@@ -64,6 +64,8 @@ src/termwatch/                                  ontoserver.py inventory.py basel
 
 ## Explorer (human-facing view)
 
+Live: https://medizininformatik-initiative.github.io/mii-terminology-watch/ (rebuilt from `explorer/` on every push to `main`).
+
 `termwatch explorer` renders a self-contained HTML page in the style of the MII
 [Kerndatensatz version-history explorer](https://github.com/medizininformatik-initiative/mii-kerndatensatz-versionhistory):
 a subway map whose columns are terminology releases and whose lanes are ValueSets.
