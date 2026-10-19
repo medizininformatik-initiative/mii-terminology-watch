@@ -90,7 +90,8 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
                 lk = ts.lookup(LOINC, code, versions[LOINC], ("STATUS",))
                 rec["display"] = rec["display"] or (lk.get("display") or "")
                 st = (lk["properties"].get("STATUS") or [None])[0]
-                rec["reason"] = f"status {st}" if st else "no longer in filter / unknown"
+                rec["reason"] = (f"status {st}, no longer matches the filter (property changed)" if st == "ACTIVE"
+                                 else f"status {st}" if st else "unknown code")
             detail_removed.append(rec)
         detail_inactivated: List[dict] = []
         for key in inactivated:
