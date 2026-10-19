@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mikrobio-morphologie-ergebnis-snomed",
+ "total": 29,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-morphologie-ergebnis-snomed",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["11471007","116442009","1359949003","18383003","243365003","243366002","243367006","250440009","27863008","404507002","404509004","404510009","427824002","59206002","61609004","62093005","70003006","719644009","719645005","721786009","723529006","734444009","734447002","768479008","768480006","768481005","768488004","83514008","87172008"],"inactive":[]}}
+}

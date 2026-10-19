@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mikrobio-allgemeine-kultur-tests-loinc",
+ "total": 2,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-kultur-tests-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["11475-1","41852-5"],"display":{"11475-1":"Microorganism identified in Specimen by Culture","41852-5":"Microorganism or agent identified in Specimen"},"inactive":[]}}
+}

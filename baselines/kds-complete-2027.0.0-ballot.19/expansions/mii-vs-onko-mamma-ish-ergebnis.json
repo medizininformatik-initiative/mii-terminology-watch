@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-onko-mamma-ish-ergebnis",
+ "total": 3,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-ish-ergebnis",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA11885-3","LA6576-8","LA6577-6"],"display":{"LA11885-3":"Equivocal","LA6576-8":"Positive","LA6577-6":"Negative"},"inactive":[]}}
+}

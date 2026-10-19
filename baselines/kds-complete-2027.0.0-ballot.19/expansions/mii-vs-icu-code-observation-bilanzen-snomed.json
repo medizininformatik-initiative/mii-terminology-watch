@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-icu-code-observation-bilanzen-snomed",
+ "total": 19,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/ValueSet/mii-vs-icu-code-observation-bilanzen-snomed",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["1162665001","1162667009","1162668004","1204299001","1204305004","250771004","251841007","251843005","251844004","251845003","251847006","251850009","251852001","251853006","251854000","251856003","364201005","819973005","819975003"],"inactive":[]}}
+}

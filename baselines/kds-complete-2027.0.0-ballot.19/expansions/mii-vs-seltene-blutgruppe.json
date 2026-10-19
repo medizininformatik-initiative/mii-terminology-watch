@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-seltene-blutgruppe",
+ "total": 16,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-blutgruppe",
+ "versions": {"http://loinc.org": "2.82", "http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://loinc.org":{"codes":["LA21321-7","LA21322-5","LA21323-3","LA21324-1","LA21325-8","LA21326-6","LA21327-4","LA21328-2"],"display":{"LA21321-7":"O Pos","LA21322-5":"O Neg","LA21323-3":"AB Pos","LA21324-1":"AB Neg","LA21325-8":"A Pos","LA21326-6":"A Neg","LA21327-4":"B Pos","LA21328-2":"B Neg"},"inactive":[]},"http://snomed.info/sct":{"codes":["278147001","278148006","278149003","278150003","278151004","278152006","278153001","278154007"],"inactive":[]}}
+}

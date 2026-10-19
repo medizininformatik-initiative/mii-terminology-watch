@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-patho-composition-type-snomed-ct",
+ "total": 5,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-composition-type-snomed-ct",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["371528001","4311000179106","721631001","721967005","726566009"],"inactive":[]}}
+}

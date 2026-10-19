@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc",
+ "total": 6,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-resistenzmechanismen-determinanten-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["101673-2","101674-0","101675-7","101676-5","101677-3","86930-5"],"display":{"101673-2":"KPC carbapenemase [Presence] in Isolate by Rapid immunoassay","101674-0":"OXA-48-like carbapenemase [Presence] in Isolate by Rapid immunoassay","101675-7":"IMP Carbapenemase [Presence] in Isolate by Rapid immunoassay","101676-5":"VIM Carbapenemase [Presence] in Isolate by Rapid immunoassay","101677-3":"NDM Carbapenemase [Presence] in Isolate by Rapid immunoassay","86930-5":"Carbapenemase [Presence] in Isolate"},"inactive":[]}}
+}

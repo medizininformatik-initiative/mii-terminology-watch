@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-seltene-nbs-hemoglobin-dbs",
+ "total": 9,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-hemoglobin-dbs",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["54068-2","54069-0","54070-8","54071-6","54072-4","54073-2","54074-0","56476-5","96595-4"],"display":{"54068-2":"Hemoglobin O - Arab/Hemoglobin.total in DBS","54069-0":"Hemoglobin Barts/Hemoglobin.total in DBS","54070-8":"Hemoglobin D/Hemoglobin.total in DBS","54071-6":"Hemoglobin E/Hemoglobin.total in DBS","54072-4":"Hemoglobin A/Hemoglobin.total in DBS","54073-2":"Hemoglobin C/Hemoglobin.total in DBS","54074-0":"Hemoglobin F/Hemoglobin.total in DBS","56476-5":"Hemoglobin S/Hemoglobin.total in DBS","96595-4":"Hemoglobin A1c/Hemoglobin.total in DBS"},"inactive":[]}}
+}

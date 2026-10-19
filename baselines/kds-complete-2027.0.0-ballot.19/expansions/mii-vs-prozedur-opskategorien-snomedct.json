@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-prozedur-opskategorien-snomedct",
+ "total": 6,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-category-sct",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["165197003","18629005","277132007","363679005","387713003","394841004"],"inactive":[]}}
+}

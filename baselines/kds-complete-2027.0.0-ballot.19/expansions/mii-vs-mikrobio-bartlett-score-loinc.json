@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mikrobio-bartlett-score-loinc",
+ "total": 6,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-bartlett-score-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA21387-8","LA21388-6","LA21389-4","LA21390-2","LA21391-0","LA21392-8"],"display":{"LA21387-8":"-2 Lack of inflammation and possible contamination with saliva","LA21388-6":"-1 Lack of inflammation and possible contamination with saliva","LA21389-4":"0  Lack of inflammation and possible contamination with saliva","LA21390-2":"+1 Active inflammation","LA21391-0":"+2 Active inflammation","LA21392-8":"+3 Active inflammation"},"inactive":[]}}
+}

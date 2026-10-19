@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-lufu-lnc-sr",
+ "total": 4,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-lungenfunktion/ValueSet/mii-vs-lufu-lnc-sr",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["91980-3","91982-9","98082-1","98083-9"],"display":{"91980-3":"Specific airway resistance by Plethysmograph body box","91982-9":"Specific airway resistance measured/predicted by Plethysmograph body box","98082-1":"Specific airway resistance mean by Plethysmograph body box --pre bronchodilation","98083-9":"Specific airway resistance mean by Plethysmograph body box --post bronchodilation"},"inactive":[]}}
+}

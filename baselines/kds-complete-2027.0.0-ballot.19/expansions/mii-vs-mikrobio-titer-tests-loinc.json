@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mikrobio-titer-tests-loinc",
+ "total": 0,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-titer-tests-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {}
+}

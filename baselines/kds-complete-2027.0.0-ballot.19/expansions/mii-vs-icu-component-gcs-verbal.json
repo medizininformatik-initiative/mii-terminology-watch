@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-icu-component-gcs-verbal",
+ "total": 5,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/ValueSet/mii-vs-icu-component-gcs-verbal",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA6557-8","LA6558-6","LA6559-4","LA6560-2","LA6561-0"],"display":{"LA6557-8":"No verbal response (>2 yrs); no vocal response (<=2 yrs)","LA6558-6":"Incomprehensible sounds","LA6559-4":"Inappropriate words","LA6560-2":"Confused","LA6561-0":"Oriented"},"inactive":[]}}
+}

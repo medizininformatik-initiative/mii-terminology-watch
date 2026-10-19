@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-prozedur-durchfuehrungsabsicht-snomedct",
+ "total": 9,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/procedures-intend",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["129428001","255231005","255302009","261004008","262202000","264931009","363676003","394602003","74964007"],"inactive":[]}}
+}

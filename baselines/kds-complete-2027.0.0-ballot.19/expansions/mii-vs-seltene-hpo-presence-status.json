@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-seltene-hpo-presence-status",
+ "total": 2,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-hpo-presence-status",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA9633-4","LA9634-2"],"display":{"LA9633-4":"Present","LA9634-2":"Absent"},"inactive":[]}}
+}

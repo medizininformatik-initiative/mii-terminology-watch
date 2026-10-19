@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-icu-component-gcs-motor",
+ "total": 6,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/ValueSet/mii-vs-icu-component-gcs-motor",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA6562-8","LA6563-6","LA6564-4","LA6565-1","LA6566-9","LA6567-7"],"display":{"LA6562-8":"No motor response","LA6563-6":"Extension to pain","LA6564-4":"Flexion to pain","LA6565-1":"Withdrawal from pain","LA6566-9":"Localizing pain","LA6567-7":"Obeys commands"},"inactive":[]}}
+}

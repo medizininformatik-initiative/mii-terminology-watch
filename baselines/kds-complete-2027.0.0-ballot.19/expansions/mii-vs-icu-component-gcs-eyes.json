@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-icu-component-gcs-eyes",
+ "total": 4,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/ValueSet/mii-vs-icu-component-gcs-eyes",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA6553-7","LA6554-5","LA6555-2","LA6556-0"],"display":{"LA6553-7":"No eye opening","LA6554-5":"Eye opening to pain","LA6555-2":"Eye opening to verbal command","LA6556-0":"Eyes open spontaneously"},"inactive":[]}}
+}

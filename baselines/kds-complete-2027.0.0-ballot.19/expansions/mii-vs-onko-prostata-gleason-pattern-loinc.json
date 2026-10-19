@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-onko-prostata-gleason-pattern-loinc",
+ "total": 3,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-pattern-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["44641-9","44642-7","44643-5"],"display":{"44641-9":"Gleason pattern.primary in Prostate tumor","44642-7":"Gleason pattern.secondary in Prostate tumor","44643-5":"Gleason pattern.tertiary in Prostate tumor"},"inactive":[]}}
+}

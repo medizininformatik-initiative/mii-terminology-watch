@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-onko-mamma-rezeptorstatus-obds",
+ "total": 3,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-rezeptorstatus-obds",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA4489-6","LA6576-8","LA6577-6"],"display":{"LA4489-6":"Unknown","LA6576-8":"Positive","LA6577-6":"Negative"},"inactive":[]}}
+}

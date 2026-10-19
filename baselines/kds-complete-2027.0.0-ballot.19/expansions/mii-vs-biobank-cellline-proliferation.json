@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-biobank-cellline-proliferation",
+ "total": 5,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-biobank/ValueSet/mii-vs-biobank-cellline-proliferation",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://purl.obolibrary.org/obo/pato.owl":{"codes":["PATO:0000719","PATO:0001422","PATO:0001991"],"inactive":[]},"http://snomed.info/sct":{"codes":["62482003","75540009"],"inactive":[]}}
+}

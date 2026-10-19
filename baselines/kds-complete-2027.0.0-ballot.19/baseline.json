@@ -1,0 +1,17 @@
+{
+ "created": "2026-10-19T01:57:24",
+ "display_kept_for": [
+  "http://loinc.org"
+ ],
+ "max_total": 500000,
+ "package": {
+  "fhirVersion": null,
+  "name": "de.medizininformatikinitiative.kerndatensatz.complete",
+  "version": "2027.0.0-ballot.19"
+ },
+ "server": "https://ontoserver.mii-termserv.de/fhir",
+ "versions": {
+  "http://loinc.org": "2.82",
+  "http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"
+ }
+}

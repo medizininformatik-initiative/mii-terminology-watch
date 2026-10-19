@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-onko-prostata-gleason-score",
+ "total": 9,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-gleason-score",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["1279714001","1279715000","1279716004","1279717008","1279718003","1279719006","1279720000","1279721001","1279722008"],"inactive":[]}}
+}

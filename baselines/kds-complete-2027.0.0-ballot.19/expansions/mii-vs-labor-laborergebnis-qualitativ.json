@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-labor-laborergebnis-qualitativ",
+ "total": 33,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/Laborergebnis-qualitativ",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["10828004","17511009","260353006","260373001","260385009","260386005","260387001","260389003","260390007","260391006","260392004","260393009","260413007","260414001","260415000","260416004","264868006","264869003","264871003","264887000","264915001","264929000","2667000","272519000","276727009","280416009","373067005","410594000","41277001","419984006","47492008","52101004","895231008"],"inactive":[]}}
+}

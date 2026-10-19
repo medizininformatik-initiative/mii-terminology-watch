@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-kardio-klappenvitium-grad-snomedct",
+ "total": 7,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-kardio/ValueSet/mii-vs-kardio-klappenvitium-grad-snomedct",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["1157273006","1157274000","1157275004","1157276003","423343006","424718006","424796009"],"inactive":[]}}
+}

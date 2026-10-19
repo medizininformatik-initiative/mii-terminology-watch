@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-onko-krk-abstand-resektionslinie-aboral",
+ "total": 2,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-abstand-resektionslinie-aboral",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["81175-2","81183-6"],"display":{"81175-2":"Distance of tumor from closest margin [Length] in Specimen by Macroscopy","81183-6":"Distance of tumor from closest distal margin [Length] in Specimen by Light microscopy"},"inactive":[]}}
+}

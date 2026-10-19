@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-pro-promis-intensity-response-scale",
+ "total": 5,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ValueSet/mii-vs-pro-promis-intensity-response-scale",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA13863-8","LA13902-4","LA13909-9","LA13914-9","LA6568-5"],"display":{"LA13863-8":"A little bit","LA13902-4":"Quite a bit","LA13909-9":"Somewhat","LA13914-9":"Very much","LA6568-5":"Not at all"},"inactive":[]}}
+}

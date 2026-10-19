@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-onko-prostata-psa-loinc",
+ "total": 5,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-prostata-psa-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["10886-0","2857-1","35741-8","83112-3","83113-1"],"display":{"10886-0":"Prostate Specific Ag Free [Mass/volume] in Serum or Plasma","2857-1":"Prostate specific Ag [Mass/volume] in Serum or Plasma","35741-8":"Prostate specific Ag [Mass/volume] in Serum or Plasma by Detection limit <= 0.01 ng/mL","83112-3":"Prostate specific Ag [Mass/volume] in Serum or Plasma by Immunoassay","83113-1":"Prostate Specific Ag Free [Mass/volume] in Serum or Plasma by Immunoassay"},"inactive":[]}}
+}

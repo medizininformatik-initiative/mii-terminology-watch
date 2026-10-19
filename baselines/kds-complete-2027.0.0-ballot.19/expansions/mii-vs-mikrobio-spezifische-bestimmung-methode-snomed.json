@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mikrobio-spezifische-bestimmung-methode-snomed",
+ "total": 12,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-spezifische-bestimmung-methode-snomed",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["1259932009","1303992007","1303998006","1304048000","1304162005","258066000","702675006","703444002","703752003","70601000052104","708104000","726449005"],"inactive":[]}}
+}

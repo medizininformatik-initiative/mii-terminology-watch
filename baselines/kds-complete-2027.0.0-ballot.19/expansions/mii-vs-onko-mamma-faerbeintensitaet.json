@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-onko-mamma-faerbeintensitaet",
+ "total": 3,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-faerbeintensitaet",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA13034-6","LA14974-2","LA6751-7"],"display":{"LA13034-6":"Weak","LA14974-2":"Strong","LA6751-7":"Moderate"},"inactive":[]}}
+}

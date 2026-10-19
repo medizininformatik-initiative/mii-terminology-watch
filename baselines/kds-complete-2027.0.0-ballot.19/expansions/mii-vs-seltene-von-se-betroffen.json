@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-seltene-von-se-betroffen",
+ "total": 3,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-von-se-betroffen",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["261665006","373066001","373067005"],"inactive":[]}}
+}

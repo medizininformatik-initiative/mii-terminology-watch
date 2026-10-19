@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mikrobio-keimzahl-loinc",
+ "total": 4,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-keimzahl-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["38436-2","49223-1","564-5","699-9"],"display":{"38436-2":"Colony count [#/mass] in Specimen by Visual count","49223-1":"Colony count [#/volume] in Specimen by Visual count","564-5":"Colony count [#] in Specimen by Visual count","699-9":"Organism count [#/volume] in Specimen by Microscopic count"},"inactive":[]}}
+}

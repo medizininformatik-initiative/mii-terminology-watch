@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-icu-body-site-observation-monitoring-und-vitaldaten",
+ "total": 30,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/ValueSet/mii-vs-icu-bodysite-observation-monitoring-und-vitaldaten",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["11527006","122494005","122495006","122496007","123851003","12738006","244383003","244387002","264856002","26893007","277633001","32849002","34402009","39352004","42859004","45206002","52795006","56459004","71836000","727614001","74281007","76752008","76784001","80891009","81040000","85562004","87878005","89187006","89837001","91470000"],"inactive":[]}}
+}

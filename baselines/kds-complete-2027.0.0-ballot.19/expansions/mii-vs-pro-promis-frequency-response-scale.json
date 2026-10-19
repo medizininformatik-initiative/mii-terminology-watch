@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-pro-promis-frequency-response-scale",
+ "total": 5,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ValueSet/mii-vs-pro-promis-frequency-response-scale",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA10044-8","LA10066-1","LA10082-8","LA6270-8","LA9933-8"],"display":{"LA10044-8":"Often","LA10066-1":"Rarely","LA10082-8":"Sometimes","LA6270-8":"Never","LA9933-8":"Always"},"inactive":[]}}
+}

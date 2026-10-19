@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mtb-msi",
+ "total": 5,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-mtb/ValueSet/mii-vs-mtb-msi",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA11884-6","LA14122-8","LA14123-6","LA26202-4","LA26203-2"],"display":{"LA11884-6":"Indeterminate","LA14122-8":"Stable","LA14123-6":"Instable","LA26202-4":"MSI-L","LA26203-2":"MSI-H"},"inactive":[]}}
+}

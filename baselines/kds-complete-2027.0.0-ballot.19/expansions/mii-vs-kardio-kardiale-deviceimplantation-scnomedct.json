@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-kardio-kardiale-deviceimplantation-scnomedct",
+ "total": 37,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-kardio/ValueSet/mii-vs-kardio-kardiale-deviceimplantation-scnomedct",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["1231779006","1234905008","1235006003","1236755008","1332236008","175144005","175145006","20453006","232966002","232967006","232968001","23999003","265482008","307280005","308805008","309405007","309407004","309408009","309471004","395218007","425435003","427508005","429064006","429542009","442249009","54866009","58863009","60531000087100","60541000087106","65219008","66816004","699125007","699135001","700151002","784162006","784163001","83333004"],"inactive":[]}}
+}

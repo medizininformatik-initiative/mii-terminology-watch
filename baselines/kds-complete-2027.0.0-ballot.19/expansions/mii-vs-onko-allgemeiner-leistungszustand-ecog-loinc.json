@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-onko-allgemeiner-leistungszustand-ecog-loinc",
+ "total": 6,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-ecog-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA9622-7","LA9623-5","LA9624-3","LA9625-0","LA9626-8","LA9627-6"],"display":{"LA9622-7":"Fully active, able to carry on all pre-disease performance without restriction","LA9623-5":"Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature, e.g., light house work, office work","LA9624-3":"Ambulatory and capable of all selfcare but unable to carry out any work activities. Up and about more than 50% of waking hours","LA9625-0":"Capable of only limited selfcare, confined to bed or chair more than 50% of waking hours","LA9626-8":"Completely disabled. Cannot carry on any selfcare. Totally confined to bed or chair","LA9627-6":"Dead"},"inactive":[]}}
+}

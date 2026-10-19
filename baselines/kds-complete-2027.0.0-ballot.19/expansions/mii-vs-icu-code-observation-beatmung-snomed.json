@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-icu-code-observation-beatmung-snomed",
+ "total": 19,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/ValueSet/mii-vs-icu-code-observation-beatmung-snomed",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["250774007","250784008","250790007","250810003","250816009","250819002","250820008","250822000","250823005","250854009","250874002","250875001","250876000","271625008","27913002","416811008","426102006","442720002","698821009"],"inactive":[]}}
+}

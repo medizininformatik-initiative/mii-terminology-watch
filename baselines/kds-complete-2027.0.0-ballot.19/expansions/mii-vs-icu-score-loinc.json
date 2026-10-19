@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-icu-score-loinc",
+ "total": 3,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/ValueSet/score-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["72514-3","96789-3","96791-9"],"display":{"72514-3":"Pain severity - 0-10 verbal numeric rating [Score] - Reported","96789-3":"Sequential Organ Failure Assessment SOFA","96791-9":"Quick SOFA score SOFA.quick"},"inactive":[]}}
+}

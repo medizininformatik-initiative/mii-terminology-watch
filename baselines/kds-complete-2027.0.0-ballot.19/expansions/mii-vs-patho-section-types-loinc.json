@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-patho-section-types-loinc",
+ "total": 5,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-section-types-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["100969-5","22634-0","22635-7","22637-3","83321-0"],"display":{"100969-5":"Pathology report additional specified observation in Specimen Narrative","22634-0":"Pathology report gross observation","22635-7":"Pathology report microscopic observation","22637-3":"Pathology report diagnosis","83321-0":"Pathology report intraoperative observation in Specimen Document"},"inactive":[]}}
+}

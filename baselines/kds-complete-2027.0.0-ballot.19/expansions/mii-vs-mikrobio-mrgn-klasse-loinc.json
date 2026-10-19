@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mikrobio-mrgn-klasse-loinc",
+ "total": 3,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-mrgn-klasse-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA33214-0","LA33215-7","LA33216-5"],"display":{"LA33214-0":"2MRGN","LA33215-7":"3MRGN","LA33216-5":"4MRGN"},"inactive":[]}}
+}

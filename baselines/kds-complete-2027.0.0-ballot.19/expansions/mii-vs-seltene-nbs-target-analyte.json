@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-seltene-nbs-target-analyte",
+ "total": 21,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-nbs-target-analyte",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["29573-3","29575-8","38473-5","38481-8","42920-9","45207-8","47679-6","47700-0","48633-2","50125-4","53160-8","53175-6","53191-3","53199-6","53231-7","53235-8","54081-5","54084-9","62320-7","75217-0","92002-5"],"display":{"29573-3":"Phenylalanine [Moles/volume] in DBS","29575-8":"Thyrotropin [Units/volume] in DBS","38473-5":"17-Hydroxyprogesterone [Mass/volume] in DBS","38481-8":"Carnitine free (C0) [Moles/volume] in DBS","42920-9":"Isovalerylcarnitine (C5) [Moles/volume] in DBS","45207-8":"Glutarylcarnitine (C5-DC) [Moles/volume] in DBS","47679-6":"Leucine [Moles/volume] in DBS","47700-0":"Methionine [Moles/volume] in DBS","48633-2":"Trypsinogen I Free [Mass/volume] in DBS","50125-4":"3-Hydroxypalmitoylcarnitine (C16-OH) [Moles/volume] in DBS","53160-8":"Propionylcarnitine (C3) [Moles/volume] in DBS","53175-6":"Octanoylcarnitine (C8) [Moles/volume] in DBS","53191-3":"Tetradecenoylcarnitine (C14:1) [Moles/volume] in DBS","53199-6":"Palmitoylcarnitine (C16) [Moles/volume] in DBS","53231-7":"Succinylacetone [Moles/volume] in DBS","53235-8":"Carnitine free (C0)/Palmitoylcarnitine (C16)+Stearoylcarnitine (C18) [Molar ratio] in DBS","54081-5":"Hemoglobinopathies newborn screening panel","54084-9":"Galactose [Mass/volume] in DBS","62320-7":"T-cell receptor excision circle [#/volume] in DBS by NAA with probe detection","75217-0":"Biotinidase [Enzymatic activity/volume] in DBS","92002-5":"SMN1 gene [Cycle Threshold #] in DBS by NAA with probe detection"},"inactive":[]}}
+}

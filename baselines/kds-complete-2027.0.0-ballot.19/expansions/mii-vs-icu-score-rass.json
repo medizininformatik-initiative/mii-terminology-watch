@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-icu-score-rass",
+ "total": 2,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/ValueSet/mii-vs-icu-score-rass",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA16474-1","LA17287-6"],"display":{"LA16474-1":"Restless +1","LA17287-6":"Combative +4"},"inactive":[]}}
+}

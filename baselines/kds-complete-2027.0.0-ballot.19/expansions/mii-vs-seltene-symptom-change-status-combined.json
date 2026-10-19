@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-seltene-symptom-change-status-combined",
+ "total": 6,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-seltene/ValueSet/mii-vs-seltene-symptom-change-status-combined",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["1250004","231877006","2667000","35105006","385425000","385630006"],"inactive":[]}}
+}

@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-onko-melanom-ldh",
+ "total": 3,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-melanom-ldh",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["14804-9","14805-6","2532-0"],"display":{"14804-9":"Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Lactate to pyruvate reaction","14805-6":"Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma by Pyruvate to lactate reaction","2532-0":"Lactate dehydrogenase [Enzymatic activity/volume] in Serum or Plasma"},"inactive":[]}}
+}

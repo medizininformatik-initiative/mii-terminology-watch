@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mikrobio-befundtyp-loinc",
+ "total": 5,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-befundtyp-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["92892-9","92893-7","92894-5","96397-5","96398-3"],"display":{"92892-9":"Microbiology - parasitic studies","92893-7":"Microbiology - viral studies","92894-5":"Microbiology - bacterial studies","96397-5":"Microbiology - mycobacteriology studies Document","96398-3":"Microbiology - mycology studies Document"},"inactive":[]}}
+}

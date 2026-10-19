@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mtb-mmr-expression",
+ "total": 3,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-mtb/ValueSet/mii-vs-mtb-mmr-expression",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA14100-4","LA26197-6","LA26198-4"],"display":{"LA14100-4":"Undetermined","LA26197-6":"Intact nuclear expression","LA26198-4":"Loss of nuclear expression"},"inactive":[]}}
+}

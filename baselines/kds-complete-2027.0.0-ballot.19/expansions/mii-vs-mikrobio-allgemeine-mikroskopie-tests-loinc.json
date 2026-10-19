@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc",
+ "total": 4,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-allgemeine-mikroskopie-tests-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["105059-0","11545-1","664-3","676-7"],"display":{"105059-0":"Microscopic observation [Identifier] in Specimen","11545-1":"Microscopic observation [Identifier] in Specimen by Acid fast stain","664-3":"Microscopic observation [Identifier] in Specimen by Gram stain","676-7":"Microscopic observation [Identifier] in Specimen by Rhodamine-auramine fluorochrome stain"},"inactive":[]}}
+}

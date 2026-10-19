@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-lufu-lnc-mef",
+ "total": 9,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-lungenfunktion/ValueSet/mii-vs-lufu-lnc-mef",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["19927-3","19945-5","65821-1","65822-9","65823-7","65824-5","69971-0","69972-8","69973-6"],"display":{"19927-3":"Gas flow FEV 25%-75%","19945-5":"Gas flow FEV 25%-75% airway","65821-1":"Gas flow FEV 25%","65822-9":"Gas flow FEV 50%","65823-7":"Gas flow FEV 75%","65824-5":"Gas flow FEV 90%","69971-0":"FEF 25-75% Predicted","69972-8":"FEF 25-75% --pre bronchodilation","69973-6":"FEF 25-75% --post bronchodilation"},"inactive":[]}}
+}

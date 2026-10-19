@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-pro-phq-9-answer-list-ll358-3",
+ "total": 4,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ValueSet/mii-vs-pro-phq-9-answer-list-ll358-3",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA6568-5","LA6569-3","LA6570-1","LA6571-9"],"display":{"LA6568-5":"Not at all","LA6569-3":"Several days","LA6570-1":"More than half the days","LA6571-9":"Nearly every day"},"inactive":[]}}
+}

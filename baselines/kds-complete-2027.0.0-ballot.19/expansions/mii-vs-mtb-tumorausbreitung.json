@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mtb-tumorausbreitung",
+ "total": 4,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-mtb/ValueSet/mii-vs-mtb-tumorausbreitung",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["128462008","255127006","261665006","58899004"],"inactive":["255127006"]}}
+}

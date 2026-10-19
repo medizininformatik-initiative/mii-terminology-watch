@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mikrobio-aviditaet-tests-loinc",
+ "total": 5,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-aviditaet-tests-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["104428-8","52984-2","52986-7","56990-5","81119-0"],"display":{"104428-8":"Measles virus IgG Ab avidity [Ratio] in Serum by Immunoassay","52984-2":"Cytomegalovirus IgG Ab avidity [Ratio] in Serum or Plasma by Immunoassay","52986-7":"Rubella virus IgG Ab avidity [Ratio] in Serum by Immunoassay","56990-5":"Toxoplasma gondii IgG Ab avidity [Ratio] in Serum by Immunoassay","81119-0":"Epstein Barr virus capsid IgG Ab avidity [Ratio] in Serum by Immunoassay"},"inactive":[]}}
+}

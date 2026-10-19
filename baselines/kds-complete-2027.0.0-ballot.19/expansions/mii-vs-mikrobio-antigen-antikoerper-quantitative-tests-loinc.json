@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc",
+ "total": 0,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-antigen-antikoerper-quantitative-tests-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {}
+}

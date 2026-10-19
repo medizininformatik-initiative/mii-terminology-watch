@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-labor-laborbereich",
+ "total": 19,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-labor/ValueSet/Laborbereich",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["18717-9","18718-7","18719-5","18720-3","18721-1","18722-9","18723-7","18724-5","18725-2","18727-8","18728-6","18729-4","18767-4","18768-2","18769-0","26435-8","26436-6","26437-4","26438-2"],"display":{"18717-9":"Blood bank studies (set)","18718-7":"Cell marker studies (set)","18719-5":"Chemistry studies (set)","18720-3":"Coagulation studies (set)","18721-1":"Therapeutic drug monitoring studies (set)","18722-9":"Fertility studies (set)","18723-7":"Hematology studies (set)","18724-5":"HLA studies (set)","18725-2":"Microbiology studies (set)","18727-8":"Serology studies (set)","18728-6":"Toxicology studies (set)","18729-4":"Urinalysis studies (set)","18767-4":"Blood gas studies (set)","18768-2":"Cell counts+Differential studies (set)","18769-0":"Microbial susceptibility tests Set","26435-8":"Molecular pathology studies (set)","26436-6":"Laboratory studies (set)","26437-4":"Chemistry challenge studies (set)","26438-2":"Cytology studies (set)"},"inactive":[]}}
+}

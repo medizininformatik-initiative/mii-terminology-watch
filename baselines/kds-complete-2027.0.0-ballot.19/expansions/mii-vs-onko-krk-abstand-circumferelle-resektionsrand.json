@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-onko-krk-abstand-circumferelle-resektionsrand",
+ "total": 2,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-krk-abstand-circumferelle-resektionsrand",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["81176-0","81184-4"],"display":{"81176-0":"Distance of tumor from circumferential resection margin [Length] in Specimen by Macroscopy","81184-4":"Distance of tumor from circumferential resection margin [Length] by Microscopy"},"inactive":[]}}
+}

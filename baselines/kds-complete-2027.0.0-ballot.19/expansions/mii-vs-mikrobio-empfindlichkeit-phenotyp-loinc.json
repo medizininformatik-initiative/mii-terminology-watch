@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc",
+ "total": 2,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/modul-mikrobio/ValueSet/mii-vs-mikrobio-empfindlichkeit-phenotyp-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["103673-0","106843-6"],"display":{"103673-0":"Isavuconazole [Susceptibility] in Isolate by Gradient strip","106843-6":"Cefotaxime+Cloxacillin [Susceptibility] in Isolate by Disk diffusion (KB)"},"inactive":[]}}
+}

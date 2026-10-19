@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-onko-tnm-t-kategorie",
+ "total": 3,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-tnm-t-kategorie",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["384625004","399504009","78873005"],"inactive":[]}}
+}

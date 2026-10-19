@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-lufu-lnc-pef",
+ "total": 13,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-lungenfunktion/ValueSet/mii-vs-lufu-lnc-pef",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["19935-6","19937-2","19938-0","33452-4","60793-7","69974-4","69975-1","69976-9","69977-7","69978-5","71794-2","71795-9","83368-1"],"display":{"19935-6":"Maximum expiratory gas flow Respiratory system airway by Peak flow meter","19937-2":"Maximum expiratory gas flow Respiratory system airway by Peak flow meter --post therapy","19938-0":"Maximum expiratory gas flow Respiratory system airway --post therapy","33452-4":"Maximum expiratory gas flow Respiratory system airway","60793-7":"Maximum expiratory gas flow Respiratory system airway --on ventilator","69974-4":"Maximum expiratory gas flow Respiratory system airway Predicted","69975-1":"Maximum expiratory gas flow Respiratory system airway --pre bronchodilation","69976-9":"Maximum expiratory gas flow Respiratory system airway --post bronchodilation","69977-7":"Maximum expiratory gas flow/Predicted maximum expiratory gas flow Respiratory system airway --pre bronchodilation","69978-5":"Maximum expiratory gas flow/Predicted maximum expiratory gas flow Respiratory system airway --post bronchodilation","71794-2":"Maximum expiratory gas flow Respiratory system airway --pre therapy","71795-9":"Maximum expiratory gas flow Respiratory system airway by Peak flow meter --pre therapy","83368-1":"Personal best peak expiratory gas flow Respiratory system airway"},"inactive":[]}}
+}

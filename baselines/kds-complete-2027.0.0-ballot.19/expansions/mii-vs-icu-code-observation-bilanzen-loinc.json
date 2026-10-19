@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-icu-code-observation-bilanzen-loinc",
+ "total": 12,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/ValueSet/mii-vs-icu-code-observation-bilanzen-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["79561-7","81661-1","8953-2","9000-1","9097-7","9103-3","9113-2","9187-6","9203-1","9217-1","9257-7","99741-1"],"display":{"79561-7":"Fluid output enteral tube [Volume] Measured","81661-1":"Blood loss [Volume] Measured","8953-2":"Fluid intake enteral tube Measured","9000-1":"Fluid intake oral Measured","9097-7":"Fluid balance 24 hour","9103-3":"Fluid intake total Measured","9113-2":"Fluid output biliary drain","9187-6":"Urine output","9203-1":"Fluid output wound drain","9217-1":"Output.stool [Volume]","9257-7":"Fluid output total Measured","99741-1":"Ultrafiltrate volume removed"},"inactive":[]}}
+}

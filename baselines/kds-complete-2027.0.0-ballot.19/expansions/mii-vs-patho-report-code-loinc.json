@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-patho-report-code-loinc",
+ "total": 8,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-report-code-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["11526-1","11529-5","18743-5","26435-8","33716-2","47527-7","47528-5","60568-3"],"display":{"11526-1":"Pathology study","11529-5":"Surgical pathology study","18743-5":"Autopsy report","26435-8":"Molecular pathology studies (set)","33716-2":"Non-gynecological cytology study","47527-7":"Cytology report of Cervical or vaginal smear or scraping Cyto stain.thin prep","47528-5":"Cytology report of Cervical or vaginal smear or scraping Cyto stain","60568-3":"Pathology Synoptic report"},"inactive":[]}}
+}

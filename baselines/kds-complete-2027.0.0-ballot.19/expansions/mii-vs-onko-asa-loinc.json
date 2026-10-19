@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-onko-asa-loinc",
+ "total": 6,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-asa-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA28813-6","LA28814-4","LA28815-1","LA28816-9","LA28817-7","LA28818-5"],"display":{"LA28813-6":"ASA I","LA28814-4":"ASA II","LA28815-1":"ASA III","LA28816-9":"ASA IV","LA28817-7":"ASA V","LA28818-5":"ASA VI"},"inactive":[]}}
+}

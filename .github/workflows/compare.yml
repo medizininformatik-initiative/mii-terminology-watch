@@ -1,0 +1,45 @@
+name: terminology-release-compare
+# Manual trigger (or schedule) that compares the committed baseline against newer terminology versions
+# on the MII Ontoserver and uploads the Markdown/CSV report. Requires the DFN client certificate as secrets.
+on:
+  workflow_dispatch:
+    inputs:
+      sct:
+        description: "SNOMED CT version URI (empty = baseline)"
+        required: false
+      loinc:
+        description: "LOINC version (empty = baseline)"
+        required: false
+      baseline:
+        description: "baseline directory"
+        default: baselines/kds-complete-2027.0.0-ballot.19
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Fetch KDS package
+        run: |
+          PKG=$(python3 -c "import json;print(json.load(open('${{ inputs.baseline }}/baseline.json'))['package']['name'])")
+          VER=$(python3 -c "import json;print(json.load(open('${{ inputs.baseline }}/baseline.json'))['package']['version'])")
+          mkdir -p pkg && curl -sSL "https://packages.simplifier.net/$PKG/$VER" | tar -xz -C pkg
+      - name: Write certificate
+        run: |
+          echo "${{ secrets.TERMWATCH_CERT_PEM }}" > cert.pem
+          echo "${{ secrets.TERMWATCH_KEY_PEM }}" > key.pem
+      - name: Compare
+        env:
+          TERMWATCH_CERT: cert.pem
+          TERMWATCH_KEY: key.pem
+          TERMWATCH_KEY_PASS: ${{ secrets.TERMWATCH_KEY_PASS }}
+          PYTHONPATH: src
+        run: |
+          ARGS=""
+          [ -n "${{ inputs.sct }}" ] && ARGS="$ARGS --sct ${{ inputs.sct }}"
+          [ -n "${{ inputs.loinc }}" ] && ARGS="$ARGS --loinc ${{ inputs.loinc }}"
+          python3 -m termwatch compare --baseline "${{ inputs.baseline }}" --package pkg/package $ARGS --out reports/run.json
+          python3 -m termwatch report --compare reports/run.json --md reports/run.md --csv reports/run.csv
+      - uses: actions/upload-artifact@v4
+        with: { name: terminology-impact-report, path: "reports/run.*" }

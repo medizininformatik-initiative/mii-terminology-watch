@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-kardio-geraetetyp-snomedct",
+ "total": 21,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-kardio/ValueSet/mii-vs-kardio-geraetetyp-snomedct",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["1204291003","1236894001","1263462004","1388891000","360057000","360065002","360066001","424921004","465460004","468542000","60511000087105","60521000087102","702215009","704707009","704708004","704721006","704722004","704768001","704769009","706004007","72506001"],"inactive":[]}}
+}

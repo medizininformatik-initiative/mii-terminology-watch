@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-pro-promis-physical-function-response-scale",
+ "total": 5,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-pro/ValueSet/mii-vs-pro-promis-physical-function-response-scale",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA13912-3","LA13918-0","LA13919-8","LA13920-6","LA13921-4"],"display":{"LA13912-3":"Unable to do","LA13918-0":"With a little difficulty","LA13919-8":"With much difficulty","LA13920-6":"With some difficulty","LA13921-4":"Without any difficulty"},"inactive":[]}}
+}

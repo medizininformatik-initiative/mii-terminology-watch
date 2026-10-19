@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-icu-code-oservation-pupillenform-loinc",
+ "total": 2,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/ValueSet/mii-vs-icu-code-oservation-pupillenform-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA19583-6","LA24884-1"],"display":{"LA19583-6":"Irregular","LA24884-1":"Round"},"inactive":[]}}
+}

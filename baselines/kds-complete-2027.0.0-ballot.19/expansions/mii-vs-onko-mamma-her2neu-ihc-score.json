@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-onko-mamma-her2neu-ihc-score",
+ "total": 5,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-mamma-her2neu-ihc-score",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA11841-6","LA11842-4","LA11843-2","LA11884-6","LA6111-4"],"display":{"LA11841-6":"1+","LA11842-4":"2+","LA11843-2":"3+","LA11884-6":"Indeterminate","LA6111-4":"0"},"inactive":[]}}
+}

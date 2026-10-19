@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-icu-code-observation-pupillenlichtreaktion",
+ "total": 3,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/ValueSet/mii-vs-icu-code-observation-pupillenlichtreaktion",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA24899-9","LA25441-9","LA25442-7"],"display":{"LA24899-9":"Sluggishly reactive to light","LA25441-9":"Reactive to light","LA25442-7":"Not reactive to light"},"inactive":[]}}
+}

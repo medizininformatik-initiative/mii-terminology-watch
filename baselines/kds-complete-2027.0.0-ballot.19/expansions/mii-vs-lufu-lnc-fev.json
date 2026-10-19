@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-lufu-lnc-fev",
+ "total": 32,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-lungenfunktion/ValueSet/mii-vs-lufu-lnc-fev",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["20135-0","20136-8","20137-6","20142-6","20147-5","20148-3","20149-1","20150-9","20152-5","20153-3","20154-1","20155-8","20156-6","20157-4","41233-8","41234-6","43253-4","43254-2","43255-9","43256-7","43257-5","43258-3","43259-1","43260-9","43261-7","43262-5","43263-3","52486-8","65655-3","65656-1","65658-7","69983-5"],"display":{"20135-0":"FEV 25%-75% post bronchodilation measured/predicted","20136-8":"FEV 25%-75% pre bronchodilation measured/predicted","20137-6":"FEV 25%-75% measured/predicted","20142-6":"FEV","20147-5":"FEV.5 Predicted","20148-3":"FEV.5","20149-1":"FEV1 Predicted","20150-9":"FEV1","20152-5":"FEV1 measured/predicted","20153-3":"FEV1/FEV total","20154-1":"FEV1 Predicted --post bronchodilation","20155-8":"FEV1 --post bronchodilation","20156-6":"FEV1 Predicted --pre bronchodilation","20157-4":"FEV1 --pre bronchodilation","41233-8":"FEV3 Predicted","41234-6":"FEV3/FEV total","43253-4":"FEV1 --pre dose methacholine","43254-2":"FEV1 --Pre excercise","43255-9":"FEV1 --post dose methacholine","43256-7":"FEV1 --post 25 mg/mL methacholine","43257-5":"FEV1 --post 2.5 mg/mL methacholine","43258-3":"FEV1 --post 10 mg/mL methacholine","43259-1":"FEV1 --post 0.25 mg/mL methacholine","43260-9":"FEV1 --post 0.025 mg/mL methacholine","43261-7":"FEV1 --5 minutes post exercise","43262-5":"FEV1 --15 minutes post exercise","43263-3":"FEV1 --10 minutes post exercise","52486-8":"FEV2/FEV total","65655-3":"FEV6","65656-1":"FEV6 Predicted","65658-7":"FEV1/FEV6 Predicted","69983-5":"FEV1 percent change"},"inactive":[]}}
+}

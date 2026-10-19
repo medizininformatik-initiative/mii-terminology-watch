@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-mtb-who-grad-tumor-zns",
+ "total": 4,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-mtb/ValueSet/mii-vs-mtb-who-grad-tumor-zns",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["396922003","396923008","396924002","396925001"],"inactive":[]}}
+}

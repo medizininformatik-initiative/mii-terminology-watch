@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-lufu-sct-pef",
+ "total": 13,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-lungenfunktion/ValueSet/mii-vs-lufu-sct-pef",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["18491006","251936000","251939007","251940009","313192007","313232000","313276007","401014009","401015005","401163005","401199000","429745009","878870000"],"inactive":[]}}
+}

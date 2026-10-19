@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc",
+ "total": 11,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-allgemeiner-leistungszustand-karnofsky-loinc",
+ "versions": {"http://loinc.org": "2.82"},
+ "members": {"http://loinc.org":{"codes":["LA29175-9","LA29176-7","LA29177-5","LA29178-3","LA29179-1","LA29180-9","LA29181-7","LA29182-5","LA29183-3","LA29184-1","LA9627-6"],"display":{"LA29175-9":"Normal; no complaints; no evidence of disease","LA29176-7":"Able to carry on normal activity; minor signs or symptoms of disease","LA29177-5":"Normal activity with effort; some signs or symptoms of disease","LA29178-3":"Cares for self; unable to carry on normal activity or do active work","LA29179-1":"Requires occasional assistance but is able to care for most needs","LA29180-9":"Requires considerable assistance and frequent medical care","LA29181-7":"Disabled; requires special care and assistance","LA29182-5":"Severely disabled; hospitalization is indicated, although death not imminent","LA29183-3":"Very sick; hospitalization necessary; active supportive treatment necessary","LA29184-1":"Moribund; fatal processes progressing rapidly","LA9627-6":"Dead"},"inactive":[]}}
+}

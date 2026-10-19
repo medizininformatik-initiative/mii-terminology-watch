@@ -1,0 +1,9 @@
+{
+ "error": null,
+ "id": "mii-vs-patho-media-modality-snomed-ct",
+ "total": 5,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-patho/ValueSet/mii-vs-patho-media-modality-snomed-ct",
+ "versions": {"http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"},
+ "members": {"http://snomed.info/sct":{"codes":["14364002","409903006","701627004","706582001","706821004"],"inactive":[]}}
+}
