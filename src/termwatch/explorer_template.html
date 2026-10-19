@@ -1,0 +1,459 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KDS Terminologie-Fahrplan</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: KPI strip → module×release overview matrix → module picker → subway map (lanes = ValueSets, columns = releases) with sticky detail aside */
+:root{
+  --bg:#f7f8f7; --surface:#ffffff; --fg:#17201e; --muted:#5d6b67; --line:#d9e0dd; --line-soft:#eceff0;
+  --accent:#0f766e; --accent-soft:#d8f0ec; --warn-bg:#fff7e0; --warn-fg:#7a4b00;
+  --identical:#16a34a; --added:#2f6fdb; --relabelled:#9333ea; --removed:#e0940b; --inactivated:#dc2626; --unknown:#9aa5a1;
+  --pill-fg:#ffffff; --code-bg:#eef1f0;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#121715; --surface:#1a211e; --fg:#e8ecea; --muted:#9fb0aa; --line:#2d3733; --line-soft:#232b28;
+  --accent:#4fd1c5; --accent-soft:#163a36; --warn-bg:#3a2e10; --warn-fg:#f5d77a;
+  --identical:#34d399; --added:#60a5fa; --relabelled:#c084fc; --removed:#fbbf24; --inactivated:#f87171; --unknown:#6b7773;
+  --pill-fg:#0f1412; --code-bg:#242d29; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#121715; --surface:#1a211e; --fg:#e8ecea; --muted:#9fb0aa; --line:#2d3733; --line-soft:#232b28;
+  --accent:#4fd1c5; --accent-soft:#163a36; --warn-bg:#3a2e10; --warn-fg:#f5d77a;
+  --identical:#34d399; --added:#60a5fa; --relabelled:#c084fc; --removed:#fbbf24; --inactivated:#f87171; --unknown:#6b7773;
+  --pill-fg:#0f1412; --code-bg:#242d29; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:14px;line-height:1.5;margin:0}
+.wrap{max-width:1400px;margin:0 auto;padding-block:20px 48px;padding-inline:16px}
+h1,h2,h3{text-wrap:balance;margin:0}
+h1{font-size:26px;font-weight:600;letter-spacing:-.01em}
+h2{font-size:17px;font-weight:600;margin-block:28px 10px}
+h3{font-size:14px;font-weight:600}
+p{margin:0 0 8px;max-width:72ch}
+a{color:var(--accent)}
+code,.mono{font-family:var(--mono);font-size:12.5px}
+code{background:var(--code-bg);padding:1px 5px;border-radius:3px}
+header{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px}
+header .sub{color:var(--muted);margin-top:4px}
+header .meta{font-size:12.5px;color:var(--muted);text-align:right}
+header .meta b{color:var(--fg);font-weight:500}
+.banner{background:var(--warn-bg);color:var(--warn-fg);border-radius:6px;padding:8px 12px;margin-top:14px;font-size:13px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:16px}
+.kpi{border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:10px 12px}
+.kpi .n{font-size:24px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.1}
+.kpi .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
+.kpi.hot .n{color:var(--inactivated)}
+details.help{border:1px solid var(--line);border-radius:6px;background:var(--surface);padding:8px 12px;margin-top:14px}
+details.help summary{cursor:pointer;font-weight:500}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px 28px;margin-top:10px;font-size:13px}
+.legend ul{list-style:none;margin:6px 0 0;padding:0}
+.legend li{display:flex;gap:8px;align-items:center;margin:4px 0}
+.sw{display:inline-block;width:28px;height:6px;border-radius:3px;flex:none}
+.sw.dash{background:repeating-linear-gradient(90deg,currentColor 0 6px,transparent 6px 10px)}
+.st{display:inline-block;width:12px;height:12px;border-radius:50%;border:2px solid var(--fg);background:var(--surface);flex:none}
+.st.big{width:16px;height:16px;background:var(--inactivated);border-color:var(--surface)}
+/* overview matrix */
+.matrix{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:6px 10px;text-align:left;border-bottom:1px solid var(--line-soft);vertical-align:top}
+th{font-weight:500;color:var(--muted);font-size:12px;white-space:nowrap}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.cell{display:inline-flex;align-items:center;gap:6px;padding:2px 8px;border-radius:12px;color:var(--pill-fg);font-weight:500;cursor:pointer;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cell.none{background:transparent;color:var(--muted);font-weight:400;cursor:default;padding-inline:0}
+.cell.ghost{background:transparent;color:var(--muted);border:1px dashed var(--line);cursor:default;font-weight:400}
+tr.rowlink td:first-child{cursor:pointer;font-weight:500}
+/* module picker */
+.modules{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.mod{border:1px solid var(--line);background:var(--surface);border-radius:6px;padding:8px 10px;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.mod:hover,.mod:focus-visible{border-color:var(--accent);outline:none}
+.mod.sel{border-color:var(--accent);background:var(--accent-soft)}
+.mod .name{font-weight:600}
+.mod .cnt{font-size:12px;color:var(--muted)}
+.mod .bar{height:4px;border-radius:2px;background:var(--line-soft);margin-top:6px;overflow:hidden;display:flex}
+.mod .bar i{display:block;height:100%}
+/* map */
+.tabs{display:flex;gap:6px;margin:14px 0 8px;flex-wrap:wrap;align-items:center}
+.tab{border:1px solid var(--line);background:var(--surface);color:inherit;font:inherit;padding:5px 12px;border-radius:16px;cursor:pointer}
+.tab.sel{background:var(--accent);border-color:var(--accent);color:var(--pill-fg)}
+.tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.search{margin-left:auto;display:flex;gap:6px;align-items:center}
+.search input{font:inherit;padding:5px 8px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:inherit;width:180px}
+.maparea{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:14px;align-items:start}
+@media (max-width:1000px){.maparea{grid-template-columns:1fr}}
+.mapscroll{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface);min-width:0}
+.mapmeta{color:var(--muted);font-size:12.5px;margin-bottom:6px}
+svg{display:block;font-family:var(--sans)}
+.lane-label{font-size:11.5px;fill:var(--fg);cursor:pointer}
+.lane-label:hover{fill:var(--accent)}
+.lane-label.sel{fill:var(--accent);font-weight:600}
+.lane-tag{font-size:9.5px;fill:var(--muted)}
+.colhead{font-size:11px;fill:var(--fg);font-family:var(--mono)}
+.colhead.ghost{fill:var(--muted)}
+.colnote{font-size:9.5px;fill:var(--muted)}
+.baseline-line{stroke:var(--accent);stroke-width:1.5;stroke-dasharray:4 3}
+.ghost-col{stroke:var(--line);stroke-width:1;stroke-dasharray:2 4}
+.seg{stroke-width:6;stroke-linecap:round;fill:none}
+.seg.identical{stroke:var(--identical)} .seg.added{stroke:var(--added)} .seg.relabelled{stroke:var(--relabelled)}
+.seg.removed{stroke:var(--removed)} .seg.inactivated{stroke:var(--inactivated)} .seg.unknown{stroke:var(--unknown)}
+.seg.future{stroke-dasharray:7 5}
+.seg.ghost{stroke:var(--line);stroke-dasharray:2 5;stroke-width:3}
+.hit{stroke:transparent;stroke-width:18;fill:none;cursor:pointer}
+.hit:hover + .seg,.seg.sel{stroke-width:9}
+.station{fill:var(--surface);stroke:var(--fg);stroke-width:2;cursor:pointer}
+.station:hover{stroke:var(--accent)} .station.sel{stroke:var(--accent);stroke-width:3.5;fill:var(--accent-soft)}
+.station.unknown{stroke:var(--unknown);stroke-dasharray:2 2}
+.station.ghost{stroke:var(--line);stroke-dasharray:2 2}
+.interchange{fill:var(--inactivated);stroke:var(--surface);stroke-width:1.5;cursor:pointer}
+.interchange.sel{stroke:var(--accent);stroke-width:3}
+.interchange.removed{fill:var(--removed)}
+.link{stroke:var(--inactivated);stroke-width:1.5;stroke-dasharray:3 3;opacity:.7}
+.link.removed{stroke:var(--removed)}
+.shared-badge{font-size:9px;fill:var(--muted)}
+/* detail panel */
+aside{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface);padding:12px 14px;min-width:0}
+aside h3{font-size:15px}
+aside .sub{color:var(--muted);font-size:12px;word-break:break-all;margin-bottom:8px}
+.row{display:grid;grid-template-columns:128px 1fr;gap:6px;padding:4px 0;border-bottom:1px solid var(--line-soft);font-size:13px}
+.row .k{color:var(--muted)}
+.pill{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12px;font-weight:500;color:var(--pill-fg);background:var(--unknown)}
+.pill.identical{background:var(--identical)} .pill.added{background:var(--added)} .pill.relabelled{background:var(--relabelled)}
+.pill.removed{background:var(--removed)} .pill.inactivated{background:var(--inactivated)}
+.pill.out{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.pill.pin{background:var(--accent)}
+.counts{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.counts span{font-family:var(--mono);font-size:12px;padding:2px 7px;border-radius:4px;background:var(--code-bg)}
+.advice{background:var(--accent-soft);border-radius:6px;padding:8px 10px;margin:10px 0;font-size:13px}
+.advice ul{margin:4px 0 0;padding-left:18px}
+.advice li{margin:3px 0}
+details.list{margin:8px 0;border-top:1px solid var(--line-soft);padding-top:6px}
+details.list summary{cursor:pointer;font-weight:500;font-size:13px}
+details.list ul{list-style:none;padding:0;margin:6px 0 0;font-size:12.5px}
+details.list li{padding:3px 0;border-bottom:1px solid var(--line-soft);display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:baseline}
+details.list li .d{min-width:0;overflow-wrap:anywhere}
+details.list li .old{text-decoration:line-through;color:var(--muted)}
+.succ{color:var(--muted);font-size:12px}
+.more{color:var(--muted);font-size:12px;margin-top:4px}
+.empty{color:var(--muted);font-size:13px}
+.hits{margin-top:8px;font-size:13px}
+.hits li{margin:3px 0}
+button.linkish{background:none;border:none;color:var(--accent);font:inherit;cursor:pointer;padding:0;text-decoration:underline}
+footer{margin-top:36px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:10px}
+@media (prefers-reduced-motion:no-preference){.seg,.station{transition:stroke-width .12s}}
+</style>
+
+<div class="wrap">
+<header>
+  <div>
+    <h1>KDS Terminologie-Fahrplan</h1>
+    <div class="sub">Welche ValueSets des MII Kerndatensatzes ändern sich mit einem SNOMED-CT- oder LOINC-Release, und was ist zu tun?</div>
+  </div>
+  <div class="meta" id="header-meta"></div>
+</header>
+
+<div class="banner">Prototyp. Grundlage ist ein Vergleich der ValueSet-Expansionen auf dem MII-Terminologieserver; SNOMED-CT-Releases nach Juli 2026 liegen dort noch nicht vor und erscheinen als ausstehende Spalte.</div>
+
+<div class="kpis" id="kpis"></div>
+
+<details class="help">
+  <summary>Legende und Lesehilfe</summary>
+  <div class="legend">
+    <div><b>Farbe der Strecke</b> = was mit dem Inhalt des ValueSets zwischen zwei Releases passiert ist
+      <ul>
+        <li><span class="sw" style="background:var(--identical)"></span> unverändert</li>
+        <li><span class="sw" style="background:var(--added)"></span> nur neue Codes (additiv)</li>
+        <li><span class="sw" style="background:var(--relabelled)"></span> Anzeigetexte geändert</li>
+        <li><span class="sw" style="background:var(--removed)"></span> aktive Codes aus dem Filter gefallen</li>
+        <li><span class="sw" style="background:var(--inactivated)"></span> Codes inaktiviert oder Filter-Anker inaktiv (breaking)</li>
+        <li><span class="sw dash" style="color:var(--added)"></span> gestrichelt: ValueSet ist gepinnt, Änderung gilt erst nach dem Pin-Wechsel</li>
+      </ul>
+    </div>
+    <div><b>Symbole</b>
+      <ul>
+        <li><span class="st"></span> Station = Stand des ValueSets unter einem Release; Größe = Anzahl Mitglieder (log.)</li>
+        <li><span class="st big"></span> Umsteigebahnhof = inaktivierte Codes; farbig gefüllt</li>
+        <li><span class="sw" style="background:var(--accent);height:2px"></span> senkrechte Linie = Stand des Ballots (im Package gepinnte Version)</li>
+        <li><span class="sw dash" style="color:var(--inactivated);height:2px"></span> Verbindung zwischen Lanes = derselbe Code trifft mehrere ValueSets</li>
+        <li><span class="st" style="border-style:dashed;border-color:var(--unknown)"></span> graue Spalte / Station = Release noch nicht auf dem Server</li>
+      </ul>
+    </div>
+    <div><b>Navigation</b>
+      <ul>
+        <li>1. In der Übersicht eine Zelle oder unten ein Modul wählen.</li>
+        <li>2. Code-System oben über dem Plan umschalten.</li>
+        <li>3. Strecke, Station oder ValueSet-Name anklicken, Details erscheinen rechts.</li>
+        <li>4. Code-Suche findet einen Code in allen Änderungslisten.</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<h2>Übersicht: Module × Releases</h2>
+<p class="mapmeta">Zelle = schlimmste Änderung im Modul, Zahl = betroffene ValueSets von allen beobachteten. Klick öffnet den Plan.</p>
+<div class="matrix"><table id="matrix"></table></div>
+
+<h2>Modul wählen</h2>
+<div class="modules" id="modules"></div>
+
+<section id="map-section" hidden>
+  <h2 id="map-title"></h2>
+  <div class="mapmeta" id="map-meta"></div>
+  <div class="tabs" id="tabs"></div>
+  <div class="maparea">
+    <div class="mapscroll"><svg id="map" role="img" aria-label="Fahrplan der ValueSets"></svg></div>
+    <aside id="detail"><div class="empty">Strecke, Station oder ValueSet anklicken.</div></aside>
+  </div>
+</section>
+
+<footer>Datenquelle: Expansionen der KDS-ValueSets auf dem MII-Terminologieserver (SU-TermServ), verglichen mit <code>termwatch</code>. Vollständige Änderungslisten liegen in den CSV-Reports des Repositories.</footer>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+const CAT_LABEL = {identical:"unverändert", added:"neue Codes", relabelled:"Texte geändert", removed:"aus Filter gefallen", inactivated:"inaktiviert", unknown:"keine Daten"};
+const CAT_RANK = {identical:0, added:1, relabelled:2, removed:3, inactivated:4, unknown:-1};
+const SEV_LABEL = {NONE:"keine Auswirkung", MINOR:"gering", SIGNIFICANT:"erheblich", BREAKING:"breaking"};
+const KIND_LABEL = {enumerated:"Aufzählung", filter:"Filter", "whole-system":"ganzes Code-System"};
+const SYS_SHORT = {sct:"SNOMED CT", loinc:"LOINC"};
+const EXPECTED = {sct:"20260801"};
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt = n => n == null ? "–" : n.toLocaleString("de-DE");
+const svgNS = "http://www.w3.org/2000/svg";
+function svgEl(tag, attrs = {}, text) { const e = document.createElementNS(svgNS, tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); if (text != null) e.textContent = text; return e; }
+
+const VS_BY_ID = Object.fromEntries(DATA.valuesets.map(v => [v.id, v]));
+const SHARED_BY_VS = {};
+for (const s of DATA.shared) for (const id of s.valuesets) (SHARED_BY_VS[id] ??= []).push(s);
+
+function releasesOf(sys) {
+  const rel = DATA.systems[sys].releases.map(r => ({...r}));
+  if (EXPECTED[sys] && !rel.some(r => r.v === EXPECTED[sys])) rel.push({v: EXPECTED[sys], ghost: true});
+  return rel;
+}
+function transitionsOf(sys) { const r = releasesOf(sys); return r.slice(1).map((b, i) => ({from: r[i].v, to: b.v, ghost: !!b.ghost, key: `${sys}|${r[i].v}|${b.v}`})); }
+function worstCat(txs) { let w = null; for (const t of txs) if (!w || CAT_RANK[t.cat] > CAT_RANK[w]) w = t.cat; return w; }
+
+let state = {module: null, sys: "loinc", sel: null};
+
+/* ---------- header, KPIs ---------- */
+(function header() {
+  const b = Object.entries(DATA.systems).map(([k, s]) => `${SYS_SHORT[k]} <b>${s.releases.find(r => r.baseline)?.v ?? "?"}</b>`).join(" · ");
+  $("#header-meta").innerHTML = `Package <b>${esc(DATA.package.name)}</b> ${esc(DATA.package.version)}<br>Ballot-Stand: ${b}<br>Stand ${esc(DATA.generated.slice(0, 10))}`;
+  const nTx = Object.keys(DATA.systems).reduce((n, k) => n + transitionsOf(k).filter(t => !t.ghost).length, 0);
+  const affected = DATA.valuesets.filter(v => Object.values(v.transitions).some(t => t.cat !== "identical")).length;
+  const breaking = DATA.valuesets.filter(v => Object.values(v.transitions).some(t => t.cat === "inactivated")).length;
+  const k = [["ValueSets beobachtet", DATA.valuesets.length], ["Module", DATA.modules.length], ["Release-Übergänge verglichen", nTx], ["ValueSets mit Änderung", affected], ["davon breaking", breaking, "hot"]];
+  $("#kpis").innerHTML = k.map(([l, n, c]) => `<div class="kpi ${c || ""}"><div class="n">${fmt(n)}</div><div class="l">${l}</div></div>`).join("");
+})();
+
+/* ---------- overview matrix ---------- */
+function drawMatrix() {
+  const cols = [];
+  for (const sys of ["sct", "loinc"]) for (const t of transitionsOf(sys)) cols.push({sys, ...t});
+  let html = `<thead><tr><th>Modul</th><th class="num">VS</th>${cols.map(c => `<th>${SYS_SHORT[c.sys]}<br><span class="mono">${c.from} → ${c.to}</span></th>`).join("")}</tr></thead><tbody>`;
+  for (const m of DATA.modules) {
+    const vss = DATA.valuesets.filter(v => v.module === m.short);
+    html += `<tr class="rowlink"><td data-mod="${m.short}">${m.short}</td><td class="num">${m.n_vs}</td>`;
+    for (const c of cols) {
+      const lanes = vss.filter(v => v.systems.includes(c.sys));
+      if (!lanes.length) { html += `<td></td>`; continue; }
+      if (c.ghost) { html += `<td><span class="cell ghost">${lanes.length} ausstehend</span></td>`; continue; }
+      const txs = lanes.map(v => v.transitions[c.key]).filter(Boolean);
+      const n = txs.filter(t => t.cat !== "identical").length;
+      const w = worstCat(txs) || "unknown";
+      html += n ? `<td><span class="cell ${w}" data-mod="${m.short}" data-sys="${c.sys}" style="background:var(--${w})">${n} / ${lanes.length}</span></td>`
+                : `<td><span class="cell none">0 / ${lanes.length}</span></td>`;
+    }
+    html += `</tr>`;
+  }
+  $("#matrix").innerHTML = html + "</tbody>";
+  $("#matrix").querySelectorAll("[data-mod]").forEach(el => el.addEventListener("click", () => selectModule(el.dataset.mod, el.dataset.sys)));
+}
+
+/* ---------- module picker ---------- */
+function drawModules() {
+  const max = Math.max(...DATA.modules.map(m => m.n_vs));
+  $("#modules").innerHTML = DATA.modules.map(m => {
+    const vss = DATA.valuesets.filter(v => v.module === m.short);
+    const cats = {};
+    for (const v of vss) { const w = worstCat(Object.values(v.transitions)); if (w) cats[w] = (cats[w] || 0) + 1; }
+    const bar = ["inactivated", "removed", "relabelled", "added", "identical"].filter(c => cats[c]).map(c => `<i style="width:${cats[c] / max * 100}%;background:var(--${c})"></i>`).join("");
+    return `<button class="mod" data-mod="${m.short}" id="mod-${m.short}"><div class="name">${m.short}</div><div class="cnt">${m.n_vs} ValueSets · ${m.sct} SCT · ${m.loinc} LOINC${m.pinned ? ` · ${m.pinned} gepinnt` : ""}</div><div class="bar">${bar}</div></button>`;
+  }).join("");
+  $("#modules").querySelectorAll(".mod").forEach(b => b.addEventListener("click", () => selectModule(b.dataset.mod)));
+}
+
+/* ---------- selection ---------- */
+function selectModule(mod, sys) {
+  state.module = mod;
+  const m = DATA.modules.find(x => x.short === mod);
+  if (sys) state.sys = sys; else if (!m[state.sys]) state.sys = m.loinc ? "loinc" : "sct";
+  state.sel = null;
+  document.querySelectorAll(".mod").forEach(b => b.classList.toggle("sel", b.dataset.mod === mod));
+  $("#map-section").hidden = false;
+  drawTabs(); drawMap(); showModuleDetail();
+  history.replaceState(null, "", `#${mod}.${state.sys}`);
+  $("#map-section").scrollIntoView({behavior: "smooth", block: "start"});
+}
+function drawTabs() {
+  const m = DATA.modules.find(x => x.short === state.module);
+  $("#tabs").innerHTML = ["sct", "loinc"].filter(s => m[s]).map(s => `<button class="tab ${s === state.sys ? "sel" : ""}" data-sys="${s}">${DATA.systems[s].label} · ${m[s]} VS</button>`).join("")
+    + `<div class="search"><label for="q" class="mapmeta">Code suchen</label><input id="q" placeholder="z. B. 105085-5" autocomplete="off"></div>`;
+  $("#tabs").querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => { state.sys = b.dataset.sys; state.sel = null; drawTabs(); drawMap(); showModuleDetail(); history.replaceState(null, "", `#${state.module}.${state.sys}`); }));
+  $("#q").addEventListener("input", e => searchCode(e.target.value.trim()));
+}
+
+/* ---------- subway map ---------- */
+function drawMap() {
+  const sys = state.sys, rel = releasesOf(sys), txs = transitionsOf(sys);
+  const lanes = DATA.valuesets.filter(v => v.module === state.module && v.systems.includes(sys))
+    .sort((a, b) => (CAT_RANK[worstCat(Object.values(b.transitions)) || "unknown"] - CAT_RANK[worstCat(Object.values(a.transitions)) || "unknown"]) || a.id.localeCompare(b.id));
+  const LEFT = 300, RIGHT = 60, TOP = 64, BOTTOM = 24, ROW = 40;
+  const COL = Math.max(170, Math.min(260, 900 / Math.max(1, rel.length - 1)));
+  const W = LEFT + COL * Math.max(1, rel.length - 1) + RIGHT, H = TOP + ROW * lanes.length + BOTTOM;
+  const svg = $("#map"); svg.innerHTML = ""; svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", W); svg.setAttribute("height", H);
+  const x = i => LEFT + i * COL, y = i => TOP + i * ROW + ROW / 2;
+  $("#map-title").textContent = `Modul ${state.module}`;
+  const m = DATA.modules.find(x => x.short === state.module);
+  const pinned = lanes.filter(l => l.pinned).length;
+  $("#map-meta").textContent = `${lanes.length} ValueSets mit ${SYS_SHORT[sys]} · ${pinned} gepinnt, ${lanes.length - pinned} folgen dem Server-Stand · Releases: ${rel.map(r => r.v + (r.ghost ? " (ausstehend)" : "")).join(", ")}`;
+  const baseIdx = rel.findIndex(r => r.baseline);
+  // columns
+  rel.forEach((r, i) => {
+    if (r.ghost) svg.appendChild(svgEl("line", {x1: x(i), x2: x(i), y1: TOP - 6, y2: H - BOTTOM, class: "ghost-col"}));
+    svg.appendChild(svgEl("text", {x: x(i), y: TOP - 30, "text-anchor": "middle", class: "colhead" + (r.ghost ? " ghost" : "")}, r.v));
+    if (r.baseline) svg.appendChild(svgEl("text", {x: x(i), y: TOP - 16, "text-anchor": "middle", class: "colnote"}, "Ballot-Stand · gepinnt"));
+    if (r.ghost) svg.appendChild(svgEl("text", {x: x(i), y: TOP - 16, "text-anchor": "middle", class: "colnote"}, "nicht auf dem Server"));
+  });
+  if (baseIdx >= 0) svg.appendChild(svgEl("line", {x1: x(baseIdx), x2: x(baseIdx), y1: TOP - 8, y2: H - BOTTOM, class: "baseline-line"}));
+  // shared-code links between lanes of this view
+  const laneIdx = Object.fromEntries(lanes.map((l, i) => [l.id, i]));
+  const linkKeys = new Set();
+  for (const l of lanes) for (const s of (SHARED_BY_VS[l.id] || [])) {
+    if (s.system !== sys) continue;
+    const here = s.valuesets.filter(id => id in laneIdx);
+    if (here.length < 2) continue;
+    const k = `${s.from}|${s.to}|${here.join(",")}|${s.kind}`; if (linkKeys.has(k)) continue; linkKeys.add(k);
+    const ci = rel.findIndex(r => r.v === s.to); if (ci < 0) continue;
+    const ys = here.map(id => y(laneIdx[id]));
+    svg.appendChild(svgEl("line", {x1: x(ci), x2: x(ci), y1: Math.min(...ys), y2: Math.max(...ys), class: "link " + (s.kind === "removed" ? "removed" : "")}));
+  }
+  // lanes
+  lanes.forEach((l, li) => {
+    const yy = y(li);
+    const label = svgEl("text", {x: LEFT - 16, y: yy + 4, "text-anchor": "end", class: "lane-label" + (state.sel?.type === "vs" && state.sel.id === l.id ? " sel" : "")}, l.id.replace(/^mii-vs-/, "").length > 38 ? l.id.replace(/^mii-vs-/, "").slice(0, 37) + "…" : l.id.replace(/^mii-vs-/, ""));
+    label.appendChild(svgEl("title", {}, `${l.title}\n${l.url}`));
+    label.addEventListener("click", () => { state.sel = {type: "vs", id: l.id}; drawMap(); showVsDetail(l); });
+    svg.appendChild(label);
+    svg.appendChild(svgEl("text", {x: LEFT - 16, y: yy + 15, "text-anchor": "end", class: "lane-tag"}, `${l.kinds.map(k => KIND_LABEL[k] || k).join("+")}${l.pinned ? " · gepinnt" : ""}`));
+    // segments
+    txs.forEach((t, ti) => {
+      const tx = l.transitions[t.key];
+      const cls = t.ghost ? "seg ghost" : `seg ${tx ? tx.cat : "unknown"}${l.pinned && ti >= baseIdx ? " future" : ""}${state.sel?.type === "tx" && state.sel.id === l.id && state.sel.key === t.key ? " sel" : ""}`;
+      if (!t.ghost) {
+        const hit = svgEl("line", {x1: x(ti), x2: x(ti + 1), y1: yy, y2: yy, class: "hit"});
+        hit.appendChild(svgEl("title", {}, tx ? `${t.from} → ${t.to}: ${CAT_LABEL[tx.cat]}${tx.cat === "inactivated" ? " (breaking)" : ""}\n+${tx.add} neu · −${tx.rem} aus Filter · ${tx.inact} inaktiviert · ${tx.rel} Texte\nKlick zeigt die Details` : "kein Vergleich vorhanden"));
+        hit.addEventListener("click", () => { if (!tx) return; state.sel = {type: "tx", id: l.id, key: t.key}; drawMap(); showTxDetail(l, tx); });
+        svg.appendChild(hit);
+      }
+      svg.appendChild(svgEl("line", {x1: x(ti), x2: x(ti + 1), y1: yy, y2: yy, class: cls}));
+    });
+    // stations
+    rel.forEach((r, ri) => {
+      const st = l.states[`${sys}|${r.v}`];
+      const inTx = ri > 0 ? l.transitions[txs[ri - 1].key] : null;
+      const n = st?.n;
+      const rad = n == null ? 5 : 3.5 + 1.1 * Math.log10(n + 1);
+      let c;
+      if (inTx && (inTx.cat === "inactivated" || inTx.cat === "removed")) c = svgEl("circle", {cx: x(ri), cy: yy, r: Math.max(rad, 8), class: `interchange ${inTx.cat}` + (state.sel?.type === "st" && state.sel.id === l.id && state.sel.v === r.v ? " sel" : "")});
+      else c = svgEl("circle", {cx: x(ri), cy: yy, r: rad, class: "station" + (r.ghost ? " ghost" : n == null ? " unknown" : "") + (state.sel?.type === "st" && state.sel.id === l.id && state.sel.v === r.v ? " sel" : "")});
+      c.appendChild(svgEl("title", {}, `${l.id}\n${SYS_SHORT[sys]} ${r.v}${r.ghost ? " (ausstehend)" : ""}\n${n == null ? (l.error ? "Expansion fehlgeschlagen" : "keine Daten") : fmt(n) + " Mitglieder"}${inTx && inTx.cat === "inactivated" ? `\n⚠ ${inTx.inact + inTx.anch} inaktiviert seit ${inTx.from}` : ""}`));
+      c.addEventListener("click", () => { state.sel = {type: "st", id: l.id, v: r.v}; drawMap(); showStationDetail(l, r, ri); });
+      svg.appendChild(c);
+      const sh = (SHARED_BY_VS[l.id] || []).filter(s => s.system === sys && s.to === r.v);
+      if (sh.length) { const other = new Set(sh.flatMap(s => s.valuesets).filter(id => id !== l.id)); svg.appendChild(svgEl("text", {x: x(ri) + 12, y: yy - 9, class: "shared-badge"}, `+${other.size} VS`)); }
+    });
+  });
+  if (!lanes.length) svg.appendChild(svgEl("text", {x: 20, y: 40, class: "lane-label"}, "Keine ValueSets mit diesem Code-System im Modul."));
+}
+
+/* ---------- detail panel ---------- */
+const row = (k, v) => `<div class="row"><span class="k">${k}</span><span>${v}</span></div>`;
+const pill = (cat, label) => `<span class="pill ${cat}">${label ?? CAT_LABEL[cat]}</span>`;
+function vsHead(l) { return `<h3>${esc(l.title)}</h3><div class="sub">${esc(l.url)}</div>`; }
+function vsRows(l) {
+  return row("Modul", esc(l.module)) + row("Definition", `${l.kinds.map(k => KIND_LABEL[k] || k).join(", ")} · ${l.n_includes} Include(s)${l.n_enumerated ? `, ${l.n_enumerated} aufgezählte Codes` : ""}`)
+    + row("Version", l.pinned ? pill("pin", "gepinnt") + ` <span class="mapmeta">ändert sich erst beim Pin-Wechsel</span>` : pill("out", "nicht gepinnt") + ` <span class="mapmeta">folgt dem Server-Stand</span>`)
+    + (l.error ? row("Hinweis", `<span style="color:var(--inactivated)">Expansion im Ballot fehlgeschlagen: ${esc(l.error).slice(0, 160)}</span>`) : "");
+}
+function showModuleDetail() {
+  const lanes = DATA.valuesets.filter(v => v.module === state.module && v.systems.includes(state.sys));
+  const hot = lanes.filter(l => Object.values(l.transitions).some(t => t.cat !== "identical"));
+  $("#detail").innerHTML = `<h3>Modul ${esc(state.module)} · ${SYS_SHORT[state.sys]}</h3><div class="sub">${lanes.length} ValueSets im Plan</div>`
+    + (hot.length ? `<p>Mit Änderungen:</p><ul class="hits">${hot.map(l => `<li>${pill(worstCat(Object.values(l.transitions)))} <button class="linkish" data-vs="${l.id}">${esc(l.id.replace(/^mii-vs-/, ""))}</button></li>`).join("")}</ul>` : `<p class="empty">Keine inhaltlichen Änderungen in den verglichenen Releases.</p>`);
+  $("#detail").querySelectorAll("[data-vs]").forEach(b => b.addEventListener("click", () => { const l = VS_BY_ID[b.dataset.vs]; state.sel = {type: "vs", id: l.id}; drawMap(); showVsDetail(l); }));
+}
+function showVsDetail(l) {
+  const txs = Object.values(l.transitions).filter(t => t.system === state.sys);
+  let html = vsHead(l) + vsRows(l);
+  html += `<h3 style="margin-top:12px">Stände</h3>` + releasesOf(state.sys).map(r => { const s = l.states[`${state.sys}|${r.v}`]; return row(r.v + (r.baseline ? " (Ballot)" : r.ghost ? " (ausstehend)" : ""), s?.n == null ? "–" : `${fmt(s.n)} Mitglieder${s.inactive ? `, davon ${s.inactive} inaktiv` : ""}`); }).join("");
+  html += `<h3 style="margin-top:12px">Übergänge</h3>` + (txs.length ? txs.map(t => `<div class="row"><span class="k mono">${t.from} → ${t.to}</span><span>${pill(t.cat)} <button class="linkish" data-tx="${t.from}|${t.to}">Details</button></span></div>`).join("") : `<p class="empty">Noch kein Vergleich vorhanden.</p>`);
+  $("#detail").innerHTML = html;
+  $("#detail").querySelectorAll("[data-tx]").forEach(b => b.addEventListener("click", () => { const tx = l.transitions[`${state.sys}|${b.dataset.tx}`]; state.sel = {type: "tx", id: l.id, key: `${state.sys}|${b.dataset.tx}`}; drawMap(); showTxDetail(l, tx); }));
+}
+function showStationDetail(l, r, ri) {
+  const txs = transitionsOf(state.sys), s = l.states[`${state.sys}|${r.v}`];
+  const inTx = ri > 0 ? l.transitions[txs[ri - 1].key] : null, outTx = l.transitions[txs[ri]?.key];
+  let html = vsHead(l) + row("Release", `${SYS_SHORT[state.sys]} <span class="mono">${r.v}</span>${r.baseline ? " · Ballot-Stand" : ""}${r.ghost ? " · noch nicht auf dem Server" : ""}`)
+    + row("Mitglieder", s?.n == null ? "–" : fmt(s.n) + (s.inactive ? `, davon ${s.inactive} inaktiv` : "")) + vsRows(l);
+  const sh = (SHARED_BY_VS[l.id] || []).filter(x => x.system === state.sys && x.to === r.v);
+  if (sh.length) html += `<div class="advice"><b>Betrifft auch andere ValueSets</b><ul>${sh.slice(0, 12).map(x => `<li><code>${esc(x.code)}</code> ${esc(x.display || "")} → ${x.valuesets.filter(id => id !== l.id).map(id => `<button class="linkish" data-vs="${id}">${esc(id.replace(/^mii-vs-/, ""))}</button>`).join(", ")}</li>`).join("")}${sh.length > 12 ? `<li class="more">+${sh.length - 12} weitere</li>` : ""}</ul></div>`;
+  if (inTx) html += `<h3 style="margin-top:12px">Änderung seit ${inTx.from}</h3>` + txSummary(inTx, l);
+  if (outTx) html += `<h3 style="margin-top:12px">Änderung bis ${outTx.to}</h3>` + txSummary(outTx, l);
+  $("#detail").innerHTML = html;
+  bindDetail(l);
+}
+function txSummary(t, l) {
+  return `<div class="row"><span class="k">Kategorie</span><span>${pill(t.cat)} <span class="pill out">${SEV_LABEL[t.severity] || t.severity}</span></span></div>`
+    + `<div class="counts"><span>+${t.add} neu</span><span>−${t.rem} aus Filter</span><span>✕ ${t.inact} inaktiviert</span>${t.anch ? `<span>⚓ ${t.anch} Anker</span>` : ""}${t.react ? `<span>↺ ${t.react} reaktiviert</span>` : ""}<span>~ ${t.rel} Texte</span><span>${fmt(t.n_from)} → ${fmt(t.n_to)}</span></div>`
+    + `<button class="linkish" data-tx="${t.from}|${t.to}">Alle Details</button>`;
+}
+function showTxDetail(l, t) {
+  let html = vsHead(l) + row("Übergang", `${SYS_SHORT[state.sys]} <span class="mono">${t.from} → ${t.to}</span>`) + vsRows(l)
+    + `<div class="row"><span class="k">Kategorie</span><span>${pill(t.cat)} <span class="pill out">${SEV_LABEL[t.severity] || t.severity}</span></span></div>`
+    + `<div class="counts"><span>+${t.add} neu</span><span>−${t.rem} aus Filter</span><span>✕ ${t.inact} inaktiviert</span>${t.anch ? `<span>⚓ ${t.anch} Anker</span>` : ""}${t.react ? `<span>↺ ${t.react} reaktiviert</span>` : ""}<span>~ ${t.rel} Texte</span><span>${fmt(t.n_from)} → ${fmt(t.n_to)}</span></div>`;
+  if (t.truncated) html += `<p class="empty">Expansion abgeschnitten, Zahlen unvollständig.</p>`;
+  if (t.advice.length) html += `<div class="advice"><b>Was ist zu tun</b><ul>${t.advice.map(a => `<li>${esc(a)}</li>`).join("")}</ul></div>`;
+  const list = (title, items, total, render, open) => total ? `<details class="list" ${open ? "open" : ""}><summary>${title} <span class="mapmeta">${total}</span></summary><ul>${items.map(render).join("")}</ul>${total > items.length ? `<div class="more">+${total - items.length} weitere, vollständig im CSV-Report</div>` : ""}</details>` : "";
+  const succ = x => x.successors?.length ? `<div class="succ">Nachfolger: ${x.successors.map(s => `<code>${esc(typeof s === "string" ? s : s.code)}</code>${typeof s === "object" && s.display ? " " + esc(s.display) : ""}${typeof s === "object" && s.association ? ` (${esc(s.association)})` : ""}`).join(", ")}</div>` : "";
+  html += list("Filter-Anker inaktiv", t.items.anchors, t.anch, x => `<li><code>${esc(x.code)}</code><span class="d">${esc(x.display || "")} <span class="mapmeta">${esc(x.reason || x.status || "")}</span>${succ(x)}</span></li>`, true);
+  html += list("Inaktiviert", t.items.inactivated, t.inact, x => `<li><code>${esc(x.code)}</code><span class="d">${esc(x.display || "")} <span class="mapmeta">${esc(x.status || x.reason || "")}</span>${succ(x)}</span></li>`, true);
+  html += list("Aus dem Filter gefallen", t.items.removed, t.rem, x => `<li><code>${esc(x.code)}</code><span class="d">${esc(x.display || "")} <span class="mapmeta">${esc(x.reason || "")}</span>${succ(x)}</span></li>`, t.rem <= 25);
+  html += list("Anzeigetext geändert", t.items.relabelled, t.rel, x => `<li><code>${esc(x.code)}</code><span class="d"><span class="old">${esc(x.display_old || "")}</span><br>${esc(x.display_new || "")}</span></li>`, t.rel <= 25);
+  html += list("Reaktiviert", t.items.reactivated, t.react, x => `<li><code>${esc(x.code)}</code><span class="d">${esc(x.display || "")}</span></li>`, true);
+  html += list("Neu", t.items.added, t.add, x => `<li><code>${esc(x.code)}</code><span class="d">${esc(x.display || "")}</span></li>`, false);
+  $("#detail").innerHTML = html;
+  bindDetail(l);
+}
+function bindDetail(l) {
+  $("#detail").querySelectorAll("[data-tx]").forEach(b => b.addEventListener("click", () => { const k = `${state.sys}|${b.dataset.tx}`; state.sel = {type: "tx", id: l.id, key: k}; drawMap(); showTxDetail(l, l.transitions[k]); }));
+  $("#detail").querySelectorAll("[data-vs]").forEach(b => b.addEventListener("click", () => { const o = VS_BY_ID[b.dataset.vs]; if (o.module !== state.module) { state.module = o.module; document.querySelectorAll(".mod").forEach(x => x.classList.toggle("sel", x.dataset.mod === o.module)); drawTabs(); } state.sel = {type: "vs", id: o.id}; drawMap(); showVsDetail(o); }));
+}
+
+/* ---------- code search over all change lists ---------- */
+function searchCode(q) {
+  if (!q) { showModuleDetail(); return; }
+  const hits = [];
+  for (const v of DATA.valuesets) for (const t of Object.values(v.transitions)) for (const [kind, items] of Object.entries(t.items)) for (const x of items) if (x.code === q) hits.push({v, t, kind, x});
+  $("#detail").innerHTML = `<h3>Code <code>${esc(q)}</code></h3>` + (hits.length ? `<ul class="hits">${hits.map(h => `<li>${pill(h.kind === "anchors" ? "inactivated" : h.kind === "inactivated" ? "inactivated" : h.kind === "removed" ? "removed" : h.kind === "relabelled" ? "relabelled" : "added", h.kind)} <button class="linkish" data-vs="${h.v.id}">${esc(h.v.id.replace(/^mii-vs-/, ""))}</button> <span class="mono">${h.t.from} → ${h.t.to}</span><br><span class="mapmeta">${esc(h.x.display || h.x.display_new || "")}</span></li>`).join("")}</ul>` : `<p class="empty">In keiner Änderungsliste gefunden. Unveränderte Mitglieder werden hier nicht durchsucht.</p>`);
+  bindDetail(null);
+}
+
+/* ---------- boot ---------- */
+drawMatrix(); drawModules();
+(function fromHash() {
+  const h = location.hash.replace(/^#/, "");
+  if (!h) return;
+  const [mod, sys] = h.split(".");
+  if (DATA.modules.some(m => m.short === mod)) selectModule(mod, sys === "sct" || sys === "loinc" ? sys : undefined);
+})();
+</script>

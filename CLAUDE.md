@@ -21,3 +21,7 @@ Do NOT run python with `-I` here: it ignores PYTHONPATH.
 - Baseline files store SNOMED codes only (no displays, licensing); LOINC displays are kept.
 - Severity: BREAKING (inactivated member / anchor), SIGNIFICANT (removed from filter, relabelled), MINOR (added), NONE.
 - New baseline = new directory named after the KDS package version; never overwrite an old one.
+- `src/termwatch/explorer.py` + `explorer_template.html`: `termwatch explorer` builds the subway-map page
+  (`explorer/index.html`, data embedded, plus `data.json`). Modelled on the MII
+  `mii-kerndatensatz-versionhistory` explorer (plain SVG, no framework). Compare runs against older
+  releases are inverted so lanes extend backwards; cap of 120 items per change list in the page.

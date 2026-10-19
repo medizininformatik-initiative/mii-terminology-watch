@@ -4,6 +4,7 @@
   python -m termwatch baseline  --package DIR --out baselines/NAME --sct VERSION_URI --loinc 2.82 [--keep-display loinc]
   python -m termwatch compare   --baseline baselines/NAME --package DIR [--sct VERSION_URI] [--loinc 2.83] --out reports/NAME.json
   python -m termwatch report    --compare reports/NAME.json [--md FILE] [--csv FILE]
+  python -m termwatch explorer  --baseline baselines/NAME --compare reports/A.json [reports/B.json ...] --out explorer/
 """
 from __future__ import annotations
 
@@ -30,6 +31,8 @@ def main(argv=None) -> int:
     c.add_argument("--sct"); c.add_argument("--loinc"); c.add_argument("--max-total", type=int, default=500000); c.add_argument("--only", default=""); c.add_argument("--workers", type=int, default=4)
     r = sub.add_parser("report", help="render a comparison as Markdown and CSV")
     r.add_argument("--compare", required=True); r.add_argument("--md"); r.add_argument("--csv")
+    e = sub.add_parser("explorer", help="build the self-contained HTML explorer (subway map of ValueSets x releases)")
+    e.add_argument("--baseline", required=True); e.add_argument("--compare", nargs="*", default=[]); e.add_argument("--out", required=True)
     a = ap.parse_args(argv)
 
     if a.cmd == "versions":
@@ -63,5 +66,12 @@ def main(argv=None) -> int:
             sys.stdout.write(md)
         if a.csv:
             write_csv(cmp, a.csv)
+        return 0
+    if a.cmd == "explorer":
+        from pathlib import Path
+        from .explorer import build, write_explorer
+        data = build(Path(a.baseline), [Path(c) for c in a.compare])
+        out = write_explorer(data, Path(a.out))
+        print(f"wrote {out} ({len(data['valuesets'])} ValueSets, {len(data['shared'])} shared changes)")
         return 0
     return 1

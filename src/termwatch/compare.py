@@ -40,6 +40,13 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
         i, e = item
         if only and only not in e["id"]:
             return
+        try:
+            _work(i, e)
+        except Exception as ex:  # one ValueSet must never lose the whole run
+            results.append({**_head(e), "severity": "NONE", "note": f"compare failed: {type(ex).__name__}: {str(ex)[:160]}"})
+            print(f"[{i}/{n}] {e['id']}: COMPARE ERROR {type(ex).__name__}: {str(ex)[:120]}", file=sys.stderr, flush=True)
+
+    def _work(i, e):
         if not (set(e["systems"]) & changed_systems):
             return
         bpath = os.path.join(baseline_dir, "expansions", f"{e['id']}.json")
@@ -48,6 +55,9 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
         base = json.load(open(bpath, encoding="utf-8"))
         if base.get("error"):
             results.append({**_head(e), "severity": "NONE", "note": f"baseline error: {base['error'][:120]}"})
+            return
+        if e["url"] not in by_url:
+            results.append({**_head(e), "severity": "NONE", "note": "ValueSet not found in package directory"})
             return
         vs = restrict_to_watched(inline_valueset_refs(by_url[e["url"]], by_url))
         versions = {s: target_versions.get(s, base_versions.get(s)) for s in e["systems"]}
@@ -75,8 +85,7 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
                     anchors.append((SCT, f["value"]))
             if inc["kind"] == "enumerated":
                 anchors += [(inc["system"], c) for c in inc["concepts"]]
-        detail_removed: List[dict] = []
-        for key in removed:
+        def _removed(key):
             sys_, code = key.split("|", 1)
             rec = {"code": code, "system": sys_, "display": old[key].get("display", "")}
             if sys_ == SCT:
@@ -92,9 +101,10 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
                 st = (lk["properties"].get("STATUS") or [None])[0]
                 rec["reason"] = (f"status {st}, no longer matches the filter (property changed)" if st == "ACTIVE"
                                  else f"status {st}" if st else "unknown code")
-            detail_removed.append(rec)
-        detail_inactivated: List[dict] = []
-        for key in inactivated:
+            return rec
+        detail_removed: List[dict] = _pmap(_removed, removed)
+
+        def _inactivated(key):
             sys_, code = key.split("|", 1)
             rec = {"code": code, "system": sys_, "display": new[key]["display"]}
             if sys_ == LOINC:
@@ -102,7 +112,8 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
                 rec["status"] = (lk["properties"].get("STATUS") or [None])[0]
             else:
                 rec["successors"] = ts.sct_successors(code, versions[SCT])
-            detail_inactivated.append(rec)
+            return rec
+        detail_inactivated: List[dict] = _pmap(_inactivated, inactivated)
         for sys_, code in anchors:
             if sys_ == SCT:
                 v = ts.validate(SCT, code, versions[SCT])
@@ -125,6 +136,15 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
     os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
     json.dump(out, open(out_path, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     return out
+
+
+def _pmap(fn, items, workers: int = 8) -> list:
+    """Run per-code server lookups concurrently, preserving order."""
+    items = list(items)
+    if len(items) < 2:
+        return [fn(x) for x in items]
+    with ThreadPoolExecutor(max_workers=min(workers, len(items))) as pool:
+        return list(pool.map(fn, items))
 
 
 def _head(e: dict) -> dict:

@@ -62,6 +62,35 @@ reports/                                        comparison JSON (ignored) + Mark
 src/termwatch/                                  ontoserver.py inventory.py baseline.py compare.py report.py cli.py
 ```
 
+## Explorer (human-facing view)
+
+`termwatch explorer` renders a self-contained HTML page in the style of the MII
+[Kerndatensatz version-history explorer](https://github.com/medizininformatik-initiative/mii-kerndatensatz-versionhistory):
+a subway map whose columns are terminology releases and whose lanes are ValueSets.
+
+```bash
+python -m termwatch explorer --baseline baselines/kds-complete-2027.0.0-ballot.19 \
+  --compare reports/kds-complete-2027.0.0-ballot.19_loinc-2.83.json reports/..._loinc-2.81.json \
+  --out explorer/
+```
+
+Reading the map:
+
+| Element | Meaning |
+|---|---|
+| Column | a SNOMED CT or LOINC release; the vertical accent line marks the ballot's pinned version |
+| Lane | one ValueSet of the chosen module (one map per code system) |
+| Segment colour | what happened to the ValueSet's members between two releases: unchanged, new codes, display texts changed, active codes dropped out of the filter, codes inactivated / filter anchor inactive |
+| Dashed segment | the ValueSet is pinned, so the change only takes effect when the module team moves the pin |
+| Station size | member count (log scale); a filled red/amber station is an interchange, i.e. members were inactivated or removed |
+| Vertical dashed link | the same code change hits several ValueSets of the module; the `+n VS` badge counts ValueSets in other modules |
+| Grey column | a release that is not yet on the terminology server (e.g. SNOMED CT 20260801) |
+
+The detail panel shows the counts, a "what to do" list derived from the include type and pin status,
+the affected codes with status and successors, and a code search over all change lists.
+Any number of compare runs can be combined; runs against an older release are inverted automatically,
+so the lanes extend backwards in time.
+
 ## Limitations
 
 - SNOMED ECL/is-a expansions exclude inactive concepts, so an inactivated member shows up as *removed*
