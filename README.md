@@ -76,3 +76,9 @@ src/termwatch/                                  ontoserver.py inventory.py basel
 See `docs/` in the companion design document (Release Change Framework): LOINC release-file parser (MapTo,
 CHNG_TYP), SNOMED RF2 delta cross-check, German edition / deDE translation tracking, usage-weighted
 impact, CI run on new server versions with automatic PRs against module repositories.
+
+## Licence
+
+Code, documentation and reports: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (see `LICENSE`).
+SNOMED CT and LOINC content remain under their own licences; baselines store code identifiers only
+(plus LOINC display text).
