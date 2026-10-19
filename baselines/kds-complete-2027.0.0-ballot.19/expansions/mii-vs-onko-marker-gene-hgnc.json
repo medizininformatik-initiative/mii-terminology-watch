@@ -1,0 +1,11 @@
+{
+ "display_dropped": false,
+ "error": null,
+ "id": "mii-vs-onko-marker-gene-hgnc",
+ "soft_versions": [],
+ "total": 40,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-onko/ValueSet/mii-vs-onko-marker-gene-hgnc",
+ "versions": {"http://www.genenames.org/geneId": "20250704"},
+ "members": {"http://www.genenames.org/geneId":{"codes":["HGNC:10261","HGNC:10680","HGNC:10681","HGNC:10682","HGNC:10683","HGNC:1097","HGNC:1100","HGNC:1101","HGNC:1133","HGNC:11998","HGNC:13726","HGNC:2561","HGNC:25941","HGNC:3236","HGNC:3430","HGNC:3689","HGNC:3765","HGNC:427","HGNC:5382","HGNC:5383","HGNC:6342","HGNC:6407","HGNC:6470","HGNC:6840","HGNC:7029","HGNC:7059","HGNC:7562","HGNC:76","HGNC:7765","HGNC:7910","HGNC:7989","HGNC:7997","HGNC:8031","HGNC:8032","HGNC:8033","HGNC:8803","HGNC:8975","HGNC:9177","HGNC:9864","HGNC:9967"],"display":{"HGNC:10261":"ROS1","HGNC:10680":"SDHA","HGNC:10681":"SDHB","HGNC:10682":"SDHC","HGNC:10683":"SDHD","HGNC:1097":"BRAF","HGNC:1100":"BRCA1","HGNC:1101":"BRCA2","HGNC:1133":"BTK","HGNC:11998":"TP53","HGNC:13726":"KMT2C","HGNC:2561":"CXCR4","HGNC:25941":"TET2","HGNC:3236":"EGFR","HGNC:3430":"ERBB2","HGNC:3689":"FGFR2","HGNC:3765":"FLT3","HGNC:427":"ALK","HGNC:5382":"IDH1","HGNC:5383":"IDH2","HGNC:6342":"KIT","HGNC:6407":"KRAS","HGNC:6470":"L1CAM","HGNC:6840":"MAP2K1","HGNC:7029":"MET","HGNC:7059":"MGMT","HGNC:7562":"MYD88","HGNC:76":"ABL1","HGNC:7765":"NF1","HGNC:7910":"NPM1","HGNC:7989":"NRAS","HGNC:7997":"NRG1","HGNC:8031":"NTRK1","HGNC:8032":"NTRK2","HGNC:8033":"NTRK3","HGNC:8803":"PDGFRA","HGNC:8975":"PIK3CA","HGNC:9177":"POLE","HGNC:9864":"RARA","HGNC:9967":"RET"},"inactive":[]}}
+}

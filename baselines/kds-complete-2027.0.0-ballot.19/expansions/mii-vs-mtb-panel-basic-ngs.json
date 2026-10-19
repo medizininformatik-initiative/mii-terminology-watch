@@ -1,0 +1,11 @@
+{
+ "display_dropped": false,
+ "error": null,
+ "id": "mii-vs-mtb-panel-basic-ngs",
+ "soft_versions": [],
+ "total": 36,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-mtb/ValueSet/mii-vs-mtb-panel-basic-ngs",
+ "versions": {"http://www.genenames.org/geneId": "20250704"},
+ "members": {"http://www.genenames.org/geneId":{"codes":["HGNC:1097","HGNC:1100","HGNC:1101","HGNC:11100","HGNC:11730","HGNC:11998","HGNC:2514","HGNC:26144","HGNC:3236","HGNC:3430","HGNC:3467","HGNC:3689","HGNC:3690","HGNC:391","HGNC:4379","HGNC:4390","HGNC:4392","HGNC:5173","HGNC:5382","HGNC:5383","HGNC:583","HGNC:6342","HGNC:6407","HGNC:7029","HGNC:7127","HGNC:7325","HGNC:7329","HGNC:7989","HGNC:8803","HGNC:8975","HGNC:9122","HGNC:9177","HGNC:950","HGNC:9588","HGNC:9884","HGNC:9967"],"display":{"HGNC:1097":"BRAF","HGNC:1100":"BRCA1","HGNC:1101":"BRCA2","HGNC:11100":"SMARCA4","HGNC:11730":"TERT","HGNC:11998":"TP53","HGNC:2514":"CTNNB1","HGNC:26144":"PALB2","HGNC:3236":"EGFR","HGNC:3430":"ERBB2","HGNC:3467":"ESR1","HGNC:3689":"FGFR2","HGNC:3690":"FGFR3","HGNC:391":"AKT1","HGNC:4379":"GNA11","HGNC:4390":"GNAQ","HGNC:4392":"GNAS","HGNC:5173":"HRAS","HGNC:5382":"IDH1","HGNC:5383":"IDH2","HGNC:583":"APC","HGNC:6342":"KIT","HGNC:6407":"KRAS","HGNC:7029":"MET","HGNC:7127":"MLH1","HGNC:7325":"MSH2","HGNC:7329":"MSH6","HGNC:7989":"NRAS","HGNC:8803":"PDGFRA","HGNC:8975":"PIK3CA","HGNC:9122":"PMS2","HGNC:9177":"POLE","HGNC:950":"BAP1","HGNC:9588":"PTEN","HGNC:9884":"RB1","HGNC:9967":"RET"},"inactive":[]}}
+}

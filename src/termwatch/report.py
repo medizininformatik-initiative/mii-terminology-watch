@@ -6,7 +6,15 @@ import json
 from collections import Counter, defaultdict
 from typing import Dict, List
 
-SYSTEM_SHORT = {"http://snomed.info/sct": "SNOMED CT", "http://loinc.org": "LOINC"}
+from .systems import label_of  # noqa: E402
+
+
+class _Labels(dict):
+    def __missing__(self, k):
+        return label_of(k)
+
+
+SYSTEM_SHORT = _Labels()
 
 
 def _ver(v: str) -> str:
@@ -20,7 +28,7 @@ def render_markdown(cmp: dict) -> str:
     lines.append(f"# Terminology release impact: {pkg['name']} {pkg['version']}\n")
     lines.append("| | Baseline | Target |\n|---|---|---|")
     for s in sorted(set(cmp["baseline_versions"]) | set(cmp["target_versions"])):
-        lines.append(f"| {SYSTEM_SHORT.get(s, s)} | {_ver(cmp['baseline_versions'].get(s))} | {_ver(cmp['target_versions'].get(s, cmp['baseline_versions'].get(s)))} |")
+        lines.append(f"| {SYSTEM_SHORT[s]} | {_ver(cmp['baseline_versions'].get(s))} | {_ver(cmp['target_versions'].get(s, cmp['baseline_versions'].get(s)))} |")
     lines.append(f"\nGenerated {cmp['created']} against {cmp['server']} ({cmp['calls']} server calls).\n")
     sev = Counter(r["severity"] for r in rs)
     lines.append("## Summary\n")
@@ -93,7 +101,7 @@ def write_csv(cmp: dict, path: str) -> None:
         for r in cmp["results"]:
             base = [r["module"], r["id"], r["url"], r["pinned"], r["severity"]]
             for a in r.get("anchors_broken", []):
-                w.writerow(base + ["anchor_inactive", "http://snomed.info/sct", a["code"], a["display"], "", "inactive", "; ".join(f"{s['association']}:{s['code']}" for s in a.get("successors", []))])
+                w.writerow(base + ["anchor_inactive", a.get("system", "http://snomed.info/sct"), a["code"], a["display"], "", a.get("reason", "inactive"), "; ".join(f"{s['association']}:{s['code']}" for s in a.get("successors", []))])
             for m in r.get("inactivated", []):
                 w.writerow(base + ["inactivated", m["system"], m["code"], m.get("display", ""), "", m.get("status", ""), "; ".join(f"{s['association']}:{s['code']}" for s in m.get("successors", []))])
             for m in r.get("removed", []):

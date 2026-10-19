@@ -73,3 +73,9 @@ bd close <id>         # Complete work
 - NEVER say "ready to push when you are" - YOU must push
 - If push fails, resolve and retry until it succeeds
 <!-- END BEADS INTEGRATION -->
+- Generic over code systems since 2026-10-19: `src/termwatch/systems.py` registry (SCT, LOINC, ICD-10-GM, OPS, ATC,
+  HGNC + Alpha-ID, Orphanet, UCUM), `discover` command, `--watch auto|all|list`, `--group`, `--system KEY=VERSION`.
+  ValueSets that pin several versions of one system are expanded without the pinned includes (soft `system-version`);
+  fully pinned ones are stored as `static`. Baseline for ballot.19 now also covers ICD-10-GM/OPS/ATC 2026 and HGNC 20250704.
+- Package to use: `~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.complete#2027.0.0-ballot.19/package`.
+- Issues: beads (`bd ready`), prefix `tw`.

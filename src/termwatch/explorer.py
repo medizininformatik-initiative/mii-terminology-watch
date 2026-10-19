@@ -12,25 +12,11 @@ import json
 import re
 from collections import defaultdict
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Optional
 
-SCT = "http://snomed.info/sct"
-LOINC = "http://loinc.org"
-SYSTEM_KEY = {SCT: "sct", LOINC: "loinc"}
-SYSTEM_LABEL = {"sct": "SNOMED CT (International)", "loinc": "LOINC"}
+from .systems import key_of, label_of, short_version, spec, version_sort_key
+
 ITEM_CAP = 120  # per change list and ValueSet; the full lists stay in the compare JSON
-
-
-def short_version(system: str, v: str) -> str:
-    if system == SCT:
-        m = re.search(r"/version/(\d{8})$", v or "")
-        return m.group(1) if m else (v or "?")
-    return v or "?"
-
-
-def version_sort_key(v: str):
-    parts = re.findall(r"\d+", v)
-    return [int(p) for p in parts] or [0]
 
 
 def _category(tx: dict) -> str:
@@ -64,7 +50,7 @@ def _advice(vs: dict, tx: dict) -> List[str]:
         out.append("Aktive Codes sind aus dem Filter gefallen (Eigenschaft geändert): Filter-Definition prüfen, ob die Codes weiterhin gewollt sind.")
     if tx["rel"]:
         out.append("Anzeigetexte haben sich geändert: Schulungsunterlagen, Dokumentation und Display-Tabellen aktualisieren.")
-    if tx["add"] and not (tx["inact"] or tx["rem"] or tx["anch"]):
+    if tx["add"] and not (tx["inact"] or tx["rem"] or tx["anch"] or tx["rel"]):
         out.append("Nur neue Codes: keine Korrektur nötig, Kodierende über die neuen Möglichkeiten informieren.")
     return out
 
@@ -77,56 +63,61 @@ def load_compares(paths: List[Path]) -> List[dict]:
     return [json.loads(p.read_text()) for p in paths]
 
 
-def build(baseline_dir: Path, compare_paths: List[Path]) -> dict:
+def build(baseline_dir: Path, compare_paths: List[Path], expected: Optional[Dict[str, str]] = None) -> dict:
     inv = json.loads((baseline_dir / "inventory.json").read_text())
     base = json.loads((baseline_dir / "baseline.json").read_text())
     compares = load_compares(compare_paths)
+    url_of: Dict[str, str] = {}  # key -> system url
 
     # releases per system: baseline + every target seen
-    releases: Dict[str, Dict[str, dict]] = {"sct": {}, "loinc": {}}
+    releases: Dict[str, Dict[str, dict]] = {}
     for sys_url, v in base["versions"].items():
-        k = SYSTEM_KEY[sys_url]
-        releases[k][short_version(sys_url, v)] = {"v": short_version(sys_url, v), "uri": v, "baseline": True}
+        k = key_of(sys_url); url_of[k] = sys_url
+        releases.setdefault(k, {})[short_version(sys_url, v)] = {"v": short_version(sys_url, v), "uri": v, "baseline": True}
     for c in compares:
         for sys_url, v in c["target_versions"].items():
-            k = SYSTEM_KEY[sys_url]
-            releases[k].setdefault(short_version(sys_url, v), {"v": short_version(sys_url, v), "uri": v, "baseline": False})
+            k = key_of(sys_url); url_of[k] = sys_url
+            releases.setdefault(k, {}).setdefault(short_version(sys_url, v), {"v": short_version(sys_url, v), "uri": v, "baseline": False})
 
     vsets: Dict[str, dict] = {}
     for v in inv["valuesets"]:
-        systems = [SYSTEM_KEY[s] for s in v["systems"] if s in SYSTEM_KEY]
+        systems = [key_of(s) for s in v["systems"] if s in base["versions"]]
+        if not systems:
+            continue
         exp_path = baseline_dir / "expansions" / f"{v['id']}.json"
-        n_base, n_inactive, err = None, 0, None
+        n_base, n_inactive, err, static = None, 0, None, False
         if exp_path.exists():
             e = json.loads(exp_path.read_text())
             err = e.get("error")
-            if not err:
+            static = bool(e.get("static"))
+            if not err and not static:
                 n_base = e.get("total")
                 n_inactive = sum(len(m.get("inactive", [])) for m in e.get("members", {}).values())
         kinds = sorted({i["kind"] for i in v["includes"]})
         vsets[v["id"]] = {
             "id": v["id"], "url": v["url"], "title": v.get("title") or v["id"], "module": v["module"],
             "systems": systems, "pinned": v["pinned"], "kinds": kinds, "status": v.get("status"),
-            "error": err,
+            "multi_version": [key_of(s) for s in v.get("multi_version", [])],
+            "error": err, "static": static,
             "n_includes": len(v["includes"]),
             "n_enumerated": sum(len(i.get("concepts", [])) for i in v["includes"]),
             "states": {}, "transitions": {},
         }
         for sk in systems:
-            bv = short_version({"sct": SCT, "loinc": LOINC}[sk], base["versions"].get({"sct": SCT, "loinc": LOINC}[sk], ""))
+            bv = short_version(url_of[sk], base["versions"].get(url_of[sk], ""))
             vsets[v["id"]]["states"][f"{sk}|{bv}"] = {"n": n_base, "inactive": n_inactive}
 
     shared: Dict[str, dict] = {}
     for c in compares:
         for r in c["results"]:
             vs = vsets.get(r["id"])
-            if not vs:
+            if not vs or "versions_target" not in r:  # skipped / static / failed entries carry only a note
                 continue
             for sys_url, tv in r["versions_target"].items():
                 bv_full = r["versions_baseline"].get(sys_url)
                 if bv_full == tv:
                     continue
-                sk = SYSTEM_KEY[sys_url]
+                sk = key_of(sys_url)
                 a, b = short_version(sys_url, bv_full), short_version(sys_url, tv)
                 forward = version_sort_key(a) < version_sort_key(b)
                 frm, to = (a, b) if forward else (b, a)
@@ -138,16 +129,20 @@ def build(baseline_dir: Path, compare_paths: List[Path]) -> dict:
                     added, removed = removed, added
                     inact, react = react, inact
                     rel = [{**x, "display_old": x.get("display_new"), "display_new": x.get("display_old")} for x in rel]
+                anchors = r["anchors_broken"] if forward else []  # backwards: "not in older version" = addition, already in added
+                enumerated = "enumerated" in vs.get("kinds", [])
                 tx = {
                     "from": frm, "to": to, "system": sk,
                     "add": len(added), "rem": len(removed), "inact": len(inact), "react": len(react),
-                    "rel": len(rel), "anch": len(r["anchors_broken"]),
+                    "rel": len(rel), "anch": len(anchors),
                     "n_from": r["count_baseline"] if forward else r["count_target"],
                     "n_to": r["count_target"] if forward else r["count_baseline"],
-                    "severity": r["severity"], "truncated": r.get("truncated", False),
+                    "severity": ("BREAKING" if anchors or inact or (removed and enumerated) else "SIGNIFICANT" if removed or rel
+                                 else "MINOR" if added or react else "NONE"),
+                    "truncated": r.get("truncated", False),
                     "items": {
                         "inactivated": _items(inact, ["code", "display", "status", "reason", "successors"]),
-                        "anchors": _items(r["anchors_broken"], ["code", "display", "status", "reason", "successors", "kind"]),
+                        "anchors": _items(anchors, ["code", "display", "status", "reason", "successors", "kind"]),
                         "removed": _items(removed, ["code", "display", "reason", "successors", "status"]),
                         "relabelled": _items(rel, ["code", "display_old", "display_new"]),
                         "added": _items(added, ["code", "display"]),
@@ -160,7 +155,7 @@ def build(baseline_dir: Path, compare_paths: List[Path]) -> dict:
                 vs["transitions"][key] = tx
                 vs["states"][f"{sk}|{to}"] = {"n": tx["n_to"], "inactive": None}
                 vs["states"].setdefault(f"{sk}|{frm}", {"n": tx["n_from"], "inactive": None})
-                for kind, lst in (("inactivated", inact), ("anchor", r["anchors_broken"]), ("removed", removed)):
+                for kind, lst in (("inactivated", inact), ("anchor", anchors), ("removed", removed)):
                     for x in lst:
                         sid = f"{key}|{x['code']}"
                         s = shared.setdefault(sid, {"system": sk, "from": frm, "to": to, "code": x["code"],
@@ -168,14 +163,15 @@ def build(baseline_dir: Path, compare_paths: List[Path]) -> dict:
                         if r["id"] not in s["valuesets"]:
                             s["valuesets"].append(r["id"])
 
-    modules = defaultdict(lambda: {"n_vs": 0, "sct": 0, "loinc": 0, "pinned": 0})
+    modules = defaultdict(lambda: {"n_vs": 0, "pinned": 0, "systems": defaultdict(int)})
     for v in vsets.values():
         m = modules[v["module"]]
         m["n_vs"] += 1
         m["pinned"] += 1 if v["pinned"] else 0
         for s in v["systems"]:
-            m[s] += 1
+            m["systems"][s] += 1
 
+    order = [key_of(s) for s in base["versions"]]
     for k in releases:
         releases[k] = sorted(releases[k].values(), key=lambda r: version_sort_key(r["v"]))
 
@@ -183,8 +179,11 @@ def build(baseline_dir: Path, compare_paths: List[Path]) -> dict:
         "generated": base["created"],
         "package": base["package"],
         "server": base.get("server"),
-        "systems": {k: {"label": SYSTEM_LABEL[k], "releases": releases[k]} for k in ("sct", "loinc")},
-        "modules": [{"short": k, **v} for k, v in sorted(modules.items())],
+        "group_label": {"mii": "Modul", "package": "Package", "host": "Host"}.get(base.get("group", "mii"), "Gruppe"),
+        "expected": expected or {},
+        "systems": {k: {"label": label_of(url_of[k]), "url": url_of[k], "yearly": bool(spec(url_of[k]).get("yearly")),
+                        "releases": releases[k]} for k in order if k in releases},
+        "modules": [{"short": k, "n_vs": v["n_vs"], "pinned": v["pinned"], "systems": dict(v["systems"])} for k, v in sorted(modules.items())],
         "valuesets": sorted(vsets.values(), key=lambda v: (v["module"], v["id"])),
         "shared": [s for s in shared.values() if len(s["valuesets"]) > 1],
         "compares": [{"created": c["created"], "target_versions": c["target_versions"], "calls": c.get("calls")} for c in compares],

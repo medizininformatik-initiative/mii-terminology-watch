@@ -149,7 +149,7 @@ footer{margin-top:36px;color:var(--muted);font-size:12px;border-top:1px solid va
   <div class="meta" id="header-meta"></div>
 </header>
 
-<div class="banner">Prototyp. Grundlage ist ein Vergleich der ValueSet-Expansionen auf dem MII-Terminologieserver; SNOMED-CT-Releases nach Juli 2026 liegen dort noch nicht vor und erscheinen als ausstehende Spalte.</div>
+<div class="banner">Prototyp. Grundlage ist ein Vergleich der ValueSet-Expansionen auf dem MII-Terminologieserver. Releases, die dort noch nicht vorliegen, erscheinen als ausstehende Spalte.</div>
 
 <div class="kpis" id="kpis"></div>
 
@@ -161,7 +161,7 @@ footer{margin-top:36px;color:var(--muted);font-size:12px;border-top:1px solid va
         <li><span class="sw" style="background:var(--identical)"></span> unverändert</li>
         <li><span class="sw" style="background:var(--added)"></span> nur neue Codes (additiv)</li>
         <li><span class="sw" style="background:var(--relabelled)"></span> Anzeigetexte geändert</li>
-        <li><span class="sw" style="background:var(--removed)"></span> aktive Codes aus dem Filter gefallen</li>
+        <li><span class="sw" style="background:var(--removed)"></span> Codes entfallen: aus dem Filter gefallen oder nicht mehr im Release (ohne Inaktiv-Status)</li>
         <li><span class="sw" style="background:var(--inactivated)"></span> Codes inaktiviert oder Filter-Anker inaktiv (breaking)</li>
         <li><span class="sw dash" style="color:var(--added)"></span> gestrichelt: ValueSet ist gepinnt, Änderung gilt erst nach dem Pin-Wechsel</li>
       </ul>
@@ -190,7 +190,7 @@ footer{margin-top:36px;color:var(--muted);font-size:12px;border-top:1px solid va
 <p class="mapmeta">Zelle = schlimmste Änderung im Modul, Zahl = betroffene ValueSets von allen beobachteten. Klick öffnet den Plan.</p>
 <div class="matrix"><table id="matrix"></table></div>
 
-<h2>Modul wählen</h2>
+<h2 id="pick-title">Modul wählen</h2>
 <div class="modules" id="modules"></div>
 
 <section id="map-section" hidden>
@@ -208,16 +208,19 @@ footer{margin-top:36px;color:var(--muted);font-size:12px;border-top:1px solid va
 
 <script>
 const DATA = /*__DATA__*/null;
-const CAT_LABEL = {identical:"unverändert", added:"neue Codes", relabelled:"Texte geändert", removed:"aus Filter gefallen", inactivated:"inaktiviert", unknown:"keine Daten"};
+const CAT_LABEL = {identical:"unverändert", added:"neue Codes", relabelled:"Texte geändert", removed:"Codes entfallen", inactivated:"inaktiviert", unknown:"keine Daten"};
 const CAT_RANK = {identical:0, added:1, relabelled:2, removed:3, inactivated:4, unknown:-1};
 const SEV_LABEL = {NONE:"keine Auswirkung", MINOR:"gering", SIGNIFICANT:"erheblich", BREAKING:"breaking"};
 const KIND_LABEL = {enumerated:"Aufzählung", filter:"Filter", "whole-system":"ganzes Code-System"};
-const SYS_SHORT = {sct:"SNOMED CT", loinc:"LOINC"};
-const EXPECTED = {sct:"20260801"};
+const SYS_KEYS = Object.keys(DATA.systems);
+const SYS_SHORT = Object.fromEntries(SYS_KEYS.map(k => [k, DATA.systems[k].label]));
+const EXPECTED = DATA.expected || {};
+const GROUP = DATA.group_label || "Modul";
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const fmt = n => n == null ? "–" : n.toLocaleString("de-DE");
 const svgNS = "http://www.w3.org/2000/svg";
+const laneName = id => { const n = id.replace(/^mii-vs-/, ""); return n.length > 38 ? n.slice(0, 24) + "…" + n.slice(-12) : n; };
 function svgEl(tag, attrs = {}, text) { const e = document.createElementNS(svgNS, tag); for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v); if (text != null) e.textContent = text; return e; }
 
 const VS_BY_ID = Object.fromEntries(DATA.valuesets.map(v => [v.id, v]));
@@ -248,8 +251,8 @@ let state = {module: null, sys: "loinc", sel: null};
 /* ---------- overview matrix ---------- */
 function drawMatrix() {
   const cols = [];
-  for (const sys of ["sct", "loinc"]) for (const t of transitionsOf(sys)) cols.push({sys, ...t});
-  let html = `<thead><tr><th>Modul</th><th class="num">VS</th>${cols.map(c => `<th>${SYS_SHORT[c.sys]}<br><span class="mono">${c.from} → ${c.to}</span></th>`).join("")}</tr></thead><tbody>`;
+  for (const sys of SYS_KEYS) for (const t of transitionsOf(sys)) cols.push({sys, ...t});
+  let html = `<thead><tr><th>${GROUP}</th><th class="num">VS</th>${cols.map(c => `<th>${SYS_SHORT[c.sys]}<br><span class="mono">${c.from} → ${c.to}</span></th>`).join("")}</tr></thead><tbody>`;
   for (const m of DATA.modules) {
     const vss = DATA.valuesets.filter(v => v.module === m.short);
     html += `<tr class="rowlink"><td data-mod="${m.short}">${m.short}</td><td class="num">${m.n_vs}</td>`;
@@ -277,7 +280,8 @@ function drawModules() {
     const cats = {};
     for (const v of vss) { const w = worstCat(Object.values(v.transitions)); if (w) cats[w] = (cats[w] || 0) + 1; }
     const bar = ["inactivated", "removed", "relabelled", "added", "identical"].filter(c => cats[c]).map(c => `<i style="width:${cats[c] / max * 100}%;background:var(--${c})"></i>`).join("");
-    return `<button class="mod" data-mod="${m.short}" id="mod-${m.short}"><div class="name">${m.short}</div><div class="cnt">${m.n_vs} ValueSets · ${m.sct} SCT · ${m.loinc} LOINC${m.pinned ? ` · ${m.pinned} gepinnt` : ""}</div><div class="bar">${bar}</div></button>`;
+    const sysTxt = SYS_KEYS.filter(k => m.systems[k]).map(k => `${m.systems[k]} ${SYS_SHORT[k]}`).join(" · ");
+    return `<button class="mod" data-mod="${m.short}" id="mod-${m.short}"><div class="name">${m.short}</div><div class="cnt">${m.n_vs} ValueSets · ${sysTxt}${m.pinned ? ` · ${m.pinned} gepinnt` : ""}</div><div class="bar">${bar}</div></button>`;
   }).join("");
   $("#modules").querySelectorAll(".mod").forEach(b => b.addEventListener("click", () => selectModule(b.dataset.mod)));
 }
@@ -286,7 +290,7 @@ function drawModules() {
 function selectModule(mod, sys) {
   state.module = mod;
   const m = DATA.modules.find(x => x.short === mod);
-  if (sys) state.sys = sys; else if (!m[state.sys]) state.sys = m.loinc ? "loinc" : "sct";
+  if (sys) state.sys = sys; else if (!m.systems[state.sys]) state.sys = SYS_KEYS.find(k => m.systems[k]) || SYS_KEYS[0];
   state.sel = null;
   document.querySelectorAll(".mod").forEach(b => b.classList.toggle("sel", b.dataset.mod === mod));
   $("#map-section").hidden = false;
@@ -296,7 +300,7 @@ function selectModule(mod, sys) {
 }
 function drawTabs() {
   const m = DATA.modules.find(x => x.short === state.module);
-  $("#tabs").innerHTML = ["sct", "loinc"].filter(s => m[s]).map(s => `<button class="tab ${s === state.sys ? "sel" : ""}" data-sys="${s}">${DATA.systems[s].label} · ${m[s]} VS</button>`).join("")
+  $("#tabs").innerHTML = SYS_KEYS.filter(s => m.systems[s]).map(s => `<button class="tab ${s === state.sys ? "sel" : ""}" data-sys="${s}">${DATA.systems[s].label} · ${m.systems[s]} VS</button>`).join("")
     + `<div class="search"><label for="q" class="mapmeta">Code suchen</label><input id="q" placeholder="z. B. 105085-5" autocomplete="off"></div>`;
   $("#tabs").querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => { state.sys = b.dataset.sys; state.sel = null; drawTabs(); drawMap(); showModuleDetail(); history.replaceState(null, "", `#${state.module}.${state.sys}`); }));
   $("#q").addEventListener("input", e => searchCode(e.target.value.trim()));
@@ -312,7 +316,7 @@ function drawMap() {
   const W = LEFT + COL * Math.max(1, rel.length - 1) + RIGHT, H = TOP + ROW * lanes.length + BOTTOM;
   const svg = $("#map"); svg.innerHTML = ""; svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", W); svg.setAttribute("height", H);
   const x = i => LEFT + i * COL, y = i => TOP + i * ROW + ROW / 2;
-  $("#map-title").textContent = `Modul ${state.module}`;
+  $("#map-title").textContent = `${GROUP} ${state.module}`;
   const m = DATA.modules.find(x => x.short === state.module);
   const pinned = lanes.filter(l => l.pinned).length;
   $("#map-meta").textContent = `${lanes.length} ValueSets mit ${SYS_SHORT[sys]} · ${pinned} gepinnt, ${lanes.length - pinned} folgen dem Server-Stand · Releases: ${rel.map(r => r.v + (r.ghost ? " (ausstehend)" : "")).join(", ")}`;
@@ -340,15 +344,15 @@ function drawMap() {
   // lanes
   lanes.forEach((l, li) => {
     const yy = y(li);
-    const label = svgEl("text", {x: LEFT - 16, y: yy + 4, "text-anchor": "end", class: "lane-label" + (state.sel?.type === "vs" && state.sel.id === l.id ? " sel" : "")}, l.id.replace(/^mii-vs-/, "").length > 38 ? l.id.replace(/^mii-vs-/, "").slice(0, 37) + "…" : l.id.replace(/^mii-vs-/, ""));
+    const label = svgEl("text", {x: LEFT - 16, y: yy + 4, "text-anchor": "end", class: "lane-label" + (state.sel?.type === "vs" && state.sel.id === l.id ? " sel" : "")}, laneName(l.id));
     label.appendChild(svgEl("title", {}, `${l.title}\n${l.url}`));
     label.addEventListener("click", () => { state.sel = {type: "vs", id: l.id}; drawMap(); showVsDetail(l); });
     svg.appendChild(label);
-    svg.appendChild(svgEl("text", {x: LEFT - 16, y: yy + 15, "text-anchor": "end", class: "lane-tag"}, `${l.kinds.map(k => KIND_LABEL[k] || k).join("+")}${l.pinned ? " · gepinnt" : ""}`));
+    svg.appendChild(svgEl("text", {x: LEFT - 16, y: yy + 15, "text-anchor": "end", class: "lane-tag"}, `${l.kinds.map(k => KIND_LABEL[k] || k).join("+")}${l.pinned ? " · gepinnt" : ""}${l.static ? " · alle Includes gepinnt" : (l.multi_version || []).includes(sys) ? " · mehrere Pins" : ""}`));
     // segments
     txs.forEach((t, ti) => {
       const tx = l.transitions[t.key];
-      const cls = t.ghost ? "seg ghost" : `seg ${tx ? tx.cat : "unknown"}${l.pinned && ti >= baseIdx ? " future" : ""}${state.sel?.type === "tx" && state.sel.id === l.id && state.sel.key === t.key ? " sel" : ""}`;
+      const cls = t.ghost || l.static ? "seg ghost" : `seg ${tx ? tx.cat : "unknown"}${l.pinned && ti >= baseIdx ? " future" : ""}${state.sel?.type === "tx" && state.sel.id === l.id && state.sel.key === t.key ? " sel" : ""}`;
       if (!t.ghost) {
         const hit = svgEl("line", {x1: x(ti), x2: x(ti + 1), y1: yy, y2: yy, class: "hit"});
         hit.appendChild(svgEl("title", {}, tx ? `${t.from} → ${t.to}: ${CAT_LABEL[tx.cat]}${tx.cat === "inactivated" ? " (breaking)" : ""}\n+${tx.add} neu · −${tx.rem} aus Filter · ${tx.inact} inaktiviert · ${tx.rel} Texte\nKlick zeigt die Details` : "kein Vergleich vorhanden"));
@@ -366,7 +370,7 @@ function drawMap() {
       let c;
       if (inTx && (inTx.cat === "inactivated" || inTx.cat === "removed")) c = svgEl("circle", {cx: x(ri), cy: yy, r: Math.max(rad, 8), class: `interchange ${inTx.cat}` + (state.sel?.type === "st" && state.sel.id === l.id && state.sel.v === r.v ? " sel" : "")});
       else c = svgEl("circle", {cx: x(ri), cy: yy, r: rad, class: "station" + (r.ghost ? " ghost" : n == null ? " unknown" : "") + (state.sel?.type === "st" && state.sel.id === l.id && state.sel.v === r.v ? " sel" : "")});
-      c.appendChild(svgEl("title", {}, `${l.id}\n${SYS_SHORT[sys]} ${r.v}${r.ghost ? " (ausstehend)" : ""}\n${n == null ? (l.error ? "Expansion fehlgeschlagen" : "keine Daten") : fmt(n) + " Mitglieder"}${inTx && inTx.cat === "inactivated" ? `\n⚠ ${inTx.inact + inTx.anch} inaktiviert seit ${inTx.from}` : ""}`));
+      c.appendChild(svgEl("title", {}, `${l.id}\n${SYS_SHORT[sys]} ${r.v}${r.ghost ? " (ausstehend)" : ""}\n${l.static ? "alle Includes gepinnt, ändert sich nur durch das Modul-Team" : n == null ? (l.error ? "Expansion fehlgeschlagen" : "keine Daten") : fmt(n) + " Mitglieder"}${inTx && inTx.cat === "inactivated" ? `\n⚠ ${inTx.inact + inTx.anch} inaktiviert seit ${inTx.from}` : ""}`));
       c.addEventListener("click", () => { state.sel = {type: "st", id: l.id, v: r.v}; drawMap(); showStationDetail(l, r, ri); });
       svg.appendChild(c);
       const sh = (SHARED_BY_VS[l.id] || []).filter(s => s.system === sys && s.to === r.v);
@@ -381,14 +385,16 @@ const row = (k, v) => `<div class="row"><span class="k">${k}</span><span>${v}</s
 const pill = (cat, label) => `<span class="pill ${cat}">${label ?? CAT_LABEL[cat]}</span>`;
 function vsHead(l) { return `<h3>${esc(l.title)}</h3><div class="sub">${esc(l.url)}</div>`; }
 function vsRows(l) {
-  return row("Modul", esc(l.module)) + row("Definition", `${l.kinds.map(k => KIND_LABEL[k] || k).join(", ")} · ${l.n_includes} Include(s)${l.n_enumerated ? `, ${l.n_enumerated} aufgezählte Codes` : ""}`)
-    + row("Version", l.pinned ? pill("pin", "gepinnt") + ` <span class="mapmeta">ändert sich erst beim Pin-Wechsel</span>` : pill("out", "nicht gepinnt") + ` <span class="mapmeta">folgt dem Server-Stand</span>`)
-    + (l.error ? row("Hinweis", `<span style="color:var(--inactivated)">Expansion im Ballot fehlgeschlagen: ${esc(l.error).slice(0, 160)}</span>`) : "");
+  return row(GROUP, esc(l.module)) + row("Definition", `${l.kinds.map(k => KIND_LABEL[k] || k).join(", ")} · ${l.n_includes} Include(s)${l.n_enumerated ? `, ${l.n_enumerated} aufgezählte Codes` : ""}`)
+    + row("Version", (l.pinned ? pill("pin", "gepinnt") + ` <span class="mapmeta">ändert sich erst beim Pin-Wechsel</span>` : pill("out", "nicht gepinnt") + ` <span class="mapmeta">folgt dem Server-Stand</span>`)
+        + ((l.multi_version || []).length ? ` <span class="mapmeta">· vereinigt mehrere gepinnte Releases, nur ungepinnte Includes folgen dem Vergleichs-Release</span>` : ""))
+    + (l.error ? row("Hinweis", `<span style="color:var(--inactivated)">Expansion im Ballot fehlgeschlagen: ${esc(l.error).slice(0, 160)}</span>`) : "")
+    + (l.static ? row("Hinweis", `Alle Includes sind auf feste Releases gepinnt. Ein neues Release ändert diesen ValueSet nicht; das Modul-Team ergänzt den nächsten Jahrgang selbst.`) : "");
 }
 function showModuleDetail() {
   const lanes = DATA.valuesets.filter(v => v.module === state.module && v.systems.includes(state.sys));
   const hot = lanes.filter(l => Object.values(l.transitions).some(t => t.cat !== "identical"));
-  $("#detail").innerHTML = `<h3>Modul ${esc(state.module)} · ${SYS_SHORT[state.sys]}</h3><div class="sub">${lanes.length} ValueSets im Plan</div>`
+  $("#detail").innerHTML = `<h3>${GROUP} ${esc(state.module)} · ${SYS_SHORT[state.sys]}</h3><div class="sub">${lanes.length} ValueSets im Plan</div>`
     + (hot.length ? `<p>Mit Änderungen:</p><ul class="hits">${hot.map(l => `<li>${pill(worstCat(Object.values(l.transitions)))} <button class="linkish" data-vs="${l.id}">${esc(l.id.replace(/^mii-vs-/, ""))}</button></li>`).join("")}</ul>` : `<p class="empty">Keine inhaltlichen Änderungen in den verglichenen Releases.</p>`);
   $("#detail").querySelectorAll("[data-vs]").forEach(b => b.addEventListener("click", () => { const l = VS_BY_ID[b.dataset.vs]; state.sel = {type: "vs", id: l.id}; drawMap(); showVsDetail(l); }));
 }
@@ -414,13 +420,13 @@ function showStationDetail(l, r, ri) {
 }
 function txSummary(t, l) {
   return `<div class="row"><span class="k">Kategorie</span><span>${pill(t.cat)} <span class="pill out">${SEV_LABEL[t.severity] || t.severity}</span></span></div>`
-    + `<div class="counts"><span>+${t.add} neu</span><span>−${t.rem} aus Filter</span><span>✕ ${t.inact} inaktiviert</span>${t.anch ? `<span>⚓ ${t.anch} Anker</span>` : ""}${t.react ? `<span>↺ ${t.react} reaktiviert</span>` : ""}<span>~ ${t.rel} Texte</span><span>${fmt(t.n_from)} → ${fmt(t.n_to)}</span></div>`
+    + `<div class="counts"><span>+${t.add} neu</span><span>−${t.rem} entfallen</span><span>✕ ${t.inact} inaktiviert</span>${t.anch ? `<span>⚓ ${t.anch} Anker</span>` : ""}${t.react ? `<span>↺ ${t.react} reaktiviert</span>` : ""}<span>~ ${t.rel} Texte</span><span>${fmt(t.n_from)} → ${fmt(t.n_to)}</span></div>`
     + `<button class="linkish" data-tx="${t.from}|${t.to}">Alle Details</button>`;
 }
 function showTxDetail(l, t) {
   let html = vsHead(l) + row("Übergang", `${SYS_SHORT[state.sys]} <span class="mono">${t.from} → ${t.to}</span>`) + vsRows(l)
     + `<div class="row"><span class="k">Kategorie</span><span>${pill(t.cat)} <span class="pill out">${SEV_LABEL[t.severity] || t.severity}</span></span></div>`
-    + `<div class="counts"><span>+${t.add} neu</span><span>−${t.rem} aus Filter</span><span>✕ ${t.inact} inaktiviert</span>${t.anch ? `<span>⚓ ${t.anch} Anker</span>` : ""}${t.react ? `<span>↺ ${t.react} reaktiviert</span>` : ""}<span>~ ${t.rel} Texte</span><span>${fmt(t.n_from)} → ${fmt(t.n_to)}</span></div>`;
+    + `<div class="counts"><span>+${t.add} neu</span><span>−${t.rem} entfallen</span><span>✕ ${t.inact} inaktiviert</span>${t.anch ? `<span>⚓ ${t.anch} Anker</span>` : ""}${t.react ? `<span>↺ ${t.react} reaktiviert</span>` : ""}<span>~ ${t.rel} Texte</span><span>${fmt(t.n_from)} → ${fmt(t.n_to)}</span></div>`;
   if (t.truncated) html += `<p class="empty">Expansion abgeschnitten, Zahlen unvollständig.</p>`;
   if (t.advice.length) html += `<div class="advice"><b>Was ist zu tun</b><ul>${t.advice.map(a => `<li>${esc(a)}</li>`).join("")}</ul></div>`;
   const list = (title, items, total, render, open) => total ? `<details class="list" ${open ? "open" : ""}><summary>${title} <span class="mapmeta">${total}</span></summary><ul>${items.map(render).join("")}</ul>${total > items.length ? `<div class="more">+${total - items.length} weitere, vollständig im CSV-Report</div>` : ""}</details>` : "";
@@ -449,11 +455,12 @@ function searchCode(q) {
 }
 
 /* ---------- boot ---------- */
+$("#pick-title").textContent = `${GROUP} wählen`;
 drawMatrix(); drawModules();
 (function fromHash() {
   const h = location.hash.replace(/^#/, "");
   if (!h) return;
   const [mod, sys] = h.split(".");
-  if (DATA.modules.some(m => m.short === mod)) selectModule(mod, sys === "sct" || sys === "loinc" ? sys : undefined);
+  if (DATA.modules.some(m => m.short === mod)) selectModule(mod, SYS_KEYS.includes(sys) ? sys : undefined);
 })();
 </script>

@@ -1,6 +1,8 @@
 {
+ "display_dropped": false,
  "error": "Invalid concept / post-coordinated expression: line 1:0 token recognition error at: 'x'",
  "id": "mii-vs-icu-delirium-interpretation",
+ "soft_versions": [],
  "total": null,
  "truncated": false,
  "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-icu/ValueSet/delirium-interpretation",

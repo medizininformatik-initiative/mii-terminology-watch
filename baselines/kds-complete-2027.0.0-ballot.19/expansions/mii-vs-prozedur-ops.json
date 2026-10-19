@@ -1,0 +1,10 @@
+{
+ "error": null,
+ "id": "mii-vs-prozedur-ops",
+ "static": true,
+ "total": 0,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/core/modul-prozedur/ValueSet/mii-vs-prozedur-ops",
+ "versions": {},
+ "members": {}
+}

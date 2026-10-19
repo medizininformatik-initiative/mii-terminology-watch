@@ -1,8 +1,13 @@
 {
- "created": "2026-10-19T01:57:24",
+ "created": "2026-10-19T20:18:08",
  "display_kept_for": [
-  "http://loinc.org"
+  "http://loinc.org",
+  "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+  "http://fhir.de/CodeSystem/bfarm/ops",
+  "http://fhir.de/CodeSystem/bfarm/atc",
+  "http://www.genenames.org/geneId"
  ],
+ "group": "mii",
  "max_total": 500000,
  "package": {
   "fhirVersion": null,
@@ -11,7 +16,19 @@
  },
  "server": "https://ontoserver.mii-termserv.de/fhir",
  "versions": {
+  "http://fhir.de/CodeSystem/bfarm/atc": "2026",
+  "http://fhir.de/CodeSystem/bfarm/icd-10-gm": "2026",
+  "http://fhir.de/CodeSystem/bfarm/ops": "2026",
   "http://loinc.org": "2.82",
-  "http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701"
- }
+  "http://snomed.info/sct": "http://snomed.info/sct/900000000000207008/version/20260701",
+  "http://www.genenames.org/geneId": "20250704"
+ },
+ "watched": [
+  "http://snomed.info/sct",
+  "http://loinc.org",
+  "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+  "http://fhir.de/CodeSystem/bfarm/ops",
+  "http://fhir.de/CodeSystem/bfarm/atc",
+  "http://www.genenames.org/geneId"
+ ]
 }

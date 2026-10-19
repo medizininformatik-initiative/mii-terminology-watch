@@ -40,14 +40,41 @@ set -a; source .env; set +a
 
 PKG="$HOME/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.complete#2027.0.0-ballot.19/package"
 
-python -m termwatch versions
+python -m termwatch discover --package "$PKG"          # which code systems does the package bind, which does the server version?
+python -m termwatch versions                            # versions of the watched systems on the server
+
 python -m termwatch baseline --package "$PKG" --out baselines/kds-complete-2027.0.0-ballot.19 \
-    --sct http://snomed.info/sct/900000000000207008/version/20260701 --loinc 2.82
+    --sct http://snomed.info/sct/900000000000207008/version/20260701 --loinc 2.82 \
+    --icd10gm 2026 --ops 2026 --atc 2026 --hgnc 20250704
 python -m termwatch compare  --baseline baselines/kds-complete-2027.0.0-ballot.19 --package "$PKG" \
-    --loinc 2.83 --out reports/ballot19_loinc-2.83.json
-python -m termwatch report   --compare reports/ballot19_loinc-2.83.json \
-    --md reports/ballot19_loinc-2.83.md --csv reports/ballot19_loinc-2.83.csv
+    --loinc 2.83 --out reports/kds-complete-2027.0.0-ballot.19_loinc-2.83.json
+python -m termwatch report   --compare reports/kds-complete-2027.0.0-ballot.19_loinc-2.83.json \
+    --md reports/kds-complete-2027.0.0-ballot.19_loinc-2.83.md --csv reports/kds-complete-2027.0.0-ballot.19_loinc-2.83.csv
 ```
+
+### Any package, any code system
+
+Nothing in the pipeline is tied to the Kerndatensatz. Three switches make it run against another
+specification or terminology server:
+
+- `--watch` chooses the code systems. Default: SNOMED CT, LOINC, ICD-10-GM, OPS, ATC, HGNC.
+  `--watch auto` watches every system the package binds that the server has at least one version of
+  (`discover` shows that list), `--watch all` the whole registry, or give keys/URLs explicitly.
+  `--system URL=VERSION` sets a version for any system, including ones not in the registry.
+- `--group` chooses how ValueSets are grouped into lanes: `mii` (default, `modul-<name>` in the canonical),
+  `package`, `host`, or a regular expression with one capturing group over the canonical URL.
+- `TERMWATCH_FHIR_BASE` points at any FHIR terminology server that supports `$expand` with
+  `force-system-version` / `system-version` (Ontoserver, tx.fhir.org, HAPI with the right loaders).
+
+Per-system behaviour lives in one table in `src/termwatch/systems.py`: how a release is spelled,
+how the status of a code is read (LOINC `STATUS` property, otherwise `$validate-code`), whether
+is-a filter values are checked as anchors (SNOMED CT), and where successors come from (SNOMED CT
+historical associations). A system without an entry gets the generic adapter.
+
+ValueSets that union several pinned yearly releases of one system (the KDS diagnosis ValueSet
+includes ICD-10-GM 2009 through 2026) are expanded without the pinned includes: those never change,
+only unpinned includes follow a new release. A ValueSet whose includes are all pinned is kept as a
+static lane; its only "change" is the module team adding the next year.
 
 `PYTHONPATH=src` is needed when running from the checkout without `pip install -e .`.
 No third-party dependencies (Python ≥ 3.9).

@@ -83,8 +83,12 @@ class TerminologyServer:
 
     # ---- $expand -------------------------------------------------------------
     def expand(self, valueset: dict, force_versions: Dict[str, str], page: int = 50000, max_total: int = 500000,
-               properties: Iterable[str] = ("inactive",)) -> Tuple[Dict[str, dict], dict]:
-        """Expand an inline ValueSet under forced code-system versions.
+               properties: Iterable[str] = ("inactive",), soft_versions: Optional[Dict[str, str]] = None) -> Tuple[Dict[str, dict], dict]:
+        """Expand an inline ValueSet under code-system versions.
+
+        force_versions override every include (also pinned ones); soft_versions
+        (FHIR system-version) only apply to includes without a version, which is
+        what a ValueSet that unions several pinned yearly releases needs.
 
         Returns (contains, info) where contains maps code -> {display, inactive, system}
         and info holds total / truncated / error.
@@ -102,6 +106,7 @@ class TerminologyServer:
             ]
             pars += [{"name": "property", "valueString": p} for p in properties]
             pars += [{"name": "force-system-version", "valueCanonical": f"{sys_}|{ver}"} for sys_, ver in force_versions.items()]
+            pars += [{"name": "system-version", "valueCanonical": f"{sys_}|{ver}"} for sys_, ver in (soft_versions or {}).items()]
             r = self.call("/ValueSet/$expand", body={"resourceType": "Parameters", "parameter": pars})
             if r.get("resourceType") != "ValueSet":
                 info["error"] = "; ".join(i.get("diagnostics") or i.get("details", {}).get("text", "") for i in r.get("issue", []))[:500] or "unknown error"

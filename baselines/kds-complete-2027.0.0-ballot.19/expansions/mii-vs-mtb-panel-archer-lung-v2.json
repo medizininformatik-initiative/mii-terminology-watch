@@ -1,0 +1,11 @@
+{
+ "display_dropped": false,
+ "error": null,
+ "id": "mii-vs-mtb-panel-archer-lung-v2",
+ "soft_versions": [],
+ "total": 17,
+ "truncated": false,
+ "url": "https://www.medizininformatik-initiative.de/fhir/ext/modul-mtb/ValueSet/mii-vs-mtb-panel-archer-lung-v2",
+ "versions": {"http://www.genenames.org/geneId": "20250704"},
+ "members": {"http://www.genenames.org/geneId":{"codes":["HGNC:10261","HGNC:1097","HGNC:29919","HGNC:3236","HGNC:3430","HGNC:3688","HGNC:3689","HGNC:3690","HGNC:427","HGNC:6407","HGNC:7029","HGNC:7997","HGNC:8031","HGNC:8032","HGNC:8033","HGNC:8975","HGNC:9967"],"display":{"HGNC:10261":"ROS1","HGNC:1097":"BRAF","HGNC:29919":"NUTM1","HGNC:3236":"EGFR","HGNC:3430":"ERBB2","HGNC:3688":"FGFR1","HGNC:3689":"FGFR2","HGNC:3690":"FGFR3","HGNC:427":"ALK","HGNC:6407":"KRAS","HGNC:7029":"MET","HGNC:7997":"NRG1","HGNC:8031":"NTRK1","HGNC:8032":"NTRK2","HGNC:8033":"NTRK3","HGNC:8975":"PIK3CA","HGNC:9967":"RET"},"inactive":[]}}
+}

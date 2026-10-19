@@ -6,9 +6,9 @@ import os
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
-from typing import Dict
+from typing import Dict, List, Optional
 
-from .inventory import build_inventory, inline_valueset_refs, load_package, restrict_to_watched
+from .inventory import build_inventory, drop_pinned_of_multi, inline_valueset_refs, load_package, restrict_to_watched, version_modes
 from .ontoserver import TerminologyServer
 
 
@@ -60,12 +60,14 @@ def expand_members(members: dict) -> Dict[str, dict]:
 
 
 def run_baseline(package_dir: str, out_dir: str, versions: Dict[str, str], keep_display: Dict[str, bool],
-                 max_total: int = 500000, only: str = "", workers: int = 4) -> None:
+                 max_total: int = 500000, only: str = "", workers: int = 4,
+                 watched: Optional[List[str]] = None, group: str = "mii") -> None:
     ts = TerminologyServer()
-    inv = build_inventory(package_dir)
+    inv = build_inventory(package_dir, watched, group)
     by_url = load_package(package_dir)
     write_json(os.path.join(out_dir, "inventory.json"), inv)
-    meta = {"package": inv["package"], "versions": versions, "server": ts.base, "created": time.strftime("%Y-%m-%dT%H:%M:%S"),
+    meta = {"package": inv["package"], "versions": versions, "watched": inv["watched"], "group": group,
+            "server": ts.base, "created": time.strftime("%Y-%m-%dT%H:%M:%S"),
             "max_total": max_total, "display_kept_for": [s for s, k in keep_display.items() if k]}
     write_json(os.path.join(out_dir, "baseline.json"), meta)
     n = len(inv["valuesets"])
@@ -82,11 +84,22 @@ def run_baseline(package_dir: str, out_dir: str, versions: Dict[str, str], keep_
                     return
             except Exception:
                 pass
-        vs = restrict_to_watched(inline_valueset_refs(by_url[e["url"]], by_url))
+        missing = [s for s in e["systems"] if s not in versions]
+        if missing:
+            print(f"[{i}/{n}] {e['id']}: skipped, no baseline version for {', '.join(missing)}", file=sys.stderr, flush=True)
+            return
+        vs = drop_pinned_of_multi(restrict_to_watched(inline_valueset_refs(by_url[e["url"]], by_url), inv["watched"]), e.get("multi_version", []))
+        if not vs["compose"].get("include"):
+            write_json(target, {"id": e["id"], "url": e["url"], "versions": {}, "total": 0, "truncated": False, "error": None,
+                                "static": True, "members": {}})
+            print(f"[{i}/{n}] {e['id']}: every include is pinned, nothing to watch", file=sys.stderr, flush=True)
+            return
         t0 = time.time()
-        contains, info = ts.expand(vs, {s: versions[s] for s in e["systems"] if s in versions}, max_total=max_total)
+        force, soft = version_modes(e, versions)
+        contains, info = ts.expand(vs, force, max_total=max_total, soft_versions=soft)
         big = (info.get("total") or 0) > DISPLAY_LIMIT
         write_json(target, {"id": e["id"], "url": e["url"], "versions": {s: versions[s] for s in e["systems"] if s in versions},
+                            "soft_versions": sorted(soft),
                             "total": info.get("total"), "truncated": info.get("truncated"), "error": info.get("error"),
                             "display_dropped": big,
                             "members": compact_members(contains, {} if big else keep_display)})

@@ -9,8 +9,9 @@ from concurrent.futures import ThreadPoolExecutor
 from typing import Dict, List
 
 from .baseline import expand_members
-from .inventory import inline_valueset_refs, load_package, restrict_to_watched
-from .ontoserver import LOINC, SCT, TerminologyServer
+from .inventory import drop_pinned_of_multi, inline_valueset_refs, load_package, restrict_to_watched, version_modes
+from .ontoserver import TerminologyServer
+from .systems import DEFAULT_WATCHED, spec
 
 SEVERITY_ORDER = ["BREAKING", "SIGNIFICANT", "MINOR", "NONE"]
 
@@ -32,6 +33,7 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
     meta = json.load(open(os.path.join(baseline_dir, "baseline.json"), encoding="utf-8"))
     inv = json.load(open(os.path.join(baseline_dir, "inventory.json"), encoding="utf-8"))
     by_url = load_package(package_dir)
+    watched = meta.get("watched") or inv.get("watched") or DEFAULT_WATCHED
     base_versions = meta["versions"]
     changed_systems = {s for s, v in target_versions.items() if base_versions.get(s) != v}
     results: List[dict] = []
@@ -59,10 +61,15 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
         if e["url"] not in by_url:
             results.append({**_head(e), "severity": "NONE", "note": "ValueSet not found in package directory"})
             return
-        vs = restrict_to_watched(inline_valueset_refs(by_url[e["url"]], by_url))
+        if base.get("static"):
+            results.append({**_head(e), "severity": "NONE", "note": "every include is pinned, nothing to compare"})
+            return
+        vs = drop_pinned_of_multi(restrict_to_watched(inline_valueset_refs(by_url[e["url"]], by_url), watched), e.get("multi_version", []))
         versions = {s: target_versions.get(s, base_versions.get(s)) for s in e["systems"]}
+        versions = {s: v for s, v in versions.items() if v}
         t0 = time.time()
-        contains, info = ts.expand(vs, versions, max_total=max_total)
+        force, soft = version_modes(e, versions)
+        contains, info = ts.expand(vs, force, max_total=max_total, soft_versions=soft)
         if info.get("error"):
             results.append({**_head(e), "severity": "BREAKING", "note": f"expansion failed under target: {info['error'][:200]}"})
             print(f"[{i}/{n}] {e['id']}: EXPANSION ERROR", file=sys.stderr, flush=True)
@@ -80,46 +87,64 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
         for inc in e["includes"]:
             if inc["system"] not in changed_systems:
                 continue
-            for f in inc.get("filters", []):
-                if inc["system"] == SCT and f.get("property") in ("concept", "code") and f.get("op") in ("is-a", "descendent-of"):
-                    anchors.append((SCT, f["value"]))
+            if spec(inc["system"]).get("anchors"):
+                for f in inc.get("filters", []):
+                    if f.get("property") in ("concept", "code") and f.get("op") in ("is-a", "descendent-of"):
+                        anchors.append((inc["system"], f["value"]))
             if inc["kind"] == "enumerated":
                 anchors += [(inc["system"], c) for c in inc["concepts"]]
+        whole = {inc["system"] for inc in e["includes"] if inc["kind"] == "whole-system"}
+
+        def _successors(sys_, code):
+            return ts.sct_successors(code, versions[sys_]) if spec(sys_).get("successors") == "sct" else []
+
+        def _status(sys_, code):
+            """(status_text, inactive, exists, display) for a code under the target version."""
+            sp = spec(sys_)
+            if sp.get("status") == "lookup":
+                lk = ts.lookup(sys_, code, versions[sys_], (sp["status_property"],))
+                st = (lk.get("properties", {}).get(sp["status_property"]) or [None])[0]
+                return st, (st is not None and st != "ACTIVE"), bool(lk.get("display") or st), lk.get("display") or ""
+            v = ts.validate(sys_, code, versions[sys_])
+            exists = bool(v.get("result")) or v.get("inactive") is not None
+            return ("inactive" if v.get("inactive") else "active" if exists else None), bool(v.get("inactive")), exists, v.get("display") or ""
+
         def _removed(key):
             sys_, code = key.split("|", 1)
             rec = {"code": code, "system": sys_, "display": old[key].get("display", "")}
-            if sys_ == SCT:
-                v = ts.validate(SCT, code, versions[SCT])
-                rec["inactive"] = v.get("inactive")
-                rec["display"] = rec["display"] or (v.get("display") or "")
-                rec["reason"] = "inactivated" if v.get("inactive") else ("unknown-code" if not v.get("result") else "no longer in filter (moved)")
-                if v.get("inactive"):
-                    rec["successors"] = ts.sct_successors(code, versions[SCT])
+            st, inactive, exists, disp = _status(sys_, code)
+            rec["display"] = rec["display"] or disp
+            rec["inactive"] = inactive
+            if not exists:
+                rec["reason"] = "not in this code system version"
+            elif inactive:
+                rec["reason"] = f"status {st}" if spec(sys_).get("status") == "lookup" else "inactivated"
+                rec["successors"] = _successors(sys_, code)
+            elif sys_ in whole:
+                rec["reason"] = f"status {st}, dropped from the whole-system include"
             else:
-                lk = ts.lookup(LOINC, code, versions[LOINC], ("STATUS",))
-                rec["display"] = rec["display"] or (lk.get("display") or "")
-                st = (lk["properties"].get("STATUS") or [None])[0]
-                rec["reason"] = (f"status {st}, no longer matches the filter (property changed)" if st == "ACTIVE"
-                                 else f"status {st}" if st else "unknown code")
+                rec["reason"] = f"status {st}, no longer matches the filter (property changed)"
             return rec
         detail_removed: List[dict] = _pmap(_removed, removed)
 
         def _inactivated(key):
             sys_, code = key.split("|", 1)
             rec = {"code": code, "system": sys_, "display": new[key]["display"]}
-            if sys_ == LOINC:
-                lk = ts.lookup(LOINC, code, versions[LOINC], ("STATUS",))
-                rec["status"] = (lk["properties"].get("STATUS") or [None])[0]
-            else:
-                rec["successors"] = ts.sct_successors(code, versions[SCT])
+            if spec(sys_).get("status") == "lookup":
+                rec["status"] = _status(sys_, code)[0]
+            rec["successors"] = _successors(sys_, code)
             return rec
         detail_inactivated: List[dict] = _pmap(_inactivated, inactivated)
-        for sys_, code in anchors:
-            if sys_ == SCT:
-                v = ts.validate(SCT, code, versions[SCT])
-                if not v.get("result") or v.get("inactive"):
-                    anchors_broken.append({"code": code, "display": v.get("display") or "", "inactive": v.get("inactive"),
-                                           "successors": ts.sct_successors(code, versions[SCT]) if v.get("inactive") else []})
+
+        def _anchor(item):
+            sys_, code = item
+            st, inactive, exists, disp = _status(sys_, code)
+            if not exists or inactive:
+                return {"code": code, "system": sys_, "display": disp, "inactive": inactive,
+                        "reason": "not in this code system version" if not exists else f"status {st}",
+                        "successors": _successors(sys_, code) if inactive else []}
+            return None
+        anchors_broken = [a for a in _pmap(_anchor, anchors) if a]
         sev = _severity(e, removed, inactivated, added, relabelled, anchors_broken)
         results.append({**_head(e), "versions_baseline": {s: base_versions.get(s) for s in e["systems"]}, "versions_target": versions,
                         "count_baseline": len(old), "count_target": len(new), "severity": sev,
