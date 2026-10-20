@@ -39,6 +39,7 @@ def main(argv=None) -> int:
     sub = ap.add_subparsers(dest="cmd", required=True)
     v = sub.add_parser("versions", help="list the versions of the watched code systems on the server")
     v.add_argument("--watch", help="comma list of registry keys or URLs (default: sct,loinc,icd10gm,ops,atc,hgnc; 'all' for the whole registry)")
+    v.add_argument("--rf2", action="append", default=[], metavar="PATH[=VERSION_URI]", help="local SNOMED CT RF2 archive to list alongside the server")
     d = sub.add_parser("discover", help="list the code systems the package binds and the versions the server has for them")
     d.add_argument("--package", required=True)
     b = sub.add_parser("baseline", help="expand all watched ValueSets under baseline versions")
@@ -54,6 +55,8 @@ def main(argv=None) -> int:
     c.add_argument("--baseline", required=True); c.add_argument("--package", required=True); c.add_argument("--out", required=True)
     _add_version_args(c)
     c.add_argument("--max-total", type=int, default=500000); c.add_argument("--only", default=""); c.add_argument("--workers", type=int, default=4)
+    c.add_argument("--rf2", action="append", default=[], metavar="PATH[=VERSION_URI]",
+                   help="SNOMED CT RF2 archive (zip or directory) used instead of the server for the version it holds; repeatable")
     r = sub.add_parser("report", help="render a comparison as Markdown and CSV")
     r.add_argument("--compare", required=True); r.add_argument("--md"); r.add_argument("--csv")
     e = sub.add_parser("explorer", help="build the self-contained HTML explorer (subway map of ValueSets x releases)")
@@ -62,7 +65,8 @@ def main(argv=None) -> int:
     a = ap.parse_args(argv)
 
     if a.cmd == "versions":
-        ts = TerminologyServer()
+        from .rf2 import make_server
+        ts = make_server(a.rf2)
         for s in parse_watch(a.watch):
             print(f"{s}  ({key_of(s)})")
             for v in ts.code_system_versions(s):
@@ -98,7 +102,7 @@ def main(argv=None) -> int:
         targets = _versions_from(a)
         if not targets:
             print("give at least one target version (--sct, --loinc, --icd10gm, ... or --system KEY=VERSION)", file=sys.stderr); return 2
-        run_compare(a.baseline, a.package, targets, a.out, a.max_total, a.only, a.workers)
+        run_compare(a.baseline, a.package, targets, a.out, a.max_total, a.only, a.workers, a.rf2)
         return 0
     if a.cmd == "report":
         from .report import render_markdown, write_csv

@@ -6,11 +6,11 @@ import os
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
-from typing import Dict, List
+from typing import Dict, Iterable, List
 
 from .baseline import expand_members
 from .inventory import drop_pinned_of_multi, inline_valueset_refs, load_package, restrict_to_watched, version_modes
-from .ontoserver import TerminologyServer
+from .rf2 import make_server
 from .systems import DEFAULT_WATCHED, spec
 
 SEVERITY_ORDER = ["BREAKING", "SIGNIFICANT", "MINOR", "NONE"]
@@ -28,8 +28,8 @@ def _severity(vs_entry: dict, removed: list, inactivated: list, added: list, rel
 
 
 def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, str], out_path: str,
-                max_total: int = 500000, only: str = "", workers: int = 4) -> dict:
-    ts = TerminologyServer()
+                max_total: int = 500000, only: str = "", workers: int = 4, rf2: Iterable[str] = ()) -> dict:
+    ts = make_server(rf2)
     meta = json.load(open(os.path.join(baseline_dir, "baseline.json"), encoding="utf-8"))
     inv = json.load(open(os.path.join(baseline_dir, "inventory.json"), encoding="utf-8"))
     by_url = load_package(package_dir)
@@ -45,6 +45,8 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
         try:
             _work(i, e)
         except Exception as ex:  # one ValueSet must never lose the whole run
+            if os.environ.get("TERMWATCH_DEBUG"):
+                import traceback; traceback.print_exc()
             results.append({**_head(e), "severity": "NONE", "note": f"compare failed: {type(ex).__name__}: {str(ex)[:160]}"})
             print(f"[{i}/{n}] {e['id']}: COMPARE ERROR {type(ex).__name__}: {str(ex)[:120]}", file=sys.stderr, flush=True)
 
@@ -74,7 +76,8 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
             results.append({**_head(e), "severity": "BREAKING", "note": f"expansion failed under target: {info['error'][:200]}"})
             print(f"[{i}/{n}] {e['id']}: EXPANSION ERROR", file=sys.stderr, flush=True)
             return
-        old = expand_members(base["members"])
+        # baseline members of systems without a version (unwatched, or never on the server) are out of scope
+        old = {k: v for k, v in expand_members(base["members"]).items() if k.split("|", 1)[0] in versions}
         new = {k: {"inactive": c["inactive"], "display": c["display"]} for k, c in contains.items()}
         removed = sorted(set(old) - set(new))
         added = sorted(set(new) - set(old))
@@ -107,7 +110,8 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
                 return st, (st is not None and st != "ACTIVE"), bool(lk.get("display") or st), lk.get("display") or ""
             v = ts.validate(sys_, code, versions[sys_])
             exists = bool(v.get("result")) or v.get("inactive") is not None
-            return ("inactive" if v.get("inactive") else "active" if exists else None), bool(v.get("inactive")), exists, v.get("display") or ""
+            st = ("inactive" + (f" ({v['reason']})" if v.get("reason") else "")) if v.get("inactive") else "active" if exists else None
+            return st, bool(v.get("inactive")), exists, v.get("display") or ""
 
         def _removed(key):
             sys_, code = key.split("|", 1)
@@ -118,7 +122,7 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
             if not exists:
                 rec["reason"] = "not in this code system version"
             elif inactive:
-                rec["reason"] = f"status {st}" if spec(sys_).get("status") == "lookup" else "inactivated"
+                rec["reason"] = f"status {st}" if spec(sys_).get("status") == "lookup" else st.replace("inactive", "inactivated", 1)
                 rec["successors"] = _successors(sys_, code)
             elif sys_ in whole:
                 rec["reason"] = f"status {st}, dropped from the whole-system include"
@@ -130,8 +134,9 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
         def _inactivated(key):
             sys_, code = key.split("|", 1)
             rec = {"code": code, "system": sys_, "display": new[key]["display"]}
-            if spec(sys_).get("status") == "lookup":
-                rec["status"] = _status(sys_, code)[0]
+            st = _status(sys_, code)[0]
+            if spec(sys_).get("status") == "lookup" or (st and "(" in st):
+                rec["status"] = st
             rec["successors"] = _successors(sys_, code)
             return rec
         detail_inactivated: List[dict] = _pmap(_inactivated, inactivated)
@@ -144,15 +149,30 @@ def run_compare(baseline_dir: str, package_dir: str, target_versions: Dict[str, 
                         "reason": "not in this code system version" if not exists else f"status {st}",
                         "successors": _successors(sys_, code) if inactive else []}
             return None
-        anchors_broken = [a for a in _pmap(_anchor, anchors) if a]
+        broken = [a for a in _pmap(_anchor, anchors) if a]
+
+        def _preexisting(a):
+            """An anchor that was already inactive/unknown under the baseline is a content issue, not a release change."""
+            rec = old.get(f"{a['system']}|{a['code']}")
+            if rec is not None:
+                return rec["inactive"]
+            bv = base_versions.get(a["system"])
+            if not bv:
+                return False
+            v = ts.validate(a["system"], a["code"], bv)
+            return not (bool(v.get("result")) or v.get("inactive") is not None) or bool(v.get("inactive"))
+        flags = _pmap(_preexisting, broken)
+        anchors_broken = [a for a, pre in zip(broken, flags) if not pre]
+        anchors_preexisting = [a for a, pre in zip(broken, flags) if pre]
         sev = _severity(e, removed, inactivated, added, relabelled, anchors_broken)
         results.append({**_head(e), "versions_baseline": {s: base_versions.get(s) for s in e["systems"]}, "versions_target": versions,
                         "count_baseline": len(old), "count_target": len(new), "severity": sev,
                         "added": [{"code": k.split("|", 1)[1], "system": k.split("|", 1)[0], "display": new[k]["display"]} for k in added],
                         "removed": detail_removed, "inactivated": detail_inactivated, "reactivated": reactivated,
                         "relabelled": [{"code": k.split("|", 1)[1], "old": old[k].get("display"), "new": new[k]["display"]} for k in relabelled],
-                        "anchors_broken": anchors_broken, "truncated": info.get("truncated")})
-        print(f"[{i}/{n}] {e['id']}: {sev} +{len(added)} -{len(removed)} inact {len(inactivated)} relabel {len(relabelled)} ({time.time()-t0:.1f}s)", file=sys.stderr, flush=True)
+                        "anchors_broken": anchors_broken, "anchors_preexisting": anchors_preexisting, "truncated": info.get("truncated")})
+        print(f"[{i}/{n}] {e['id']}: {sev} +{len(added)} -{len(removed)} inact {len(inactivated)} relabel {len(relabelled)} anchors {len(anchors_broken)}"
+              f"{' (+%d already broken at baseline)' % len(anchors_preexisting) if anchors_preexisting else ''} ({time.time()-t0:.1f}s)", file=sys.stderr, flush=True)
     with ThreadPoolExecutor(max_workers=workers) as pool:
         list(pool.map(work, enumerate(inv["valuesets"], 1)))
     out = {"package": inv["package"], "baseline_versions": base_versions, "target_versions": target_versions,

@@ -12,6 +12,10 @@ Do NOT run python with `-I` here: it ignores PYTHONPATH.
 
 ## Layout
 - `src/termwatch/ontoserver.py` FHIR TS client ($expand with force-system-version, $validate-code, $lookup, $translate on SNOMED historical ConceptMaps)
+- `src/termwatch/rf2.py` local SNOMED CT backend over RF2 Snapshot archives (`compare --rf2 PATH`), same interface as the
+  server client; `Router` sends SCT calls for versions it holds there, the rest to the server. Pickle cache in `~/.cache/termwatch`.
+  Verified: RF2 20260701 reproduces the server baseline for all 134 SNOMED ValueSets (Ontoserver keeps an inactive is-a
+  anchor itself in the expansion, flagged inactive; the backend does the same).
 - `src/termwatch/inventory.py` package crawler (ValueSets with SNOMED/LOINC includes, pins, module)
 - `src/termwatch/baseline.py` expansions under baseline versions, compact per-system code lists
 - `src/termwatch/compare.py` membership diff + severity; `report.py` Markdown per module + CSV
@@ -77,5 +81,8 @@ bd close <id>         # Complete work
   HGNC + Alpha-ID, Orphanet, UCUM), `discover` command, `--watch auto|all|list`, `--group`, `--system KEY=VERSION`.
   ValueSets that pin several versions of one system are expanded without the pinned includes (soft `system-version`);
   fully pinned ones are stored as `static`. Baseline for ballot.19 now also covers ICD-10-GM/OPS/ATC 2026 and HGNC 20250704.
-- Package to use: `~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.complete#2027.0.0-ballot.19/package`.
+- Package to use: `~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.complete#2027.0.0-ballot.19/package`
+  (if the cache was cleared: the ballot.19 tgz in the local kerndatensatz-complete build repo, extracted to a scratch dir).
+- Anchors already inactive/unknown under the baseline are `anchors_preexisting` (content findings), not release changes.
+- `TERMWATCH_DEBUG=1` prints tracebacks for per-ValueSet compare failures.
 - Issues: beads (`bd ready`), prefix `tw`.

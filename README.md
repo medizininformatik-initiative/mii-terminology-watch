@@ -6,7 +6,9 @@ It takes a **baseline** (a KDS package expanded under the terminology versions i
 Markdown report for the KDS module teams and a flat CSV for technical follow-up.
 
 Current baseline: `de.medizininformatikinitiative.kerndatensatz.complete 2027.0.0-ballot.19`
-with SNOMED CT International `20260701` and LOINC `2.82`.
+with SNOMED CT International `20260701` and LOINC `2.82`. Compared so far: LOINC 2.81 / 2.83,
+ICD-10-GM / OPS / ATC 2025, SNOMED CT International 20260401 / 20260901 / 20261001 (the last two from
+RF2 archives, see below).
 
 ## Why
 
@@ -52,6 +54,28 @@ python -m termwatch report   --compare reports/kds-complete-2027.0.0-ballot.19_l
     --md reports/kds-complete-2027.0.0-ballot.19_loinc-2.83.md --csv reports/kds-complete-2027.0.0-ballot.19_loinc-2.83.csv
 ```
 
+### SNOMED CT releases the server does not have yet (RF2 archives)
+
+The MII Ontoserver lags the SNOMED International release train by a few months. `--rf2` points
+`compare` at an RF2 release archive (zip or extracted directory with `Snapshot/`); the version it holds
+is then answered locally and everything else still goes to the server:
+
+```bash
+python -m termwatch compare --baseline baselines/kds-complete-2027.0.0-ballot.19 --package "$PKG" \
+    --sct http://snomed.info/sct/900000000000207008/version/20261001 \
+    --rf2 ~/terminologies/SnomedCT_InternationalRF2_PRODUCTION_20261001T120000Z.zip \
+    --out reports/kds-complete-2027.0.0-ballot.19_sct-20261001.json
+```
+
+The archive is parsed once (concepts, inferred is-a relationships, preferred terms, historical
+associations, inactivation reasons; ~10 s) and cached under `~/.cache/termwatch` (`TERMWATCH_CACHE`).
+Edition and date are read from the archive name; `--rf2 PATH=VERSION_URI` overrides that.
+Validated against the server: expanding all 134 SNOMED ValueSets of ballot.19 from the 20260701
+archive reproduces the server baseline exactly. Supported: enumerated includes, `is-a` /
+`descendent-of` filters, ECL with `<`, `<<`, `>`, `>>`, `AND`, `OR`, `MINUS` and brackets.
+Refined ECL raises an expansion error, like the server does for invalid ECL. Inactivation reasons
+(Duplicate, Outdated, Ambiguous, Classification derived, …) are reported next to the successors.
+
 ### Any package, any code system
 
 Nothing in the pipeline is tied to the Kerndatensatz. Three switches make it run against another
@@ -86,7 +110,7 @@ baselines/<package-version>/inventory.json      watched ValueSets with includes,
 baselines/<package-version>/baseline.json       versions, server, timestamp
 baselines/<package-version>/expansions/*.json   member codes per ValueSet under the baseline versions
 reports/                                        comparison JSON (ignored) + Markdown/CSV reports (committed)
-src/termwatch/                                  ontoserver.py inventory.py baseline.py compare.py report.py cli.py
+src/termwatch/                                  ontoserver.py rf2.py inventory.py baseline.py compare.py report.py explorer.py cli.py
 ```
 
 ## Explorer (human-facing view)
@@ -113,7 +137,7 @@ Reading the map:
 | Dashed segment | the ValueSet is pinned, so the change only takes effect when the module team moves the pin |
 | Station size | member count (log scale); a filled red/amber station is an interchange, i.e. members were inactivated or removed |
 | Vertical dashed link | the same code change hits several ValueSets of the module; the `+n VS` badge counts ValueSets in other modules |
-| Grey column | a release that is not yet on the terminology server (e.g. SNOMED CT 20260801) |
+| Grey column | a release that is expected but not yet on the server or in an RF2 archive (`--expected KEY=VERSION`) |
 
 The detail panel shows the counts, a "what to do" list derived from the include type and pin status,
 the affected codes with status and successors, and a code search over all change lists.
@@ -123,7 +147,10 @@ so the lanes extend backwards in time.
 ## Limitations
 
 - SNOMED ECL/is-a expansions exclude inactive concepts, so an inactivated member shows up as *removed*
-  and is then confirmed via `$validate-code`; LOINC members stay in the expansion with `inactive=true`.
+  and is then confirmed via `$validate-code` (reason "inactivated (Outdated)" etc.); LOINC members stay in
+  the expansion with `inactive=true`.
+- Filter/enumerated anchors that were already inactive or unknown under the baseline are reported as
+  `anchors_preexisting` (content findings) and do not raise the severity of a release.
 - LOINC `MapTo` successors are not exposed by the server; add the LOINC release files to resolve them (planned).
 - ValueSets that reference other ValueSets are inlined from the same package; cross-package references
   are passed to the server as-is.

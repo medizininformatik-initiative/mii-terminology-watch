@@ -65,6 +65,8 @@ def render_markdown(cmp: dict) -> str:
             for a in r.get("anchors_broken", []):
                 succ = ", ".join(f"{s['association']} → {s['code']} {s['display']}" for s in a.get("successors", [])) or "no successor"
                 lines.append(f"- **Filter/enumerated anchor inactive:** `{a['code']}` {a['display']} — {succ}")
+            for a in r.get("anchors_preexisting", []):
+                lines.append(f"- Content note (not a release change): anchor `{a['code']}` {a.get('display') or ''} was already {a.get('reason', 'inactive')} under the baseline")
             if r.get("inactivated"):
                 lines.append("\n**Members now inactive (stop using):**\n")
                 lines.append("| Code | Display | Status / successor |\n|---|---|---|")
@@ -102,6 +104,8 @@ def write_csv(cmp: dict, path: str) -> None:
             base = [r["module"], r["id"], r["url"], r["pinned"], r["severity"]]
             for a in r.get("anchors_broken", []):
                 w.writerow(base + ["anchor_inactive", a.get("system", "http://snomed.info/sct"), a["code"], a["display"], "", a.get("reason", "inactive"), "; ".join(f"{s['association']}:{s['code']}" for s in a.get("successors", []))])
+            for a in r.get("anchors_preexisting", []):
+                w.writerow(base + ["anchor_preexisting", a.get("system", "http://snomed.info/sct"), a["code"], a.get("display", ""), "", a.get("reason", "inactive"), ""])
             for m in r.get("inactivated", []):
                 w.writerow(base + ["inactivated", m["system"], m["code"], m.get("display", ""), "", m.get("status", ""), "; ".join(f"{s['association']}:{s['code']}" for s in m.get("successors", []))])
             for m in r.get("removed", []):
