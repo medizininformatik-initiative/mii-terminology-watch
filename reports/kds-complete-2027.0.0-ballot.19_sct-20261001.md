@@ -9,7 +9,7 @@
 | SNOMED CT | 20260701 | 20261001 |
 | HGNC | 20250704 | 20250704 |
 
-Generated 2026-10-20T02:39:56 against https://ontoserver.mii-termserv.de/fhir + rf2:SnomedCT_InternationalRF2_PRODUCTION_20261001T120000Z.zip (5504 server calls).
+Generated 2026-10-21T05:57:34 against https://ontoserver.mii-termserv.de/fhir + rf2:SnomedCT_InternationalRF2_PRODUCTION_20261001T120000Z.zip (5504 server calls).
 
 ## Summary
 
@@ -59,7 +59,7 @@ Members: 129012 → 129411
 | Code | Display | Reason | Successor |
 |---|---|---|---|
 | `10562009` | Malignant hypertension complicating AND/OR reason for care during childbirth | inactivated (Classification derived) | REPLACED BY → 1373612000 Maternal disorder in labor due to malignant hypertension |
-| `105709005` | Disease caused by Rhabdiasoidea | inactivated (Outdated) | - |
+| `105709005` | Disease caused by Rhabdiasoidea | inactivated (Outdated) | POSSIBLY REPLACED BY → 1214006 Infection by Strongyloides, POSSIBLY REPLACED BY → 105710000 Disease caused by Rhabditoidea |
 | `106005003` | Hypertension AND/OR vomiting complicating pregnancy childbirth AND/OR puerperium | inactivated (Classification derived) | PARTIALLY EQUIVALENT TO → 1373731004 Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to hypertension, PARTIALLY EQUIVALENT TO → 90325002 Vomiting of pregnancy |
 | `106008001` | Delivery AND/OR maternal condition affecting management | inactivated (Classification derived) | REPLACED BY → 1269075002 Maternal disorder during intrapartum period |
 | `106009009` | Fetal condition affecting obstetrical care of mother | inactivated (Classification derived) | REPLACED BY → 70591005 Fetal disorder |
@@ -111,8 +111,8 @@ Members: 129012 → 129411
 | `128076000` | Bone AND/OR joint disorder in mother complicating pregnancy, childbirth AND/OR puerperium | inactivated (Classification derived) | REPLACED BY → 1380433009 Maternal disorder of bone and/or joint during antenatal and/or intrapartum and/or postpartum period |
 | `12867002` | Fetal distress affecting management of mother | inactivated (Classification derived) | REPLACED BY → 130955003 Nonreassuring fetal status |
 | `1354494000` | Induced termination of pregnancy complicated by damage to urethra | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1376018005 Traumatic injury of urethra during termination of pregnancy |
-| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | - |
-| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | - |
+| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | POSSIBLY REPLACED BY → 102556003 Pain in upper limb, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
+| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | POSSIBLY REPLACED BY → 771083005 Pain in upper arm, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `13866000` | Fetal acidemia affecting management of mother | inactivated (Classification derived) | REPLACED BY → 1382318006 Fetal acidemia |
 | `13943000` | Failed attempted termination of pregnancy complicated by embolism | inactivated (Duplicate) | SAME AS → 198812002 Failed attempted termination of pregnancy with embolism |
 | `14022007` | Fetal death, affecting management of mother | inactivated (Classification derived) | REPLACED BY → 276507005 Fetal death |
@@ -187,8 +187,8 @@ Members: 129012 → 129411
 | `200985008` | Parapsoriasis varioliformis | inactivated (Outdated) | REPLACED BY → 86487001 Acute lichenoid pityriasis |
 | `201174003` | Poliosis eccentrica | inactivated (Erroneous) | REPLACED BY → 1402372003 Poliosis eccentrica |
 | `201175002` | Poliosis - acquired | inactivated (Erroneous) | REPLACED BY → 1402371005 Acquired poliosis |
-| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | - |
-| `203104007` | Fibrositis of neck | inactivated (Outdated) | - |
+| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 45326000 Pain of shoulder region |
+| `203104007` | Fibrositis of neck | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 81680005 Neck pain |
 | `20753005` | Hypertensive heart disease complicating AND/OR reason for care during pregnancy | inactivated (Classification derived) | REPLACED BY → 1373738005 Disorder during maternal antenatal and/or intrapartum period due to pre-existing hypertensive heart disease |
 | `20759009` | Dietetic jejunitis | inactivated (Duplicate) | SAME AS → 1401593002 Allergic jejunitis caused by food |
 | `20845005` | Meconium in amniotic fluid affecting management of mother | inactivated (Classification derived) | PARTIALLY EQUIVALENT TO → 1389111006 Meconium stained amniotic fluid during intrapartum period, PARTIALLY EQUIVALENT TO → 206269002 Liveborn with labor meconium in liquor, PARTIALLY EQUIVALENT TO → 2132004 Meconium in amniotic fluid noted before labor in liveborn infant |
@@ -211,7 +211,7 @@ Members: 129012 → 129411
 | `238419741000119109` | Alpha thalassemia trait in mother complicating pregnancy | inactivated (Classification derived) | REPLACED BY → 1373734007 Maternal disorder due to alpha thalassemia trait during antenatal and/or intrapartum period |
 | `23894009` | Acne varioliformis | inactivated (Duplicate) | SAME AS → 201228005 Necrotizing lymphocytic folliculitis |
 | `239884000` | Malemud disease | inactivated (Nonconformance to editorial policy) | - |
-| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | - |
+| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | POSSIBLY REPLACED BY → 400138001 Nodular fasciitis, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `248663000` | Upper sternal shock | inactivated (Classification derived) | REPLACED BY → 248690009 Added heart sounds |
 | `249079005` | Fontanelles presenting | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 249083005 Posterior fontanelle presenting, POSSIBLY EQUIVALENT TO → 249082000 Anterior fontanelle presenting |
 | `25053000` | Obstetrical central nervous system complication of anesthesia AND/OR sedation | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1380049002 Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period, POSSIBLY EQUIVALENT TO → 1379974001 Maternal central nervous system disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period |
@@ -232,7 +232,7 @@ Members: 129012 → 129411
 | `273983009` | Maternal cord or placental problem | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 429260008 Disorder of umbilical cord, POSSIBLY EQUIVALENT TO → 125586008 Disorder of placenta |
 | `274776000` | Finding of alcohol in blood | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1402002006 Finding of alcohol in blood, POSSIBLY EQUIVALENT TO → 1402003001 Finding of substance with alcohol structure in blood specimen |
 | `276263005` | Porphobilinogen deaminase deficiency | inactivated (Duplicate) | SAME AS → 234422006 Acute intermittent porphyria |
-| `276580005` | Atypical isoimmunization of newborn | inactivated (Outdated) | - |
+| `276580005` | Atypical isoimmunization of newborn | inactivated (Outdated) | POSSIBLY REPLACED BY → 387705004 Hemolytic disease of fetus OR newborn due to isoimmunization, POSSIBLY REPLACED BY → 111469006 Hemolytic disease of newborn due to non-ABO, non-Rhesus isoimmunization |
 | `284670008` | Nutritionally compromised | inactivated (Duplicate) | SAME AS → 445261000124106 Impaired nutritional status |
 | `28664002` | Herpes iris | inactivated (Outdated) | REPLACED BY → 1407145007 Erythema multiforme with vesiculobullous target-shaped lesion |
 | `288261009` | Was malpresentation pre-labor | inactivated (Erroneous) | REPLACED BY → 80002007 Malpresentation of fetus |
@@ -409,7 +409,7 @@ Members: 129012 → 129411
 | `609513003` | Induced termination of pregnancy complicated by uterus damage | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1373914002 Traumatic injury of uterus during termination of pregnancy |
 | `609514009` | Induced termination of pregnancy complicated by vaginal damage | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1373917009 Traumatic injury of vagina during termination of pregnancy |
 | `61714007` | Metabolic disturbance in labor AND/OR delivery | inactivated (Classification derived) | REPLACED BY → 1395830004 Maternal metabolic disease during intrapartum period |
-| `61947007` | Deaf mutism | inactivated (Outdated) | - |
+| `61947007` | Deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 15188001 Hearing loss |
 | `62612003` | Fibrosis of perineum affecting pregnancy | inactivated (Classification derived) | REPLACED BY → 1381677004 Fibrosis of perineum during antenatal and/or intrapartum period |
 | `62657007` | Cardiac arrest AND/OR failure following anesthesia AND/OR sedation in labor AND/OR delivery | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1386325001 Maternal cardiac arrest due to administration of anesthesia and/or sedation during intrapartum period, POSSIBLY EQUIVALENT TO → 1386326000 Maternal cardiac failure due to administration of anesthesia and/or sedation during intrapartum period |
 | `63287004` | Benign essential hypertension in obstetric context | inactivated (Classification derived) | REPLACED BY → 1373658004 Benign pre-existing essential hypertension during antenatal and/or intrapartum and/or postpartum period |
@@ -421,8 +421,8 @@ Members: 129012 → 129411
 | `66958002` | Isoimmunization from non-ABO, non-Rh blood-group incompatibility affecting pregnancy | inactivated (Classification derived) | REPLACED BY → 1381707006 Maternal non-ABO, non-Rhesus blood-group isoimmunization during antenatal and/or intrapartum period |
 | `68214002` | Lymphangitis of breast associated with childbirth | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1388394002 Lymphangitis of breast during postpartum |
 | `69302000` | Termination of pregnancy on demand | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 57797005 Termination of pregnancy |
-| `698614006` | Acquired deaf mutism | inactivated (Outdated) | - |
-| `698615007` | Congenital deaf mutism | inactivated (Outdated) | - |
+| `698614006` | Acquired deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 721294001 Acquired hearing loss |
+| `698615007` | Congenital deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 95828007 Congenital deafness, POSSIBLY REPLACED BY → 88052002 Mutism |
 | `698764006` | Post infectious grand mal epilepsy | inactivated (Outdated) | REPLACED BY → 1373924005 Epilepsy due to infectious disease |
 | `698767004` | Post-cerebrovascular accident epilepsy | inactivated (Duplicate) | SAME AS → 1380178003 Epilepsy due to and following stroke |
 | `699950009` | Anti-D isoimmunization affecting pregnancy | inactivated (Classification derived) | REPLACED BY → 1381696000 Maternal anti-D isoimmunization during antenatal and/or intrapartum period |
@@ -469,7 +469,7 @@ Members: 129012 → 129411
 | `78818007` | Decreased skin sensitivity | inactivated (Duplicate) | SAME AS → 398026008 Reduced sensation of skin |
 | `79254009` | Flail elbow | inactivated (Duplicate) | SAME AS → 296641000119105 Flail joint of elbow |
 | `79355007` | Hypertensive heart disease in obstetric context | inactivated (Classification derived) | REPLACED BY → 1373662005 Pre-existing hypertensive heart disease during maternal antenatal and/or intrapartum and/or postpartum period |
-| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | - |
+| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | POSSIBLY REPLACED BY → 237619009 Maternally inherited diabetes and deafness, POSSIBLY REPLACED BY → 57838006 Retinitis pigmentosa-deafness syndrome |
 | `79839005` | Perineal laceration involving vulva | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 237332009 Vulval tear, POSSIBLY EQUIVALENT TO → 1388876002 First degree laceration of perineum and laceration of vulva during vaginal delivery of fetus |
 | `80818002` | Previous surgery to perineum AND/OR vulva affecting pregnancy | inactivated (Classification derived) | PARTIALLY EQUIVALENT TO → 1381693008 Maternal disorder due to previous procedure on perineum during antenatal and/or intrapartum period, PARTIALLY EQUIVALENT TO → 1381694002 Maternal disorder due to previous procedure on vulva during antenatal and/or intrapartum period |
 | `81557008` | Parasitic disease in mother complicating pregnancy, childbirth AND/OR puerperium | inactivated (Classification derived) | REPLACED BY → 1375999005 Maternal disorder caused by parasite during antenatal and/or intrapartum and/or postpartum period |
@@ -1321,7 +1321,7 @@ Members: 137458 → 137864
 | Code | Display | Reason | Successor |
 |---|---|---|---|
 | `10562009` | Malignant hypertension complicating AND/OR reason for care during childbirth | inactivated (Classification derived) | REPLACED BY → 1373612000 Maternal disorder in labor due to malignant hypertension |
-| `105709005` | Disease caused by Rhabdiasoidea | inactivated (Outdated) | - |
+| `105709005` | Disease caused by Rhabdiasoidea | inactivated (Outdated) | POSSIBLY REPLACED BY → 1214006 Infection by Strongyloides, POSSIBLY REPLACED BY → 105710000 Disease caused by Rhabditoidea |
 | `106005003` | Hypertension AND/OR vomiting complicating pregnancy childbirth AND/OR puerperium | inactivated (Classification derived) | PARTIALLY EQUIVALENT TO → 1373731004 Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to hypertension, PARTIALLY EQUIVALENT TO → 90325002 Vomiting of pregnancy |
 | `106008001` | Delivery AND/OR maternal condition affecting management | inactivated (Classification derived) | REPLACED BY → 1269075002 Maternal disorder during intrapartum period |
 | `106009009` | Fetal condition affecting obstetrical care of mother | inactivated (Classification derived) | REPLACED BY → 70591005 Fetal disorder |
@@ -1374,8 +1374,8 @@ Members: 137458 → 137864
 | `128076000` | Bone AND/OR joint disorder in mother complicating pregnancy, childbirth AND/OR puerperium | inactivated (Classification derived) | REPLACED BY → 1380433009 Maternal disorder of bone and/or joint during antenatal and/or intrapartum and/or postpartum period |
 | `12867002` | Fetal distress affecting management of mother | inactivated (Classification derived) | REPLACED BY → 130955003 Nonreassuring fetal status |
 | `1354494000` | Induced termination of pregnancy complicated by damage to urethra | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1376018005 Traumatic injury of urethra during termination of pregnancy |
-| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | - |
-| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | - |
+| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | POSSIBLY REPLACED BY → 102556003 Pain in upper limb, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
+| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | POSSIBLY REPLACED BY → 771083005 Pain in upper arm, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `1362092008` | Complication occurring during pregnancy absent | inactivated (Outdated) | REPLACED BY → 1389061004 Maternal disorder during antenatal and/or intrapartum period absent |
 | `13866000` | Fetal acidemia affecting management of mother | inactivated (Classification derived) | REPLACED BY → 1382318006 Fetal acidemia |
 | `13943000` | Failed attempted termination of pregnancy complicated by embolism | inactivated (Duplicate) | SAME AS → 198812002 Failed attempted termination of pregnancy with embolism |
@@ -1452,8 +1452,8 @@ Members: 137458 → 137864
 | `200985008` | Parapsoriasis varioliformis | inactivated (Outdated) | REPLACED BY → 86487001 Acute lichenoid pityriasis |
 | `201174003` | Poliosis eccentrica | inactivated (Erroneous) | REPLACED BY → 1402372003 Poliosis eccentrica |
 | `201175002` | Poliosis - acquired | inactivated (Erroneous) | REPLACED BY → 1402371005 Acquired poliosis |
-| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | - |
-| `203104007` | Fibrositis of neck | inactivated (Outdated) | - |
+| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 45326000 Pain of shoulder region |
+| `203104007` | Fibrositis of neck | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 81680005 Neck pain |
 | `20753005` | Hypertensive heart disease complicating AND/OR reason for care during pregnancy | inactivated (Classification derived) | REPLACED BY → 1373738005 Disorder during maternal antenatal and/or intrapartum period due to pre-existing hypertensive heart disease |
 | `20759009` | Dietetic jejunitis | inactivated (Duplicate) | SAME AS → 1401593002 Allergic jejunitis caused by food |
 | `20845005` | Meconium in amniotic fluid affecting management of mother | inactivated (Classification derived) | PARTIALLY EQUIVALENT TO → 1389111006 Meconium stained amniotic fluid during intrapartum period, PARTIALLY EQUIVALENT TO → 206269002 Liveborn with labor meconium in liquor, PARTIALLY EQUIVALENT TO → 2132004 Meconium in amniotic fluid noted before labor in liveborn infant |
@@ -1476,7 +1476,7 @@ Members: 137458 → 137864
 | `238419741000119109` | Alpha thalassemia trait in mother complicating pregnancy | inactivated (Classification derived) | REPLACED BY → 1373734007 Maternal disorder due to alpha thalassemia trait during antenatal and/or intrapartum period |
 | `23894009` | Acne varioliformis | inactivated (Duplicate) | SAME AS → 201228005 Necrotizing lymphocytic folliculitis |
 | `239884000` | Malemud disease | inactivated (Nonconformance to editorial policy) | - |
-| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | - |
+| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | POSSIBLY REPLACED BY → 400138001 Nodular fasciitis, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `248663000` | Upper sternal shock | inactivated (Classification derived) | REPLACED BY → 248690009 Added heart sounds |
 | `249079005` | Fontanelles presenting | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 249083005 Posterior fontanelle presenting, POSSIBLY EQUIVALENT TO → 249082000 Anterior fontanelle presenting |
 | `25053000` | Obstetrical central nervous system complication of anesthesia AND/OR sedation | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1380049002 Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period, POSSIBLY EQUIVALENT TO → 1379974001 Maternal central nervous system disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period |
@@ -1497,7 +1497,7 @@ Members: 137458 → 137864
 | `273983009` | Maternal cord or placental problem | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 429260008 Disorder of umbilical cord, POSSIBLY EQUIVALENT TO → 125586008 Disorder of placenta |
 | `274776000` | Finding of alcohol in blood | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1402002006 Finding of alcohol in blood, POSSIBLY EQUIVALENT TO → 1402003001 Finding of substance with alcohol structure in blood specimen |
 | `276263005` | Porphobilinogen deaminase deficiency | inactivated (Duplicate) | SAME AS → 234422006 Acute intermittent porphyria |
-| `276580005` | Atypical isoimmunization of newborn | inactivated (Outdated) | - |
+| `276580005` | Atypical isoimmunization of newborn | inactivated (Outdated) | POSSIBLY REPLACED BY → 387705004 Hemolytic disease of fetus OR newborn due to isoimmunization, POSSIBLY REPLACED BY → 111469006 Hemolytic disease of newborn due to non-ABO, non-Rhesus isoimmunization |
 | `284670008` | Nutritionally compromised | inactivated (Duplicate) | SAME AS → 445261000124106 Impaired nutritional status |
 | `28664002` | Herpes iris | inactivated (Outdated) | REPLACED BY → 1407145007 Erythema multiforme with vesiculobullous target-shaped lesion |
 | `288261009` | Was malpresentation pre-labor | inactivated (Erroneous) | REPLACED BY → 80002007 Malpresentation of fetus |
@@ -1676,7 +1676,7 @@ Members: 137458 → 137864
 | `609513003` | Induced termination of pregnancy complicated by uterus damage | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1373914002 Traumatic injury of uterus during termination of pregnancy |
 | `609514009` | Induced termination of pregnancy complicated by vaginal damage | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1373917009 Traumatic injury of vagina during termination of pregnancy |
 | `61714007` | Metabolic disturbance in labor AND/OR delivery | inactivated (Classification derived) | REPLACED BY → 1395830004 Maternal metabolic disease during intrapartum period |
-| `61947007` | Deaf mutism | inactivated (Outdated) | - |
+| `61947007` | Deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 15188001 Hearing loss |
 | `62612003` | Fibrosis of perineum affecting pregnancy | inactivated (Classification derived) | REPLACED BY → 1381677004 Fibrosis of perineum during antenatal and/or intrapartum period |
 | `62657007` | Cardiac arrest AND/OR failure following anesthesia AND/OR sedation in labor AND/OR delivery | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1386325001 Maternal cardiac arrest due to administration of anesthesia and/or sedation during intrapartum period, POSSIBLY EQUIVALENT TO → 1386326000 Maternal cardiac failure due to administration of anesthesia and/or sedation during intrapartum period |
 | `63287004` | Benign essential hypertension in obstetric context | inactivated (Classification derived) | REPLACED BY → 1373658004 Benign pre-existing essential hypertension during antenatal and/or intrapartum and/or postpartum period |
@@ -1688,8 +1688,8 @@ Members: 137458 → 137864
 | `66958002` | Isoimmunization from non-ABO, non-Rh blood-group incompatibility affecting pregnancy | inactivated (Classification derived) | REPLACED BY → 1381707006 Maternal non-ABO, non-Rhesus blood-group isoimmunization during antenatal and/or intrapartum period |
 | `68214002` | Lymphangitis of breast associated with childbirth | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1388394002 Lymphangitis of breast during postpartum |
 | `69302000` | Termination of pregnancy on demand | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 57797005 Termination of pregnancy |
-| `698614006` | Acquired deaf mutism | inactivated (Outdated) | - |
-| `698615007` | Congenital deaf mutism | inactivated (Outdated) | - |
+| `698614006` | Acquired deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 721294001 Acquired hearing loss |
+| `698615007` | Congenital deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 95828007 Congenital deafness, POSSIBLY REPLACED BY → 88052002 Mutism |
 | `698764006` | Post infectious grand mal epilepsy | inactivated (Outdated) | REPLACED BY → 1373924005 Epilepsy due to infectious disease |
 | `698767004` | Post-cerebrovascular accident epilepsy | inactivated (Duplicate) | SAME AS → 1380178003 Epilepsy due to and following stroke |
 | `699950009` | Anti-D isoimmunization affecting pregnancy | inactivated (Classification derived) | REPLACED BY → 1381696000 Maternal anti-D isoimmunization during antenatal and/or intrapartum period |
@@ -1736,7 +1736,7 @@ Members: 137458 → 137864
 | `78818007` | Decreased skin sensitivity | inactivated (Duplicate) | SAME AS → 398026008 Reduced sensation of skin |
 | `79254009` | Flail elbow | inactivated (Duplicate) | SAME AS → 296641000119105 Flail joint of elbow |
 | `79355007` | Hypertensive heart disease in obstetric context | inactivated (Classification derived) | REPLACED BY → 1373662005 Pre-existing hypertensive heart disease during maternal antenatal and/or intrapartum and/or postpartum period |
-| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | - |
+| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | POSSIBLY REPLACED BY → 237619009 Maternally inherited diabetes and deafness, POSSIBLY REPLACED BY → 57838006 Retinitis pigmentosa-deafness syndrome |
 | `79839005` | Perineal laceration involving vulva | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 237332009 Vulval tear, POSSIBLY EQUIVALENT TO → 1388876002 First degree laceration of perineum and laceration of vulva during vaginal delivery of fetus |
 | `80818002` | Previous surgery to perineum AND/OR vulva affecting pregnancy | inactivated (Classification derived) | PARTIALLY EQUIVALENT TO → 1381693008 Maternal disorder due to previous procedure on perineum during antenatal and/or intrapartum period, PARTIALLY EQUIVALENT TO → 1381694002 Maternal disorder due to previous procedure on vulva during antenatal and/or intrapartum period |
 | `81557008` | Parasitic disease in mother complicating pregnancy, childbirth AND/OR puerperium | inactivated (Classification derived) | REPLACED BY → 1375999005 Maternal disorder caused by parasite during antenatal and/or intrapartum and/or postpartum period |
@@ -1843,7 +1843,7 @@ Members: 137458 → 137864
 | Code | Display | Reason | Successor |
 |---|---|---|---|
 | `10562009` | Malignant hypertension complicating AND/OR reason for care during childbirth | inactivated (Classification derived) | REPLACED BY → 1373612000 Maternal disorder in labor due to malignant hypertension |
-| `105709005` | Disease caused by Rhabdiasoidea | inactivated (Outdated) | - |
+| `105709005` | Disease caused by Rhabdiasoidea | inactivated (Outdated) | POSSIBLY REPLACED BY → 1214006 Infection by Strongyloides, POSSIBLY REPLACED BY → 105710000 Disease caused by Rhabditoidea |
 | `106005003` | Hypertension AND/OR vomiting complicating pregnancy childbirth AND/OR puerperium | inactivated (Classification derived) | PARTIALLY EQUIVALENT TO → 1373731004 Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to hypertension, PARTIALLY EQUIVALENT TO → 90325002 Vomiting of pregnancy |
 | `106008001` | Delivery AND/OR maternal condition affecting management | inactivated (Classification derived) | REPLACED BY → 1269075002 Maternal disorder during intrapartum period |
 | `106009009` | Fetal condition affecting obstetrical care of mother | inactivated (Classification derived) | REPLACED BY → 70591005 Fetal disorder |
@@ -1896,8 +1896,8 @@ Members: 137458 → 137864
 | `128076000` | Bone AND/OR joint disorder in mother complicating pregnancy, childbirth AND/OR puerperium | inactivated (Classification derived) | REPLACED BY → 1380433009 Maternal disorder of bone and/or joint during antenatal and/or intrapartum and/or postpartum period |
 | `12867002` | Fetal distress affecting management of mother | inactivated (Classification derived) | REPLACED BY → 130955003 Nonreassuring fetal status |
 | `1354494000` | Induced termination of pregnancy complicated by damage to urethra | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1376018005 Traumatic injury of urethra during termination of pregnancy |
-| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | - |
-| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | - |
+| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | POSSIBLY REPLACED BY → 102556003 Pain in upper limb, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
+| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | POSSIBLY REPLACED BY → 771083005 Pain in upper arm, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `1362092008` | Complication occurring during pregnancy absent | inactivated (Outdated) | REPLACED BY → 1389061004 Maternal disorder during antenatal and/or intrapartum period absent |
 | `13866000` | Fetal acidemia affecting management of mother | inactivated (Classification derived) | REPLACED BY → 1382318006 Fetal acidemia |
 | `13943000` | Failed attempted termination of pregnancy complicated by embolism | inactivated (Duplicate) | SAME AS → 198812002 Failed attempted termination of pregnancy with embolism |
@@ -1974,8 +1974,8 @@ Members: 137458 → 137864
 | `200985008` | Parapsoriasis varioliformis | inactivated (Outdated) | REPLACED BY → 86487001 Acute lichenoid pityriasis |
 | `201174003` | Poliosis eccentrica | inactivated (Erroneous) | REPLACED BY → 1402372003 Poliosis eccentrica |
 | `201175002` | Poliosis - acquired | inactivated (Erroneous) | REPLACED BY → 1402371005 Acquired poliosis |
-| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | - |
-| `203104007` | Fibrositis of neck | inactivated (Outdated) | - |
+| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 45326000 Pain of shoulder region |
+| `203104007` | Fibrositis of neck | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 81680005 Neck pain |
 | `20753005` | Hypertensive heart disease complicating AND/OR reason for care during pregnancy | inactivated (Classification derived) | REPLACED BY → 1373738005 Disorder during maternal antenatal and/or intrapartum period due to pre-existing hypertensive heart disease |
 | `20759009` | Dietetic jejunitis | inactivated (Duplicate) | SAME AS → 1401593002 Allergic jejunitis caused by food |
 | `20845005` | Meconium in amniotic fluid affecting management of mother | inactivated (Classification derived) | PARTIALLY EQUIVALENT TO → 1389111006 Meconium stained amniotic fluid during intrapartum period, PARTIALLY EQUIVALENT TO → 206269002 Liveborn with labor meconium in liquor, PARTIALLY EQUIVALENT TO → 2132004 Meconium in amniotic fluid noted before labor in liveborn infant |
@@ -1998,7 +1998,7 @@ Members: 137458 → 137864
 | `238419741000119109` | Alpha thalassemia trait in mother complicating pregnancy | inactivated (Classification derived) | REPLACED BY → 1373734007 Maternal disorder due to alpha thalassemia trait during antenatal and/or intrapartum period |
 | `23894009` | Acne varioliformis | inactivated (Duplicate) | SAME AS → 201228005 Necrotizing lymphocytic folliculitis |
 | `239884000` | Malemud disease | inactivated (Nonconformance to editorial policy) | - |
-| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | - |
+| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | POSSIBLY REPLACED BY → 400138001 Nodular fasciitis, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `248663000` | Upper sternal shock | inactivated (Classification derived) | REPLACED BY → 248690009 Added heart sounds |
 | `249079005` | Fontanelles presenting | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 249083005 Posterior fontanelle presenting, POSSIBLY EQUIVALENT TO → 249082000 Anterior fontanelle presenting |
 | `25053000` | Obstetrical central nervous system complication of anesthesia AND/OR sedation | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1380049002 Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period, POSSIBLY EQUIVALENT TO → 1379974001 Maternal central nervous system disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period |
@@ -2019,7 +2019,7 @@ Members: 137458 → 137864
 | `273983009` | Maternal cord or placental problem | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 429260008 Disorder of umbilical cord, POSSIBLY EQUIVALENT TO → 125586008 Disorder of placenta |
 | `274776000` | Finding of alcohol in blood | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1402002006 Finding of alcohol in blood, POSSIBLY EQUIVALENT TO → 1402003001 Finding of substance with alcohol structure in blood specimen |
 | `276263005` | Porphobilinogen deaminase deficiency | inactivated (Duplicate) | SAME AS → 234422006 Acute intermittent porphyria |
-| `276580005` | Atypical isoimmunization of newborn | inactivated (Outdated) | - |
+| `276580005` | Atypical isoimmunization of newborn | inactivated (Outdated) | POSSIBLY REPLACED BY → 387705004 Hemolytic disease of fetus OR newborn due to isoimmunization, POSSIBLY REPLACED BY → 111469006 Hemolytic disease of newborn due to non-ABO, non-Rhesus isoimmunization |
 | `284670008` | Nutritionally compromised | inactivated (Duplicate) | SAME AS → 445261000124106 Impaired nutritional status |
 | `28664002` | Herpes iris | inactivated (Outdated) | REPLACED BY → 1407145007 Erythema multiforme with vesiculobullous target-shaped lesion |
 | `288261009` | Was malpresentation pre-labor | inactivated (Erroneous) | REPLACED BY → 80002007 Malpresentation of fetus |
@@ -2198,7 +2198,7 @@ Members: 137458 → 137864
 | `609513003` | Induced termination of pregnancy complicated by uterus damage | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1373914002 Traumatic injury of uterus during termination of pregnancy |
 | `609514009` | Induced termination of pregnancy complicated by vaginal damage | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1373917009 Traumatic injury of vagina during termination of pregnancy |
 | `61714007` | Metabolic disturbance in labor AND/OR delivery | inactivated (Classification derived) | REPLACED BY → 1395830004 Maternal metabolic disease during intrapartum period |
-| `61947007` | Deaf mutism | inactivated (Outdated) | - |
+| `61947007` | Deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 15188001 Hearing loss |
 | `62612003` | Fibrosis of perineum affecting pregnancy | inactivated (Classification derived) | REPLACED BY → 1381677004 Fibrosis of perineum during antenatal and/or intrapartum period |
 | `62657007` | Cardiac arrest AND/OR failure following anesthesia AND/OR sedation in labor AND/OR delivery | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1386325001 Maternal cardiac arrest due to administration of anesthesia and/or sedation during intrapartum period, POSSIBLY EQUIVALENT TO → 1386326000 Maternal cardiac failure due to administration of anesthesia and/or sedation during intrapartum period |
 | `63287004` | Benign essential hypertension in obstetric context | inactivated (Classification derived) | REPLACED BY → 1373658004 Benign pre-existing essential hypertension during antenatal and/or intrapartum and/or postpartum period |
@@ -2210,8 +2210,8 @@ Members: 137458 → 137864
 | `66958002` | Isoimmunization from non-ABO, non-Rh blood-group incompatibility affecting pregnancy | inactivated (Classification derived) | REPLACED BY → 1381707006 Maternal non-ABO, non-Rhesus blood-group isoimmunization during antenatal and/or intrapartum period |
 | `68214002` | Lymphangitis of breast associated with childbirth | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1388394002 Lymphangitis of breast during postpartum |
 | `69302000` | Termination of pregnancy on demand | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 57797005 Termination of pregnancy |
-| `698614006` | Acquired deaf mutism | inactivated (Outdated) | - |
-| `698615007` | Congenital deaf mutism | inactivated (Outdated) | - |
+| `698614006` | Acquired deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 721294001 Acquired hearing loss |
+| `698615007` | Congenital deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 95828007 Congenital deafness, POSSIBLY REPLACED BY → 88052002 Mutism |
 | `698764006` | Post infectious grand mal epilepsy | inactivated (Outdated) | REPLACED BY → 1373924005 Epilepsy due to infectious disease |
 | `698767004` | Post-cerebrovascular accident epilepsy | inactivated (Duplicate) | SAME AS → 1380178003 Epilepsy due to and following stroke |
 | `699950009` | Anti-D isoimmunization affecting pregnancy | inactivated (Classification derived) | REPLACED BY → 1381696000 Maternal anti-D isoimmunization during antenatal and/or intrapartum period |
@@ -2258,7 +2258,7 @@ Members: 137458 → 137864
 | `78818007` | Decreased skin sensitivity | inactivated (Duplicate) | SAME AS → 398026008 Reduced sensation of skin |
 | `79254009` | Flail elbow | inactivated (Duplicate) | SAME AS → 296641000119105 Flail joint of elbow |
 | `79355007` | Hypertensive heart disease in obstetric context | inactivated (Classification derived) | REPLACED BY → 1373662005 Pre-existing hypertensive heart disease during maternal antenatal and/or intrapartum and/or postpartum period |
-| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | - |
+| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | POSSIBLY REPLACED BY → 237619009 Maternally inherited diabetes and deafness, POSSIBLY REPLACED BY → 57838006 Retinitis pigmentosa-deafness syndrome |
 | `79839005` | Perineal laceration involving vulva | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 237332009 Vulval tear, POSSIBLY EQUIVALENT TO → 1388876002 First degree laceration of perineum and laceration of vulva during vaginal delivery of fetus |
 | `80818002` | Previous surgery to perineum AND/OR vulva affecting pregnancy | inactivated (Classification derived) | PARTIALLY EQUIVALENT TO → 1381693008 Maternal disorder due to previous procedure on perineum during antenatal and/or intrapartum period, PARTIALLY EQUIVALENT TO → 1381694002 Maternal disorder due to previous procedure on vulva during antenatal and/or intrapartum period |
 | `81557008` | Parasitic disease in mother complicating pregnancy, childbirth AND/OR puerperium | inactivated (Classification derived) | REPLACED BY → 1375999005 Maternal disorder caused by parasite during antenatal and/or intrapartum and/or postpartum period |
@@ -2850,7 +2850,7 @@ Members: 129019 → 129419
 | Code | Display | Reason | Successor |
 |---|---|---|---|
 | `10562009` | Malignant hypertension complicating AND/OR reason for care during childbirth | inactivated (Classification derived) | REPLACED BY → 1373612000 Maternal disorder in labor due to malignant hypertension |
-| `105709005` | Disease caused by Rhabdiasoidea | inactivated (Outdated) | - |
+| `105709005` | Disease caused by Rhabdiasoidea | inactivated (Outdated) | POSSIBLY REPLACED BY → 1214006 Infection by Strongyloides, POSSIBLY REPLACED BY → 105710000 Disease caused by Rhabditoidea |
 | `106005003` | Hypertension AND/OR vomiting complicating pregnancy childbirth AND/OR puerperium | inactivated (Classification derived) | PARTIALLY EQUIVALENT TO → 1373731004 Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to hypertension, PARTIALLY EQUIVALENT TO → 90325002 Vomiting of pregnancy |
 | `106008001` | Delivery AND/OR maternal condition affecting management | inactivated (Classification derived) | REPLACED BY → 1269075002 Maternal disorder during intrapartum period |
 | `106009009` | Fetal condition affecting obstetrical care of mother | inactivated (Classification derived) | REPLACED BY → 70591005 Fetal disorder |
@@ -2902,8 +2902,8 @@ Members: 129019 → 129419
 | `128076000` | Bone AND/OR joint disorder in mother complicating pregnancy, childbirth AND/OR puerperium | inactivated (Classification derived) | REPLACED BY → 1380433009 Maternal disorder of bone and/or joint during antenatal and/or intrapartum and/or postpartum period |
 | `12867002` | Fetal distress affecting management of mother | inactivated (Classification derived) | REPLACED BY → 130955003 Nonreassuring fetal status |
 | `1354494000` | Induced termination of pregnancy complicated by damage to urethra | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1376018005 Traumatic injury of urethra during termination of pregnancy |
-| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | - |
-| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | - |
+| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | POSSIBLY REPLACED BY → 102556003 Pain in upper limb, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
+| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | POSSIBLY REPLACED BY → 771083005 Pain in upper arm, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `13866000` | Fetal acidemia affecting management of mother | inactivated (Classification derived) | REPLACED BY → 1382318006 Fetal acidemia |
 | `13943000` | Failed attempted termination of pregnancy complicated by embolism | inactivated (Duplicate) | SAME AS → 198812002 Failed attempted termination of pregnancy with embolism |
 | `14022007` | Fetal death, affecting management of mother | inactivated (Classification derived) | REPLACED BY → 276507005 Fetal death |
@@ -2978,8 +2978,8 @@ Members: 129019 → 129419
 | `200985008` | Parapsoriasis varioliformis | inactivated (Outdated) | REPLACED BY → 86487001 Acute lichenoid pityriasis |
 | `201174003` | Poliosis eccentrica | inactivated (Erroneous) | REPLACED BY → 1402372003 Poliosis eccentrica |
 | `201175002` | Poliosis - acquired | inactivated (Erroneous) | REPLACED BY → 1402371005 Acquired poliosis |
-| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | - |
-| `203104007` | Fibrositis of neck | inactivated (Outdated) | - |
+| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 45326000 Pain of shoulder region |
+| `203104007` | Fibrositis of neck | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 81680005 Neck pain |
 | `20753005` | Hypertensive heart disease complicating AND/OR reason for care during pregnancy | inactivated (Classification derived) | REPLACED BY → 1373738005 Disorder during maternal antenatal and/or intrapartum period due to pre-existing hypertensive heart disease |
 | `20759009` | Dietetic jejunitis | inactivated (Duplicate) | SAME AS → 1401593002 Allergic jejunitis caused by food |
 | `20845005` | Meconium in amniotic fluid affecting management of mother | inactivated (Classification derived) | PARTIALLY EQUIVALENT TO → 1389111006 Meconium stained amniotic fluid during intrapartum period, PARTIALLY EQUIVALENT TO → 206269002 Liveborn with labor meconium in liquor, PARTIALLY EQUIVALENT TO → 2132004 Meconium in amniotic fluid noted before labor in liveborn infant |
@@ -3002,7 +3002,7 @@ Members: 129019 → 129419
 | `238419741000119109` | Alpha thalassemia trait in mother complicating pregnancy | inactivated (Classification derived) | REPLACED BY → 1373734007 Maternal disorder due to alpha thalassemia trait during antenatal and/or intrapartum period |
 | `23894009` | Acne varioliformis | inactivated (Duplicate) | SAME AS → 201228005 Necrotizing lymphocytic folliculitis |
 | `239884000` | Malemud disease | inactivated (Nonconformance to editorial policy) | - |
-| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | - |
+| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | POSSIBLY REPLACED BY → 400138001 Nodular fasciitis, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `248663000` | Upper sternal shock | inactivated (Classification derived) | REPLACED BY → 248690009 Added heart sounds |
 | `249079005` | Fontanelles presenting | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 249083005 Posterior fontanelle presenting, POSSIBLY EQUIVALENT TO → 249082000 Anterior fontanelle presenting |
 | `25053000` | Obstetrical central nervous system complication of anesthesia AND/OR sedation | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1380049002 Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period, POSSIBLY EQUIVALENT TO → 1379974001 Maternal central nervous system disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period |
@@ -3023,7 +3023,7 @@ Members: 129019 → 129419
 | `273983009` | Maternal cord or placental problem | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 429260008 Disorder of umbilical cord, POSSIBLY EQUIVALENT TO → 125586008 Disorder of placenta |
 | `274776000` | Finding of alcohol in blood | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1402002006 Finding of alcohol in blood, POSSIBLY EQUIVALENT TO → 1402003001 Finding of substance with alcohol structure in blood specimen |
 | `276263005` | Porphobilinogen deaminase deficiency | inactivated (Duplicate) | SAME AS → 234422006 Acute intermittent porphyria |
-| `276580005` | Atypical isoimmunization of newborn | inactivated (Outdated) | - |
+| `276580005` | Atypical isoimmunization of newborn | inactivated (Outdated) | POSSIBLY REPLACED BY → 387705004 Hemolytic disease of fetus OR newborn due to isoimmunization, POSSIBLY REPLACED BY → 111469006 Hemolytic disease of newborn due to non-ABO, non-Rhesus isoimmunization |
 | `284670008` | Nutritionally compromised | inactivated (Duplicate) | SAME AS → 445261000124106 Impaired nutritional status |
 | `28664002` | Herpes iris | inactivated (Outdated) | REPLACED BY → 1407145007 Erythema multiforme with vesiculobullous target-shaped lesion |
 | `288261009` | Was malpresentation pre-labor | inactivated (Erroneous) | REPLACED BY → 80002007 Malpresentation of fetus |
@@ -3200,7 +3200,7 @@ Members: 129019 → 129419
 | `609513003` | Induced termination of pregnancy complicated by uterus damage | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1373914002 Traumatic injury of uterus during termination of pregnancy |
 | `609514009` | Induced termination of pregnancy complicated by vaginal damage | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1373917009 Traumatic injury of vagina during termination of pregnancy |
 | `61714007` | Metabolic disturbance in labor AND/OR delivery | inactivated (Classification derived) | REPLACED BY → 1395830004 Maternal metabolic disease during intrapartum period |
-| `61947007` | Deaf mutism | inactivated (Outdated) | - |
+| `61947007` | Deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 15188001 Hearing loss |
 | `62612003` | Fibrosis of perineum affecting pregnancy | inactivated (Classification derived) | REPLACED BY → 1381677004 Fibrosis of perineum during antenatal and/or intrapartum period |
 | `62657007` | Cardiac arrest AND/OR failure following anesthesia AND/OR sedation in labor AND/OR delivery | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1386325001 Maternal cardiac arrest due to administration of anesthesia and/or sedation during intrapartum period, POSSIBLY EQUIVALENT TO → 1386326000 Maternal cardiac failure due to administration of anesthesia and/or sedation during intrapartum period |
 | `63287004` | Benign essential hypertension in obstetric context | inactivated (Classification derived) | REPLACED BY → 1373658004 Benign pre-existing essential hypertension during antenatal and/or intrapartum and/or postpartum period |
@@ -3212,8 +3212,8 @@ Members: 129019 → 129419
 | `66958002` | Isoimmunization from non-ABO, non-Rh blood-group incompatibility affecting pregnancy | inactivated (Classification derived) | REPLACED BY → 1381707006 Maternal non-ABO, non-Rhesus blood-group isoimmunization during antenatal and/or intrapartum period |
 | `68214002` | Lymphangitis of breast associated with childbirth | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1388394002 Lymphangitis of breast during postpartum |
 | `69302000` | Termination of pregnancy on demand | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 57797005 Termination of pregnancy |
-| `698614006` | Acquired deaf mutism | inactivated (Outdated) | - |
-| `698615007` | Congenital deaf mutism | inactivated (Outdated) | - |
+| `698614006` | Acquired deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 721294001 Acquired hearing loss |
+| `698615007` | Congenital deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 95828007 Congenital deafness, POSSIBLY REPLACED BY → 88052002 Mutism |
 | `698764006` | Post infectious grand mal epilepsy | inactivated (Outdated) | REPLACED BY → 1373924005 Epilepsy due to infectious disease |
 | `698767004` | Post-cerebrovascular accident epilepsy | inactivated (Duplicate) | SAME AS → 1380178003 Epilepsy due to and following stroke |
 | `699950009` | Anti-D isoimmunization affecting pregnancy | inactivated (Classification derived) | REPLACED BY → 1381696000 Maternal anti-D isoimmunization during antenatal and/or intrapartum period |
@@ -3260,7 +3260,7 @@ Members: 129019 → 129419
 | `78818007` | Decreased skin sensitivity | inactivated (Duplicate) | SAME AS → 398026008 Reduced sensation of skin |
 | `79254009` | Flail elbow | inactivated (Duplicate) | SAME AS → 296641000119105 Flail joint of elbow |
 | `79355007` | Hypertensive heart disease in obstetric context | inactivated (Classification derived) | REPLACED BY → 1373662005 Pre-existing hypertensive heart disease during maternal antenatal and/or intrapartum and/or postpartum period |
-| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | - |
+| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | POSSIBLY REPLACED BY → 237619009 Maternally inherited diabetes and deafness, POSSIBLY REPLACED BY → 57838006 Retinitis pigmentosa-deafness syndrome |
 | `79839005` | Perineal laceration involving vulva | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 237332009 Vulval tear, POSSIBLY EQUIVALENT TO → 1388876002 First degree laceration of perineum and laceration of vulva during vaginal delivery of fetus |
 | `80818002` | Previous surgery to perineum AND/OR vulva affecting pregnancy | inactivated (Classification derived) | PARTIALLY EQUIVALENT TO → 1381693008 Maternal disorder due to previous procedure on perineum during antenatal and/or intrapartum period, PARTIALLY EQUIVALENT TO → 1381694002 Maternal disorder due to previous procedure on vulva during antenatal and/or intrapartum period |
 | `81557008` | Parasitic disease in mother complicating pregnancy, childbirth AND/OR puerperium | inactivated (Classification derived) | REPLACED BY → 1375999005 Maternal disorder caused by parasite during antenatal and/or intrapartum and/or postpartum period |
@@ -3411,7 +3411,7 @@ Members: 60697 → 62931
 | `312339003` | Stereotactic injection of alcohol to Gasserian ganglion | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1402008005 Stereotactic injection of glycerol to Gasserian ganglion, POSSIBLY EQUIVALENT TO → 1402007000 Stereotactic injection of alcohol to Gasserian ganglion |
 | `32845008` | Alcohol measurement, urine | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 271289006 Urine alcohol measurement, POSSIBLY EQUIVALENT TO → 1402000003 Measurement of substance with alcohol structure in urine specimen |
 | `359578003` | Percutaneous endoscopy through jejunostomy | inactivated (Erroneous) | REPLACED BY → 53402007 Endoscopy of small intestine through artificial stoma |
-| `37127001` | Injection of inner ear with alcohol | inactivated (Outdated) | - |
+| `37127001` | Injection of inner ear with alcohol | inactivated (Outdated) | POSSIBLY REPLACED BY → 1402090008 Injection of inner ear with gentamicin, POSSIBLY REPLACED BY → 1402091007 Injection of inner ear with corticosteroid and/or corticosteroid derivative |
 | `386745004` | Transurethral cystoscopy | inactivated (Duplicate) | SAME AS → 142505009 Cystoscopy |
 | `406911000` | Permethrin stain method | inactivated (Nonconformance to editorial policy) | ALTERNATIVE → 59209009 Toxicology testing for insecticide, ALTERNATIVE → 127790008 Staining method |
 | `418447007` | US scan of orbits | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 127671000146102 Ultrasonography of right orbit proper, POSSIBLY EQUIVALENT TO → 1399538009 Ultrasonography of orbit proper, POSSIBLY EQUIVALENT TO → 127661000146108 Ultrasonography of left orbit proper |

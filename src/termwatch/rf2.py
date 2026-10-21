@@ -45,7 +45,7 @@ EDITIONS = [  # archive-name marker -> edition module (the version URI's middle 
     ("InternationalRF2", "900000000000207008"), ("Germany", "11000274103"),
     ("ManagedServiceAT", "11000234105"), ("ManagedServiceCH", "2011000195101"),
 ]
-CACHE_FORMAT = 1
+CACHE_FORMAT = 2
 
 
 def _edition_and_date(name: str) -> Tuple[str, str]:

@@ -1,0 +1,32 @@
+{
+ "resourceType": "ConceptMap",
+ "id": "mii-vs-lufu-sct-observable-sct-20260701-20261001",
+ "status": "draft",
+ "name": "mii-vs-lufu-sct-observable_sct_20260701_20261001",
+ "title": "Überleitung mii-vs-lufu-sct-observable: SNOMED CT 20260701 → 20261001",
+ "date": "2026-10-21",
+ "publisher": "MII Terminology Watch (draft)",
+ "description": "Successors for members of mii-vs-lufu-sct-observable inactivated between SNOMED CT International 20260701 and 20261001. 0 of 1 elements resolved (auto / proposed / decided), the rest unmatched pending a decision.",
+ "sourceUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701",
+ "targetUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20261001",
+ "group": [
+  {
+   "source": "http://snomed.info/sct",
+   "sourceVersion": "http://snomed.info/sct/900000000000207008/version/20260701",
+   "target": "http://snomed.info/sct",
+   "targetVersion": "http://snomed.info/sct/900000000000207008/version/20261001",
+   "element": [
+    {
+     "code": "313221000",
+     "display": "Respiratory percentage",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Nonconformance to editorial policy); candidates: 251880004 (ALTERNATIVE)"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

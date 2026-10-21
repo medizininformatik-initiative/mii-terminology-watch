@@ -84,5 +84,8 @@ bd close <id>         # Complete work
 - Package to use: `~/.fhir/packages/de.medizininformatikinitiative.kerndatensatz.complete#2027.0.0-ballot.19/package`
   (if the cache was cleared: the ballot.19 tgz in the local kerndatensatz-complete build repo, extracted to a scratch dir).
 - Anchors already inactive/unknown under the baseline are `anchors_preexisting` (content findings), not release changes.
+- `src/termwatch/decide.py` + `decide_template.html`: `termwatch decide` ranks successor candidates per inactivated code
+  (auto/proposed/open/none/out-of-filter), merges previous decisions.json (per code), writes summary.md, R4 ConceptMap drafts
+  and review.html; review pages are copied to `explorer/decisions/` for Pages.
 - `TERMWATCH_DEBUG=1` prints tracebacks for per-ValueSet compare failures.
 - Issues: beads (`bd ready`), prefix `tw`.

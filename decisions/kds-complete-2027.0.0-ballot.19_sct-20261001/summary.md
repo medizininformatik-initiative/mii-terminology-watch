@@ -1,0 +1,2283 @@
+# Decisions: SNOMED CT 20260701 → 20261001 (de.medizininformatikinitiative.kerndatensatz.complete 2027.0.0-ballot.19)
+
+Status: auto = single SAME AS / REPLACED BY successor; proposed = one candidate survives the signals (member of the re-expanded ValueSet, active, same hierarchy); open = several candidates; none = no successor; out-of-filter = code still active, only dropped out of the filter (data stays valid).
+
+| ValueSet | auto | proposed | open | none | out-of-filter | decided |
+|---|---:|---:|---:|---:|---:|---:|
+| bildgebung / `mii-vs-bildgebung-findings-sct` | 243 | 106 | 85 | 5 | 0 | 0 |
+| bildgebung / `mii-vs-bildgebung-imaging-procedure-code-sct` | 9 | 3 | 3 | 0 | 0 | 0 |
+| bildgebung / `mii-vs-bildgebung-observation-body-site-sct` | 31 | 0 | 4 | 0 | 0 | 0 |
+| biobank / `mii-vs-biobank-body-structures-sct` | 31 | 0 | 4 | 0 | 0 | 0 |
+| biobank / `mii-vs-biobank-laboratory-procedure-sct` | 0 | 1 | 0 | 0 | 0 | 0 |
+| biobank / `mii-vs-biobank-substance-additive-sct` | 153 | 0 | 1 | 127 | 0 | 0 |
+| diagnose / `mii-vs-diagnose-bodystructure-snomed` | 31 | 0 | 4 | 0 | 0 | 0 |
+| diagnose / `mii-vs-diagnose-diagnosecodes-snomed` | 246 | 106 | 87 | 5 | 0 | 0 |
+| kardio / `mii-vs-kardio-extended-mii-diagnosecodes-snomed` | 246 | 106 | 87 | 5 | 0 | 0 |
+| lungenfunktion / `mii-vs-lufu-sct-findings` | 3 | 1 | 1 | 0 | 0 | 0 |
+| lungenfunktion / `mii-vs-lufu-sct-observable` | 0 | 0 | 1 | 0 | 0 | 0 |
+| mikrobio / `mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed` | 6 | 0 | 1 | 2 | 0 | 0 |
+| mikrobio / `mii-vs-mikrobio-organismen-snomedct` | 6 | 0 | 1 | 2 | 0 | 0 |
+| onko / `mii-vs-onko-koerperstruktur-sct` | 31 | 0 | 4 | 0 | 0 | 0 |
+| onko / `mii-vs-onko-prostata-operation-snomedct` | 0 | 0 | 0 | 0 | 1 | 0 |
+| patho / `mii-vs-patho-collection-method-snomed-ct` | 3 | 0 | 1 | 1 | 1 | 0 |
+| patho / `mii-vs-patho-problem-list-snomed-ct` | 243 | 106 | 85 | 5 | 0 | 0 |
+| patho / `mii-vs-patho-processing-procedure-snomed-ct` | 0 | 1 | 0 | 0 | 0 | 0 |
+| patho / `mii-vs-patho-service-request-code` | 0 | 1 | 0 | 0 | 0 | 0 |
+| prozedur / `mii-vs-prozedur-prozeduren-snomedct` | 22 | 9 | 16 | 3 | 0 | 0 |
+| **total** | **1304** | **440** | **385** | **155** | **2** | **0** |
+| **distinct codes** | **458** | **117** | **110** | **137** | **2** | **0** |
+
+A decision is taken once per code and applies to every ValueSet it sits in: 110 open + 137 without successor need a human, 117 proposals to confirm, 458 resolved automatically.
+
+## Open: several candidates (385)
+
+- `105709005` Disease caused by Rhabdiasoidea — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `105710000` Disease caused by Rhabditoidea (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `1214006` Infection by Strongyloides (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `106005003` Hypertension AND/OR vomiting complicating pregnancy childbirth AND/OR puerperium — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `90325002` Vomiting of pregnancy (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `1373731004` Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.08)
+- `106010004` Pelvic dystocia AND/OR uterine disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `79748007` Maternal dystocia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `12337004` Disorder of uterus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `1381465004` Labor dystocia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `10808861000119105` Maternal distress during childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1409197005` Maternal emotional distress during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43)
+    - `249196008` Maternal distress due to pain during maternal intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43)
+    - `200164009` Maternal exhaustion during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+- `1163529009` Epilepsy due to bacterial endocarditis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373924005` Epilepsy due to infectious disease (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `1373925006` Epilepsy due to infectious abscess of brain (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `11914001` Transverse OR oblique presentation of fetus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `73161006` Transverse lie (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `63750008` Oblique lie (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `1220631006` Incomplete induced termination of pregnancy complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379951000` Excessive hemorrhage due to and following incomplete induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+    - `1379950004` Delayed hemorrhage due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56)
+- `1220632004` Incomplete induced termination of pregnancy complicated by damage to pelvic organs or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379947002` Traumatic injury of pelvic organ during incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+    - `1379948007` Traumatic injury of soft tissue of pelvis during incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `1269476005` At increased risk for complication during labor and delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1392349003` At increased risk for maternal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.42)
+    - `1392350003` At increased risk for fetal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.42)
+- `1354668000` Fibrositis of upper limb — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `102556003` Pain in upper limb (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `1354669008` Fibrositis of upper arm — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `771083005` Pain in upper arm (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `162863004` Body mass index 25-29 - overweight — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407011003` Adult body mass index 25-29.9 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.5)
+    - `1407012005` Overweight in adulthood (ALTERNATIVE; in VS; same hierarchy; score 4.14)
+- `162864005` Body mass index 30+ - obesity — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407009007` Adult body mass index greater than or equal to 30 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.36)
+    - `414916001` Obesity (ALTERNATIVE; in VS; same hierarchy; score 4.2)
+    - `414915002` Obese (ALTERNATIVE; in VS; same hierarchy; score 4.0)
+- `1639007` Abnormality of organs AND/OR soft tissues of pelvis affecting pregnancy — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `199446000` Maternal abnormality of pelvic soft tissue during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.13)
+    - `1381684007` Maternal disorder of pelvic organ during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `197140007` Secondary megacolon - congenital — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `197141006` Secondary acquired megacolon (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `204739008` Congenital aganglionic megacolon (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `19773009` Infection of the breast AND/OR nipple associated with childbirth — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388392003` Infection of nipple during postpartum (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+    - `1388391005` Infection of breast during postpartum (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+- `198609003` Complication of pregnancy, childbirth and/or puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1269101009` Maternal disorder during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `70591005` Fetal disorder (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `198656000` Complete miscarriage with delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397338001` Excessive hemorrhage due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+    - `1397337006` Delayed hemorrhage due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+- `198657009` Complete miscarriage with damage to pelvic organs or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397371002` Traumatic injury of organ of pelvis due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+    - `1397364007` Traumatic injury of soft tissue of pelvis due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `198806007` Failed attempted termination of pregnancy with genital tract or pelvic infection — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373273008` Failed attempted abortion with genital tract infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.56)
+    - `1373272003` Failed attempted abortion with pelvic infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `198807003` Failed attempted termination of pregnancy with delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397361004` Delayed hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+    - `1397362006` Excessive hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `198874006` Failed medical termination of pregnancy, complicated by genital tract or pelvic infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373431003` Failed medical abortion with genital tract infection (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1373432005` Failed medical abortion with pelvic infection (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `198875007` Failed medical termination of pregnancy, complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397361004` Delayed hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `1397362006` Excessive hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+- `198997005` Pre-eclampsia or eclampsia with pre-existing hypertension — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `67359005` Pre-eclampsia added to pre-existing hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+    - `69909000` Eclampsia added to pre-existing hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+- `199257008` Mental disorders during pregnancy, childbirth and the puerperium — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1258898000` Mental disorder during puerperium (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.43)
+    - `1396772000` Mental disorder during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `199296002` Endocrine, nutritional and metabolic disease complicating pregnancy, childbirth and puerperium — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380430007` Maternal nutritional disorder during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.07)
+    - `1380431006` Maternal metabolic disorder during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.07)
+- `199745000` Complication occurring during labor and delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1269434002` Fetal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+    - `1269075002` Maternal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `202848009` Scapulohumeral fibrositis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+    - `45326000` Pain of shoulder region (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `203104007` Fibrositis of neck — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `81680005` Neck pain (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `20845005` Meconium in amniotic fluid affecting management of mother — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389111006` Meconium stained amniotic fluid during intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.3)
+    - `2132004` Meconium in amniotic fluid noted before labor in liveborn infant (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `206269002` Liveborn with labor meconium in liquor (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `22281000119101` Post-term pregnancy of 40 to 42 weeks — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `90968009` Post-term pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `46230007` Gestation period, 40 weeks (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `63503002` Gestation period, 41 weeks (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `22753004` Fetal AND/OR placental disorder affecting management of mother — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1193535003` Fetal disorder due to placental disorder (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `125586008` Disorder of placenta (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `237256006` Disorder of pelvic size and disproportion — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `275426009` Pelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `199416003` Mixed feto-pelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `25749005` Fetopelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `199397009` Cephalopelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `240044003` Fibrositis and nodular fasciitis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `400138001` Nodular fasciitis (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.67)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `249079005` Fontanelles presenting — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `249083005` Posterior fontanelle presenting (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `249082000` Anterior fontanelle presenting (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `25053000` Obstetrical central nervous system complication of anesthesia AND/OR sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379974001` Maternal central nervous system disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+    - `1380049002` Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `26224003` Failed attempted termination of pregnancy complicated by genital-pelvic infection — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373272003` Failed attempted abortion with pelvic infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+    - `1373273008` Failed attempted abortion with genital tract infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `26623000` Failed attempted termination of pregnancy complicated by delayed and/or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397362006` Excessive hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+    - `1397361004` Delayed hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `267322007` Pregnancy with orthopedic problem — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `9111000119104` Musculoskeletal problem in pregnancy (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1380410008` Maternal disorder of musculoskeletal system during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `270498000` Fetal malposition and malpresentation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `80002007` Malpresentation of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `289365005` Finding of malposition of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `273983009` Maternal cord or placental problem — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `429260008` Disorder of umbilical cord (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `125586008` Disorder of placenta (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `274776000` Finding of alcohol in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402002006` Finding of alcohol in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1402003001` Finding of substance with alcohol structure in blood specimen (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `276580005` Atypical isoimmunization of newborn — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `387705004` Hemolytic disease of fetus OR newborn due to isoimmunization (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `111469006` Hemolytic disease of newborn due to non-ABO, non-Rhesus isoimmunization (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.25)
+- `29847008` Obstetrical complication of anesthesia AND/OR sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380038008` Maternal disorder due to administration of anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.08)
+    - `1380049002` Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `307333004` Rhesus isoimmunization due to anti-D — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381908006` Hemolytic disease of fetus and/or neonate due to Rhesus anti-D isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381696000` Maternal anti-D isoimmunization during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+- `307334005` Rhesus isoimmunization due to anti-c — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381903002` Hemolytic disease of fetus and/or neonate due to Rhesus anti-c isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381901000` Maternal Rhesus isoimmunization due to anti-c during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `307335006` Rhesus isoimmunization due to anti-E — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381909003` Hemolytic disease of fetus and/or neonate due to Rhesus anti-E isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381907001` Maternal Rhesus isoimmunization due to anti-E during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `307336007` Rhesus isoimmunization due to anti-Cw — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381906005` Hemolytic disease of fetus and/or neonate due to Rhesus anti-Cw isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381905009` Maternal Rhesus isoimmunization due to anti-Cw during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `307735008` Complete inevitable miscarriage complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397334004` Excessive hemorrhage due to and following complete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+    - `1397335003` Delayed hemorrhage due to and following complete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+- `307752007` Incomplete inevitable miscarriage complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397343008` Excessive hemorrhage due to and following incomplete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+    - `1397344002` Delayed hemorrhage due to and following incomplete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+- `362972006` Disorder of labor / delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1269434002` Fetal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `1269075002` Maternal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `1382290001` Disorder of mother and/or fetus during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.12)
+- `387833009` Premature canities — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402360009` Premature canities (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `297994000` Gray hair (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `408512008` Body mass index 40+ - severely obese — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407010002` Adult body mass index greater than or equal to 40 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.33)
+    - `83911000119104` Severe obesity (ALTERNATIVE; in VS; same hierarchy; score 4.0)
+- `412768003` Body mass index 20-24 - normal — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407013000` Adult body mass index 18.5-24.9 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.33)
+    - `43664005` Normal weight (ALTERNATIVE; in VS; same hierarchy; score 4.14)
+- `415110002` Plasma cell myeloma/plasmacytoma — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `415112005` Plasmacytoma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `109989006` Multiple myeloma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `47507006` Rieger anomaly — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1416355004` Rieger anomaly (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `417604002` Axenfeld-Rieger syndrome (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `4783006` Maternal diabetes mellitus with hypoglycemia affecting fetus OR newborn — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388261002` Disorder of fetus due to hypoglycemia of mother with diabetes mellitus (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+    - `1388262009` Disorder of neonate due to hypoglycemia of mother with diabetes mellitus (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.3)
+- `48739004` Miscarriage with cardiac arrest and/or cardiac failure — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `10760181000119109` Cardiac arrest due to miscarriage (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1397851002` Cardiac failure due to and following miscarriage (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.6)
+- `51495008` Cerebral anoxia following anesthesia AND/OR sedation in labor AND/OR delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-lufu-sct-findings`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1396086006` Maternal cerebral anoxia due to and following anesthesia during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.36)
+    - `1396087002` Maternal cerebral anoxia due to and following sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.36)
+- `5534004` Senile arteritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `129573006` Atherosclerotic occlusive disease (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `698816006` Chronic occlusion of artery of extremity (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `55581002` Meconium in amniotic fluid first noted during labor AND/OR delivery in liveborn infant — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389111006` Meconium stained amniotic fluid during intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+    - `206269002` Liveborn with labor meconium in liquor (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+- `55613002` Engorgement of breasts associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `34831003` Neonatal engorgement of breast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1388405005` Engorgement of breast during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `58990004` Miscarriage complicated by damage to pelvic organs and/or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397368005` Traumatic injury of organ of pelvis due to and following miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.09)
+    - `1397367000` Traumatic injury of soft tissue of pelvis due to and following miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.08)
+- `609496007` Complication occurring during pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `173300003` Disorder of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `70591005` Fetal disorder (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `61947007` Deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `15188001` Hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `62657007` Cardiac arrest AND/OR failure following anesthesia AND/OR sedation in labor AND/OR delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1386325001` Maternal cardiac arrest due to administration of anesthesia and/or sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+    - `1386326000` Maternal cardiac failure due to administration of anesthesia and/or sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+- `64171002` Obstetrical cardiac complication of anesthesia AND/OR sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379973007` Maternal cardiac disorder due to and following anesthesia during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+    - `1379970005` Maternal cardiac disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1386324002` Maternal disorder of heart due to administration of anesthesia and/or sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1386323008` Maternal disorder of heart due to administration of anesthesia and/or sedation during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `698614006` Acquired deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `721294001` Acquired hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.2)
+- `698615007` Congenital deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `95828007` Congenital deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.25)
+- `721177006` Injury complicating pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402307005` Maternal injury during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.12)
+    - `426997005` Maternal traumatic injury during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `722595002` Overweight in adulthood with body mass index of 25 or more but less than 30 — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407011003` Adult body mass index 25-29.9 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.25)
+    - `1407012005` Overweight in adulthood (ALTERNATIVE; in VS; same hierarchy; score 4.18)
+- `737329004` Damage to pelvic organs and tissues following ectopic pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397370001` Traumatic injury of organ of pelvis due to and following ectopic pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `1397365008` Traumatic injury of soft tissue of pelvis due to and following ectopic pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `737330009` Damage to pelvic organs and tissues following molar pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397369002` Traumatic injury of organ of pelvis due to and following molar pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `1397366009` Traumatic injury of soft tissue of pelvis due to and following molar pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `73837001` Failed attempted termination of pregnancy with cardiac arrest and/or failure — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `10750641000119101` Cardiac arrest due to failed attempted abortion (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1373227006` Failed attempted abortion with cardiac failure (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `74227009` Apraxic aphonia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `441913003` Aphonia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1407180006` Acquired apraxia of speech (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `75150001` Renal disease in pregnancy AND/OR puerperium without hypertension — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373626009` Disorder during maternal antenatal and/or intrapartum period due to renal hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1373733001` Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to renal hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.15)
+    - `733839001` Postpartum acute renal failure (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `76751001` Diabetes mellitus in mother complicating pregnancy, childbirth AND/OR puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `609563008` Pre-existing diabetes mellitus in pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `199223000` Maternal diabetes mellitus during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.15)
+- `79442007` Deafmutism-retinal degeneration syndrome — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `57838006` Retinitis pigmentosa-deafness syndrome (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.14)
+    - `237619009` Maternally inherited diabetes and deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `79839005` Perineal laceration involving vulva — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388876002` First degree laceration of perineum and laceration of vulva during vaginal delivery of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+    - `237332009` Vulval tear (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `80818002` Previous surgery to perineum AND/OR vulva affecting pregnancy — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381693008` Maternal disorder due to previous procedure on perineum during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `1381694002` Maternal disorder due to previous procedure on vulva during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `82381000119103` Epileptic dementia with behavioral disturbance — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1591000119103` Dementia with behavioral disturbance (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1373650006` Epilepsy due to neurodegenerative dementia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1340125003` Epilepsy syndrome with progressive neurological deterioration (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `84007008` Shock during AND/OR following labor AND/OR delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381592008` Maternal shock due to and following delivery (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381590000` Maternal shock during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `85542007` Perineal laceration involving skin — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388874004` Laceration of skin of perineum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+    - `1388873005` First degree laceration of skin of perineum during vaginal delivery of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+- `870766001` Acneiform eruption due to bromine compound — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `8007005` Bromoderma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `1406864008` Bromoderma tuberosum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `87383005` Maternal distress — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `249196008` Maternal distress due to pain during maternal intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `1409197005` Maternal emotional distress during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `200164009` Maternal exhaustion during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `418447007` US scan of orbits — inactivated (Ambiguous) — in `mii-vs-bildgebung-imaging-procedure-code-sct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `127671000146102` Ultrasonography of right orbit proper (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `1399538009` Ultrasonography of orbit proper (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `127661000146108` Ultrasonography of left orbit proper (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `432275005` Radionuclide imaging of bone of wrist — inactivated (Ambiguous) — in `mii-vs-bildgebung-imaging-procedure-code-sct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `1404457002` Radionuclide imaging of bone of wrist region (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+    - `1404456006` Radionuclide imaging of bone of carpus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.6)
+- `438814001` Fluoroscopy guided percutaneous transluminal embolization of branch of iliac vein with contrast — inactivated (Ambiguous) — in `mii-vs-bildgebung-imaging-procedure-code-sct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `1409194003` Fluoroscopy guided percutaneous transluminal embolization of common iliac vein with contrast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+    - `1409196001` Fluoroscopy guided percutaneous transluminal embolization of external iliac vein with contrast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+    - `1409195002` Fluoroscopy guided percutaneous transluminal embolization of internal iliac vein with contrast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+- `110708006` Middle ear and mastoid cells — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `25342003` Middle ear structure (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+    - `57222008` Structure of mastoid cell (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `363667005` Middle ear and mastoid structure — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `25342003` Middle ear structure (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `59066005` Mastoid structure (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `399456004` Plasma cell myeloma/plasmacytoma — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `1162576007` Plasma cell myeloma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1187107005` Plasmacytoma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `732139009` Entire middle ear and mastoid — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `181185000` Entire middle ear (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `265784008` Entire mastoid (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `110708006` Middle ear and mastoid cells — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `25342003` Middle ear structure (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+    - `57222008` Structure of mastoid cell (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `363667005` Middle ear and mastoid structure — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `25342003` Middle ear structure (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `59066005` Mastoid structure (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `399456004` Plasma cell myeloma/plasmacytoma — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `1162576007` Plasma cell myeloma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1187107005` Plasmacytoma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `732139009` Entire middle ear and mastoid — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `181185000` Entire middle ear (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `265784008` Entire mastoid (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `710220009` Common millet — inactivated (Ambiguous) — in `mii-vs-biobank-substance-additive-sct`
+    - `1411501003` Common millet seed (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+    - `1411504006` Common millet seed extract (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `29178009` Common millet (POSSIBLY EQUIVALENT TO; not in VS; other hierarchy; score 1.0)
+- `110708006` Middle ear and mastoid cells — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `25342003` Middle ear structure (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+    - `57222008` Structure of mastoid cell (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `363667005` Middle ear and mastoid structure — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `25342003` Middle ear structure (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `59066005` Mastoid structure (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `399456004` Plasma cell myeloma/plasmacytoma — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `1162576007` Plasma cell myeloma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1187107005` Plasmacytoma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `732139009` Entire middle ear and mastoid — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `181185000` Entire middle ear (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `265784008` Entire mastoid (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `105709005` Disease caused by Rhabdiasoidea — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `105710000` Disease caused by Rhabditoidea (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `1214006` Infection by Strongyloides (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `106005003` Hypertension AND/OR vomiting complicating pregnancy childbirth AND/OR puerperium — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `90325002` Vomiting of pregnancy (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `1373731004` Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.08)
+- `106010004` Pelvic dystocia AND/OR uterine disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `79748007` Maternal dystocia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `12337004` Disorder of uterus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `1381465004` Labor dystocia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `10743881000119104` Suspected fetal abnormality affecting management of mother — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `609520005` Disorder of fetal structure (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.12)
+    - `609415007` Fetal disorder suspected (PARTIALLY EQUIVALENT TO; in VS; other hierarchy; score 3.29)
+- `10808861000119105` Maternal distress during childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1409197005` Maternal emotional distress during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43)
+    - `249196008` Maternal distress due to pain during maternal intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43)
+    - `200164009` Maternal exhaustion during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+- `1163529009` Epilepsy due to bacterial endocarditis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373924005` Epilepsy due to infectious disease (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `1373925006` Epilepsy due to infectious abscess of brain (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `11914001` Transverse OR oblique presentation of fetus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `73161006` Transverse lie (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `63750008` Oblique lie (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `1220631006` Incomplete induced termination of pregnancy complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379951000` Excessive hemorrhage due to and following incomplete induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+    - `1379950004` Delayed hemorrhage due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56)
+- `1220632004` Incomplete induced termination of pregnancy complicated by damage to pelvic organs or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379947002` Traumatic injury of pelvic organ during incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+    - `1379948007` Traumatic injury of soft tissue of pelvis during incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `1269476005` At increased risk for complication during labor and delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1392349003` At increased risk for maternal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.42)
+    - `1392350003` At increased risk for fetal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.42)
+- `1354668000` Fibrositis of upper limb — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `102556003` Pain in upper limb (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `1354669008` Fibrositis of upper arm — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `771083005` Pain in upper arm (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `162863004` Body mass index 25-29 - overweight — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407011003` Adult body mass index 25-29.9 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.5)
+    - `1407012005` Overweight in adulthood (ALTERNATIVE; in VS; same hierarchy; score 4.14)
+- `162864005` Body mass index 30+ - obesity — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407009007` Adult body mass index greater than or equal to 30 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.36)
+    - `414916001` Obesity (ALTERNATIVE; in VS; same hierarchy; score 4.2)
+    - `414915002` Obese (ALTERNATIVE; in VS; same hierarchy; score 4.0)
+- `1639007` Abnormality of organs AND/OR soft tissues of pelvis affecting pregnancy — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `199446000` Maternal abnormality of pelvic soft tissue during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.13)
+    - `1381684007` Maternal disorder of pelvic organ during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `197140007` Secondary megacolon - congenital — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `197141006` Secondary acquired megacolon (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `204739008` Congenital aganglionic megacolon (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `19773009` Infection of the breast AND/OR nipple associated with childbirth — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388392003` Infection of nipple during postpartum (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+    - `1388391005` Infection of breast during postpartum (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+- `198609003` Complication of pregnancy, childbirth and/or puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1269101009` Maternal disorder during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `70591005` Fetal disorder (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `198656000` Complete miscarriage with delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397338001` Excessive hemorrhage due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+    - `1397337006` Delayed hemorrhage due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+- `198657009` Complete miscarriage with damage to pelvic organs or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397371002` Traumatic injury of organ of pelvis due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+    - `1397364007` Traumatic injury of soft tissue of pelvis due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `198806007` Failed attempted termination of pregnancy with genital tract or pelvic infection — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373273008` Failed attempted abortion with genital tract infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.56)
+    - `1373272003` Failed attempted abortion with pelvic infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `198807003` Failed attempted termination of pregnancy with delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397361004` Delayed hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+    - `1397362006` Excessive hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `198874006` Failed medical termination of pregnancy, complicated by genital tract or pelvic infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373431003` Failed medical abortion with genital tract infection (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1373432005` Failed medical abortion with pelvic infection (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `198875007` Failed medical termination of pregnancy, complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397361004` Delayed hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `1397362006` Excessive hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+- `198997005` Pre-eclampsia or eclampsia with pre-existing hypertension — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `67359005` Pre-eclampsia added to pre-existing hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+    - `69909000` Eclampsia added to pre-existing hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+- `199257008` Mental disorders during pregnancy, childbirth and the puerperium — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1258898000` Mental disorder during puerperium (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.43)
+    - `1396772000` Mental disorder during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `199296002` Endocrine, nutritional and metabolic disease complicating pregnancy, childbirth and puerperium — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380430007` Maternal nutritional disorder during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.07)
+    - `1380431006` Maternal metabolic disorder during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.07)
+- `199745000` Complication occurring during labor and delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1269434002` Fetal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+    - `1269075002` Maternal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `202848009` Scapulohumeral fibrositis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+    - `45326000` Pain of shoulder region (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `203104007` Fibrositis of neck — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `81680005` Neck pain (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `20845005` Meconium in amniotic fluid affecting management of mother — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389111006` Meconium stained amniotic fluid during intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.3)
+    - `2132004` Meconium in amniotic fluid noted before labor in liveborn infant (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `206269002` Liveborn with labor meconium in liquor (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `22281000119101` Post-term pregnancy of 40 to 42 weeks — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `90968009` Post-term pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `46230007` Gestation period, 40 weeks (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `63503002` Gestation period, 41 weeks (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `22753004` Fetal AND/OR placental disorder affecting management of mother — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1193535003` Fetal disorder due to placental disorder (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `125586008` Disorder of placenta (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `237256006` Disorder of pelvic size and disproportion — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `275426009` Pelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `199416003` Mixed feto-pelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `25749005` Fetopelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `199397009` Cephalopelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `240044003` Fibrositis and nodular fasciitis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `400138001` Nodular fasciitis (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.67)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `249079005` Fontanelles presenting — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `249083005` Posterior fontanelle presenting (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `249082000` Anterior fontanelle presenting (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `25053000` Obstetrical central nervous system complication of anesthesia AND/OR sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379974001` Maternal central nervous system disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+    - `1380049002` Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `26224003` Failed attempted termination of pregnancy complicated by genital-pelvic infection — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373272003` Failed attempted abortion with pelvic infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+    - `1373273008` Failed attempted abortion with genital tract infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `26623000` Failed attempted termination of pregnancy complicated by delayed and/or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397362006` Excessive hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+    - `1397361004` Delayed hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `267322007` Pregnancy with orthopedic problem — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `9111000119104` Musculoskeletal problem in pregnancy (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1380410008` Maternal disorder of musculoskeletal system during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `270498000` Fetal malposition and malpresentation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `80002007` Malpresentation of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `289365005` Finding of malposition of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `273983009` Maternal cord or placental problem — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `429260008` Disorder of umbilical cord (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `125586008` Disorder of placenta (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `274776000` Finding of alcohol in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402002006` Finding of alcohol in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1402003001` Finding of substance with alcohol structure in blood specimen (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `276580005` Atypical isoimmunization of newborn — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `387705004` Hemolytic disease of fetus OR newborn due to isoimmunization (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `111469006` Hemolytic disease of newborn due to non-ABO, non-Rhesus isoimmunization (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.25)
+- `29847008` Obstetrical complication of anesthesia AND/OR sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380038008` Maternal disorder due to administration of anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.08)
+    - `1380049002` Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `307333004` Rhesus isoimmunization due to anti-D — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381908006` Hemolytic disease of fetus and/or neonate due to Rhesus anti-D isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381696000` Maternal anti-D isoimmunization during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+- `307334005` Rhesus isoimmunization due to anti-c — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381903002` Hemolytic disease of fetus and/or neonate due to Rhesus anti-c isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381901000` Maternal Rhesus isoimmunization due to anti-c during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `307335006` Rhesus isoimmunization due to anti-E — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381909003` Hemolytic disease of fetus and/or neonate due to Rhesus anti-E isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381907001` Maternal Rhesus isoimmunization due to anti-E during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `307336007` Rhesus isoimmunization due to anti-Cw — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381906005` Hemolytic disease of fetus and/or neonate due to Rhesus anti-Cw isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381905009` Maternal Rhesus isoimmunization due to anti-Cw during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `307735008` Complete inevitable miscarriage complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397334004` Excessive hemorrhage due to and following complete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+    - `1397335003` Delayed hemorrhage due to and following complete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+- `307752007` Incomplete inevitable miscarriage complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397343008` Excessive hemorrhage due to and following incomplete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+    - `1397344002` Delayed hemorrhage due to and following incomplete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+- `362972006` Disorder of labor / delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1269434002` Fetal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `1269075002` Maternal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `1382290001` Disorder of mother and/or fetus during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.12)
+- `370914009` Death or serious disability (kernicterus) associated with failure to identify and treat hyperbilirubinemia in neonates — inactivated (Classification derived) — in `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`
+    - `370909005` Serious reportable event associated with care management (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `419620001` Death (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.1)
+    - `21134002` Disability (PARTIALLY EQUIVALENT TO; in VS; other hierarchy; score 3.1)
+- `387833009` Premature canities — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402360009` Premature canities (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `297994000` Gray hair (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `408512008` Body mass index 40+ - severely obese — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407010002` Adult body mass index greater than or equal to 40 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.33)
+    - `83911000119104` Severe obesity (ALTERNATIVE; in VS; same hierarchy; score 4.0)
+- `412768003` Body mass index 20-24 - normal — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407013000` Adult body mass index 18.5-24.9 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.33)
+    - `43664005` Normal weight (ALTERNATIVE; in VS; same hierarchy; score 4.14)
+- `415110002` Plasma cell myeloma/plasmacytoma — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `415112005` Plasmacytoma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `109989006` Multiple myeloma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `47507006` Rieger anomaly — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1416355004` Rieger anomaly (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `417604002` Axenfeld-Rieger syndrome (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `4783006` Maternal diabetes mellitus with hypoglycemia affecting fetus OR newborn — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388261002` Disorder of fetus due to hypoglycemia of mother with diabetes mellitus (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+    - `1388262009` Disorder of neonate due to hypoglycemia of mother with diabetes mellitus (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.3)
+- `48739004` Miscarriage with cardiac arrest and/or cardiac failure — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `10760181000119109` Cardiac arrest due to miscarriage (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1397851002` Cardiac failure due to and following miscarriage (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.6)
+- `51495008` Cerebral anoxia following anesthesia AND/OR sedation in labor AND/OR delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-lufu-sct-findings`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1396086006` Maternal cerebral anoxia due to and following anesthesia during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.36)
+    - `1396087002` Maternal cerebral anoxia due to and following sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.36)
+- `5534004` Senile arteritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `129573006` Atherosclerotic occlusive disease (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `698816006` Chronic occlusion of artery of extremity (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `55581002` Meconium in amniotic fluid first noted during labor AND/OR delivery in liveborn infant — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389111006` Meconium stained amniotic fluid during intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+    - `206269002` Liveborn with labor meconium in liquor (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+- `55613002` Engorgement of breasts associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `34831003` Neonatal engorgement of breast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1388405005` Engorgement of breast during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `58990004` Miscarriage complicated by damage to pelvic organs and/or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397368005` Traumatic injury of organ of pelvis due to and following miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.09)
+    - `1397367000` Traumatic injury of soft tissue of pelvis due to and following miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.08)
+- `609496007` Complication occurring during pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `173300003` Disorder of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `70591005` Fetal disorder (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `61947007` Deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `15188001` Hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `62657007` Cardiac arrest AND/OR failure following anesthesia AND/OR sedation in labor AND/OR delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1386325001` Maternal cardiac arrest due to administration of anesthesia and/or sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+    - `1386326000` Maternal cardiac failure due to administration of anesthesia and/or sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+- `64171002` Obstetrical cardiac complication of anesthesia AND/OR sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379973007` Maternal cardiac disorder due to and following anesthesia during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+    - `1379970005` Maternal cardiac disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1386324002` Maternal disorder of heart due to administration of anesthesia and/or sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1386323008` Maternal disorder of heart due to administration of anesthesia and/or sedation during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `698614006` Acquired deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `721294001` Acquired hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.2)
+- `698615007` Congenital deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `95828007` Congenital deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.25)
+- `721177006` Injury complicating pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402307005` Maternal injury during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.12)
+    - `426997005` Maternal traumatic injury during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `722595002` Overweight in adulthood with body mass index of 25 or more but less than 30 — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407011003` Adult body mass index 25-29.9 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.25)
+    - `1407012005` Overweight in adulthood (ALTERNATIVE; in VS; same hierarchy; score 4.18)
+- `737329004` Damage to pelvic organs and tissues following ectopic pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397370001` Traumatic injury of organ of pelvis due to and following ectopic pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `1397365008` Traumatic injury of soft tissue of pelvis due to and following ectopic pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `737330009` Damage to pelvic organs and tissues following molar pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397369002` Traumatic injury of organ of pelvis due to and following molar pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `1397366009` Traumatic injury of soft tissue of pelvis due to and following molar pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `73837001` Failed attempted termination of pregnancy with cardiac arrest and/or failure — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `10750641000119101` Cardiac arrest due to failed attempted abortion (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1373227006` Failed attempted abortion with cardiac failure (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `74227009` Apraxic aphonia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `441913003` Aphonia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1407180006` Acquired apraxia of speech (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `75150001` Renal disease in pregnancy AND/OR puerperium without hypertension — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373626009` Disorder during maternal antenatal and/or intrapartum period due to renal hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1373733001` Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to renal hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.15)
+    - `733839001` Postpartum acute renal failure (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `76751001` Diabetes mellitus in mother complicating pregnancy, childbirth AND/OR puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `609563008` Pre-existing diabetes mellitus in pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `199223000` Maternal diabetes mellitus during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.15)
+- `79442007` Deafmutism-retinal degeneration syndrome — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `57838006` Retinitis pigmentosa-deafness syndrome (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.14)
+    - `237619009` Maternally inherited diabetes and deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `79839005` Perineal laceration involving vulva — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388876002` First degree laceration of perineum and laceration of vulva during vaginal delivery of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+    - `237332009` Vulval tear (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `80818002` Previous surgery to perineum AND/OR vulva affecting pregnancy — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381693008` Maternal disorder due to previous procedure on perineum during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `1381694002` Maternal disorder due to previous procedure on vulva during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `82381000119103` Epileptic dementia with behavioral disturbance — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1591000119103` Dementia with behavioral disturbance (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1373650006` Epilepsy due to neurodegenerative dementia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1340125003` Epilepsy syndrome with progressive neurological deterioration (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `84007008` Shock during AND/OR following labor AND/OR delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381592008` Maternal shock due to and following delivery (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381590000` Maternal shock during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `85542007` Perineal laceration involving skin — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388874004` Laceration of skin of perineum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+    - `1388873005` First degree laceration of skin of perineum during vaginal delivery of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+- `870766001` Acneiform eruption due to bromine compound — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `8007005` Bromoderma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `1406864008` Bromoderma tuberosum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `87383005` Maternal distress — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `249196008` Maternal distress due to pain during maternal intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `1409197005` Maternal emotional distress during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `200164009` Maternal exhaustion during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `105709005` Disease caused by Rhabdiasoidea — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `105710000` Disease caused by Rhabditoidea (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `1214006` Infection by Strongyloides (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `106005003` Hypertension AND/OR vomiting complicating pregnancy childbirth AND/OR puerperium — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `90325002` Vomiting of pregnancy (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `1373731004` Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.08)
+- `106010004` Pelvic dystocia AND/OR uterine disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `79748007` Maternal dystocia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `12337004` Disorder of uterus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `1381465004` Labor dystocia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `10743881000119104` Suspected fetal abnormality affecting management of mother — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `609520005` Disorder of fetal structure (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.12)
+    - `609415007` Fetal disorder suspected (PARTIALLY EQUIVALENT TO; in VS; other hierarchy; score 3.29)
+- `10808861000119105` Maternal distress during childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1409197005` Maternal emotional distress during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43)
+    - `249196008` Maternal distress due to pain during maternal intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43)
+    - `200164009` Maternal exhaustion during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+- `1163529009` Epilepsy due to bacterial endocarditis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373924005` Epilepsy due to infectious disease (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `1373925006` Epilepsy due to infectious abscess of brain (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `11914001` Transverse OR oblique presentation of fetus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `73161006` Transverse lie (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `63750008` Oblique lie (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `1220631006` Incomplete induced termination of pregnancy complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379951000` Excessive hemorrhage due to and following incomplete induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+    - `1379950004` Delayed hemorrhage due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56)
+- `1220632004` Incomplete induced termination of pregnancy complicated by damage to pelvic organs or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379947002` Traumatic injury of pelvic organ during incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+    - `1379948007` Traumatic injury of soft tissue of pelvis during incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `1269476005` At increased risk for complication during labor and delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1392349003` At increased risk for maternal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.42)
+    - `1392350003` At increased risk for fetal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.42)
+- `1354668000` Fibrositis of upper limb — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `102556003` Pain in upper limb (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `1354669008` Fibrositis of upper arm — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `771083005` Pain in upper arm (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `162863004` Body mass index 25-29 - overweight — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407011003` Adult body mass index 25-29.9 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.5)
+    - `1407012005` Overweight in adulthood (ALTERNATIVE; in VS; same hierarchy; score 4.14)
+- `162864005` Body mass index 30+ - obesity — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407009007` Adult body mass index greater than or equal to 30 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.36)
+    - `414916001` Obesity (ALTERNATIVE; in VS; same hierarchy; score 4.2)
+    - `414915002` Obese (ALTERNATIVE; in VS; same hierarchy; score 4.0)
+- `1639007` Abnormality of organs AND/OR soft tissues of pelvis affecting pregnancy — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `199446000` Maternal abnormality of pelvic soft tissue during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.13)
+    - `1381684007` Maternal disorder of pelvic organ during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `197140007` Secondary megacolon - congenital — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `197141006` Secondary acquired megacolon (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `204739008` Congenital aganglionic megacolon (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `19773009` Infection of the breast AND/OR nipple associated with childbirth — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388392003` Infection of nipple during postpartum (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+    - `1388391005` Infection of breast during postpartum (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+- `198609003` Complication of pregnancy, childbirth and/or puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1269101009` Maternal disorder during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `70591005` Fetal disorder (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `198656000` Complete miscarriage with delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397338001` Excessive hemorrhage due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+    - `1397337006` Delayed hemorrhage due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+- `198657009` Complete miscarriage with damage to pelvic organs or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397371002` Traumatic injury of organ of pelvis due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+    - `1397364007` Traumatic injury of soft tissue of pelvis due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `198806007` Failed attempted termination of pregnancy with genital tract or pelvic infection — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373273008` Failed attempted abortion with genital tract infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.56)
+    - `1373272003` Failed attempted abortion with pelvic infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `198807003` Failed attempted termination of pregnancy with delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397361004` Delayed hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+    - `1397362006` Excessive hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `198874006` Failed medical termination of pregnancy, complicated by genital tract or pelvic infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373431003` Failed medical abortion with genital tract infection (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1373432005` Failed medical abortion with pelvic infection (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `198875007` Failed medical termination of pregnancy, complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397361004` Delayed hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `1397362006` Excessive hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+- `198997005` Pre-eclampsia or eclampsia with pre-existing hypertension — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `67359005` Pre-eclampsia added to pre-existing hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+    - `69909000` Eclampsia added to pre-existing hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+- `199257008` Mental disorders during pregnancy, childbirth and the puerperium — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1258898000` Mental disorder during puerperium (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.43)
+    - `1396772000` Mental disorder during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `199296002` Endocrine, nutritional and metabolic disease complicating pregnancy, childbirth and puerperium — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380430007` Maternal nutritional disorder during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.07)
+    - `1380431006` Maternal metabolic disorder during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.07)
+- `199745000` Complication occurring during labor and delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1269434002` Fetal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+    - `1269075002` Maternal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `202848009` Scapulohumeral fibrositis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+    - `45326000` Pain of shoulder region (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `203104007` Fibrositis of neck — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `81680005` Neck pain (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `20845005` Meconium in amniotic fluid affecting management of mother — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389111006` Meconium stained amniotic fluid during intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.3)
+    - `2132004` Meconium in amniotic fluid noted before labor in liveborn infant (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `206269002` Liveborn with labor meconium in liquor (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `22281000119101` Post-term pregnancy of 40 to 42 weeks — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `90968009` Post-term pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `46230007` Gestation period, 40 weeks (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `63503002` Gestation period, 41 weeks (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `22753004` Fetal AND/OR placental disorder affecting management of mother — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1193535003` Fetal disorder due to placental disorder (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `125586008` Disorder of placenta (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `237256006` Disorder of pelvic size and disproportion — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `275426009` Pelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `199416003` Mixed feto-pelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `25749005` Fetopelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `199397009` Cephalopelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `240044003` Fibrositis and nodular fasciitis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `400138001` Nodular fasciitis (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.67)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `249079005` Fontanelles presenting — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `249083005` Posterior fontanelle presenting (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `249082000` Anterior fontanelle presenting (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `25053000` Obstetrical central nervous system complication of anesthesia AND/OR sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379974001` Maternal central nervous system disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+    - `1380049002` Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `26224003` Failed attempted termination of pregnancy complicated by genital-pelvic infection — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373272003` Failed attempted abortion with pelvic infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+    - `1373273008` Failed attempted abortion with genital tract infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `26623000` Failed attempted termination of pregnancy complicated by delayed and/or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397362006` Excessive hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+    - `1397361004` Delayed hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `267322007` Pregnancy with orthopedic problem — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `9111000119104` Musculoskeletal problem in pregnancy (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1380410008` Maternal disorder of musculoskeletal system during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `270498000` Fetal malposition and malpresentation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `80002007` Malpresentation of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `289365005` Finding of malposition of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `273983009` Maternal cord or placental problem — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `429260008` Disorder of umbilical cord (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `125586008` Disorder of placenta (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `274776000` Finding of alcohol in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402002006` Finding of alcohol in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1402003001` Finding of substance with alcohol structure in blood specimen (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `276580005` Atypical isoimmunization of newborn — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `387705004` Hemolytic disease of fetus OR newborn due to isoimmunization (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `111469006` Hemolytic disease of newborn due to non-ABO, non-Rhesus isoimmunization (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.25)
+- `29847008` Obstetrical complication of anesthesia AND/OR sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380038008` Maternal disorder due to administration of anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.08)
+    - `1380049002` Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `307333004` Rhesus isoimmunization due to anti-D — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381908006` Hemolytic disease of fetus and/or neonate due to Rhesus anti-D isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381696000` Maternal anti-D isoimmunization during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+- `307334005` Rhesus isoimmunization due to anti-c — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381903002` Hemolytic disease of fetus and/or neonate due to Rhesus anti-c isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381901000` Maternal Rhesus isoimmunization due to anti-c during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `307335006` Rhesus isoimmunization due to anti-E — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381909003` Hemolytic disease of fetus and/or neonate due to Rhesus anti-E isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381907001` Maternal Rhesus isoimmunization due to anti-E during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `307336007` Rhesus isoimmunization due to anti-Cw — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381906005` Hemolytic disease of fetus and/or neonate due to Rhesus anti-Cw isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381905009` Maternal Rhesus isoimmunization due to anti-Cw during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `307735008` Complete inevitable miscarriage complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397334004` Excessive hemorrhage due to and following complete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+    - `1397335003` Delayed hemorrhage due to and following complete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+- `307752007` Incomplete inevitable miscarriage complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397343008` Excessive hemorrhage due to and following incomplete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+    - `1397344002` Delayed hemorrhage due to and following incomplete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+- `362972006` Disorder of labor / delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1269434002` Fetal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `1269075002` Maternal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `1382290001` Disorder of mother and/or fetus during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.12)
+- `370914009` Death or serious disability (kernicterus) associated with failure to identify and treat hyperbilirubinemia in neonates — inactivated (Classification derived) — in `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`
+    - `370909005` Serious reportable event associated with care management (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `419620001` Death (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.1)
+    - `21134002` Disability (PARTIALLY EQUIVALENT TO; in VS; other hierarchy; score 3.1)
+- `387833009` Premature canities — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402360009` Premature canities (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `297994000` Gray hair (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `408512008` Body mass index 40+ - severely obese — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407010002` Adult body mass index greater than or equal to 40 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.33)
+    - `83911000119104` Severe obesity (ALTERNATIVE; in VS; same hierarchy; score 4.0)
+- `412768003` Body mass index 20-24 - normal — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407013000` Adult body mass index 18.5-24.9 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.33)
+    - `43664005` Normal weight (ALTERNATIVE; in VS; same hierarchy; score 4.14)
+- `415110002` Plasma cell myeloma/plasmacytoma — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `415112005` Plasmacytoma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `109989006` Multiple myeloma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `47507006` Rieger anomaly — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1416355004` Rieger anomaly (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `417604002` Axenfeld-Rieger syndrome (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `4783006` Maternal diabetes mellitus with hypoglycemia affecting fetus OR newborn — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388261002` Disorder of fetus due to hypoglycemia of mother with diabetes mellitus (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+    - `1388262009` Disorder of neonate due to hypoglycemia of mother with diabetes mellitus (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.3)
+- `48739004` Miscarriage with cardiac arrest and/or cardiac failure — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `10760181000119109` Cardiac arrest due to miscarriage (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1397851002` Cardiac failure due to and following miscarriage (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.6)
+- `51495008` Cerebral anoxia following anesthesia AND/OR sedation in labor AND/OR delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-lufu-sct-findings`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1396086006` Maternal cerebral anoxia due to and following anesthesia during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.36)
+    - `1396087002` Maternal cerebral anoxia due to and following sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.36)
+- `5534004` Senile arteritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `129573006` Atherosclerotic occlusive disease (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `698816006` Chronic occlusion of artery of extremity (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `55581002` Meconium in amniotic fluid first noted during labor AND/OR delivery in liveborn infant — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389111006` Meconium stained amniotic fluid during intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+    - `206269002` Liveborn with labor meconium in liquor (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+- `55613002` Engorgement of breasts associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `34831003` Neonatal engorgement of breast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1388405005` Engorgement of breast during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `58990004` Miscarriage complicated by damage to pelvic organs and/or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397368005` Traumatic injury of organ of pelvis due to and following miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.09)
+    - `1397367000` Traumatic injury of soft tissue of pelvis due to and following miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.08)
+- `609496007` Complication occurring during pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `173300003` Disorder of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `70591005` Fetal disorder (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `61947007` Deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `15188001` Hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `62657007` Cardiac arrest AND/OR failure following anesthesia AND/OR sedation in labor AND/OR delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1386325001` Maternal cardiac arrest due to administration of anesthesia and/or sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+    - `1386326000` Maternal cardiac failure due to administration of anesthesia and/or sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+- `64171002` Obstetrical cardiac complication of anesthesia AND/OR sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379973007` Maternal cardiac disorder due to and following anesthesia during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+    - `1379970005` Maternal cardiac disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1386324002` Maternal disorder of heart due to administration of anesthesia and/or sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1386323008` Maternal disorder of heart due to administration of anesthesia and/or sedation during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `698614006` Acquired deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `721294001` Acquired hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.2)
+- `698615007` Congenital deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `95828007` Congenital deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.25)
+- `721177006` Injury complicating pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402307005` Maternal injury during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.12)
+    - `426997005` Maternal traumatic injury during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `722595002` Overweight in adulthood with body mass index of 25 or more but less than 30 — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407011003` Adult body mass index 25-29.9 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.25)
+    - `1407012005` Overweight in adulthood (ALTERNATIVE; in VS; same hierarchy; score 4.18)
+- `737329004` Damage to pelvic organs and tissues following ectopic pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397370001` Traumatic injury of organ of pelvis due to and following ectopic pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `1397365008` Traumatic injury of soft tissue of pelvis due to and following ectopic pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `737330009` Damage to pelvic organs and tissues following molar pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397369002` Traumatic injury of organ of pelvis due to and following molar pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `1397366009` Traumatic injury of soft tissue of pelvis due to and following molar pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `73837001` Failed attempted termination of pregnancy with cardiac arrest and/or failure — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `10750641000119101` Cardiac arrest due to failed attempted abortion (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1373227006` Failed attempted abortion with cardiac failure (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `74227009` Apraxic aphonia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `441913003` Aphonia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1407180006` Acquired apraxia of speech (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `75150001` Renal disease in pregnancy AND/OR puerperium without hypertension — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373626009` Disorder during maternal antenatal and/or intrapartum period due to renal hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1373733001` Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to renal hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.15)
+    - `733839001` Postpartum acute renal failure (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `76751001` Diabetes mellitus in mother complicating pregnancy, childbirth AND/OR puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `609563008` Pre-existing diabetes mellitus in pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `199223000` Maternal diabetes mellitus during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.15)
+- `79442007` Deafmutism-retinal degeneration syndrome — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `57838006` Retinitis pigmentosa-deafness syndrome (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.14)
+    - `237619009` Maternally inherited diabetes and deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `79839005` Perineal laceration involving vulva — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388876002` First degree laceration of perineum and laceration of vulva during vaginal delivery of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+    - `237332009` Vulval tear (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `80818002` Previous surgery to perineum AND/OR vulva affecting pregnancy — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381693008` Maternal disorder due to previous procedure on perineum during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `1381694002` Maternal disorder due to previous procedure on vulva during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `82381000119103` Epileptic dementia with behavioral disturbance — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1591000119103` Dementia with behavioral disturbance (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1373650006` Epilepsy due to neurodegenerative dementia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1340125003` Epilepsy syndrome with progressive neurological deterioration (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `84007008` Shock during AND/OR following labor AND/OR delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381592008` Maternal shock due to and following delivery (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381590000` Maternal shock during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `85542007` Perineal laceration involving skin — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388874004` Laceration of skin of perineum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+    - `1388873005` First degree laceration of skin of perineum during vaginal delivery of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+- `870766001` Acneiform eruption due to bromine compound — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `8007005` Bromoderma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `1406864008` Bromoderma tuberosum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `87383005` Maternal distress — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `249196008` Maternal distress due to pain during maternal intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `1409197005` Maternal emotional distress during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `200164009` Maternal exhaustion during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `51495008` Cerebral anoxia following anesthesia AND/OR sedation in labor AND/OR delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-lufu-sct-findings`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1396086006` Maternal cerebral anoxia due to and following anesthesia during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.36)
+    - `1396087002` Maternal cerebral anoxia due to and following sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.36)
+- `313221000` Respiratory percentage — inactivated (Nonconformance to editorial policy) — in `mii-vs-lufu-sct-observable`
+    - `251880004` Respiratory measure (ALTERNATIVE; not in VS; same hierarchy; score 1.33) ← proposal
+- `302608002` Alpha non-hemolytic streptococcus — inactivated (Ambiguous) — in `mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed`, `mii-vs-mikrobio-organismen-snomedct`
+    - `60631002` Alpha-hemolytic streptococcus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `414871004` Non-Beta-hemolytic Streptococcus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.6)
+    - `22339002` Gamma-hemolytic Streptococcus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `302608002` Alpha non-hemolytic streptococcus — inactivated (Ambiguous) — in `mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed`, `mii-vs-mikrobio-organismen-snomedct`
+    - `60631002` Alpha-hemolytic streptococcus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `414871004` Non-Beta-hemolytic Streptococcus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.6)
+    - `22339002` Gamma-hemolytic Streptococcus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `110708006` Middle ear and mastoid cells — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `25342003` Middle ear structure (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+    - `57222008` Structure of mastoid cell (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `363667005` Middle ear and mastoid structure — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `25342003` Middle ear structure (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `59066005` Mastoid structure (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `399456004` Plasma cell myeloma/plasmacytoma — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `1162576007` Plasma cell myeloma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1187107005` Plasmacytoma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `732139009` Entire middle ear and mastoid — inactivated (Ambiguous) — in `mii-vs-bildgebung-observation-body-site-sct`, `mii-vs-biobank-body-structures-sct`, `mii-vs-diagnose-bodystructure-snomed`, `mii-vs-onko-koerperstruktur-sct`
+    - `181185000` Entire middle ear (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `265784008` Entire mastoid (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `23864003` Esophagoscopy for biopsy and collection of specimen by brushing or washing — inactivated (Ambiguous) — in `mii-vs-patho-collection-method-snomed-ct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `71658001` Esophagoscopy for biopsy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43)
+    - `1370946001` Esophagoscopy with brush biopsy and washing (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.38)
+- `105709005` Disease caused by Rhabdiasoidea — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `105710000` Disease caused by Rhabditoidea (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `1214006` Infection by Strongyloides (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `106005003` Hypertension AND/OR vomiting complicating pregnancy childbirth AND/OR puerperium — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `90325002` Vomiting of pregnancy (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `1373731004` Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.08)
+- `106010004` Pelvic dystocia AND/OR uterine disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `79748007` Maternal dystocia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `12337004` Disorder of uterus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `1381465004` Labor dystocia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `10808861000119105` Maternal distress during childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1409197005` Maternal emotional distress during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43)
+    - `249196008` Maternal distress due to pain during maternal intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43)
+    - `200164009` Maternal exhaustion during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+- `1163529009` Epilepsy due to bacterial endocarditis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373924005` Epilepsy due to infectious disease (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `1373925006` Epilepsy due to infectious abscess of brain (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `11914001` Transverse OR oblique presentation of fetus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `73161006` Transverse lie (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `63750008` Oblique lie (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `1220631006` Incomplete induced termination of pregnancy complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379951000` Excessive hemorrhage due to and following incomplete induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+    - `1379950004` Delayed hemorrhage due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56)
+- `1220632004` Incomplete induced termination of pregnancy complicated by damage to pelvic organs or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379947002` Traumatic injury of pelvic organ during incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+    - `1379948007` Traumatic injury of soft tissue of pelvis during incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `1269476005` At increased risk for complication during labor and delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1392349003` At increased risk for maternal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.42)
+    - `1392350003` At increased risk for fetal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.42)
+- `1354668000` Fibrositis of upper limb — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `102556003` Pain in upper limb (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `1354669008` Fibrositis of upper arm — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `771083005` Pain in upper arm (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `162863004` Body mass index 25-29 - overweight — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407011003` Adult body mass index 25-29.9 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.5)
+    - `1407012005` Overweight in adulthood (ALTERNATIVE; in VS; same hierarchy; score 4.14)
+- `162864005` Body mass index 30+ - obesity — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407009007` Adult body mass index greater than or equal to 30 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.36)
+    - `414916001` Obesity (ALTERNATIVE; in VS; same hierarchy; score 4.2)
+    - `414915002` Obese (ALTERNATIVE; in VS; same hierarchy; score 4.0)
+- `1639007` Abnormality of organs AND/OR soft tissues of pelvis affecting pregnancy — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `199446000` Maternal abnormality of pelvic soft tissue during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.13)
+    - `1381684007` Maternal disorder of pelvic organ during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `197140007` Secondary megacolon - congenital — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `197141006` Secondary acquired megacolon (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `204739008` Congenital aganglionic megacolon (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `19773009` Infection of the breast AND/OR nipple associated with childbirth — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388392003` Infection of nipple during postpartum (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+    - `1388391005` Infection of breast during postpartum (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+- `198609003` Complication of pregnancy, childbirth and/or puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1269101009` Maternal disorder during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `70591005` Fetal disorder (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `198656000` Complete miscarriage with delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397338001` Excessive hemorrhage due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+    - `1397337006` Delayed hemorrhage due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+- `198657009` Complete miscarriage with damage to pelvic organs or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397371002` Traumatic injury of organ of pelvis due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+    - `1397364007` Traumatic injury of soft tissue of pelvis due to and following complete miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `198806007` Failed attempted termination of pregnancy with genital tract or pelvic infection — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373273008` Failed attempted abortion with genital tract infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.56)
+    - `1373272003` Failed attempted abortion with pelvic infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `198807003` Failed attempted termination of pregnancy with delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397361004` Delayed hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+    - `1397362006` Excessive hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `198874006` Failed medical termination of pregnancy, complicated by genital tract or pelvic infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373431003` Failed medical abortion with genital tract infection (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1373432005` Failed medical abortion with pelvic infection (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `198875007` Failed medical termination of pregnancy, complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397361004` Delayed hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `1397362006` Excessive hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+- `198997005` Pre-eclampsia or eclampsia with pre-existing hypertension — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `67359005` Pre-eclampsia added to pre-existing hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+    - `69909000` Eclampsia added to pre-existing hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+- `199257008` Mental disorders during pregnancy, childbirth and the puerperium — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1258898000` Mental disorder during puerperium (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.43)
+    - `1396772000` Mental disorder during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `199296002` Endocrine, nutritional and metabolic disease complicating pregnancy, childbirth and puerperium — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380430007` Maternal nutritional disorder during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.07)
+    - `1380431006` Maternal metabolic disorder during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.07)
+- `199745000` Complication occurring during labor and delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1269434002` Fetal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+    - `1269075002` Maternal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `202848009` Scapulohumeral fibrositis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+    - `45326000` Pain of shoulder region (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `203104007` Fibrositis of neck — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `81680005` Neck pain (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `20845005` Meconium in amniotic fluid affecting management of mother — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389111006` Meconium stained amniotic fluid during intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.3)
+    - `2132004` Meconium in amniotic fluid noted before labor in liveborn infant (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `206269002` Liveborn with labor meconium in liquor (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `22281000119101` Post-term pregnancy of 40 to 42 weeks — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `90968009` Post-term pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `46230007` Gestation period, 40 weeks (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `63503002` Gestation period, 41 weeks (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `22753004` Fetal AND/OR placental disorder affecting management of mother — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1193535003` Fetal disorder due to placental disorder (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `125586008` Disorder of placenta (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `237256006` Disorder of pelvic size and disproportion — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `275426009` Pelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `199416003` Mixed feto-pelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `25749005` Fetopelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `199397009` Cephalopelvic disproportion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `240044003` Fibrositis and nodular fasciitis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `400138001` Nodular fasciitis (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.67)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `249079005` Fontanelles presenting — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `249083005` Posterior fontanelle presenting (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `249082000` Anterior fontanelle presenting (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `25053000` Obstetrical central nervous system complication of anesthesia AND/OR sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379974001` Maternal central nervous system disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.29)
+    - `1380049002` Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `26224003` Failed attempted termination of pregnancy complicated by genital-pelvic infection — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373272003` Failed attempted abortion with pelvic infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+    - `1373273008` Failed attempted abortion with genital tract infection (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `26623000` Failed attempted termination of pregnancy complicated by delayed and/or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397362006` Excessive hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+    - `1397361004` Delayed hemorrhage due to and following failed attempted abortion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `267322007` Pregnancy with orthopedic problem — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `9111000119104` Musculoskeletal problem in pregnancy (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1380410008` Maternal disorder of musculoskeletal system during antenatal and/or intrapartum and/or postpartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `270498000` Fetal malposition and malpresentation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `80002007` Malpresentation of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `289365005` Finding of malposition of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `273983009` Maternal cord or placental problem — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `429260008` Disorder of umbilical cord (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `125586008` Disorder of placenta (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `274776000` Finding of alcohol in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402002006` Finding of alcohol in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1402003001` Finding of substance with alcohol structure in blood specimen (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `276580005` Atypical isoimmunization of newborn — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `387705004` Hemolytic disease of fetus OR newborn due to isoimmunization (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `111469006` Hemolytic disease of newborn due to non-ABO, non-Rhesus isoimmunization (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.25)
+- `29847008` Obstetrical complication of anesthesia AND/OR sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380038008` Maternal disorder due to administration of anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.08)
+    - `1380049002` Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `307333004` Rhesus isoimmunization due to anti-D — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381908006` Hemolytic disease of fetus and/or neonate due to Rhesus anti-D isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381696000` Maternal anti-D isoimmunization during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+- `307334005` Rhesus isoimmunization due to anti-c — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381903002` Hemolytic disease of fetus and/or neonate due to Rhesus anti-c isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381901000` Maternal Rhesus isoimmunization due to anti-c during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `307335006` Rhesus isoimmunization due to anti-E — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381909003` Hemolytic disease of fetus and/or neonate due to Rhesus anti-E isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381907001` Maternal Rhesus isoimmunization due to anti-E during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `307336007` Rhesus isoimmunization due to anti-Cw — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381906005` Hemolytic disease of fetus and/or neonate due to Rhesus anti-Cw isoimmunization (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381905009` Maternal Rhesus isoimmunization due to anti-Cw during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+- `307735008` Complete inevitable miscarriage complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397334004` Excessive hemorrhage due to and following complete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+    - `1397335003` Delayed hemorrhage due to and following complete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+- `307752007` Incomplete inevitable miscarriage complicated by delayed or excessive hemorrhage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397343008` Excessive hemorrhage due to and following incomplete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+    - `1397344002` Delayed hemorrhage due to and following incomplete inevitable miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62)
+- `362972006` Disorder of labor / delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1269434002` Fetal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `1269075002` Maternal disorder during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `1382290001` Disorder of mother and/or fetus during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.12)
+- `387833009` Premature canities — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402360009` Premature canities (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `297994000` Gray hair (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `408512008` Body mass index 40+ - severely obese — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407010002` Adult body mass index greater than or equal to 40 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.33)
+    - `83911000119104` Severe obesity (ALTERNATIVE; in VS; same hierarchy; score 4.0)
+- `412768003` Body mass index 20-24 - normal — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407013000` Adult body mass index 18.5-24.9 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.33)
+    - `43664005` Normal weight (ALTERNATIVE; in VS; same hierarchy; score 4.14)
+- `415110002` Plasma cell myeloma/plasmacytoma — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `415112005` Plasmacytoma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+    - `109989006` Multiple myeloma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+- `47507006` Rieger anomaly — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1416355004` Rieger anomaly (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `417604002` Axenfeld-Rieger syndrome (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `4783006` Maternal diabetes mellitus with hypoglycemia affecting fetus OR newborn — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388261002` Disorder of fetus due to hypoglycemia of mother with diabetes mellitus (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.44)
+    - `1388262009` Disorder of neonate due to hypoglycemia of mother with diabetes mellitus (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.3)
+- `48739004` Miscarriage with cardiac arrest and/or cardiac failure — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `10760181000119109` Cardiac arrest due to miscarriage (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1397851002` Cardiac failure due to and following miscarriage (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.6)
+- `51495008` Cerebral anoxia following anesthesia AND/OR sedation in labor AND/OR delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-lufu-sct-findings`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1396086006` Maternal cerebral anoxia due to and following anesthesia during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.36)
+    - `1396087002` Maternal cerebral anoxia due to and following sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.36)
+- `5534004` Senile arteritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `129573006` Atherosclerotic occlusive disease (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `698816006` Chronic occlusion of artery of extremity (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `55581002` Meconium in amniotic fluid first noted during labor AND/OR delivery in liveborn infant — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389111006` Meconium stained amniotic fluid during intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+    - `206269002` Liveborn with labor meconium in liquor (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+- `55613002` Engorgement of breasts associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `34831003` Neonatal engorgement of breast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1388405005` Engorgement of breast during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `58990004` Miscarriage complicated by damage to pelvic organs and/or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397368005` Traumatic injury of organ of pelvis due to and following miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.09)
+    - `1397367000` Traumatic injury of soft tissue of pelvis due to and following miscarriage (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.08)
+- `609496007` Complication occurring during pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `173300003` Disorder of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `70591005` Fetal disorder (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `61947007` Deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `15188001` Hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `62657007` Cardiac arrest AND/OR failure following anesthesia AND/OR sedation in labor AND/OR delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1386325001` Maternal cardiac arrest due to administration of anesthesia and/or sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+    - `1386326000` Maternal cardiac failure due to administration of anesthesia and/or sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.31)
+- `64171002` Obstetrical cardiac complication of anesthesia AND/OR sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379973007` Maternal cardiac disorder due to and following anesthesia during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+    - `1379970005` Maternal cardiac disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1386324002` Maternal disorder of heart due to administration of anesthesia and/or sedation during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1386323008` Maternal disorder of heart due to administration of anesthesia and/or sedation during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `698614006` Acquired deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `721294001` Acquired hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.2)
+- `698615007` Congenital deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `95828007` Congenital deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.25)
+- `721177006` Injury complicating pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402307005` Maternal injury during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.12)
+    - `426997005` Maternal traumatic injury during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `722595002` Overweight in adulthood with body mass index of 25 or more but less than 30 — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1407011003` Adult body mass index 25-29.9 kg/m2 (ALTERNATIVE; in VS; same hierarchy; score 4.25)
+    - `1407012005` Overweight in adulthood (ALTERNATIVE; in VS; same hierarchy; score 4.18)
+- `737329004` Damage to pelvic organs and tissues following ectopic pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397370001` Traumatic injury of organ of pelvis due to and following ectopic pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `1397365008` Traumatic injury of soft tissue of pelvis due to and following ectopic pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `737330009` Damage to pelvic organs and tissues following molar pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1397369002` Traumatic injury of organ of pelvis due to and following molar pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `1397366009` Traumatic injury of soft tissue of pelvis due to and following molar pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `73837001` Failed attempted termination of pregnancy with cardiac arrest and/or failure — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `10750641000119101` Cardiac arrest due to failed attempted abortion (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1373227006` Failed attempted abortion with cardiac failure (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `74227009` Apraxic aphonia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `441913003` Aphonia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1407180006` Acquired apraxia of speech (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `75150001` Renal disease in pregnancy AND/OR puerperium without hypertension — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373626009` Disorder during maternal antenatal and/or intrapartum period due to renal hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1373733001` Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to renal hypertension (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.15)
+    - `733839001` Postpartum acute renal failure (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.11)
+- `76751001` Diabetes mellitus in mother complicating pregnancy, childbirth AND/OR puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `609563008` Pre-existing diabetes mellitus in pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `199223000` Maternal diabetes mellitus during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.15)
+- `79442007` Deafmutism-retinal degeneration syndrome — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `57838006` Retinitis pigmentosa-deafness syndrome (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.14)
+    - `237619009` Maternally inherited diabetes and deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `79839005` Perineal laceration involving vulva — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388876002` First degree laceration of perineum and laceration of vulva during vaginal delivery of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+    - `237332009` Vulval tear (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `80818002` Previous surgery to perineum AND/OR vulva affecting pregnancy — inactivated (Classification derived) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381693008` Maternal disorder due to previous procedure on perineum during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `1381694002` Maternal disorder due to previous procedure on vulva during antenatal and/or intrapartum period (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+- `82381000119103` Epileptic dementia with behavioral disturbance — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1591000119103` Dementia with behavioral disturbance (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1373650006` Epilepsy due to neurodegenerative dementia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1340125003` Epilepsy syndrome with progressive neurological deterioration (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `84007008` Shock during AND/OR following labor AND/OR delivery — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381592008` Maternal shock due to and following delivery (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1381590000` Maternal shock during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25)
+- `85542007` Perineal laceration involving skin — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388874004` Laceration of skin of perineum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+    - `1388873005` First degree laceration of skin of perineum during vaginal delivery of fetus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18)
+- `870766001` Acneiform eruption due to bromine compound — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `8007005` Bromoderma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `1406864008` Bromoderma tuberosum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `87383005` Maternal distress — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `249196008` Maternal distress due to pain during maternal intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `1409197005` Maternal emotional distress during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33)
+    - `200164009` Maternal exhaustion during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `1303747009` Intravenous shockwave lithotripsy of atherosclerotic plaque of artery — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1404843006` Imaging guided intravascular shockwave balloon lithotripsy of atherosclerotic plaque of artery (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+    - `1404837009` Fluoroscopy guided intravascular shockwave balloon lithotripsy of atherosclerotic plaque of artery with contrast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.45)
+- `232183005` Insertion of bone anchors for subcutaneous bone anchored hearing aid — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1401724004` Implantation of magnetic hearing aid bone anchor (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `232184004` Implantation of percutaneous hearing aid bone anchor (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+- `234724006` Tooth or teeth preparation — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1407172004` Preparation of teeth (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+    - `1407171006` Preparation of tooth (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+- `234743006` Bridge preparation of tooth or teeth — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1407193001` Bridge preparation of tooth (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1407194007` Bridge preparation of teeth (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+- `23864003` Esophagoscopy for biopsy and collection of specimen by brushing or washing — inactivated (Ambiguous) — in `mii-vs-patho-collection-method-snomed-ct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `71658001` Esophagoscopy for biopsy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43)
+    - `1370946001` Esophagoscopy with brush biopsy and washing (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.38)
+- `312339003` Stereotactic injection of alcohol to Gasserian ganglion — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402007000` Stereotactic injection of alcohol to Gasserian ganglion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1402008005` Stereotactic injection of glycerol to Gasserian ganglion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+- `32845008` Alcohol measurement, urine — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `271289006` Urine alcohol measurement (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1402000003` Measurement of substance with alcohol structure in urine specimen (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `37127001` Injection of inner ear with alcohol — inactivated (Outdated) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402090008` Injection of inner ear with gentamicin (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.6)
+    - `1402091007` Injection of inner ear with corticosteroid and/or corticosteroid derivative (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+- `406911000` Permethrin stain method — inactivated (Nonconformance to editorial policy) — in `mii-vs-biobank-laboratory-procedure-sct`, `mii-vs-patho-processing-procedure-snomed-ct`, `mii-vs-patho-service-request-code`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `127790008` Staining method (ALTERNATIVE; in VS; same hierarchy; score 4.25)
+    - `59209009` Toxicology testing for insecticide (ALTERNATIVE; in VS; same hierarchy; score 4.0)
+- `418447007` US scan of orbits — inactivated (Ambiguous) — in `mii-vs-bildgebung-imaging-procedure-code-sct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `127671000146102` Ultrasonography of right orbit proper (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `1399538009` Ultrasonography of orbit proper (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `127661000146108` Ultrasonography of left orbit proper (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `432275005` Radionuclide imaging of bone of wrist — inactivated (Ambiguous) — in `mii-vs-bildgebung-imaging-procedure-code-sct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `1404457002` Radionuclide imaging of bone of wrist region (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+    - `1404456006` Radionuclide imaging of bone of carpus (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.6)
+- `438814001` Fluoroscopy guided percutaneous transluminal embolization of branch of iliac vein with contrast — inactivated (Ambiguous) — in `mii-vs-bildgebung-imaging-procedure-code-sct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `1409194003` Fluoroscopy guided percutaneous transluminal embolization of common iliac vein with contrast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+    - `1409196001` Fluoroscopy guided percutaneous transluminal embolization of external iliac vein with contrast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+    - `1409195002` Fluoroscopy guided percutaneous transluminal embolization of internal iliac vein with contrast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+- `442321000` Measurement of alcohol in blood specimen — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402001004` Measurement of substance with alcohol structure in blood specimen (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+    - `167009006` Blood alcohol level (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `53797006` Esophagoscopy for destruction of lesion or tumor — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1370964008` Esophagoscopy for destruction of lesion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+    - `1370965009` Esophagoscopy for destruction of tumor (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8)
+- `63267000` Alcohol measurement — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `430837008` Alcohol measurement (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1401999009` Measurement of substance with alcohol structure (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `88572002` Injection of alcohol into nerve — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402005008` Injection of alcohol into nerve (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1402006009` Injection of glycerol into nerve (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.6)
+
+## Proposed: confirm (435)
+
+- `10749811000119108` Obstetric anesthesia with central nervous system complication in childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379975000` Maternal central nervous system disorder due to anesthesia during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `10835971000119109` Anti-A sensitization in pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388946008` Maternal anti-A isoimmunization during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11) ← proposal
+- `10853001` Obstetrical complication of general anesthesia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380040003` Maternal disorder due to administration of general anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `111459000` Infection of nipple, associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388392003` Infection of nipple during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `1179359005` Maternal epilepsy due to perinatal stroke — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380178003` Epilepsy due to and following stroke (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `1220564001` Incomplete induced termination of pregnancy complicated by shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373920001` Shock due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `1220586000` Incomplete induced termination of pregnancy complicated by renal failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373870002` Renal failure due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `1220625008` Incomplete induced termination of pregnancy complicated by metabolic disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376019002` Metabolic disorder due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `1220626009` Incomplete induced termination of pregnancy complicated by genital-pelvic infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379949004` Pelvic inflammatory disease due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.36) ← proposal
+- `1220630007` Incomplete induced termination of pregnancy complicated by embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376023005` Embolism due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `1260377005` Epilepsy due to congenital anomaly of brain — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1372772007` Epilepsy due to intracranial structural abnormality (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `1354494000` Induced termination of pregnancy complicated by damage to urethra — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376018005` Traumatic injury of urethra during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `15406009` Retromammary abscess associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388404009` Retromammary abscess during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `171000119107` Maternal obesity complicating pregnancy, childbirth and the puerperium, antepartum — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380417006` Maternal obesity during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `18237006` Parenchymatous mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388396000` Parenchymatous mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `199595002` Labor and delivery complication by meconium in amniotic fluid — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389111006` Meconium stained amniotic fluid during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `199596001` Labor and delivery complicated by fetal heart rate anomaly with meconium in amniotic fluid — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389112004` Abnormal fetal heart rate with meconium stained amniotic fluid during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `199597005` Labor and delivery complicated by biochemical evidence of fetal stress — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389146003` Fetal distress with fetal acidosis during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.08) ← proposal
+- `200766001` Parakeratosis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `56585003` Parakeratosis of skin (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+    - `65068000` Parakeratosis (POSSIBLY EQUIVALENT TO; not in VS; other hierarchy; score 1.0)
+- `267257007` Labor and delivery complicated by fetal heart rate anomaly — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389144000` Abnormal fetal heart rate during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27) ← proposal
+- `267280004` Venous complication of pregnancy and/or puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379964004` Maternal venous disorder due to pregnancy during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18) ← proposal
+- `31026002` Obstetrical complication of sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380049002` Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `32999002` Complication of obstetrical surgical wound — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380090004` Disorder of surgical wound following obstetric surgical procedure during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.15) ← proposal
+- `35716006` Cracked nipple associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1258917005` Postpartum cracked nipple (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `39101000119109` Pregnancy with isoimmunization from irregular blood group incompatibility — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381698004` Maternal irregular blood group isoimmunization during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `4026005` Interstitial mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388393008` Interstitial mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `413567003` Aplastic anemia associated with pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379966002` Maternal aplastic anemia during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.22) ← proposal
+- `42537006` Secondary perineal tear in the puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `6234006` Second degree perineal laceration (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `442766007` High alcohol level in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `441685000` High alcohol level in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `46273003` Abscess of nipple associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388401001` Abscess of nipple during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `49102001` Hypertensive heart AND renal disease in obstetric context — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373667004` Pre-existing hypertensive heart and renal disease during maternal antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.29) ← proposal
+- `49364005` Subareolar abscess associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388403003` Subareolar abscess during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `55472006` Submammary abscess associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388402008` Submammary abscess during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `55704005` Abscess of breast, associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1258867002` Postpartum abscess of breast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `57220000` Obstetrical complication of local anesthesia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380039000` Maternal disorder due to administration of local anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `59919008` Failed attempted termination of pregnancy with complication — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `49416000` Failed attempted termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609447002` Induced termination of pregnancy complicated by damage to pelvic organs and/or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389152002` Traumatic injury of pelvic organ during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25) ← proposal
+- `609449004` Induced termination of pregnancy complicated by embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373901003` Embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `609450004` Induced termination of pregnancy complicated by genital-pelvic infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379953002` Pelvic inflammatory disease due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `609451000` Induced termination of pregnancy complicated by metabolic disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373900002` Metabolic disorder due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609452007` Induced termination of pregnancy complicated by renal failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373872005` Renal failure due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609453002` Induced termination of pregnancy complicated by shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373919007` Postoperative shock due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43) ← proposal
+- `609454008` Induced termination of pregnancy complicated by acute necrosis of liver — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379940000` Acute necrosis of liver due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.86) ← proposal
+- `609455009` Induced termination of pregnancy complicated by acute renal failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376024004` Acute renal failure due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609456005` Induced termination of pregnancy complicated by afibrinogenemia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376015008` Afibrinogenemia due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609457001` Induced termination of pregnancy complicated by air embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373908009` Air embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609458006` Induced termination of pregnancy complicated by amniotic fluid embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379939002` Amniotic fluid embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609459003` Induced termination of pregnancy complicated by blood-clot embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376026002` Thromboembolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.22) ← proposal
+- `609461007` Induced termination of pregnancy complicated by cerebral anoxia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-lufu-sct-findings`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376016009` Cerebral anoxia due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609462000` Induced termination of pregnancy complicated by defibrination syndrome — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379937000` Disseminated intravascular coagulation due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `609463005` Induced termination of pregnancy complicated by electrolyte imbalance — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379932006` Electrolyte imbalance due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609464004` Induced termination of pregnancy complicated by endometritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373904006` Endometritis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609465003` Induced termination of pregnancy complicated by fat embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373907004` Fat embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609466002` Induced termination of pregnancy complicated by intravascular hemolysis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379954008` Intravascular hemolysis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609467006` Induced termination of pregnancy complicated by laceration of bowel — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376027006` Laceration of intestine during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.38) ← proposal
+- `609468001` Induced termination of pregnancy complicated by laceration of broad ligament — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379942008` Laceration of broad ligament during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609469009` Induced termination of pregnancy complicated by laceration of cervix — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376029009` Laceration of cervix during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609470005` Induced termination of pregnancy complicated by laceration of uterus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376031000` Laceration of uterus during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609471009` Induced termination of pregnancy complicated by laceration of vagina — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376030004` Laceration of vagina during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609472002` Induced termination of pregnancy complicated by acute renal failure with oliguria — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379956005` Acute renal failure with oliguria due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.88) ← proposal
+- `609473007` Induced termination of pregnancy complicated by parametritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373906008` Parametritis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609474001` Induced termination of pregnancy complicated by pelvic peritonitis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376020008` Pelvic peritonitis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609475000` Induced termination of pregnancy complicated by perforation of bowel — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376028001` Traumatic perforation of intestine during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `609476004` Induced termination of pregnancy complicated by perforation of cervix — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379931004` Traumatic perforation of uterine cervix during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44) ← proposal
+- `609477008` Induced termination of pregnancy complicated by perforation of uterus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379935008` Traumatic perforation of uterus during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `609478003` Induced termination of pregnancy complicated by perforation of vagina — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379930003` Traumatic perforation of vagina during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `609479006` Induced termination of pregnancy complicated by postoperative shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373919007` Postoperative shock due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609480009` Induced termination of pregnancy complicated by pulmonary embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376021007` Pulmonary embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609482001` Induced termination of pregnancy complicated by renal tubular necrosis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379938005` Acute renal tubular necrosis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75) ← proposal
+- `609483006` Induced termination of pregnancy complicated by salpingitis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373903000` Salpingitis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609484000` Induced termination of pregnancy complicated by salpingo-oophoritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376025003` Salpingo-oophoritis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609486003` Induced termination of pregnancy complicated by septic embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373918004` Septic embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609487007` Induced termination of pregnancy complicated by septic shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373909001` Septic shock due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609489005` Induced termination of pregnancy complicated by soap embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373912003` Soap embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609490001` Induced termination of pregnancy complicated by uremia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373898004` Uremia due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609491002` Induced termination of pregnancy complicated by urinary tract infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379952007` Urinary tract infection due to and following induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75) ← proposal
+- `609493004` Induced termination of pregnancy complicated by tetanus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373899007` Tetanus due to and following induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67) ← proposal
+- `609494005` Induced termination of pregnancy complicated by pelvic disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373875007` Disorder of pelvis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609498008` Induced termination of pregnancy complicated by laceration of urinary bladder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379929008` Laceration of urinary bladder during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609499000` Induced termination of pregnancy complicated by laceration of periurethral tissue — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379943003` Laceration of periurethral tissue during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609500009` Induced termination of pregnancy complicated by perforation of urinary bladder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379936009` Traumatic perforation of urinary bladder during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56) ← proposal
+- `609501008` Induced termination of pregnancy complicated by perforation of broad ligament — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379941001` Traumatic perforation of broad ligament during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56) ← proposal
+- `609502001` Induced termination of pregnancy complicated by perforation of periurethral tissue — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379944009` Traumatic perforation of periurethral tissue during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56) ← proposal
+- `609503006` Induced termination of pregnancy complicated by urinary bladder damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373915001` Traumatic injury of urinary bladder during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `609504000` Induced termination of pregnancy complicated by bowel damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373905007` Traumatic injury of intestine during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2) ← proposal
+- `609505004` Induced termination of pregnancy complicated by broad ligament damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379933001` Traumatic injury of broad ligament during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `609506003` Induced termination of pregnancy complicated by cardiac arrest — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373916000` Cardiac arrest due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609507007` Induced termination of pregnancy complicated by cardiac failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376017000` Cardiac failure due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609508002` Induced termination of pregnancy complicated by cervix damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373911005` Traumatic injury of uterine cervix during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `609510000` Induced termination of pregnancy complicated by infectious disease — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376022000` Infectious disease due to and following induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.71) ← proposal
+- `609511001` Induced termination of pregnancy complicated by periurethral tissue damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379955009` Periurethral traumatic injury during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `609512008` Induced termination of pregnancy complicated by oliguria — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373902005` Oliguria due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609513003` Induced termination of pregnancy complicated by uterus damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373914002` Traumatic injury of uterus during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `609514009` Induced termination of pregnancy complicated by vaginal damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373917009` Traumatic injury of vagina during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2) ← proposal
+- `65409004` Obstetrical complication of anesthesia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380038008` Maternal disorder due to administration of anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.09) ← proposal
+- `68214002` Lymphangitis of breast associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388394002` Lymphangitis of breast during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `69302000` Termination of pregnancy on demand — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `57797005` Termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `71639005` Galactorrhea associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388264005` Maternal galactorrhea during postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `721203003` Sequela of complication of pregnancy childbirth and the puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380411007` Disorder due to and following maternal disorder during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `74955002` Retracted nipple associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388400000` Retraction of nipple during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `78697003` Nonpurulent mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388395001` Nonpurulent mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `87840008` Galactocele associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388398004` Galactocele during postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `89672000` Retromammary mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388397009` Retromammary mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `95606005` Maternal drug exposure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1254981008` Substance dependence during pregnancy, childbirth and/or puerperium (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `95607001` Maternal drug use — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1254981008` Substance dependence during pregnancy, childbirth and/or puerperium (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `430266004` Radionuclide two-phase bone imaging of wrist — inactivated (Ambiguous) — in `mii-vs-bildgebung-imaging-procedure-code-sct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `1404502002` Radionuclide two-phase imaging of bone of wrist region (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.86) ← proposal
+- `431895007` Ultrasonography of graft — inactivated (Ambiguous) — in `mii-vs-bildgebung-imaging-procedure-code-sct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `1401842000` Ultrasonography of vascular graft (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67) ← proposal
+- `433717001` Percutaneous injection of alcohol using fluoroscopic guidance — inactivated (Ambiguous) — in `mii-vs-bildgebung-imaging-procedure-code-sct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402089004` Percutaneous injection of alcohol using fluoroscopic guidance (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `10749811000119108` Obstetric anesthesia with central nervous system complication in childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379975000` Maternal central nervous system disorder due to anesthesia during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `10835971000119109` Anti-A sensitization in pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388946008` Maternal anti-A isoimmunization during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11) ← proposal
+- `10853001` Obstetrical complication of general anesthesia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380040003` Maternal disorder due to administration of general anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `111459000` Infection of nipple, associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388392003` Infection of nipple during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `1179359005` Maternal epilepsy due to perinatal stroke — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380178003` Epilepsy due to and following stroke (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `1220564001` Incomplete induced termination of pregnancy complicated by shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373920001` Shock due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `1220586000` Incomplete induced termination of pregnancy complicated by renal failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373870002` Renal failure due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `1220625008` Incomplete induced termination of pregnancy complicated by metabolic disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376019002` Metabolic disorder due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `1220626009` Incomplete induced termination of pregnancy complicated by genital-pelvic infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379949004` Pelvic inflammatory disease due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.36) ← proposal
+- `1220630007` Incomplete induced termination of pregnancy complicated by embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376023005` Embolism due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `1260377005` Epilepsy due to congenital anomaly of brain — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1372772007` Epilepsy due to intracranial structural abnormality (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `1354494000` Induced termination of pregnancy complicated by damage to urethra — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376018005` Traumatic injury of urethra during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `15406009` Retromammary abscess associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388404009` Retromammary abscess during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `161579008` H/O: perinatal problem — inactivated (Ambiguous) — in `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`
+    - `1401818004` History of perinatal disorder of fetus and/or early neonate (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11) ← proposal
+- `171000119107` Maternal obesity complicating pregnancy, childbirth and the puerperium, antepartum — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380417006` Maternal obesity during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `18237006` Parenchymatous mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388396000` Parenchymatous mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `199595002` Labor and delivery complication by meconium in amniotic fluid — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389111006` Meconium stained amniotic fluid during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `199596001` Labor and delivery complicated by fetal heart rate anomaly with meconium in amniotic fluid — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389112004` Abnormal fetal heart rate with meconium stained amniotic fluid during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `199597005` Labor and delivery complicated by biochemical evidence of fetal stress — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389146003` Fetal distress with fetal acidosis during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.08) ← proposal
+- `200766001` Parakeratosis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `56585003` Parakeratosis of skin (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+    - `65068000` Parakeratosis (POSSIBLY EQUIVALENT TO; not in VS; other hierarchy; score 1.0)
+- `267257007` Labor and delivery complicated by fetal heart rate anomaly — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389144000` Abnormal fetal heart rate during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27) ← proposal
+- `267280004` Venous complication of pregnancy and/or puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379964004` Maternal venous disorder due to pregnancy during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18) ← proposal
+- `31026002` Obstetrical complication of sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380049002` Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `32999002` Complication of obstetrical surgical wound — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380090004` Disorder of surgical wound following obstetric surgical procedure during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.15) ← proposal
+- `35716006` Cracked nipple associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1258917005` Postpartum cracked nipple (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `39101000119109` Pregnancy with isoimmunization from irregular blood group incompatibility — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381698004` Maternal irregular blood group isoimmunization during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `4026005` Interstitial mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388393008` Interstitial mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `413567003` Aplastic anemia associated with pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379966002` Maternal aplastic anemia during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.22) ← proposal
+- `42537006` Secondary perineal tear in the puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `6234006` Second degree perineal laceration (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `442766007` High alcohol level in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `441685000` High alcohol level in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `46273003` Abscess of nipple associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388401001` Abscess of nipple during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `49102001` Hypertensive heart AND renal disease in obstetric context — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373667004` Pre-existing hypertensive heart and renal disease during maternal antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.29) ← proposal
+- `49364005` Subareolar abscess associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388403003` Subareolar abscess during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `55472006` Submammary abscess associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388402008` Submammary abscess during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `55704005` Abscess of breast, associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1258867002` Postpartum abscess of breast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `57220000` Obstetrical complication of local anesthesia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380039000` Maternal disorder due to administration of local anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `59919008` Failed attempted termination of pregnancy with complication — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `49416000` Failed attempted termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609447002` Induced termination of pregnancy complicated by damage to pelvic organs and/or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389152002` Traumatic injury of pelvic organ during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25) ← proposal
+- `609449004` Induced termination of pregnancy complicated by embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373901003` Embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `609450004` Induced termination of pregnancy complicated by genital-pelvic infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379953002` Pelvic inflammatory disease due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `609451000` Induced termination of pregnancy complicated by metabolic disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373900002` Metabolic disorder due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609452007` Induced termination of pregnancy complicated by renal failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373872005` Renal failure due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609453002` Induced termination of pregnancy complicated by shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373919007` Postoperative shock due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43) ← proposal
+- `609454008` Induced termination of pregnancy complicated by acute necrosis of liver — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379940000` Acute necrosis of liver due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.86) ← proposal
+- `609455009` Induced termination of pregnancy complicated by acute renal failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376024004` Acute renal failure due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609456005` Induced termination of pregnancy complicated by afibrinogenemia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376015008` Afibrinogenemia due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609457001` Induced termination of pregnancy complicated by air embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373908009` Air embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609458006` Induced termination of pregnancy complicated by amniotic fluid embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379939002` Amniotic fluid embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609459003` Induced termination of pregnancy complicated by blood-clot embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376026002` Thromboembolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.22) ← proposal
+- `609461007` Induced termination of pregnancy complicated by cerebral anoxia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-lufu-sct-findings`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376016009` Cerebral anoxia due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609462000` Induced termination of pregnancy complicated by defibrination syndrome — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379937000` Disseminated intravascular coagulation due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `609463005` Induced termination of pregnancy complicated by electrolyte imbalance — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379932006` Electrolyte imbalance due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609464004` Induced termination of pregnancy complicated by endometritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373904006` Endometritis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609465003` Induced termination of pregnancy complicated by fat embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373907004` Fat embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609466002` Induced termination of pregnancy complicated by intravascular hemolysis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379954008` Intravascular hemolysis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609467006` Induced termination of pregnancy complicated by laceration of bowel — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376027006` Laceration of intestine during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.38) ← proposal
+- `609468001` Induced termination of pregnancy complicated by laceration of broad ligament — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379942008` Laceration of broad ligament during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609469009` Induced termination of pregnancy complicated by laceration of cervix — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376029009` Laceration of cervix during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609470005` Induced termination of pregnancy complicated by laceration of uterus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376031000` Laceration of uterus during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609471009` Induced termination of pregnancy complicated by laceration of vagina — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376030004` Laceration of vagina during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609472002` Induced termination of pregnancy complicated by acute renal failure with oliguria — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379956005` Acute renal failure with oliguria due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.88) ← proposal
+- `609473007` Induced termination of pregnancy complicated by parametritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373906008` Parametritis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609474001` Induced termination of pregnancy complicated by pelvic peritonitis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376020008` Pelvic peritonitis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609475000` Induced termination of pregnancy complicated by perforation of bowel — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376028001` Traumatic perforation of intestine during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `609476004` Induced termination of pregnancy complicated by perforation of cervix — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379931004` Traumatic perforation of uterine cervix during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44) ← proposal
+- `609477008` Induced termination of pregnancy complicated by perforation of uterus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379935008` Traumatic perforation of uterus during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `609478003` Induced termination of pregnancy complicated by perforation of vagina — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379930003` Traumatic perforation of vagina during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `609479006` Induced termination of pregnancy complicated by postoperative shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373919007` Postoperative shock due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609480009` Induced termination of pregnancy complicated by pulmonary embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376021007` Pulmonary embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609482001` Induced termination of pregnancy complicated by renal tubular necrosis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379938005` Acute renal tubular necrosis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75) ← proposal
+- `609483006` Induced termination of pregnancy complicated by salpingitis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373903000` Salpingitis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609484000` Induced termination of pregnancy complicated by salpingo-oophoritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376025003` Salpingo-oophoritis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609486003` Induced termination of pregnancy complicated by septic embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373918004` Septic embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609487007` Induced termination of pregnancy complicated by septic shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373909001` Septic shock due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609489005` Induced termination of pregnancy complicated by soap embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373912003` Soap embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609490001` Induced termination of pregnancy complicated by uremia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373898004` Uremia due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609491002` Induced termination of pregnancy complicated by urinary tract infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379952007` Urinary tract infection due to and following induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75) ← proposal
+- `609493004` Induced termination of pregnancy complicated by tetanus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373899007` Tetanus due to and following induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67) ← proposal
+- `609494005` Induced termination of pregnancy complicated by pelvic disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373875007` Disorder of pelvis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609498008` Induced termination of pregnancy complicated by laceration of urinary bladder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379929008` Laceration of urinary bladder during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609499000` Induced termination of pregnancy complicated by laceration of periurethral tissue — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379943003` Laceration of periurethral tissue during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609500009` Induced termination of pregnancy complicated by perforation of urinary bladder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379936009` Traumatic perforation of urinary bladder during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56) ← proposal
+- `609501008` Induced termination of pregnancy complicated by perforation of broad ligament — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379941001` Traumatic perforation of broad ligament during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56) ← proposal
+- `609502001` Induced termination of pregnancy complicated by perforation of periurethral tissue — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379944009` Traumatic perforation of periurethral tissue during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56) ← proposal
+- `609503006` Induced termination of pregnancy complicated by urinary bladder damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373915001` Traumatic injury of urinary bladder during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `609504000` Induced termination of pregnancy complicated by bowel damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373905007` Traumatic injury of intestine during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2) ← proposal
+- `609505004` Induced termination of pregnancy complicated by broad ligament damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379933001` Traumatic injury of broad ligament during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `609506003` Induced termination of pregnancy complicated by cardiac arrest — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373916000` Cardiac arrest due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609507007` Induced termination of pregnancy complicated by cardiac failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376017000` Cardiac failure due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609508002` Induced termination of pregnancy complicated by cervix damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373911005` Traumatic injury of uterine cervix during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `609510000` Induced termination of pregnancy complicated by infectious disease — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376022000` Infectious disease due to and following induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.71) ← proposal
+- `609511001` Induced termination of pregnancy complicated by periurethral tissue damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379955009` Periurethral traumatic injury during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `609512008` Induced termination of pregnancy complicated by oliguria — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373902005` Oliguria due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609513003` Induced termination of pregnancy complicated by uterus damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373914002` Traumatic injury of uterus during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `609514009` Induced termination of pregnancy complicated by vaginal damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373917009` Traumatic injury of vagina during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2) ← proposal
+- `65409004` Obstetrical complication of anesthesia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380038008` Maternal disorder due to administration of anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.09) ← proposal
+- `68214002` Lymphangitis of breast associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388394002` Lymphangitis of breast during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `69302000` Termination of pregnancy on demand — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `57797005` Termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `71639005` Galactorrhea associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388264005` Maternal galactorrhea during postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `721203003` Sequela of complication of pregnancy childbirth and the puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380411007` Disorder due to and following maternal disorder during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `74955002` Retracted nipple associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388400000` Retraction of nipple during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `78697003` Nonpurulent mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388395001` Nonpurulent mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `87840008` Galactocele associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388398004` Galactocele during postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `89672000` Retromammary mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388397009` Retromammary mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `95606005` Maternal drug exposure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1254981008` Substance dependence during pregnancy, childbirth and/or puerperium (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `95607001` Maternal drug use — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1254981008` Substance dependence during pregnancy, childbirth and/or puerperium (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `10749811000119108` Obstetric anesthesia with central nervous system complication in childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379975000` Maternal central nervous system disorder due to anesthesia during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `10835971000119109` Anti-A sensitization in pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388946008` Maternal anti-A isoimmunization during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11) ← proposal
+- `10853001` Obstetrical complication of general anesthesia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380040003` Maternal disorder due to administration of general anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `111459000` Infection of nipple, associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388392003` Infection of nipple during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `1179359005` Maternal epilepsy due to perinatal stroke — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380178003` Epilepsy due to and following stroke (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `1220564001` Incomplete induced termination of pregnancy complicated by shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373920001` Shock due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `1220586000` Incomplete induced termination of pregnancy complicated by renal failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373870002` Renal failure due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `1220625008` Incomplete induced termination of pregnancy complicated by metabolic disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376019002` Metabolic disorder due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `1220626009` Incomplete induced termination of pregnancy complicated by genital-pelvic infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379949004` Pelvic inflammatory disease due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.36) ← proposal
+- `1220630007` Incomplete induced termination of pregnancy complicated by embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376023005` Embolism due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `1260377005` Epilepsy due to congenital anomaly of brain — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1372772007` Epilepsy due to intracranial structural abnormality (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `1354494000` Induced termination of pregnancy complicated by damage to urethra — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376018005` Traumatic injury of urethra during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `15406009` Retromammary abscess associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388404009` Retromammary abscess during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `161579008` H/O: perinatal problem — inactivated (Ambiguous) — in `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`
+    - `1401818004` History of perinatal disorder of fetus and/or early neonate (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11) ← proposal
+- `171000119107` Maternal obesity complicating pregnancy, childbirth and the puerperium, antepartum — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380417006` Maternal obesity during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `18237006` Parenchymatous mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388396000` Parenchymatous mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `199595002` Labor and delivery complication by meconium in amniotic fluid — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389111006` Meconium stained amniotic fluid during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `199596001` Labor and delivery complicated by fetal heart rate anomaly with meconium in amniotic fluid — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389112004` Abnormal fetal heart rate with meconium stained amniotic fluid during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `199597005` Labor and delivery complicated by biochemical evidence of fetal stress — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389146003` Fetal distress with fetal acidosis during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.08) ← proposal
+- `200766001` Parakeratosis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `56585003` Parakeratosis of skin (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+    - `65068000` Parakeratosis (POSSIBLY EQUIVALENT TO; not in VS; other hierarchy; score 1.0)
+- `267257007` Labor and delivery complicated by fetal heart rate anomaly — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389144000` Abnormal fetal heart rate during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27) ← proposal
+- `267280004` Venous complication of pregnancy and/or puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379964004` Maternal venous disorder due to pregnancy during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18) ← proposal
+- `31026002` Obstetrical complication of sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380049002` Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `32999002` Complication of obstetrical surgical wound — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380090004` Disorder of surgical wound following obstetric surgical procedure during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.15) ← proposal
+- `35716006` Cracked nipple associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1258917005` Postpartum cracked nipple (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `39101000119109` Pregnancy with isoimmunization from irregular blood group incompatibility — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381698004` Maternal irregular blood group isoimmunization during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `4026005` Interstitial mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388393008` Interstitial mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `413567003` Aplastic anemia associated with pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379966002` Maternal aplastic anemia during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.22) ← proposal
+- `42537006` Secondary perineal tear in the puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `6234006` Second degree perineal laceration (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `442766007` High alcohol level in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `441685000` High alcohol level in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `46273003` Abscess of nipple associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388401001` Abscess of nipple during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `49102001` Hypertensive heart AND renal disease in obstetric context — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373667004` Pre-existing hypertensive heart and renal disease during maternal antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.29) ← proposal
+- `49364005` Subareolar abscess associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388403003` Subareolar abscess during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `55472006` Submammary abscess associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388402008` Submammary abscess during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `55704005` Abscess of breast, associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1258867002` Postpartum abscess of breast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `57220000` Obstetrical complication of local anesthesia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380039000` Maternal disorder due to administration of local anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `59919008` Failed attempted termination of pregnancy with complication — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `49416000` Failed attempted termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609447002` Induced termination of pregnancy complicated by damage to pelvic organs and/or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389152002` Traumatic injury of pelvic organ during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25) ← proposal
+- `609449004` Induced termination of pregnancy complicated by embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373901003` Embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `609450004` Induced termination of pregnancy complicated by genital-pelvic infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379953002` Pelvic inflammatory disease due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `609451000` Induced termination of pregnancy complicated by metabolic disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373900002` Metabolic disorder due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609452007` Induced termination of pregnancy complicated by renal failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373872005` Renal failure due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609453002` Induced termination of pregnancy complicated by shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373919007` Postoperative shock due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43) ← proposal
+- `609454008` Induced termination of pregnancy complicated by acute necrosis of liver — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379940000` Acute necrosis of liver due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.86) ← proposal
+- `609455009` Induced termination of pregnancy complicated by acute renal failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376024004` Acute renal failure due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609456005` Induced termination of pregnancy complicated by afibrinogenemia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376015008` Afibrinogenemia due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609457001` Induced termination of pregnancy complicated by air embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373908009` Air embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609458006` Induced termination of pregnancy complicated by amniotic fluid embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379939002` Amniotic fluid embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609459003` Induced termination of pregnancy complicated by blood-clot embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376026002` Thromboembolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.22) ← proposal
+- `609461007` Induced termination of pregnancy complicated by cerebral anoxia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-lufu-sct-findings`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376016009` Cerebral anoxia due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609462000` Induced termination of pregnancy complicated by defibrination syndrome — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379937000` Disseminated intravascular coagulation due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `609463005` Induced termination of pregnancy complicated by electrolyte imbalance — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379932006` Electrolyte imbalance due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609464004` Induced termination of pregnancy complicated by endometritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373904006` Endometritis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609465003` Induced termination of pregnancy complicated by fat embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373907004` Fat embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609466002` Induced termination of pregnancy complicated by intravascular hemolysis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379954008` Intravascular hemolysis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609467006` Induced termination of pregnancy complicated by laceration of bowel — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376027006` Laceration of intestine during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.38) ← proposal
+- `609468001` Induced termination of pregnancy complicated by laceration of broad ligament — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379942008` Laceration of broad ligament during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609469009` Induced termination of pregnancy complicated by laceration of cervix — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376029009` Laceration of cervix during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609470005` Induced termination of pregnancy complicated by laceration of uterus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376031000` Laceration of uterus during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609471009` Induced termination of pregnancy complicated by laceration of vagina — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376030004` Laceration of vagina during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609472002` Induced termination of pregnancy complicated by acute renal failure with oliguria — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379956005` Acute renal failure with oliguria due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.88) ← proposal
+- `609473007` Induced termination of pregnancy complicated by parametritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373906008` Parametritis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609474001` Induced termination of pregnancy complicated by pelvic peritonitis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376020008` Pelvic peritonitis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609475000` Induced termination of pregnancy complicated by perforation of bowel — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376028001` Traumatic perforation of intestine during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `609476004` Induced termination of pregnancy complicated by perforation of cervix — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379931004` Traumatic perforation of uterine cervix during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44) ← proposal
+- `609477008` Induced termination of pregnancy complicated by perforation of uterus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379935008` Traumatic perforation of uterus during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `609478003` Induced termination of pregnancy complicated by perforation of vagina — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379930003` Traumatic perforation of vagina during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `609479006` Induced termination of pregnancy complicated by postoperative shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373919007` Postoperative shock due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609480009` Induced termination of pregnancy complicated by pulmonary embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376021007` Pulmonary embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609482001` Induced termination of pregnancy complicated by renal tubular necrosis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379938005` Acute renal tubular necrosis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75) ← proposal
+- `609483006` Induced termination of pregnancy complicated by salpingitis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373903000` Salpingitis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609484000` Induced termination of pregnancy complicated by salpingo-oophoritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376025003` Salpingo-oophoritis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609486003` Induced termination of pregnancy complicated by septic embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373918004` Septic embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609487007` Induced termination of pregnancy complicated by septic shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373909001` Septic shock due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609489005` Induced termination of pregnancy complicated by soap embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373912003` Soap embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609490001` Induced termination of pregnancy complicated by uremia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373898004` Uremia due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609491002` Induced termination of pregnancy complicated by urinary tract infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379952007` Urinary tract infection due to and following induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75) ← proposal
+- `609493004` Induced termination of pregnancy complicated by tetanus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373899007` Tetanus due to and following induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67) ← proposal
+- `609494005` Induced termination of pregnancy complicated by pelvic disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373875007` Disorder of pelvis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609498008` Induced termination of pregnancy complicated by laceration of urinary bladder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379929008` Laceration of urinary bladder during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609499000` Induced termination of pregnancy complicated by laceration of periurethral tissue — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379943003` Laceration of periurethral tissue during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609500009` Induced termination of pregnancy complicated by perforation of urinary bladder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379936009` Traumatic perforation of urinary bladder during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56) ← proposal
+- `609501008` Induced termination of pregnancy complicated by perforation of broad ligament — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379941001` Traumatic perforation of broad ligament during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56) ← proposal
+- `609502001` Induced termination of pregnancy complicated by perforation of periurethral tissue — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379944009` Traumatic perforation of periurethral tissue during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56) ← proposal
+- `609503006` Induced termination of pregnancy complicated by urinary bladder damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373915001` Traumatic injury of urinary bladder during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `609504000` Induced termination of pregnancy complicated by bowel damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373905007` Traumatic injury of intestine during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2) ← proposal
+- `609505004` Induced termination of pregnancy complicated by broad ligament damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379933001` Traumatic injury of broad ligament during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `609506003` Induced termination of pregnancy complicated by cardiac arrest — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373916000` Cardiac arrest due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609507007` Induced termination of pregnancy complicated by cardiac failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376017000` Cardiac failure due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609508002` Induced termination of pregnancy complicated by cervix damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373911005` Traumatic injury of uterine cervix during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `609510000` Induced termination of pregnancy complicated by infectious disease — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376022000` Infectious disease due to and following induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.71) ← proposal
+- `609511001` Induced termination of pregnancy complicated by periurethral tissue damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379955009` Periurethral traumatic injury during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `609512008` Induced termination of pregnancy complicated by oliguria — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373902005` Oliguria due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609513003` Induced termination of pregnancy complicated by uterus damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373914002` Traumatic injury of uterus during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `609514009` Induced termination of pregnancy complicated by vaginal damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373917009` Traumatic injury of vagina during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2) ← proposal
+- `65409004` Obstetrical complication of anesthesia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380038008` Maternal disorder due to administration of anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.09) ← proposal
+- `68214002` Lymphangitis of breast associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388394002` Lymphangitis of breast during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `69302000` Termination of pregnancy on demand — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `57797005` Termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `71639005` Galactorrhea associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388264005` Maternal galactorrhea during postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `721203003` Sequela of complication of pregnancy childbirth and the puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380411007` Disorder due to and following maternal disorder during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `74955002` Retracted nipple associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388400000` Retraction of nipple during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `78697003` Nonpurulent mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388395001` Nonpurulent mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `87840008` Galactocele associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388398004` Galactocele during postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `89672000` Retromammary mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388397009` Retromammary mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `95606005` Maternal drug exposure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1254981008` Substance dependence during pregnancy, childbirth and/or puerperium (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `95607001` Maternal drug use — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1254981008` Substance dependence during pregnancy, childbirth and/or puerperium (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `609461007` Induced termination of pregnancy complicated by cerebral anoxia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-lufu-sct-findings`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376016009` Cerebral anoxia due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `10749811000119108` Obstetric anesthesia with central nervous system complication in childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379975000` Maternal central nervous system disorder due to anesthesia during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `10835971000119109` Anti-A sensitization in pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388946008` Maternal anti-A isoimmunization during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.11) ← proposal
+- `10853001` Obstetrical complication of general anesthesia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380040003` Maternal disorder due to administration of general anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `111459000` Infection of nipple, associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388392003` Infection of nipple during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `1179359005` Maternal epilepsy due to perinatal stroke — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380178003` Epilepsy due to and following stroke (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `1220564001` Incomplete induced termination of pregnancy complicated by shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373920001` Shock due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `1220586000` Incomplete induced termination of pregnancy complicated by renal failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373870002` Renal failure due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `1220625008` Incomplete induced termination of pregnancy complicated by metabolic disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376019002` Metabolic disorder due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `1220626009` Incomplete induced termination of pregnancy complicated by genital-pelvic infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379949004` Pelvic inflammatory disease due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.36) ← proposal
+- `1220630007` Incomplete induced termination of pregnancy complicated by embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376023005` Embolism due to and following incomplete termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `1260377005` Epilepsy due to congenital anomaly of brain — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1372772007` Epilepsy due to intracranial structural abnormality (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `1354494000` Induced termination of pregnancy complicated by damage to urethra — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376018005` Traumatic injury of urethra during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `15406009` Retromammary abscess associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388404009` Retromammary abscess during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `171000119107` Maternal obesity complicating pregnancy, childbirth and the puerperium, antepartum — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380417006` Maternal obesity during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `18237006` Parenchymatous mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388396000` Parenchymatous mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `199595002` Labor and delivery complication by meconium in amniotic fluid — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389111006` Meconium stained amniotic fluid during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `199596001` Labor and delivery complicated by fetal heart rate anomaly with meconium in amniotic fluid — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389112004` Abnormal fetal heart rate with meconium stained amniotic fluid during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `199597005` Labor and delivery complicated by biochemical evidence of fetal stress — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389146003` Fetal distress with fetal acidosis during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.08) ← proposal
+- `200766001` Parakeratosis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `56585003` Parakeratosis of skin (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+    - `65068000` Parakeratosis (POSSIBLY EQUIVALENT TO; not in VS; other hierarchy; score 1.0)
+- `267257007` Labor and delivery complicated by fetal heart rate anomaly — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389144000` Abnormal fetal heart rate during intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27) ← proposal
+- `267280004` Venous complication of pregnancy and/or puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379964004` Maternal venous disorder due to pregnancy during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.18) ← proposal
+- `31026002` Obstetrical complication of sedation — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380049002` Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `32999002` Complication of obstetrical surgical wound — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380090004` Disorder of surgical wound following obstetric surgical procedure during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.15) ← proposal
+- `35716006` Cracked nipple associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1258917005` Postpartum cracked nipple (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `39101000119109` Pregnancy with isoimmunization from irregular blood group incompatibility — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1381698004` Maternal irregular blood group isoimmunization during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `4026005` Interstitial mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388393008` Interstitial mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `413567003` Aplastic anemia associated with pregnancy — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379966002` Maternal aplastic anemia during antenatal and/or intrapartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.22) ← proposal
+- `42537006` Secondary perineal tear in the puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `6234006` Second degree perineal laceration (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `442766007` High alcohol level in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `441685000` High alcohol level in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `46273003` Abscess of nipple associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388401001` Abscess of nipple during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `49102001` Hypertensive heart AND renal disease in obstetric context — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373667004` Pre-existing hypertensive heart and renal disease during maternal antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.29) ← proposal
+- `49364005` Subareolar abscess associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388403003` Subareolar abscess during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `55472006` Submammary abscess associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388402008` Submammary abscess during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `55704005` Abscess of breast, associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1258867002` Postpartum abscess of breast (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `57220000` Obstetrical complication of local anesthesia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380039000` Maternal disorder due to administration of local anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `59919008` Failed attempted termination of pregnancy with complication — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `49416000` Failed attempted termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609447002` Induced termination of pregnancy complicated by damage to pelvic organs and/or tissues — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1389152002` Traumatic injury of pelvic organ during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.25) ← proposal
+- `609449004` Induced termination of pregnancy complicated by embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373901003` Embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `609450004` Induced termination of pregnancy complicated by genital-pelvic infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379953002` Pelvic inflammatory disease due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `609451000` Induced termination of pregnancy complicated by metabolic disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373900002` Metabolic disorder due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609452007` Induced termination of pregnancy complicated by renal failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373872005` Renal failure due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609453002` Induced termination of pregnancy complicated by shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373919007` Postoperative shock due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43) ← proposal
+- `609454008` Induced termination of pregnancy complicated by acute necrosis of liver — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379940000` Acute necrosis of liver due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.86) ← proposal
+- `609455009` Induced termination of pregnancy complicated by acute renal failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376024004` Acute renal failure due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609456005` Induced termination of pregnancy complicated by afibrinogenemia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376015008` Afibrinogenemia due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609457001` Induced termination of pregnancy complicated by air embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373908009` Air embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609458006` Induced termination of pregnancy complicated by amniotic fluid embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379939002` Amniotic fluid embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609459003` Induced termination of pregnancy complicated by blood-clot embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376026002` Thromboembolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.22) ← proposal
+- `609461007` Induced termination of pregnancy complicated by cerebral anoxia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-lufu-sct-findings`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376016009` Cerebral anoxia due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609462000` Induced termination of pregnancy complicated by defibrination syndrome — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379937000` Disseminated intravascular coagulation due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `609463005` Induced termination of pregnancy complicated by electrolyte imbalance — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379932006` Electrolyte imbalance due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609464004` Induced termination of pregnancy complicated by endometritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373904006` Endometritis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609465003` Induced termination of pregnancy complicated by fat embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373907004` Fat embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609466002` Induced termination of pregnancy complicated by intravascular hemolysis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379954008` Intravascular hemolysis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609467006` Induced termination of pregnancy complicated by laceration of bowel — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376027006` Laceration of intestine during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.38) ← proposal
+- `609468001` Induced termination of pregnancy complicated by laceration of broad ligament — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379942008` Laceration of broad ligament during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609469009` Induced termination of pregnancy complicated by laceration of cervix — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376029009` Laceration of cervix during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609470005` Induced termination of pregnancy complicated by laceration of uterus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376031000` Laceration of uterus during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609471009` Induced termination of pregnancy complicated by laceration of vagina — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376030004` Laceration of vagina during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609472002` Induced termination of pregnancy complicated by acute renal failure with oliguria — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379956005` Acute renal failure with oliguria due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.88) ← proposal
+- `609473007` Induced termination of pregnancy complicated by parametritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373906008` Parametritis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609474001` Induced termination of pregnancy complicated by pelvic peritonitis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376020008` Pelvic peritonitis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609475000` Induced termination of pregnancy complicated by perforation of bowel — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376028001` Traumatic perforation of intestine during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `609476004` Induced termination of pregnancy complicated by perforation of cervix — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379931004` Traumatic perforation of uterine cervix during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.44) ← proposal
+- `609477008` Induced termination of pregnancy complicated by perforation of uterus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379935008` Traumatic perforation of uterus during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `609478003` Induced termination of pregnancy complicated by perforation of vagina — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379930003` Traumatic perforation of vagina during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `609479006` Induced termination of pregnancy complicated by postoperative shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373919007` Postoperative shock due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609480009` Induced termination of pregnancy complicated by pulmonary embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376021007` Pulmonary embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609482001` Induced termination of pregnancy complicated by renal tubular necrosis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379938005` Acute renal tubular necrosis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75) ← proposal
+- `609483006` Induced termination of pregnancy complicated by salpingitis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373903000` Salpingitis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609484000` Induced termination of pregnancy complicated by salpingo-oophoritis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376025003` Salpingo-oophoritis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609486003` Induced termination of pregnancy complicated by septic embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373918004` Septic embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609487007` Induced termination of pregnancy complicated by septic shock — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373909001` Septic shock due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609489005` Induced termination of pregnancy complicated by soap embolism — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373912003` Soap embolism due to and following termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609490001` Induced termination of pregnancy complicated by uremia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373898004` Uremia due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609491002` Induced termination of pregnancy complicated by urinary tract infection — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379952007` Urinary tract infection due to and following induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75) ← proposal
+- `609493004` Induced termination of pregnancy complicated by tetanus — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373899007` Tetanus due to and following induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67) ← proposal
+- `609494005` Induced termination of pregnancy complicated by pelvic disorder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373875007` Disorder of pelvis due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.57) ← proposal
+- `609498008` Induced termination of pregnancy complicated by laceration of urinary bladder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379929008` Laceration of urinary bladder during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609499000` Induced termination of pregnancy complicated by laceration of periurethral tissue — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379943003` Laceration of periurethral tissue during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.62) ← proposal
+- `609500009` Induced termination of pregnancy complicated by perforation of urinary bladder — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379936009` Traumatic perforation of urinary bladder during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56) ← proposal
+- `609501008` Induced termination of pregnancy complicated by perforation of broad ligament — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379941001` Traumatic perforation of broad ligament during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56) ← proposal
+- `609502001` Induced termination of pregnancy complicated by perforation of periurethral tissue — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379944009` Traumatic perforation of periurethral tissue during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.56) ← proposal
+- `609503006` Induced termination of pregnancy complicated by urinary bladder damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373915001` Traumatic injury of urinary bladder during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `609504000` Induced termination of pregnancy complicated by bowel damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373905007` Traumatic injury of intestine during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2) ← proposal
+- `609505004` Induced termination of pregnancy complicated by broad ligament damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379933001` Traumatic injury of broad ligament during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `609506003` Induced termination of pregnancy complicated by cardiac arrest — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373916000` Cardiac arrest due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609507007` Induced termination of pregnancy complicated by cardiac failure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376017000` Cardiac failure due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.83) ← proposal
+- `609508002` Induced termination of pregnancy complicated by cervix damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373911005` Traumatic injury of uterine cervix during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `609510000` Induced termination of pregnancy complicated by infectious disease — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1376022000` Infectious disease due to and following induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.71) ← proposal
+- `609511001` Induced termination of pregnancy complicated by periurethral tissue damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1379955009` Periurethral traumatic injury during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.3) ← proposal
+- `609512008` Induced termination of pregnancy complicated by oliguria — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373902005` Oliguria due to induced termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.8) ← proposal
+- `609513003` Induced termination of pregnancy complicated by uterus damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373914002` Traumatic injury of uterus during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `609514009` Induced termination of pregnancy complicated by vaginal damage — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373917009` Traumatic injury of vagina during termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2) ← proposal
+- `65409004` Obstetrical complication of anesthesia — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380038008` Maternal disorder due to administration of anesthesia during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.09) ← proposal
+- `68214002` Lymphangitis of breast associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388394002` Lymphangitis of breast during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `69302000` Termination of pregnancy on demand — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `57797005` Termination of pregnancy (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `71639005` Galactorrhea associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388264005` Maternal galactorrhea during postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `721203003` Sequela of complication of pregnancy childbirth and the puerperium — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380411007` Disorder due to and following maternal disorder during antenatal and/or intrapartum and/or postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `74955002` Retracted nipple associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388400000` Retraction of nipple during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `78697003` Nonpurulent mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388395001` Nonpurulent mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `87840008` Galactocele associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388398004` Galactocele during postpartum period (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17) ← proposal
+- `89672000` Retromammary mastitis associated with childbirth — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1388397009` Retromammary mastitis during postpartum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `95606005` Maternal drug exposure — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1254981008` Substance dependence during pregnancy, childbirth and/or puerperium (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `95607001` Maternal drug use — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1254981008` Substance dependence during pregnancy, childbirth and/or puerperium (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0) ← proposal
+- `15872003` Injection of alcohol into retrobulbar space — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402088007` Injection of alcohol into retrobulbar space (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `239462008` Hydrodistension of joint — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402226000` Imaging guided hydrodistension of joint (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+- `239463003` Hydrodistension of shoulder joint — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402227009` Imaging guided hydrodistension of glenohumeral joint (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.33) ← proposal
+- `307189004` Alcohol injection of liver metastases — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1258912004` Percutaneous injection of alcohol into neoplasm of liver (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43) ← proposal
+- `430266004` Radionuclide two-phase bone imaging of wrist — inactivated (Ambiguous) — in `mii-vs-bildgebung-imaging-procedure-code-sct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `1404502002` Radionuclide two-phase imaging of bone of wrist region (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.86) ← proposal
+- `431895007` Ultrasonography of graft — inactivated (Ambiguous) — in `mii-vs-bildgebung-imaging-procedure-code-sct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `1401842000` Ultrasonography of vascular graft (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67) ← proposal
+- `433717001` Percutaneous injection of alcohol using fluoroscopic guidance — inactivated (Ambiguous) — in `mii-vs-bildgebung-imaging-procedure-code-sct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402089004` Percutaneous injection of alcohol using fluoroscopic guidance (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `60196006` Injection of alcohol into sympathetic nerve — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402014003` Injection of alcohol into sympathetic nerve (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `89516003` Spinal injection of alcohol — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402012004` Spinal injection of alcohol (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+
+## No successor (155)
+
+- `111362001` Anal furunculosis — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `239884000` Malemud disease — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `370480003` Hepatoportal microvascular dysplasia — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `372043009` Hydrops of allantois — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `43329005` Infestation by Knemidokoptes pilae — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `256928008` A*0201 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256930005` A*0203 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256932002` A*0205 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256933007` A*0206 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256940008` A*0301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256942000` A*1101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256943005` A*1102 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256944004` A*2301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256945003` A*2401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256946002` A*2501 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256947006` A*2601 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256948001` A*2901 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256949009` A*2902 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256950009` A*3001 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256951008` A*3002 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256955004` A*3201 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256956003` A*3301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256957007` A*3401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256963003` A*6801 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256964009` A*6802 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256968007` B*0701 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256969004` B*0702 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256972006` B*1301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256973001` B*1302 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256975008` B*1402 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256978005` B*1503 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256980004` B*1801 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256984008` B*2704 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256985009` B*2705 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256989003` B*3502 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256990007` B*3503 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256991006` B*3504 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256994003` B*3701 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256995002` B*3801 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256996001` B*3901 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256997005` B*3902 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256998000` B*4001 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256999008` B*4002 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257004002` B*4201 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257006000` B*4402 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257007009` B*4403 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257009007` B*4601 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257010002` B*4701 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257011003` B*4801 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257012005` B*4901 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257013000` B*5001 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257014006` B*5101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257016008` B*5201 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257017004` B*5301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257019001` B*5501 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257020007` B*5601 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257022004` B*5701 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257023009` B*5702 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257028000` Cw*0102 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257033001` Cw*0302 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257034007` Cw*0401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257035008` Cw*0501 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257037000` Cw*0701 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257038005` Cw*0702 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257039002` Cw*0801 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257040000` Cw*0802 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257043003` Cw*1202 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257044009` Cw*1301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257048007` DPA1*0103 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257049004` DPA1*0201 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257050004` DPA1*02021 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257054008` DPB1*0101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257055009` DPB1*0201 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257059003` DPB1*0301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257060008` DPB1*0401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257062000` DPB1*0501 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257066002` DPB1*1101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257075000` DPB1*2001 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257081008` DPB1*2601 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257091002` DQA1*0101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257092009` DQA1*0102 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257094005` DQA1*0104 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257099000` DQA1*0401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257100008` DQA1*0501 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257104004` DQA1*0601 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257105003` DQB1*0501 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257106002` DQB1*0502 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257110004` DQB1*0601 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257111000` DQB1*0602 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257112007` DQB1*0603 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257113002` DQB1*0604 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257114008` DQB1*0605 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257116005` DQB1*0201 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257117001` DQB1*0301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257118006` DQB1*0302 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257122001` DQB1*0401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257124000` DRB1*0101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257125004` DRB1*0102 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257127007` DRB1*1501 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257128002` DRB1*1502 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257129005` DRB1*1503 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257130000` DRB1*1601 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257132008` DRB1*1602 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257133003` DRB1*0301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257134009` DRB1*0302 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257136006` DRB1*0401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257138007` DRB1*0403 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257139004` DRB1*0404 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257140002` DRB1*0405 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257141003` DRB1*0406 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257142005` DRB1*0407 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257143000` DRB1*0408 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257150001` DRB1*1102 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257155006` DRB1*1202 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257156007` DRB1*1301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257157003` DRB1*1302 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257158008` DRB1*1303 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257162002` DRB1*1401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257164001` DRB1*1403 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257166004` DRB1*1405 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257167008` DRB1*1406 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257168003` DRB1*1407 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257171006` DRB1*0701 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257173009` DRB1*0801 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257178000` DRB1*0804 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257182003` DRB1*1001 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257183008` DRB3*0101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257185001` DRB3*0202 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257186000` DRB3*0301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257187009` DRB4*0101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257188004` DRB5*0101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `260071009` Human leukocyte antigen allele — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `111362001` Anal furunculosis — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `239884000` Malemud disease — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `370480003` Hepatoportal microvascular dysplasia — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `372043009` Hydrops of allantois — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `43329005` Infestation by Knemidokoptes pilae — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `111362001` Anal furunculosis — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `239884000` Malemud disease — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `370480003` Hepatoportal microvascular dysplasia — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `372043009` Hydrops of allantois — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `43329005` Infestation by Knemidokoptes pilae — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `106652005` Superfamily Rhabdiasoidea — inactivated (Outdated) — in `mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed`, `mii-vs-mikrobio-organismen-snomedct`
+- `64620000` Asdravirus — inactivated (Nonconformance to editorial policy) — in `mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed`, `mii-vs-mikrobio-organismen-snomedct`
+- `106652005` Superfamily Rhabdiasoidea — inactivated (Outdated) — in `mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed`, `mii-vs-mikrobio-organismen-snomedct`
+- `64620000` Asdravirus — inactivated (Nonconformance to editorial policy) — in `mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed`, `mii-vs-mikrobio-organismen-snomedct`
+- `288010005` Urethral removal of ureteric calculus — inactivated (Nonconformance to editorial policy) — in `mii-vs-patho-collection-method-snomed-ct`, `mii-vs-prozedur-prozeduren-snomedct`
+- `111362001` Anal furunculosis — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `239884000` Malemud disease — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `370480003` Hepatoportal microvascular dysplasia — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `372043009` Hydrops of allantois — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `43329005` Infestation by Knemidokoptes pilae — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `236842007` Subcutaneous alcohol injection of the vulva — inactivated (Outdated) — in `mii-vs-prozedur-prozeduren-snomedct`
+- `287531000` Enteroscopy via paracentesis — inactivated (Nonconformance to editorial policy) — in `mii-vs-prozedur-prozeduren-snomedct`
+- `288010005` Urethral removal of ureteric calculus — inactivated (Nonconformance to editorial policy) — in `mii-vs-patho-collection-method-snomed-ct`, `mii-vs-prozedur-prozeduren-snomedct`

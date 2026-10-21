@@ -1,0 +1,124 @@
+{
+ "resourceType": "ConceptMap",
+ "id": "mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed-sct-20260701-20261001",
+ "status": "draft",
+ "name": "mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed_sct_20260701_20261001",
+ "title": "Überleitung mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed: SNOMED CT 20260701 → 20261001",
+ "date": "2026-10-21",
+ "publisher": "MII Terminology Watch (draft)",
+ "description": "Successors for members of mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed inactivated between SNOMED CT International 20260701 and 20261001. 6 of 9 elements resolved (auto / proposed / decided), the rest unmatched pending a decision.",
+ "sourceUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701",
+ "targetUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20261001",
+ "group": [
+  {
+   "source": "http://snomed.info/sct",
+   "sourceVersion": "http://snomed.info/sct/900000000000207008/version/20260701",
+   "target": "http://snomed.info/sct",
+   "targetVersion": "http://snomed.info/sct/900000000000207008/version/20261001",
+   "element": [
+    {
+     "code": "106652005",
+     "display": "Superfamily Rhabdiasoidea",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "113562007",
+     "display": "Clostridium adrichii",
+     "target": [
+      {
+       "code": "432614007",
+       "display": "Acetivibrio aldrichii",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "114095004",
+     "display": "Paenibacillus gluconolyticus",
+     "target": [
+      {
+       "code": "430611008",
+       "display": "Paenibacillus glucanolyticus",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "116663002",
+     "display": "Sin Nombre virus",
+     "target": [
+      {
+       "code": "1389076007",
+       "display": "Orthohantavirus sinnombreense",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "12127000",
+     "display": "Clostridium dormicaceticum",
+     "target": [
+      {
+       "code": "113574006",
+       "display": "Andreesenella formicacetica",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "302608002",
+     "display": "Alpha non-hemolytic streptococcus",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 60631002 (POSSIBLY EQUIVALENT TO), 414871004 (POSSIBLY EQUIVALENT TO), 22339002 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "49445003",
+     "display": "Genus Hantavirus",
+     "target": [
+      {
+       "code": "735350007",
+       "display": "Orthohantavirus",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "64620000",
+     "display": "Asdravirus",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Nonconformance to editorial policy); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "90736006",
+     "display": "Eimeria ninakolyakimovae",
+     "target": [
+      {
+       "code": "57949004",
+       "display": "Eimeria ninakohlyakimovae",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

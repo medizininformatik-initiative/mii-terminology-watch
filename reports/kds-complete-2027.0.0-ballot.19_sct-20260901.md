@@ -9,7 +9,7 @@
 | SNOMED CT | 20260701 | 20260901 |
 | HGNC | 20250704 | 20250704 |
 
-Generated 2026-10-20T02:39:54 against https://ontoserver.mii-termserv.de/fhir + rf2:SnomedCT_InternationalRF2_PRODUCTION_20260901T120000Z.zip (2326 server calls).
+Generated 2026-10-21T05:57:18 against https://ontoserver.mii-termserv.de/fhir + rf2:SnomedCT_InternationalRF2_PRODUCTION_20260901T120000Z.zip (2326 server calls).
 
 ## Summary
 
@@ -71,8 +71,8 @@ Members: 129012 → 129233
 | `1260377005` | Epilepsy due to congenital anomaly of brain | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1372772007 Epilepsy due to intracranial structural abnormality |
 | `126944002` | Brain disorder resulting from a period of impaired oxygen delivery to the brain | inactivated (Erroneous) | REPLACED BY → 1381325002 Hypoxic brain injury |
 | `127070008` | Malignant histiocytic disorder | inactivated (Outdated) | REPLACED BY → 1399256008 Malignant histiocytic macrophage neoplasm |
-| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | - |
-| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | - |
+| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | POSSIBLY REPLACED BY → 102556003 Pain in upper limb, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
+| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | POSSIBLY REPLACED BY → 771083005 Pain in upper arm, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `140391000119101` | Ulcer of toe due to type 2 diabetes mellitus | inactivated (Duplicate) | SAME AS → 10656271000119102 Skin ulcer of toe due to diabetes mellitus type 2 |
 | `15954901000119100` | Pendulous left breast | inactivated (Duplicate) | SAME AS → 15954981000119108 Ptosis of left breast |
 | `15954941000119103` | Bilateral pendulous breasts | inactivated (Duplicate) | SAME AS → 15955061000119104 Bilateral ptotic breasts |
@@ -81,11 +81,11 @@ Members: 129012 → 129233
 | `197030006` | Dietetic enterocolitis | inactivated (Duplicate) | SAME AS → 1401594008 Allergic enterocolitis caused by food |
 | `200766001` | Parakeratosis | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 56585003 Parakeratosis of skin, POSSIBLY EQUIVALENT TO → 65068000 Parakeratosis |
 | `200948000` | Pityriasis rubra (Hebra) | inactivated (Outdated) | REPLACED BY → 399992009 Erythroderma |
-| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | - |
-| `203104007` | Fibrositis of neck | inactivated (Outdated) | - |
+| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 45326000 Pain of shoulder region |
+| `203104007` | Fibrositis of neck | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 81680005 Neck pain |
 | `20759009` | Dietetic jejunitis | inactivated (Duplicate) | SAME AS → 1401593002 Allergic jejunitis caused by food |
 | `230441003` | Drug-induced epilepsy | inactivated (Erroneous) | REPLACED BY → 1382151008 Acute symptomatic epileptic seizure due to poisoning |
-| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | - |
+| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | POSSIBLY REPLACED BY → 400138001 Nodular fasciitis, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `269480005` | Benign islet cell neoplasm | inactivated (Duplicate) | SAME AS → 254614001 Benign neoplasm of endocrine pancreas |
 | `274776000` | Finding of alcohol in blood | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1402002006 Finding of alcohol in blood, POSSIBLY EQUIVALENT TO → 1402003001 Finding of substance with alcohol structure in blood specimen |
 | `30173002` | Primary fibrositis | inactivated (Outdated) | REPLACED BY → 95417003 Primary fibromyalgia syndrome |
@@ -108,9 +108,9 @@ Members: 129012 → 129233
 | `55028001` | Boil of vas deferens | inactivated (Erroneous) | REPLACED BY → 39235000 Abscess of vas deferens |
 | `56557000` | Fibrositis | inactivated (Outdated) | REPLACED BY → 203082005 Fibromyalgia |
 | `6051000119109` | Chronic ulcer of calf | inactivated (Duplicate) | SAME AS → 10640791000119105 Chronic ulcer of skin of calf |
-| `61947007` | Deaf mutism | inactivated (Outdated) | - |
-| `698614006` | Acquired deaf mutism | inactivated (Outdated) | - |
-| `698615007` | Congenital deaf mutism | inactivated (Outdated) | - |
+| `61947007` | Deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 15188001 Hearing loss |
+| `698614006` | Acquired deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 721294001 Acquired hearing loss |
+| `698615007` | Congenital deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 95828007 Congenital deafness, POSSIBLY REPLACED BY → 88052002 Mutism |
 | `698764006` | Post infectious grand mal epilepsy | inactivated (Outdated) | REPLACED BY → 1373924005 Epilepsy due to infectious disease |
 | `698767004` | Post-cerebrovascular accident epilepsy | inactivated (Duplicate) | SAME AS → 1380178003 Epilepsy due to and following stroke |
 | `700237005` | Supra-eruption of tooth | inactivated (Duplicate) | SAME AS → 109644008 Overeruption of tooth |
@@ -125,7 +125,7 @@ Members: 129012 → 129233
 | `76118001` | Dietetic ileitis | inactivated (Duplicate) | SAME AS → 1401592007 Allergic ileitis caused by food |
 | `78818007` | Decreased skin sensitivity | inactivated (Duplicate) | SAME AS → 398026008 Reduced sensation of skin |
 | `79254009` | Flail elbow | inactivated (Duplicate) | SAME AS → 296641000119105 Flail joint of elbow |
-| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | - |
+| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | POSSIBLY REPLACED BY → 237619009 Maternally inherited diabetes and deafness, POSSIBLY REPLACED BY → 57838006 Retinitis pigmentosa-deafness syndrome |
 | `82381000119103` | Epileptic dementia with behavioral disturbance | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1373650006 Epilepsy due to neurodegenerative dementia, POSSIBLY EQUIVALENT TO → 1340125003 Epilepsy syndrome with progressive neurological deterioration, POSSIBLY EQUIVALENT TO → 1591000119103 Dementia with behavioral disturbance |
 | `83134002` | Dietetic diarrhea | inactivated (Duplicate) | SAME AS → 1401598006 Allergic diarrhea caused by food |
 | `85879003` | Secondary fibrositis | inactivated (Outdated) | REPLACED BY → 203082005 Fibromyalgia |
@@ -847,8 +847,8 @@ Members: 137458 → 137681
 | `1260377005` | Epilepsy due to congenital anomaly of brain | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1372772007 Epilepsy due to intracranial structural abnormality |
 | `126944002` | Brain disorder resulting from a period of impaired oxygen delivery to the brain | inactivated (Erroneous) | REPLACED BY → 1381325002 Hypoxic brain injury |
 | `127070008` | Malignant histiocytic disorder | inactivated (Outdated) | REPLACED BY → 1399256008 Malignant histiocytic macrophage neoplasm |
-| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | - |
-| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | - |
+| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | POSSIBLY REPLACED BY → 102556003 Pain in upper limb, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
+| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | POSSIBLY REPLACED BY → 771083005 Pain in upper arm, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `140391000119101` | Ulcer of toe due to type 2 diabetes mellitus | inactivated (Duplicate) | SAME AS → 10656271000119102 Skin ulcer of toe due to diabetes mellitus type 2 |
 | `15954901000119100` | Pendulous left breast | inactivated (Duplicate) | SAME AS → 15954981000119108 Ptosis of left breast |
 | `15954941000119103` | Bilateral pendulous breasts | inactivated (Duplicate) | SAME AS → 15955061000119104 Bilateral ptotic breasts |
@@ -857,11 +857,11 @@ Members: 137458 → 137681
 | `197030006` | Dietetic enterocolitis | inactivated (Duplicate) | SAME AS → 1401594008 Allergic enterocolitis caused by food |
 | `200766001` | Parakeratosis | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 56585003 Parakeratosis of skin, POSSIBLY EQUIVALENT TO → 65068000 Parakeratosis |
 | `200948000` | Pityriasis rubra (Hebra) | inactivated (Outdated) | REPLACED BY → 399992009 Erythroderma |
-| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | - |
-| `203104007` | Fibrositis of neck | inactivated (Outdated) | - |
+| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 45326000 Pain of shoulder region |
+| `203104007` | Fibrositis of neck | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 81680005 Neck pain |
 | `20759009` | Dietetic jejunitis | inactivated (Duplicate) | SAME AS → 1401593002 Allergic jejunitis caused by food |
 | `230441003` | Drug-induced epilepsy | inactivated (Erroneous) | REPLACED BY → 1382151008 Acute symptomatic epileptic seizure due to poisoning |
-| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | - |
+| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | POSSIBLY REPLACED BY → 400138001 Nodular fasciitis, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `269480005` | Benign islet cell neoplasm | inactivated (Duplicate) | SAME AS → 254614001 Benign neoplasm of endocrine pancreas |
 | `274776000` | Finding of alcohol in blood | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1402002006 Finding of alcohol in blood, POSSIBLY EQUIVALENT TO → 1402003001 Finding of substance with alcohol structure in blood specimen |
 | `30173002` | Primary fibrositis | inactivated (Outdated) | REPLACED BY → 95417003 Primary fibromyalgia syndrome |
@@ -885,9 +885,9 @@ Members: 137458 → 137681
 | `55028001` | Boil of vas deferens | inactivated (Erroneous) | REPLACED BY → 39235000 Abscess of vas deferens |
 | `56557000` | Fibrositis | inactivated (Outdated) | REPLACED BY → 203082005 Fibromyalgia |
 | `6051000119109` | Chronic ulcer of calf | inactivated (Duplicate) | SAME AS → 10640791000119105 Chronic ulcer of skin of calf |
-| `61947007` | Deaf mutism | inactivated (Outdated) | - |
-| `698614006` | Acquired deaf mutism | inactivated (Outdated) | - |
-| `698615007` | Congenital deaf mutism | inactivated (Outdated) | - |
+| `61947007` | Deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 15188001 Hearing loss |
+| `698614006` | Acquired deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 721294001 Acquired hearing loss |
+| `698615007` | Congenital deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 95828007 Congenital deafness, POSSIBLY REPLACED BY → 88052002 Mutism |
 | `698764006` | Post infectious grand mal epilepsy | inactivated (Outdated) | REPLACED BY → 1373924005 Epilepsy due to infectious disease |
 | `698767004` | Post-cerebrovascular accident epilepsy | inactivated (Duplicate) | SAME AS → 1380178003 Epilepsy due to and following stroke |
 | `700237005` | Supra-eruption of tooth | inactivated (Duplicate) | SAME AS → 109644008 Overeruption of tooth |
@@ -902,7 +902,7 @@ Members: 137458 → 137681
 | `76118001` | Dietetic ileitis | inactivated (Duplicate) | SAME AS → 1401592007 Allergic ileitis caused by food |
 | `78818007` | Decreased skin sensitivity | inactivated (Duplicate) | SAME AS → 398026008 Reduced sensation of skin |
 | `79254009` | Flail elbow | inactivated (Duplicate) | SAME AS → 296641000119105 Flail joint of elbow |
-| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | - |
+| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | POSSIBLY REPLACED BY → 237619009 Maternally inherited diabetes and deafness, POSSIBLY REPLACED BY → 57838006 Retinitis pigmentosa-deafness syndrome |
 | `82381000119103` | Epileptic dementia with behavioral disturbance | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1373650006 Epilepsy due to neurodegenerative dementia, POSSIBLY EQUIVALENT TO → 1340125003 Epilepsy syndrome with progressive neurological deterioration, POSSIBLY EQUIVALENT TO → 1591000119103 Dementia with behavioral disturbance |
 | `83134002` | Dietetic diarrhea | inactivated (Duplicate) | SAME AS → 1401598006 Allergic diarrhea caused by food |
 | `85879003` | Secondary fibrositis | inactivated (Outdated) | REPLACED BY → 203082005 Fibromyalgia |
@@ -984,8 +984,8 @@ Members: 137458 → 137681
 | `1260377005` | Epilepsy due to congenital anomaly of brain | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1372772007 Epilepsy due to intracranial structural abnormality |
 | `126944002` | Brain disorder resulting from a period of impaired oxygen delivery to the brain | inactivated (Erroneous) | REPLACED BY → 1381325002 Hypoxic brain injury |
 | `127070008` | Malignant histiocytic disorder | inactivated (Outdated) | REPLACED BY → 1399256008 Malignant histiocytic macrophage neoplasm |
-| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | - |
-| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | - |
+| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | POSSIBLY REPLACED BY → 102556003 Pain in upper limb, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
+| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | POSSIBLY REPLACED BY → 771083005 Pain in upper arm, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `140391000119101` | Ulcer of toe due to type 2 diabetes mellitus | inactivated (Duplicate) | SAME AS → 10656271000119102 Skin ulcer of toe due to diabetes mellitus type 2 |
 | `15954901000119100` | Pendulous left breast | inactivated (Duplicate) | SAME AS → 15954981000119108 Ptosis of left breast |
 | `15954941000119103` | Bilateral pendulous breasts | inactivated (Duplicate) | SAME AS → 15955061000119104 Bilateral ptotic breasts |
@@ -994,11 +994,11 @@ Members: 137458 → 137681
 | `197030006` | Dietetic enterocolitis | inactivated (Duplicate) | SAME AS → 1401594008 Allergic enterocolitis caused by food |
 | `200766001` | Parakeratosis | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 56585003 Parakeratosis of skin, POSSIBLY EQUIVALENT TO → 65068000 Parakeratosis |
 | `200948000` | Pityriasis rubra (Hebra) | inactivated (Outdated) | REPLACED BY → 399992009 Erythroderma |
-| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | - |
-| `203104007` | Fibrositis of neck | inactivated (Outdated) | - |
+| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 45326000 Pain of shoulder region |
+| `203104007` | Fibrositis of neck | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 81680005 Neck pain |
 | `20759009` | Dietetic jejunitis | inactivated (Duplicate) | SAME AS → 1401593002 Allergic jejunitis caused by food |
 | `230441003` | Drug-induced epilepsy | inactivated (Erroneous) | REPLACED BY → 1382151008 Acute symptomatic epileptic seizure due to poisoning |
-| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | - |
+| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | POSSIBLY REPLACED BY → 400138001 Nodular fasciitis, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `269480005` | Benign islet cell neoplasm | inactivated (Duplicate) | SAME AS → 254614001 Benign neoplasm of endocrine pancreas |
 | `274776000` | Finding of alcohol in blood | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1402002006 Finding of alcohol in blood, POSSIBLY EQUIVALENT TO → 1402003001 Finding of substance with alcohol structure in blood specimen |
 | `30173002` | Primary fibrositis | inactivated (Outdated) | REPLACED BY → 95417003 Primary fibromyalgia syndrome |
@@ -1022,9 +1022,9 @@ Members: 137458 → 137681
 | `55028001` | Boil of vas deferens | inactivated (Erroneous) | REPLACED BY → 39235000 Abscess of vas deferens |
 | `56557000` | Fibrositis | inactivated (Outdated) | REPLACED BY → 203082005 Fibromyalgia |
 | `6051000119109` | Chronic ulcer of calf | inactivated (Duplicate) | SAME AS → 10640791000119105 Chronic ulcer of skin of calf |
-| `61947007` | Deaf mutism | inactivated (Outdated) | - |
-| `698614006` | Acquired deaf mutism | inactivated (Outdated) | - |
-| `698615007` | Congenital deaf mutism | inactivated (Outdated) | - |
+| `61947007` | Deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 15188001 Hearing loss |
+| `698614006` | Acquired deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 721294001 Acquired hearing loss |
+| `698615007` | Congenital deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 95828007 Congenital deafness, POSSIBLY REPLACED BY → 88052002 Mutism |
 | `698764006` | Post infectious grand mal epilepsy | inactivated (Outdated) | REPLACED BY → 1373924005 Epilepsy due to infectious disease |
 | `698767004` | Post-cerebrovascular accident epilepsy | inactivated (Duplicate) | SAME AS → 1380178003 Epilepsy due to and following stroke |
 | `700237005` | Supra-eruption of tooth | inactivated (Duplicate) | SAME AS → 109644008 Overeruption of tooth |
@@ -1039,7 +1039,7 @@ Members: 137458 → 137681
 | `76118001` | Dietetic ileitis | inactivated (Duplicate) | SAME AS → 1401592007 Allergic ileitis caused by food |
 | `78818007` | Decreased skin sensitivity | inactivated (Duplicate) | SAME AS → 398026008 Reduced sensation of skin |
 | `79254009` | Flail elbow | inactivated (Duplicate) | SAME AS → 296641000119105 Flail joint of elbow |
-| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | - |
+| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | POSSIBLY REPLACED BY → 237619009 Maternally inherited diabetes and deafness, POSSIBLY REPLACED BY → 57838006 Retinitis pigmentosa-deafness syndrome |
 | `82381000119103` | Epileptic dementia with behavioral disturbance | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1373650006 Epilepsy due to neurodegenerative dementia, POSSIBLY EQUIVALENT TO → 1340125003 Epilepsy syndrome with progressive neurological deterioration, POSSIBLY EQUIVALENT TO → 1591000119103 Dementia with behavioral disturbance |
 | `83134002` | Dietetic diarrhea | inactivated (Duplicate) | SAME AS → 1401598006 Allergic diarrhea caused by food |
 | `85879003` | Secondary fibrositis | inactivated (Outdated) | REPLACED BY → 203082005 Fibromyalgia |
@@ -1394,8 +1394,8 @@ Members: 129019 → 129241
 | `1260377005` | Epilepsy due to congenital anomaly of brain | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1372772007 Epilepsy due to intracranial structural abnormality |
 | `126944002` | Brain disorder resulting from a period of impaired oxygen delivery to the brain | inactivated (Erroneous) | REPLACED BY → 1381325002 Hypoxic brain injury |
 | `127070008` | Malignant histiocytic disorder | inactivated (Outdated) | REPLACED BY → 1399256008 Malignant histiocytic macrophage neoplasm |
-| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | - |
-| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | - |
+| `1354668000` | Fibrositis of upper limb | inactivated (Outdated) | POSSIBLY REPLACED BY → 102556003 Pain in upper limb, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
+| `1354669008` | Fibrositis of upper arm | inactivated (Outdated) | POSSIBLY REPLACED BY → 771083005 Pain in upper arm, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `140391000119101` | Ulcer of toe due to type 2 diabetes mellitus | inactivated (Duplicate) | SAME AS → 10656271000119102 Skin ulcer of toe due to diabetes mellitus type 2 |
 | `15954901000119100` | Pendulous left breast | inactivated (Duplicate) | SAME AS → 15954981000119108 Ptosis of left breast |
 | `15954941000119103` | Bilateral pendulous breasts | inactivated (Duplicate) | SAME AS → 15955061000119104 Bilateral ptotic breasts |
@@ -1404,11 +1404,11 @@ Members: 129019 → 129241
 | `197030006` | Dietetic enterocolitis | inactivated (Duplicate) | SAME AS → 1401594008 Allergic enterocolitis caused by food |
 | `200766001` | Parakeratosis | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 56585003 Parakeratosis of skin, POSSIBLY EQUIVALENT TO → 65068000 Parakeratosis |
 | `200948000` | Pityriasis rubra (Hebra) | inactivated (Outdated) | REPLACED BY → 399992009 Erythroderma |
-| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | - |
-| `203104007` | Fibrositis of neck | inactivated (Outdated) | - |
+| `202848009` | Scapulohumeral fibrositis | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 45326000 Pain of shoulder region |
+| `203104007` | Fibrositis of neck | inactivated (Outdated) | POSSIBLY REPLACED BY → 203082005 Fibromyalgia, POSSIBLY REPLACED BY → 81680005 Neck pain |
 | `20759009` | Dietetic jejunitis | inactivated (Duplicate) | SAME AS → 1401593002 Allergic jejunitis caused by food |
 | `230441003` | Drug-induced epilepsy | inactivated (Erroneous) | REPLACED BY → 1382151008 Acute symptomatic epileptic seizure due to poisoning |
-| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | - |
+| `240044003` | Fibrositis and nodular fasciitis | inactivated (Outdated) | POSSIBLY REPLACED BY → 400138001 Nodular fasciitis, POSSIBLY REPLACED BY → 203082005 Fibromyalgia |
 | `269480005` | Benign islet cell neoplasm | inactivated (Duplicate) | SAME AS → 254614001 Benign neoplasm of endocrine pancreas |
 | `274776000` | Finding of alcohol in blood | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1402002006 Finding of alcohol in blood, POSSIBLY EQUIVALENT TO → 1402003001 Finding of substance with alcohol structure in blood specimen |
 | `30173002` | Primary fibrositis | inactivated (Outdated) | REPLACED BY → 95417003 Primary fibromyalgia syndrome |
@@ -1431,9 +1431,9 @@ Members: 129019 → 129241
 | `55028001` | Boil of vas deferens | inactivated (Erroneous) | REPLACED BY → 39235000 Abscess of vas deferens |
 | `56557000` | Fibrositis | inactivated (Outdated) | REPLACED BY → 203082005 Fibromyalgia |
 | `6051000119109` | Chronic ulcer of calf | inactivated (Duplicate) | SAME AS → 10640791000119105 Chronic ulcer of skin of calf |
-| `61947007` | Deaf mutism | inactivated (Outdated) | - |
-| `698614006` | Acquired deaf mutism | inactivated (Outdated) | - |
-| `698615007` | Congenital deaf mutism | inactivated (Outdated) | - |
+| `61947007` | Deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 15188001 Hearing loss |
+| `698614006` | Acquired deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 88052002 Mutism, POSSIBLY REPLACED BY → 721294001 Acquired hearing loss |
+| `698615007` | Congenital deaf mutism | inactivated (Outdated) | POSSIBLY REPLACED BY → 95828007 Congenital deafness, POSSIBLY REPLACED BY → 88052002 Mutism |
 | `698764006` | Post infectious grand mal epilepsy | inactivated (Outdated) | REPLACED BY → 1373924005 Epilepsy due to infectious disease |
 | `698767004` | Post-cerebrovascular accident epilepsy | inactivated (Duplicate) | SAME AS → 1380178003 Epilepsy due to and following stroke |
 | `700237005` | Supra-eruption of tooth | inactivated (Duplicate) | SAME AS → 109644008 Overeruption of tooth |
@@ -1448,7 +1448,7 @@ Members: 129019 → 129241
 | `76118001` | Dietetic ileitis | inactivated (Duplicate) | SAME AS → 1401592007 Allergic ileitis caused by food |
 | `78818007` | Decreased skin sensitivity | inactivated (Duplicate) | SAME AS → 398026008 Reduced sensation of skin |
 | `79254009` | Flail elbow | inactivated (Duplicate) | SAME AS → 296641000119105 Flail joint of elbow |
-| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | - |
+| `79442007` | Deafmutism-retinal degeneration syndrome | inactivated (Outdated) | POSSIBLY REPLACED BY → 237619009 Maternally inherited diabetes and deafness, POSSIBLY REPLACED BY → 57838006 Retinitis pigmentosa-deafness syndrome |
 | `82381000119103` | Epileptic dementia with behavioral disturbance | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1373650006 Epilepsy due to neurodegenerative dementia, POSSIBLY EQUIVALENT TO → 1340125003 Epilepsy syndrome with progressive neurological deterioration, POSSIBLY EQUIVALENT TO → 1591000119103 Dementia with behavioral disturbance |
 | `83134002` | Dietetic diarrhea | inactivated (Duplicate) | SAME AS → 1401598006 Allergic diarrhea caused by food |
 | `85879003` | Secondary fibrositis | inactivated (Outdated) | REPLACED BY → 203082005 Fibromyalgia |
@@ -1524,7 +1524,7 @@ Members: 60697 → 60732
 | `307189004` | Alcohol injection of liver metastases | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1258912004 Percutaneous injection of alcohol into neoplasm of liver |
 | `312339003` | Stereotactic injection of alcohol to Gasserian ganglion | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1402008005 Stereotactic injection of glycerol to Gasserian ganglion, POSSIBLY EQUIVALENT TO → 1402007000 Stereotactic injection of alcohol to Gasserian ganglion |
 | `32845008` | Alcohol measurement, urine | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 271289006 Urine alcohol measurement, POSSIBLY EQUIVALENT TO → 1402000003 Measurement of substance with alcohol structure in urine specimen |
-| `37127001` | Injection of inner ear with alcohol | inactivated (Outdated) | - |
+| `37127001` | Injection of inner ear with alcohol | inactivated (Outdated) | POSSIBLY REPLACED BY → 1402090008 Injection of inner ear with gentamicin, POSSIBLY REPLACED BY → 1402091007 Injection of inner ear with corticosteroid and/or corticosteroid derivative |
 | `433717001` | Percutaneous injection of alcohol using fluoroscopic guidance | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1402089004 Percutaneous injection of alcohol using fluoroscopic guidance |
 | `442321000` | Measurement of alcohol in blood specimen | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1402001004 Measurement of substance with alcohol structure in blood specimen, POSSIBLY EQUIVALENT TO → 167009006 Blood alcohol level |
 | `60196006` | Injection of alcohol into sympathetic nerve | inactivated (Ambiguous) | POSSIBLY EQUIVALENT TO → 1402014003 Injection of alcohol into sympathetic nerve |

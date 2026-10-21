@@ -1,0 +1,584 @@
+{
+ "resourceType": "ConceptMap",
+ "id": "mii-vs-prozedur-prozeduren-snomedct-sct-20260701-20261001",
+ "status": "draft",
+ "name": "mii-vs-prozedur-prozeduren-snomedct_sct_20260701_20261001",
+ "title": "Überleitung mii-vs-prozedur-prozeduren-snomedct: SNOMED CT 20260701 → 20261001",
+ "date": "2026-10-21",
+ "publisher": "MII Terminology Watch (draft)",
+ "description": "Successors for members of mii-vs-prozedur-prozeduren-snomedct inactivated between SNOMED CT International 20260701 and 20261001. 31 of 50 elements resolved (auto / proposed / decided), the rest unmatched pending a decision.",
+ "sourceUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701",
+ "targetUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20261001",
+ "group": [
+  {
+   "source": "http://snomed.info/sct",
+   "sourceVersion": "http://snomed.info/sct/900000000000207008/version/20260701",
+   "target": "http://snomed.info/sct",
+   "targetVersion": "http://snomed.info/sct/900000000000207008/version/20261001",
+   "element": [
+    {
+     "code": "1196926008",
+     "display": "Computed tomography triple phase study of pancreas",
+     "target": [
+      {
+       "code": "1398941000",
+       "display": "CT triple phase of pancreas with contrast",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "1196930006",
+     "display": "Computed tomography dual phase study of kidney",
+     "target": [
+      {
+       "code": "1399227008",
+       "display": "CT dual phase of kidney with contrast",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "127803005",
+     "display": "Lung residual volume measurement",
+     "target": [
+      {
+       "code": "252473009",
+       "display": "Residual lung volume test",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "1303747009",
+     "display": "Intravenous shockwave lithotripsy of atherosclerotic plaque of artery",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1404843006 (POSSIBLY EQUIVALENT TO), 1404837009 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "15872003",
+     "display": "Injection of alcohol into retrobulbar space",
+     "target": [
+      {
+       "code": "1402088007",
+       "display": "Injection of alcohol into retrobulbar space",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "174625005",
+     "display": "Endoscopic change of biliary stent",
+     "target": [
+      {
+       "code": "709467007",
+       "display": "Fluoroscopy guided endoscopic retrograde cholangiopancreatography with replacement of bile duct stent",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "232183005",
+     "display": "Insertion of bone anchors for subcutaneous bone anchored hearing aid",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1401724004 (POSSIBLY EQUIVALENT TO), 232184004 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "232663008",
+     "display": "Airway procedure",
+     "target": [
+      {
+       "code": "387662008",
+       "display": "Respiratory tract procedure",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "234724006",
+     "display": "Tooth or teeth preparation",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1407172004 (POSSIBLY EQUIVALENT TO), 1407171006 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "234743006",
+     "display": "Bridge preparation of tooth or teeth",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1407193001 (POSSIBLY EQUIVALENT TO), 1407194007 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "236178000",
+     "display": "Therapeutic ureteroscopic operation on ureter",
+     "target": [
+      {
+       "code": "387717002",
+       "display": "Ureteroscopy",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "236842007",
+     "display": "Subcutaneous alcohol injection of the vulva",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "23864003",
+     "display": "Esophagoscopy for biopsy and collection of specimen by brushing or washing",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 71658001 (POSSIBLY EQUIVALENT TO), 1370946001 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "239462008",
+     "display": "Hydrodistension of joint",
+     "target": [
+      {
+       "code": "1402226000",
+       "display": "Imaging guided hydrodistension of joint",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "239463003",
+     "display": "Hydrodistension of shoulder joint",
+     "target": [
+      {
+       "code": "1402227009",
+       "display": "Imaging guided hydrodistension of glenohumeral joint",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "265455000",
+     "display": "Endoscopic sphincterotomy of sphincter of Oddi and removal of calculus",
+     "target": [
+      {
+       "code": "235583009",
+       "display": "Fluoroscopy guided endoscopic retrograde cholangiopancreatography with sphincterotomy of sphincter of Oddi and calculus removal",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "271490000",
+     "display": "Open endoscopic operation on colon",
+     "target": [
+      {
+       "code": "34264006",
+       "display": "Intraoperative colonoscopy",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "287531000",
+     "display": "Enteroscopy via paracentesis",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Nonconformance to editorial policy); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "288010005",
+     "display": "Urethral removal of ureteric calculus",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Nonconformance to editorial policy); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "29380005",
+     "display": "Insertion of pessary into cervix",
+     "target": [
+      {
+       "code": "1401562003",
+       "display": "Insertion of cervical pessary into vagina",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "307189004",
+     "display": "Alcohol injection of liver metastases",
+     "target": [
+      {
+       "code": "1258912004",
+       "display": "Percutaneous injection of alcohol into neoplasm of liver",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "312339003",
+     "display": "Stereotactic injection of alcohol to Gasserian ganglion",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1402007000 (POSSIBLY EQUIVALENT TO), 1402008005 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "32845008",
+     "display": "Alcohol measurement, urine",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 271289006 (POSSIBLY EQUIVALENT TO), 1402000003 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "359578003",
+     "display": "Percutaneous endoscopy through jejunostomy",
+     "target": [
+      {
+       "code": "53402007",
+       "display": "Endoscopy of small intestine through artificial stoma",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "37127001",
+     "display": "Injection of inner ear with alcohol",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 1402090008 (POSSIBLY REPLACED BY), 1402091007 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "386745004",
+     "display": "Transurethral cystoscopy",
+     "target": [
+      {
+       "code": "142505009",
+       "display": "Cystoscopy",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "406911000",
+     "display": "Permethrin stain method",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Nonconformance to editorial policy); candidates: 127790008 (ALTERNATIVE), 59209009 (ALTERNATIVE)"
+      }
+     ]
+    },
+    {
+     "code": "418447007",
+     "display": "US scan of orbits",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 127671000146102 (POSSIBLY EQUIVALENT TO), 1399538009 (POSSIBLY EQUIVALENT TO), 127661000146108 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "430266004",
+     "display": "Radionuclide two-phase bone imaging of wrist",
+     "target": [
+      {
+       "code": "1404502002",
+       "display": "Radionuclide two-phase imaging of bone of wrist region",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "431895007",
+     "display": "Ultrasonography of graft",
+     "target": [
+      {
+       "code": "1401842000",
+       "display": "Ultrasonography of vascular graft",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "432275005",
+     "display": "Radionuclide imaging of bone of wrist",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1404457002 (POSSIBLY EQUIVALENT TO), 1404456006 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "432396001",
+     "display": "Percutaneous pyeloplasty using fluoroscopic guidance",
+     "target": [
+      {
+       "code": "1406753002",
+       "display": "Fluoroscopy guided percutaneous reconstruction of ureteropelvic junction",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "432779000",
+     "display": "Computed tomography dacryocystography of lacrimal canaliculus",
+     "target": [
+      {
+       "code": "1397944005",
+       "display": "CT dacryocystography of lacrimal canaliculus with contrast",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "433023004",
+     "display": "Fluoroscopic dacryocystoplasty",
+     "target": [
+      {
+       "code": "1401820001",
+       "display": "Fluoroscopy guided dilation of lacrimal drainage system with contrast",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "433717001",
+     "display": "Percutaneous injection of alcohol using fluoroscopic guidance",
+     "target": [
+      {
+       "code": "1402089004",
+       "display": "Percutaneous injection of alcohol using fluoroscopic guidance",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "438305004",
+     "display": "CT dual phase study of liver",
+     "target": [
+      {
+       "code": "1399230001",
+       "display": "CT dual phase of liver with contrast",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "438591004",
+     "display": "Computed tomography triple phase study of liver",
+     "target": [
+      {
+       "code": "1398939001",
+       "display": "CT triple phase of liver with contrast",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "438814001",
+     "display": "Fluoroscopy guided percutaneous transluminal embolization of branch of iliac vein with contrast",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1409194003 (POSSIBLY EQUIVALENT TO), 1409196001 (POSSIBLY EQUIVALENT TO), 1409195002 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "440514007",
+     "display": "CT dual phase study of pancreas",
+     "target": [
+      {
+       "code": "1399231002",
+       "display": "CT dual phase of pancreas with contrast",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "442321000",
+     "display": "Measurement of alcohol in blood specimen",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1402001004 (POSSIBLY EQUIVALENT TO), 167009006 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "53797006",
+     "display": "Esophagoscopy for destruction of lesion or tumor",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1370964008 (POSSIBLY EQUIVALENT TO), 1370965009 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "55648009",
+     "display": "Endoscopic dilation of pancreatic duct",
+     "target": [
+      {
+       "code": "174639005",
+       "display": "Fluoroscopy guided endoscopic retrograde pancreatography with dilation of pancreatic duct",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "60196006",
+     "display": "Injection of alcohol into sympathetic nerve",
+     "target": [
+      {
+       "code": "1402014003",
+       "display": "Injection of alcohol into sympathetic nerve",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "63267000",
+     "display": "Alcohol measurement",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 430837008 (POSSIBLY EQUIVALENT TO), 1401999009 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "66399003",
+     "display": "Take-down of cerebral ventricular shunt",
+     "target": [
+      {
+       "code": "288846002",
+       "display": "Cerebrospinal fluid shunt removal",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "718008007",
+     "display": "Three dimensional cone beam CT of mandible",
+     "target": [
+      {
+       "code": "718007002",
+       "display": "Cone beam CT of mandible",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "76572000",
+     "display": "Measurement of lung volume",
+     "target": [
+      {
+       "code": "252472004",
+       "display": "Lung volume test",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "88572002",
+     "display": "Injection of alcohol into nerve",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1402005008 (POSSIBLY EQUIVALENT TO), 1402006009 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "88851005",
+     "display": "Cerebral ventricular to thoracic cavity shunt",
+     "target": [
+      {
+       "code": "1395914006",
+       "display": "Creation of ventriculopleural shunt",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "89516003",
+     "display": "Spinal injection of alcohol",
+     "target": [
+      {
+       "code": "1402012004",
+       "display": "Spinal injection of alcohol",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

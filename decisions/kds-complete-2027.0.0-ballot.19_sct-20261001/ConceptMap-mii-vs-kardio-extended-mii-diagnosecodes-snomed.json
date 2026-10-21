@@ -1,0 +1,5166 @@
+{
+ "resourceType": "ConceptMap",
+ "id": "mii-vs-kardio-extended-mii-diagnosecodes-snomed-sct-20260701-20261001",
+ "status": "draft",
+ "name": "mii-vs-kardio-extended-mii-diagnosecodes-snomed_sct_20260701_20261001",
+ "title": "Überleitung mii-vs-kardio-extended-mii-diagnosecodes-snomed: SNOMED CT 20260701 → 20261001",
+ "date": "2026-10-21",
+ "publisher": "MII Terminology Watch (draft)",
+ "description": "Successors for members of mii-vs-kardio-extended-mii-diagnosecodes-snomed inactivated between SNOMED CT International 20260701 and 20261001. 352 of 444 elements resolved (auto / proposed / decided), the rest unmatched pending a decision.",
+ "sourceUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701",
+ "targetUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20261001",
+ "group": [
+  {
+   "source": "http://snomed.info/sct",
+   "sourceVersion": "http://snomed.info/sct/900000000000207008/version/20260701",
+   "target": "http://snomed.info/sct",
+   "targetVersion": "http://snomed.info/sct/900000000000207008/version/20261001",
+   "element": [
+    {
+     "code": "10562009",
+     "display": "Malignant hypertension complicating AND/OR reason for care during childbirth",
+     "target": [
+      {
+       "code": "1373612000",
+       "display": "Maternal disorder in labor due to malignant hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "105709005",
+     "display": "Disease caused by Rhabdiasoidea",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 105710000 (POSSIBLY REPLACED BY), 1214006 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "106005003",
+     "display": "Hypertension AND/OR vomiting complicating pregnancy childbirth AND/OR puerperium",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 90325002 (PARTIALLY EQUIVALENT TO), 1373731004 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "106008001",
+     "display": "Delivery AND/OR maternal condition affecting management",
+     "target": [
+      {
+       "code": "1269075002",
+       "display": "Maternal disorder during intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "106009009",
+     "display": "Fetal condition affecting obstetrical care of mother",
+     "target": [
+      {
+       "code": "70591005",
+       "display": "Fetal disorder",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "106010004",
+     "display": "Pelvic dystocia AND/OR uterine disorder",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 79748007 (POSSIBLY EQUIVALENT TO), 12337004 (POSSIBLY EQUIVALENT TO), 1381465004 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "10741911000119103",
+     "display": "Abnormal cervix affecting pregnancy",
+     "target": [
+      {
+       "code": "1381664008",
+       "display": "Abnormal cervix during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "10743831000119100",
+     "display": "Neoplasm of uterus affecting pregnancy",
+     "target": [
+      {
+       "code": "1381663002",
+       "display": "Neoplasm of uterus during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "10743881000119104",
+     "display": "Suspected fetal abnormality affecting management of mother",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 609520005 (PARTIALLY EQUIVALENT TO), 609415007 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "10749811000119108",
+     "display": "Obstetric anesthesia with central nervous system complication in childbirth",
+     "target": [
+      {
+       "code": "1379975000",
+       "display": "Maternal central nervous system disorder due to anesthesia during intrapartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "10808861000119105",
+     "display": "Maternal distress during childbirth",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1409197005 (POSSIBLY EQUIVALENT TO), 249196008 (POSSIBLY EQUIVALENT TO), 200164009 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "10835971000119109",
+     "display": "Anti-A sensitization in pregnancy",
+     "target": [
+      {
+       "code": "1388946008",
+       "display": "Maternal anti-A isoimmunization during antenatal and/or intrapartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "10853001",
+     "display": "Obstetrical complication of general anesthesia",
+     "target": [
+      {
+       "code": "1380040003",
+       "display": "Maternal disorder due to administration of general anesthesia during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "10884004",
+     "display": "Threatened miscarriage in third trimester",
+     "target": [
+      {
+       "code": "6383007",
+       "display": "Premature labor",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "10897531000119101",
+     "display": "Open wound of female external genitalia",
+     "target": [
+      {
+       "code": "210438000",
+       "display": "Open wound of vulva",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "10950002",
+     "display": "Vulval hematoma during delivery",
+     "target": [
+      {
+       "code": "249217005",
+       "display": "Maternal hematoma of vulva during intrapartum period",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "111360009",
+     "display": "Obstipation",
+     "target": [
+      {
+       "code": "236069009",
+       "display": "Chronic constipation",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "111362001",
+     "display": "Anal furunculosis",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Nonconformance to editorial policy); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "111438007",
+     "display": "Hypertension secondary to renal disease in obstetric context",
+     "target": [
+      {
+       "code": "1373660002",
+       "display": "Hypertension due to renal disease during maternal antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "111447004",
+     "display": "Placental condition affecting management of mother",
+     "target": [
+      {
+       "code": "125586008",
+       "display": "Disorder of placenta",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "111459000",
+     "display": "Infection of nipple, associated with childbirth",
+     "target": [
+      {
+       "code": "1388392003",
+       "display": "Infection of nipple during postpartum",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "1142291001",
+     "display": "Achromotrichia of eyebrow",
+     "target": [
+      {
+       "code": "1402357002",
+       "display": "Achromotrichia of eyebrow",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "1145232003",
+     "display": "Premature grayness of hair of body",
+     "target": [
+      {
+       "code": "1402358007",
+       "display": "Premature grayness of hair of body",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "1156096005",
+     "display": "Past pregnancy history of complication occurring during labor and delivery",
+     "target": [
+      {
+       "code": "1389463009",
+       "display": "Past pregnancy history of maternal disorder during intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "1156495004",
+     "display": "Dendritic cell sarcoma",
+     "target": [
+      {
+       "code": "721313009",
+       "display": "Indeterminate dendritic cell neoplasm",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "1163527006",
+     "display": "Epilepsy due to parasitic disease",
+     "target": [
+      {
+       "code": "1397332000",
+       "display": "Epilepsy due to parasitic disease of brain",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "1163529009",
+     "display": "Epilepsy due to bacterial endocarditis",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1373924005 (POSSIBLY EQUIVALENT TO), 1373925006 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "1179359005",
+     "display": "Maternal epilepsy due to perinatal stroke",
+     "target": [
+      {
+       "code": "1380178003",
+       "display": "Epilepsy due to and following stroke",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "1179360000",
+     "display": "Fetal epilepsy due to perinatal stroke",
+     "target": [
+      {
+       "code": "1381734009",
+       "display": "Epilepsy due to and following perinatal fetal and/or neonatal stroke",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "1179547007",
+     "display": "Neonatal epilepsy due to perinatal stroke",
+     "target": [
+      {
+       "code": "1381734009",
+       "display": "Epilepsy due to and following perinatal fetal and/or neonatal stroke",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "118612006",
+     "display": "Malignant histiocytosis (clinical)",
+     "target": [
+      {
+       "code": "1399256008",
+       "display": "Malignant histiocytic macrophage neoplasm",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "1186810009",
+     "display": "Erythropoietic protoporphyria due to gain of function of erythroid-specific aminolevulinic acid synthase 2",
+     "target": [
+      {
+       "code": "1197360001",
+       "display": "X-linked dominant erythropoietic protoporphyria",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "11914001",
+     "display": "Transverse OR oblique presentation of fetus",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 73161006 (POSSIBLY EQUIVALENT TO), 63750008 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "120001000119107",
+     "display": "Group B streptococcus carrier complicating pregnancy",
+     "target": [
+      {
+       "code": "1397016006",
+       "display": "Maternal group B streptococcus carrier during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "1208862000",
+     "display": "Acquired poliosis of eyelash",
+     "target": [
+      {
+       "code": "1402368002",
+       "display": "Acquired poliosis of eyelash",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "1220564001",
+     "display": "Incomplete induced termination of pregnancy complicated by shock",
+     "target": [
+      {
+       "code": "1373920001",
+       "display": "Shock due to and following incomplete termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "1220586000",
+     "display": "Incomplete induced termination of pregnancy complicated by renal failure",
+     "target": [
+      {
+       "code": "1373870002",
+       "display": "Renal failure due to and following incomplete termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "1220625008",
+     "display": "Incomplete induced termination of pregnancy complicated by metabolic disorder",
+     "target": [
+      {
+       "code": "1376019002",
+       "display": "Metabolic disorder due to and following incomplete termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "1220626009",
+     "display": "Incomplete induced termination of pregnancy complicated by genital-pelvic infection",
+     "target": [
+      {
+       "code": "1379949004",
+       "display": "Pelvic inflammatory disease due to and following incomplete termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "1220630007",
+     "display": "Incomplete induced termination of pregnancy complicated by embolism",
+     "target": [
+      {
+       "code": "1376023005",
+       "display": "Embolism due to and following incomplete termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "1220631006",
+     "display": "Incomplete induced termination of pregnancy complicated by delayed or excessive hemorrhage",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1379951000 (POSSIBLY EQUIVALENT TO), 1379950004 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "1220632004",
+     "display": "Incomplete induced termination of pregnancy complicated by damage to pelvic organs or tissues",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1379947002 (POSSIBLY EQUIVALENT TO), 1379948007 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "1220657009",
+     "display": "Damage to pelvic organs and/or tissue due to and following complete induced termination of pregnancy",
+     "target": [
+      {
+       "code": "1375964006",
+       "display": "Traumatic injury of pelvic organ during complete termination of pregnancy",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "1254988002",
+     "display": "Substance dependence in mother complicating pregnancy, childbirth and/or puerperium",
+     "target": [
+      {
+       "code": "1254981008",
+       "display": "Substance dependence during pregnancy, childbirth and/or puerperium",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "1260371006",
+     "display": "Epilepsy due to perinatal cerebral ischemia",
+     "target": [
+      {
+       "code": "1381728002",
+       "display": "Epilepsy due to and following perinatal fetal and/or neonatal ischemic cerebrovascular accident",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "1260377005",
+     "display": "Epilepsy due to congenital anomaly of brain",
+     "target": [
+      {
+       "code": "1372772007",
+       "display": "Epilepsy due to intracranial structural abnormality",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "1269073009",
+     "display": "Fetal disorder due to disorder of amniotic cavity and/or membrane",
+     "target": [
+      {
+       "code": "1384151007",
+       "display": "Fetal disorder due to disorder of extraembryonic membrane",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "1269102002",
+     "display": "Fetal disorder due to maternal disorder during pregnancy",
+     "target": [
+      {
+       "code": "609429008",
+       "display": "Fetal disorder due to disease in mother",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "126944002",
+     "display": "Brain disorder resulting from a period of impaired oxygen delivery to the brain",
+     "target": [
+      {
+       "code": "1381325002",
+       "display": "Hypoxic brain injury",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "1269476005",
+     "display": "At increased risk for complication during labor and delivery",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1392349003 (POSSIBLY EQUIVALENT TO), 1392350003 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "127070008",
+     "display": "Malignant histiocytic disorder",
+     "target": [
+      {
+       "code": "1399256008",
+       "display": "Malignant histiocytic macrophage neoplasm",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "128076000",
+     "display": "Bone AND/OR joint disorder in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "code": "1380433009",
+       "display": "Maternal disorder of bone and/or joint during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "12867002",
+     "display": "Fetal distress affecting management of mother",
+     "target": [
+      {
+       "code": "130955003",
+       "display": "Nonreassuring fetal status",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "1354494000",
+     "display": "Induced termination of pregnancy complicated by damage to urethra",
+     "target": [
+      {
+       "code": "1376018005",
+       "display": "Traumatic injury of urethra during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "1354668000",
+     "display": "Fibrositis of upper limb",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 102556003 (POSSIBLY REPLACED BY), 203082005 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "1354669008",
+     "display": "Fibrositis of upper arm",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 771083005 (POSSIBLY REPLACED BY), 203082005 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "1362092008",
+     "display": "Complication occurring during pregnancy absent",
+     "target": [
+      {
+       "code": "1389061004",
+       "display": "Maternal disorder during antenatal and/or intrapartum period absent",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "13866000",
+     "display": "Fetal acidemia affecting management of mother",
+     "target": [
+      {
+       "code": "1382318006",
+       "display": "Fetal acidemia",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "13943000",
+     "display": "Failed attempted termination of pregnancy complicated by embolism",
+     "target": [
+      {
+       "code": "198812002",
+       "display": "Failed attempted termination of pregnancy with embolism",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "14022007",
+     "display": "Fetal death, affecting management of mother",
+     "target": [
+      {
+       "code": "276507005",
+       "display": "Fetal death",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "140391000119101",
+     "display": "Ulcer of toe due to type 2 diabetes mellitus",
+     "target": [
+      {
+       "code": "10656271000119102",
+       "display": "Skin ulcer of toe due to diabetes mellitus type 2",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "14240001",
+     "display": "Poliosis",
+     "target": [
+      {
+       "code": "1402362001",
+       "display": "Poliosis",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "1474004",
+     "display": "Hypertensive heart AND renal disease complicating AND/OR reason for care during childbirth",
+     "target": [
+      {
+       "code": "1373630007",
+       "display": "Disorder during maternal intrapartum period due to hypertensive heart and renal disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "1538006",
+     "display": "Fetal malformation of central nervous system affecting obstetrical care",
+     "target": [
+      {
+       "code": "9721000119107",
+       "display": "Fetal malformation of central nervous system",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "15406009",
+     "display": "Retromammary abscess associated with childbirth",
+     "target": [
+      {
+       "code": "1388404009",
+       "display": "Retromammary abscess during postpartum",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "15954901000119100",
+     "display": "Pendulous left breast",
+     "target": [
+      {
+       "code": "15954981000119108",
+       "display": "Ptosis of left breast",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "15954941000119103",
+     "display": "Bilateral pendulous breasts",
+     "target": [
+      {
+       "code": "15955061000119104",
+       "display": "Bilateral ptotic breasts",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "161579008",
+     "display": "H/O: perinatal problem",
+     "target": [
+      {
+       "code": "1401818004",
+       "display": "History of perinatal disorder of fetus and/or early neonate",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "162135003",
+     "display": "Urine looks pale",
+     "target": [
+      {
+       "code": "167234002",
+       "display": "Pale urine",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "162863004",
+     "display": "Body mass index 25-29 - overweight",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Nonconformance to editorial policy); candidates: 1407011003 (ALTERNATIVE), 1407012005 (ALTERNATIVE)"
+      }
+     ]
+    },
+    {
+     "code": "162864005",
+     "display": "Body mass index 30+ - obesity",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Nonconformance to editorial policy); candidates: 1407009007 (ALTERNATIVE), 414916001 (ALTERNATIVE), 414915002 (ALTERNATIVE)"
+      }
+     ]
+    },
+    {
+     "code": "1639007",
+     "display": "Abnormality of organs AND/OR soft tissues of pelvis affecting pregnancy",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 199446000 (PARTIALLY EQUIVALENT TO), 1381684007 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "169887003",
+     "display": "Birth length equal to third centile",
+     "target": [
+      {
+       "code": "1411483000",
+       "display": "Birth length equal to or less than third centile",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "171000119107",
+     "display": "Maternal obesity complicating pregnancy, childbirth and the puerperium, antepartum",
+     "target": [
+      {
+       "code": "1380417006",
+       "display": "Maternal obesity during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "17594002",
+     "display": "Fetal bradycardia affecting management of mother",
+     "target": [
+      {
+       "code": "240299002",
+       "display": "Fetal bradycardia",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "18237006",
+     "display": "Parenchymatous mastitis associated with childbirth",
+     "target": [
+      {
+       "code": "1388396000",
+       "display": "Parenchymatous mastitis during postpartum",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "18416000",
+     "display": "Essential hypertension complicating AND/OR reason for care during childbirth",
+     "target": [
+      {
+       "code": "1373617006",
+       "display": "Disorder during maternal intrapartum period due to essential hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "187794005",
+     "display": "Malignant neoplasm of Islets of Langerhans",
+     "target": [
+      {
+       "code": "254611009",
+       "display": "Malignant neoplasm of endocrine pancreas",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "190737001",
+     "display": "Iminoacidopathy",
+     "target": [
+      {
+       "code": "37800003",
+       "display": "Disorder of proline AND/OR hydroxyproline metabolism",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "197028009",
+     "display": "Dietetic gastritis",
+     "target": [
+      {
+       "code": "1401596005",
+       "display": "Allergic gastritis caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "197030006",
+     "display": "Dietetic enterocolitis",
+     "target": [
+      {
+       "code": "1401594008",
+       "display": "Allergic enterocolitis caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "197140007",
+     "display": "Secondary megacolon - congenital",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 197141006 (POSSIBLY EQUIVALENT TO), 204739008 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "19773009",
+     "display": "Infection of the breast AND/OR nipple associated with childbirth",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 1388392003 (PARTIALLY EQUIVALENT TO), 1388391005 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "198609003",
+     "display": "Complication of pregnancy, childbirth and/or puerperium",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1269101009 (POSSIBLY EQUIVALENT TO), 70591005 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "198617006",
+     "display": "Delivery of viable fetus in abdominal pregnancy",
+     "target": [
+      {
+       "code": "237253003",
+       "display": "Viable fetus in abdominal pregnancy",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "198655001",
+     "display": "Complete miscarriage with genital tract or pelvic infection",
+     "target": [
+      {
+       "code": "1397373004",
+       "display": "Genital tract infection due to and following complete miscarriage",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "198656000",
+     "display": "Complete miscarriage with delayed or excessive hemorrhage",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1397338001 (POSSIBLY EQUIVALENT TO), 1397337006 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "198657009",
+     "display": "Complete miscarriage with damage to pelvic organs or tissues",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1397371002 (POSSIBLY EQUIVALENT TO), 1397364007 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "19866007",
+     "display": "Previous operation to cervix affecting pregnancy",
+     "target": [
+      {
+       "code": "1381692003",
+       "display": "Maternal disorder due to previous uterine cervix surgery during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "198806007",
+     "display": "Failed attempted termination of pregnancy with genital tract or pelvic infection",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 1373273008 (PARTIALLY EQUIVALENT TO), 1373272003 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "198807003",
+     "display": "Failed attempted termination of pregnancy with delayed or excessive hemorrhage",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1397361004 (POSSIBLY EQUIVALENT TO), 1397362006 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "198808008",
+     "display": "Failed attempted termination of pregnancy with damage to pelvic organ or tissues",
+     "target": [
+      {
+       "code": "1375968009",
+       "display": "Failed attempted abortion with traumatic injury to pelvic organ",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "198832001",
+     "display": "Damage to pelvic organs or tissues following abortive pregnancy",
+     "target": [
+      {
+       "code": "1389152002",
+       "display": "Traumatic injury of pelvic organ during termination of pregnancy",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "198874006",
+     "display": "Failed medical termination of pregnancy, complicated by genital tract or pelvic infection",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1373431003 (POSSIBLY EQUIVALENT TO), 1373432005 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "198875007",
+     "display": "Failed medical termination of pregnancy, complicated by delayed or excessive hemorrhage",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1397361004 (POSSIBLY EQUIVALENT TO), 1397362006 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "198941007",
+     "display": "Hypertension complicating pregnancy, childbirth and the puerperium",
+     "target": [
+      {
+       "code": "1373731004",
+       "display": "Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "198942000",
+     "display": "Benign essential hypertension complicating pregnancy, childbirth and the puerperium",
+     "target": [
+      {
+       "code": "1373728000",
+       "display": "Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to benign essential hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "198949009",
+     "display": "Renal hypertension complicating pregnancy, childbirth and the puerperium",
+     "target": [
+      {
+       "code": "1373733001",
+       "display": "Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to renal hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "198997005",
+     "display": "Pre-eclampsia or eclampsia with pre-existing hypertension",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 67359005 (PARTIALLY EQUIVALENT TO), 69909000 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "199005000",
+     "display": "Pre-existing hypertension complicating pregnancy, childbirth and puerperium",
+     "target": [
+      {
+       "code": "1373810005",
+       "display": "Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to pre-existing hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199006004",
+     "display": "Pre-existing hypertensive heart disease complicating pregnancy, childbirth and the puerperium",
+     "target": [
+      {
+       "code": "1373739002",
+       "display": "Maternal disorder during antenatal and/or intrapartum and/or postpartum period due to hypertensive heart disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199007008",
+     "display": "Pre-existing hypertensive heart and renal disease complicating pregnancy, childbirth and the puerperium",
+     "target": [
+      {
+       "code": "1373732006",
+       "display": "Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to pre-existing hypertensive heart and renal disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199008003",
+     "display": "Pre-existing secondary hypertension complicating pregnancy, childbirth and puerperium",
+     "target": [
+      {
+       "code": "1380416002",
+       "display": "Pre-existing secondary hypertension during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199203001",
+     "display": "Viral hepatitis complicating pregnancy, childbirth and the puerperium",
+     "target": [
+      {
+       "code": "1380412000",
+       "display": "Maternal viral hepatitis during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199257008",
+     "display": "Mental disorders during pregnancy, childbirth and the puerperium",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 1258898000 (PARTIALLY EQUIVALENT TO), 1396772000 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "199279003",
+     "display": "Orthopedic disorders during pregnancy, childbirth and the puerperium",
+     "target": [
+      {
+       "code": "1380410008",
+       "display": "Maternal disorder of musculoskeletal system during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199293005",
+     "display": "Disease of the respiratory system complicating pregnancy, childbirth and/or the puerperium",
+     "target": [
+      {
+       "code": "1380415003",
+       "display": "Maternal disorder of respiratory system during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199294004",
+     "display": "Disease of the digestive system complicating pregnancy, childbirth and/or the puerperium",
+     "target": [
+      {
+       "code": "1376007005",
+       "display": "Maternal disorder of digestive system during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199295003",
+     "display": "Disease of skin and subcutaneous tissue complicating pregnancy, childbirth and/or puerperium",
+     "target": [
+      {
+       "code": "1380413005",
+       "display": "Maternal disorder of skin and/or subcutaneous tissue during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199296002",
+     "display": "Endocrine, nutritional and metabolic disease complicating pregnancy, childbirth and puerperium",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 1380430007 (PARTIALLY EQUIVALENT TO), 1380431006 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "199297006",
+     "display": "Disease of nervous system complicating pregnancy, childbirth and puerperium",
+     "target": [
+      {
+       "code": "1380418001",
+       "display": "Maternal disorder of nervous system during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199305006",
+     "display": "Complications specific to multiple gestation",
+     "target": [
+      {
+       "code": "1379972002",
+       "display": "Maternal disorder due to multiple pregnancy",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199314001",
+     "display": "Normal delivery but ante- or post- natal conditions present",
+     "target": [
+      {
+       "code": "48782003",
+       "display": "Delivery normal",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199322008",
+     "display": "Triplet pregnancy with antenatal problem",
+     "target": [
+      {
+       "code": "64254006",
+       "display": "Triplet pregnancy",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199326006",
+     "display": "Quadruplet pregnancy with antenatal problem",
+     "target": [
+      {
+       "code": "60810003",
+       "display": "Quadruplet pregnancy",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199578005",
+     "display": "Fetal-maternal hemorrhage with antenatal problem",
+     "target": [
+      {
+       "code": "71028008",
+       "display": "Fetal-maternal hemorrhage",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199595002",
+     "display": "Labor and delivery complication by meconium in amniotic fluid",
+     "target": [
+      {
+       "code": "1389111006",
+       "display": "Meconium stained amniotic fluid during intrapartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "199596001",
+     "display": "Labor and delivery complicated by fetal heart rate anomaly with meconium in amniotic fluid",
+     "target": [
+      {
+       "code": "1389112004",
+       "display": "Abnormal fetal heart rate with meconium stained amniotic fluid during intrapartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "199597005",
+     "display": "Labor and delivery complicated by biochemical evidence of fetal stress",
+     "target": [
+      {
+       "code": "1389146003",
+       "display": "Fetal distress with fetal acidosis during intrapartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "199678003",
+     "display": "Amniotic cavity infection with antenatal problem",
+     "target": [
+      {
+       "code": "10573002",
+       "display": "Infection of amniotic cavity",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "199745000",
+     "display": "Complication occurring during labor and delivery",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1269434002 (POSSIBLY EQUIVALENT TO), 1269075002 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "199935005",
+     "display": "Fourth degree perineal tear during delivery with postnatal problem",
+     "target": [
+      {
+       "code": "399031001",
+       "display": "Fourth degree perineal laceration",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "200046004",
+     "display": "Complications of anesthesia during labor and delivery",
+     "target": [
+      {
+       "code": "1381276002",
+       "display": "Maternal disorder due to administration of anesthesia during intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "200054002",
+     "display": "Obstetric anesthesia with cardiac complications",
+     "target": [
+      {
+       "code": "1379970005",
+       "display": "Maternal cardiac disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "200061003",
+     "display": "Obstetric anesthesia with central nervous system complications",
+     "target": [
+      {
+       "code": "1379974001",
+       "display": "Maternal central nervous system disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "200077002",
+     "display": "Cardiac complications of anesthesia during labor and delivery",
+     "target": [
+      {
+       "code": "1379973007",
+       "display": "Maternal cardiac disorder due to and following anesthesia during intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "200078007",
+     "display": "Central nervous system complications of anesthesia during labor and delivery",
+     "target": [
+      {
+       "code": "1379975000",
+       "display": "Maternal central nervous system disorder due to anesthesia during intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "200766001",
+     "display": "Parakeratosis",
+     "target": [
+      {
+       "code": "56585003",
+       "display": "Parakeratosis of skin",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "200948000",
+     "display": "Pityriasis rubra (Hebra)",
+     "target": [
+      {
+       "code": "399992009",
+       "display": "Erythroderma",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "200985008",
+     "display": "Parapsoriasis varioliformis",
+     "target": [
+      {
+       "code": "86487001",
+       "display": "Acute lichenoid pityriasis",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "201174003",
+     "display": "Poliosis eccentrica",
+     "target": [
+      {
+       "code": "1402372003",
+       "display": "Poliosis eccentrica",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "201175002",
+     "display": "Poliosis - acquired",
+     "target": [
+      {
+       "code": "1402371005",
+       "display": "Acquired poliosis",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "202848009",
+     "display": "Scapulohumeral fibrositis",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 203082005 (POSSIBLY REPLACED BY), 45326000 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "203104007",
+     "display": "Fibrositis of neck",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 81680005 (POSSIBLY REPLACED BY), 203082005 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "20753005",
+     "display": "Hypertensive heart disease complicating AND/OR reason for care during pregnancy",
+     "target": [
+      {
+       "code": "1373738005",
+       "display": "Disorder during maternal antenatal and/or intrapartum period due to pre-existing hypertensive heart disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "20759009",
+     "display": "Dietetic jejunitis",
+     "target": [
+      {
+       "code": "1401593002",
+       "display": "Allergic jejunitis caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "20845005",
+     "display": "Meconium in amniotic fluid affecting management of mother",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 1389111006 (PARTIALLY EQUIVALENT TO), 2132004 (PARTIALLY EQUIVALENT TO), 206269002 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "213202009",
+     "display": "Complications of attempted introduction of fertilized ovum following in vitro fertilization",
+     "target": [
+      {
+       "code": "1379976004",
+       "display": "Disorder due to embryo transfer following in vitro fertilization",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "21346009",
+     "display": "Double uterus affecting pregnancy",
+     "target": [
+      {
+       "code": "1381658001",
+       "display": "Maternal congenital duplication of uterus during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "22173004",
+     "display": "Excessive fetal growth affecting management of mother",
+     "target": [
+      {
+       "code": "199616008",
+       "display": "Large for gestation age fetus",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "22281000119101",
+     "display": "Post-term pregnancy of 40 to 42 weeks",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 90968009 (POSSIBLY EQUIVALENT TO), 46230007 (POSSIBLY EQUIVALENT TO), 63503002 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "22288000",
+     "display": "Neoplasm of cervix uteri affecting pregnancy",
+     "target": [
+      {
+       "code": "1381666005",
+       "display": "Neoplasm of cervix uteri during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "223003",
+     "display": "Neoplasm of body of uterus affecting pregnancy",
+     "target": [
+      {
+       "code": "1381678009",
+       "display": "Neoplasm of body of uterus during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "22753004",
+     "display": "Fetal AND/OR placental disorder affecting management of mother",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 1193535003 (PARTIALLY EQUIVALENT TO), 125586008 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "22966008",
+     "display": "Hypertensive heart AND renal disease complicating AND/OR reason for care during pregnancy",
+     "target": [
+      {
+       "code": "1373627000",
+       "display": "Disorder during maternal antenatal and/or intrapartum period due to pre-existing hypertensive heart and renal disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "23001005",
+     "display": "Stenosis AND/OR stricture of cervix affecting pregnancy",
+     "target": [
+      {
+       "code": "1381651007",
+       "display": "Maternal stenosis of cervix during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "230441003",
+     "display": "Drug-induced epilepsy",
+     "target": [
+      {
+       "code": "1382151008",
+       "display": "Acute symptomatic epileptic seizure due to poisoning",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "23171006",
+     "display": "Delayed AND/OR secondary postpartum hemorrhage",
+     "target": [
+      {
+       "code": "156241003",
+       "display": "Secondary postpartum hemorrhage",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "23717007",
+     "display": "Benign essential hypertension complicating AND/OR reason for care during pregnancy",
+     "target": [
+      {
+       "code": "1373728000",
+       "display": "Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to benign essential hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "237171000",
+     "display": "Stenosis of vagina in pregnancy, childbirth and the puerperium",
+     "target": [
+      {
+       "code": "1396771007",
+       "display": "Stenosis of vagina during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "237256006",
+     "display": "Disorder of pelvic size and disproportion",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 275426009 (POSSIBLY EQUIVALENT TO), 199416003 (POSSIBLY EQUIVALENT TO), 25749005 (POSSIBLY EQUIVALENT TO), 199397009 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "237330001",
+     "display": "Obstetric injury of urinary bladder",
+     "target": [
+      {
+       "code": "54679003",
+       "display": "Traumatic injury of urinary bladder during obstetric procedure",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "237342006",
+     "display": "Fat embolism - obstetric",
+     "target": [
+      {
+       "code": "2261009",
+       "display": "Obstetrical pulmonary fat embolism",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "238419741000119109",
+     "display": "Alpha thalassemia trait in mother complicating pregnancy",
+     "target": [
+      {
+       "code": "1373734007",
+       "display": "Maternal disorder due to alpha thalassemia trait during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "23894009",
+     "display": "Acne varioliformis",
+     "target": [
+      {
+       "code": "201228005",
+       "display": "Necrotizing lymphocytic folliculitis",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "239884000",
+     "display": "Malemud disease",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Nonconformance to editorial policy); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "240044003",
+     "display": "Fibrositis and nodular fasciitis",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 400138001 (POSSIBLY REPLACED BY), 203082005 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "248663000",
+     "display": "Upper sternal shock",
+     "target": [
+      {
+       "code": "248690009",
+       "display": "Added heart sounds",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "249079005",
+     "display": "Fontanelles presenting",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 249083005 (POSSIBLY EQUIVALENT TO), 249082000 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "25053000",
+     "display": "Obstetrical central nervous system complication of anesthesia AND/OR sedation",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1379974001 (POSSIBLY EQUIVALENT TO), 1380049002 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "26078007",
+     "display": "Hypertension secondary to renal disease complicating AND/OR reason for care during childbirth",
+     "target": [
+      {
+       "code": "1373596009",
+       "display": "Disorder during maternal intrapartum period due to renal hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "26224003",
+     "display": "Failed attempted termination of pregnancy complicated by genital-pelvic infection",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 1373272003 (PARTIALLY EQUIVALENT TO), 1373273008 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "26623000",
+     "display": "Failed attempted termination of pregnancy complicated by delayed and/or excessive hemorrhage",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1397362006 (POSSIBLY EQUIVALENT TO), 1397361004 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "267207004",
+     "display": "Congenital cardiovascular disorders during pregnancy, childbirth and the puerperium",
+     "target": [
+      {
+       "code": "1379961007",
+       "display": "Maternal congenital cardiovascular disorder during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "267257007",
+     "display": "Labor and delivery complicated by fetal heart rate anomaly",
+     "target": [
+      {
+       "code": "1389144000",
+       "display": "Abnormal fetal heart rate during intrapartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "267276009",
+     "display": "Obstetric anesthesia with pulmonary complications",
+     "target": [
+      {
+       "code": "1379971009",
+       "display": "Maternal pulmonary disorder due to anesthesia during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "267280004",
+     "display": "Venous complication of pregnancy and/or puerperium",
+     "target": [
+      {
+       "code": "1379964004",
+       "display": "Maternal venous disorder due to pregnancy during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "267322007",
+     "display": "Pregnancy with orthopedic problem",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 9111000119104 (PARTIALLY EQUIVALENT TO), 1380410008 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "267350007",
+     "display": "Obstetric anesthesia problems",
+     "target": [
+      {
+       "code": "1380038008",
+       "display": "Maternal disorder due to administration of anesthesia during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "26828006",
+     "display": "Rectocele affecting pregnancy",
+     "target": [
+      {
+       "code": "1381657006",
+       "display": "Maternal rectocele during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "269480005",
+     "display": "Benign islet cell neoplasm",
+     "target": [
+      {
+       "code": "254614001",
+       "display": "Benign neoplasm of endocrine pancreas",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "270498000",
+     "display": "Fetal malposition and malpresentation",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 80002007 (POSSIBLY EQUIVALENT TO), 289365005 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "27075004",
+     "display": "Venereal disease in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "code": "1375996003",
+       "display": "Maternal sexually transmitted infectious disease during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "273982004",
+     "display": "Obstetric problem affecting fetus",
+     "target": [
+      {
+       "code": "609429008",
+       "display": "Fetal disorder due to disease in mother",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "273983009",
+     "display": "Maternal cord or placental problem",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 429260008 (POSSIBLY EQUIVALENT TO), 125586008 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "274776000",
+     "display": "Finding of alcohol in blood",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1402002006 (POSSIBLY EQUIVALENT TO), 1402003001 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "276263005",
+     "display": "Porphobilinogen deaminase deficiency",
+     "target": [
+      {
+       "code": "234422006",
+       "display": "Acute intermittent porphyria",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "276580005",
+     "display": "Atypical isoimmunization of newborn",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 387705004 (POSSIBLY REPLACED BY), 111469006 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "284670008",
+     "display": "Nutritionally compromised",
+     "target": [
+      {
+       "code": "445261000124106",
+       "display": "Impaired nutritional status",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "28664002",
+     "display": "Herpes iris",
+     "target": [
+      {
+       "code": "1407145007",
+       "display": "Erythema multiforme with vesiculobullous target-shaped lesion",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "288261009",
+     "display": "Was malpresentation pre-labor",
+     "target": [
+      {
+       "code": "80002007",
+       "display": "Malpresentation of fetus",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "29259002",
+     "display": "Malignant hypertension complicating AND/OR reason for care during pregnancy",
+     "target": [
+      {
+       "code": "1373611007",
+       "display": "Disorder during maternal antenatal and/or intrapartum period due to malignant hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "29421008",
+     "display": "Failed attempted termination of pregnancy complicated by renal failure",
+     "target": [
+      {
+       "code": "198809000",
+       "display": "Failed attempted termination of pregnancy with renal failure",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "29847008",
+     "display": "Obstetrical complication of anesthesia AND/OR sedation",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1380038008 (POSSIBLY EQUIVALENT TO), 1380049002 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "30173002",
+     "display": "Primary fibrositis",
+     "target": [
+      {
+       "code": "95417003",
+       "display": "Primary fibromyalgia syndrome",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "3033000",
+     "display": "Bone AND/OR joint disorder of pelvis in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "code": "1380435002",
+       "display": "Maternal disorder of pelvic ring during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "30719001",
+     "display": "Dietetic enteritis of intestine",
+     "target": [
+      {
+       "code": "1401590004",
+       "display": "Allergic enteritis of intestine caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "307333004",
+     "display": "Rhesus isoimmunization due to anti-D",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1381908006 (POSSIBLY EQUIVALENT TO), 1381696000 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "307334005",
+     "display": "Rhesus isoimmunization due to anti-c",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1381903002 (POSSIBLY EQUIVALENT TO), 1381901000 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "307335006",
+     "display": "Rhesus isoimmunization due to anti-E",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1381909003 (POSSIBLY EQUIVALENT TO), 1381907001 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "307336007",
+     "display": "Rhesus isoimmunization due to anti-Cw",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1381906005 (POSSIBLY EQUIVALENT TO), 1381905009 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "307735008",
+     "display": "Complete inevitable miscarriage complicated by delayed or excessive hemorrhage",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1397334004 (POSSIBLY EQUIVALENT TO), 1397335003 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "307752007",
+     "display": "Incomplete inevitable miscarriage complicated by delayed or excessive hemorrhage",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1397343008 (POSSIBLY EQUIVALENT TO), 1397344002 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "31026002",
+     "display": "Obstetrical complication of sedation",
+     "target": [
+      {
+       "code": "1380049002",
+       "display": "Maternal disorder due to administration of sedative during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "31383003",
+     "display": "Neoplasm of vagina affecting pregnancy",
+     "target": [
+      {
+       "code": "1381650008",
+       "display": "Neoplasm of vagina during pregnancy",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "31407004",
+     "display": "Pre-existing hypertension complicating AND/OR reason for care during puerperium",
+     "target": [
+      {
+       "code": "1373620003",
+       "display": "Disorder during maternal postpartum period due to pre-existing hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "31516002",
+     "display": "Viral disease in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "code": "1375992001",
+       "display": "Maternal viral disorder during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "31801000146106",
+     "display": "Pre-existing maternal disease complicating pregnancy",
+     "target": [
+      {
+       "code": "1373736009",
+       "display": "Disorder during maternal antenatal and/or intrapartum period due to pre-existing disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "31821006",
+     "display": "Uterine scar from previous surgery affecting pregnancy",
+     "target": [
+      {
+       "code": "1381695001",
+       "display": "Maternal disorder due to uterine scar from previous surgery during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "322112361000132104",
+     "display": "Scar epilepsy",
+     "target": [
+      {
+       "code": "1372772007",
+       "display": "Epilepsy due to intracranial structural abnormality",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "32999002",
+     "display": "Complication of obstetrical surgical wound",
+     "target": [
+      {
+       "code": "1380090004",
+       "display": "Disorder of surgical wound following obstetric surgical procedure during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "33687004",
+     "display": "Dietetic gastroenteritis",
+     "target": [
+      {
+       "code": "1401597001",
+       "display": "Allergic gastroenteritis caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "34273003",
+     "display": "Hypertensive heart disease complicating AND/OR reason for care during puerperium",
+     "target": [
+      {
+       "code": "1373628005",
+       "display": "Disorder during maternal postpartum period due to hypertensive heart and renal disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "34694006",
+     "display": "Pre-existing hypertension complicating AND/OR reason for care during childbirth",
+     "target": [
+      {
+       "code": "1373621004",
+       "display": "Disorder during maternal intrapartum period due to pre-existing hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "35217003",
+     "display": "Gross' disease",
+     "target": [
+      {
+       "code": "716685003",
+       "display": "Solitary rectal ulcer syndrome",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "35716006",
+     "display": "Cracked nipple associated with childbirth",
+     "target": [
+      {
+       "code": "1258917005",
+       "display": "Postpartum cracked nipple",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "35746009",
+     "display": "Uterine fibroids affecting pregnancy",
+     "target": [
+      {
+       "code": "1381668006",
+       "display": "Uterine leiomyoma during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "361268000",
+     "display": "Alcohol-induced epilepsy",
+     "target": [
+      {
+       "code": "1365922007",
+       "display": "Acute symptomatic epileptic seizure due to ethyl alcohol poisoning",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "36175004",
+     "display": "Furuncle of heel",
+     "target": [
+      {
+       "code": "91541006",
+       "display": "Abscess of heel",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "36199004",
+     "display": "Pendulous breast",
+     "target": [
+      {
+       "code": "248804005",
+       "display": "Ptotic breast",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "36297009",
+     "display": "Septate vagina affecting pregnancy",
+     "target": [
+      {
+       "code": "1381660004",
+       "display": "Maternal septate vagina during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "362972006",
+     "display": "Disorder of labor / delivery",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1269434002 (POSSIBLY EQUIVALENT TO), 1269075002 (POSSIBLY EQUIVALENT TO), 1382290001 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "36428009",
+     "display": "Gestation period, 42 weeks",
+     "target": [
+      {
+       "code": "90968009",
+       "display": "Post-term pregnancy",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "367390009",
+     "display": "Hypertension in the obstetric context",
+     "target": [
+      {
+       "code": "288250001",
+       "display": "Maternal hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "36916008",
+     "display": "Bone AND/OR joint disorder of back in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "code": "1380434003",
+       "display": "Maternal disorder of vertebral column during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "370056005",
+     "display": "Tumor invasion into bronchus, in situ",
+     "target": [
+      {
+       "code": "370055009",
+       "display": "Tumor invasion into bronchus",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "370057001",
+     "display": "Tumor invasion into bronchus, invasive",
+     "target": [
+      {
+       "code": "370055009",
+       "display": "Tumor invasion into bronchus",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "370480003",
+     "display": "Hepatoportal microvascular dysplasia",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Nonconformance to editorial policy); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "370914009",
+     "display": "Death or serious disability (kernicterus) associated with failure to identify and treat hyperbilirubinemia in neonates",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 370909005 (PARTIALLY EQUIVALENT TO), 419620001 (PARTIALLY EQUIVALENT TO), 21134002 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "372043009",
+     "display": "Hydrops of allantois",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Nonconformance to editorial policy); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "37618003",
+     "display": "Chronic hypertension complicating AND/OR reason for care during pregnancy",
+     "target": [
+      {
+       "code": "1373619009",
+       "display": "Disorder during maternal antenatal and/or intrapartum period due to pre-existing hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "387817006",
+     "display": "Deficiency of phosphorylase b kinase",
+     "target": [
+      {
+       "code": "124329006",
+       "display": "Deficiency of phosphorylase kinase",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "387833009",
+     "display": "Premature canities",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1402360009 (POSSIBLY EQUIVALENT TO), 297994000 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "3885002",
+     "display": "ABO isoimmunization affecting pregnancy",
+     "target": [
+      {
+       "code": "1381701007",
+       "display": "Maternal ABO isoimmunization during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "39101000119109",
+     "display": "Pregnancy with isoimmunization from irregular blood group incompatibility",
+     "target": [
+      {
+       "code": "1381698004",
+       "display": "Maternal irregular blood group isoimmunization during antenatal and/or intrapartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "39727004",
+     "display": "Hypertension secondary to renal disease complicating AND/OR reason for care during puerperium",
+     "target": [
+      {
+       "code": "1373624007",
+       "display": "Disorder during maternal postpartum period due to renal hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "39763004",
+     "display": "Abnormal glucose tolerance in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "code": "372046001",
+       "display": "Glucose tolerance test during pregnancy, childbirth and puerperium outside reference range",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "397949005",
+     "display": "Poor fetal growth affecting management",
+     "target": [
+      {
+       "code": "22033007",
+       "display": "Fetal growth restriction",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "398276003",
+     "display": "Placental insufficiency affecting management of mother",
+     "target": [
+      {
+       "code": "237292005",
+       "display": "Placental insufficiency",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "399363000",
+     "display": "Late fetal death affecting management of mother",
+     "target": [
+      {
+       "code": "237364002",
+       "display": "Stillbirth",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "4006006",
+     "display": "Fetal tachycardia affecting management of mother",
+     "target": [
+      {
+       "code": "240298005",
+       "display": "Fetal tachycardia",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "4026005",
+     "display": "Interstitial mastitis associated with childbirth",
+     "target": [
+      {
+       "code": "1388393008",
+       "display": "Interstitial mastitis during postpartum",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "404169008",
+     "display": "Malignant histiocytosis involving skin",
+     "target": [
+      {
+       "code": "1402004007",
+       "display": "Malignant histiocytic macrophage neoplasm of skin",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "40609001",
+     "display": "Infectious disease in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "code": "1376002004",
+       "display": "Maternal infection during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "408512008",
+     "display": "Body mass index 40+ - severely obese",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Nonconformance to editorial policy); candidates: 1407010002 (ALTERNATIVE), 83911000119104 (ALTERNATIVE)"
+      }
+     ]
+    },
+    {
+     "code": "41215002",
+     "display": "Congenital abnormality of uterus, affecting pregnancy",
+     "target": [
+      {
+       "code": "1381683001",
+       "display": "Maternal disorder due to congenital abnormality of uterus during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "412768003",
+     "display": "Body mass index 20-24 - normal",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Nonconformance to editorial policy); candidates: 1407013000 (ALTERNATIVE), 43664005 (ALTERNATIVE)"
+      }
+     ]
+    },
+    {
+     "code": "413567003",
+     "display": "Aplastic anemia associated with pregnancy",
+     "target": [
+      {
+       "code": "1379966002",
+       "display": "Maternal aplastic anemia during antenatal and/or intrapartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "415110002",
+     "display": "Plasma cell myeloma/plasmacytoma",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 415112005 (POSSIBLY EQUIVALENT TO), 109989006 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "41527003",
+     "display": "Glycogen storage disease type VIII",
+     "target": [
+      {
+       "code": "235908005",
+       "display": "Glycogen phosphorylase kinase deficiency",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "416389007",
+     "display": "Gastrointestinal disorder due to food allergy",
+     "target": [
+      {
+       "code": "1401588000",
+       "display": "Allergic disorder of gastrointestinal tract caused by food",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "417349008",
+     "display": "Closed fracture dislocation of proximal interphalangeal joint of digit of hand",
+     "target": [
+      {
+       "code": "1401963004",
+       "display": "Closed fracture dislocation of proximal interphalangeal joint of finger",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "42537006",
+     "display": "Secondary perineal tear in the puerperium",
+     "target": [
+      {
+       "code": "6234006",
+       "display": "Second degree perineal laceration",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "42686001",
+     "display": "Fetal chromosomal abnormality affecting obstetrical care",
+     "target": [
+      {
+       "code": "267253006",
+       "display": "Fetal chromosomal abnormality",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "427090001",
+     "display": "Body mass index less than 16.5",
+     "target": [
+      {
+       "code": "1407014006",
+       "display": "Adult body mass index less than 18.5 kg/m2",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "427921009",
+     "display": "Chronic ulcer of ankle",
+     "target": [
+      {
+       "code": "10637751000119102",
+       "display": "Chronic ulcer of skin of ankle",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "428530009",
+     "display": "Heterozygous sitosterolemia",
+     "target": [
+      {
+       "code": "1409234007",
+       "display": "Compound heterozygous sitosterolemia",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "43329005",
+     "display": "Infestation by Knemidokoptes pilae",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Nonconformance to editorial policy); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "43651009",
+     "display": "Acquired stenosis of vagina affecting pregnancy",
+     "target": [
+      {
+       "code": "1381681004",
+       "display": "Maternal disorder due to acquired stenosis of vagina during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "43970002",
+     "display": "Congenital stenosis of vagina affecting pregnancy",
+     "target": [
+      {
+       "code": "1381682006",
+       "display": "Maternal disorder due to congenital stenosis of vagina during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "442766007",
+     "display": "High alcohol level in blood",
+     "target": [
+      {
+       "code": "441685000",
+       "display": "High alcohol level in blood",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "443006",
+     "display": "Cystocele affecting pregnancy",
+     "target": [
+      {
+       "code": "1381656002",
+       "display": "Maternal cystocele during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "444768009",
+     "display": "Chronic ulcer of sacral region",
+     "target": [
+      {
+       "code": "10642351000119100",
+       "display": "Chronic skin ulcer of sacrum",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "44795003",
+     "display": "Rhesus isoimmunization affecting pregnancy",
+     "target": [
+      {
+       "code": "1381697009",
+       "display": "Maternal Rhesus isoimmunization during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "45079001",
+     "display": "Acromion left anterior position",
+     "target": [
+      {
+       "code": "249108000",
+       "display": "Shoulder left anterior position",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "450891000124109",
+     "display": "Past pregnancy history of complication of pregnancy, childbirth and/or puerperium",
+     "target": [
+      {
+       "code": "1389464003",
+       "display": "Past pregnancy history of disorder of antenatal and/or intrapartum and/or postnatal period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "45759004",
+     "display": "Rigid perineum affecting pregnancy",
+     "target": [
+      {
+       "code": "1381659009",
+       "display": "Rigid perineum during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "45828008",
+     "display": "Anemia in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "code": "156140005",
+       "display": "Maternal anemia during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "46273003",
+     "display": "Abscess of nipple associated with childbirth",
+     "target": [
+      {
+       "code": "1388401001",
+       "display": "Abscess of nipple during postpartum",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "473429002",
+     "display": "Tuberculoma of spinal cord confirmed",
+     "target": [
+      {
+       "code": "1411612005",
+       "display": "Tuberculoma of spinal cord confirmed",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "47507006",
+     "display": "Rieger anomaly",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1416355004 (POSSIBLY EQUIVALENT TO), 417604002 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "4783006",
+     "display": "Maternal diabetes mellitus with hypoglycemia affecting fetus OR newborn",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 1388261002 (PARTIALLY EQUIVALENT TO), 1388262009 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "48012003",
+     "display": "Boil of tunica vaginalis",
+     "target": [
+      {
+       "code": "33724004",
+       "display": "Abscess of tunica vaginalis",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "48200009",
+     "display": "Bone AND/OR joint disorder of lower extremities in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "code": "1380436001",
+       "display": "Maternal musculoskeletal disorder of lower limb during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "48485000",
+     "display": "Miscarriage in third trimester",
+     "target": [
+      {
+       "code": "10761191000119104",
+       "display": "Preterm labor in third trimester with preterm delivery in third trimester",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "48552006",
+     "display": "Hypertension secondary to renal disease complicating AND/OR reason for care during pregnancy",
+     "target": [
+      {
+       "code": "1373626009",
+       "display": "Disorder during maternal antenatal and/or intrapartum period due to renal hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "48739004",
+     "display": "Miscarriage with cardiac arrest and/or cardiac failure",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 10760181000119109 (PARTIALLY EQUIVALENT TO), 1397851002 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "49102001",
+     "display": "Hypertensive heart AND renal disease in obstetric context",
+     "target": [
+      {
+       "code": "1373667004",
+       "display": "Pre-existing hypertensive heart and renal disease during maternal antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "49171007",
+     "display": "Hypertensive renal disease complicating AND/OR reason for care during childbirth",
+     "target": [
+      {
+       "code": "1373596009",
+       "display": "Disorder during maternal intrapartum period due to renal hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "49342001",
+     "display": "Stricture of vagina affecting pregnancy",
+     "target": [
+      {
+       "code": "1381676008",
+       "display": "Stricture of vagina during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "49364005",
+     "display": "Subareolar abscess associated with childbirth",
+     "target": [
+      {
+       "code": "1388403003",
+       "display": "Subareolar abscess during postpartum",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "49464009",
+     "display": "Dietetic sigmoiditis",
+     "target": [
+      {
+       "code": "1401595009",
+       "display": "Allergic sigmoiditis caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "50120008",
+     "display": "Abnormal acid-base balance affecting management of mother",
+     "target": [
+      {
+       "code": "1382350001",
+       "display": "Maternal disorder of acid-base balance during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "50305006",
+     "display": "Acquired poliosis circumscripta",
+     "target": [
+      {
+       "code": "1402366003",
+       "display": "Acquired poliosis circumscripta",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "50557007",
+     "display": "Healed pelvic floor repair affecting pregnancy",
+     "target": [
+      {
+       "code": "1381680003",
+       "display": "Maternal disorder due to previous pelvic floor repair during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "51154004",
+     "display": "Obstetrical pulmonary complication of anesthesia AND/OR sedation",
+     "target": [
+      {
+       "code": "1386327009",
+       "display": "Maternal disorder of lung due to administration of anesthesia and/or sedation during intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "51495008",
+     "display": "Cerebral anoxia following anesthesia AND/OR sedation in labor AND/OR delivery",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1396086006 (POSSIBLY EQUIVALENT TO), 1396087002 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "541000119105",
+     "display": "Hypertension complicating pregnancy, childbirth and the puerperium, antepartum",
+     "target": [
+      {
+       "code": "1373731004",
+       "display": "Disorder during maternal antenatal and/or intrapartum and/or postpartum period due to hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "55028001",
+     "display": "Boil of vas deferens",
+     "target": [
+      {
+       "code": "39235000",
+       "display": "Abscess of vas deferens",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "5534004",
+     "display": "Senile arteritis",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 129573006 (POSSIBLY EQUIVALENT TO), 698816006 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "55472006",
+     "display": "Submammary abscess associated with childbirth",
+     "target": [
+      {
+       "code": "1388402008",
+       "display": "Submammary abscess during postpartum",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "55581002",
+     "display": "Meconium in amniotic fluid first noted during labor AND/OR delivery in liveborn infant",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 1389111006 (PARTIALLY EQUIVALENT TO), 206269002 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "55613002",
+     "display": "Engorgement of breasts associated with childbirth",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 34831003 (POSSIBLY EQUIVALENT TO), 1388405005 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "55704005",
+     "display": "Abscess of breast, associated with childbirth",
+     "target": [
+      {
+       "code": "1258867002",
+       "display": "Postpartum abscess of breast",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "56313000",
+     "display": "Abnormal placenta affecting management of mother",
+     "target": [
+      {
+       "code": "33552005",
+       "display": "Anomaly of placenta",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "56557000",
+     "display": "Fibrositis",
+     "target": [
+      {
+       "code": "203082005",
+       "display": "Fibromyalgia",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "57220000",
+     "display": "Obstetrical complication of local anesthesia",
+     "target": [
+      {
+       "code": "1380039000",
+       "display": "Maternal disorder due to administration of local anesthesia during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "57873008",
+     "display": "Hypertensive renal disease complicating AND/OR reason for care during puerperium",
+     "target": [
+      {
+       "code": "1373623001",
+       "display": "Disorder during maternal postpartum period due to hypertensive renal disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "5852008",
+     "display": "Acromion right anterior position",
+     "target": [
+      {
+       "code": "249107005",
+       "display": "Shoulder right anterior position",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "58881007",
+     "display": "Polyp of cervix affecting pregnancy",
+     "target": [
+      {
+       "code": "1381662007",
+       "display": "Polyp of cervix during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "58990004",
+     "display": "Miscarriage complicated by damage to pelvic organs and/or tissues",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1397368005 (POSSIBLY EQUIVALENT TO), 1397367000 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "59136001",
+     "display": "Thyroid disease in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "code": "1375993006",
+       "display": "Maternal thyroid disorder during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "5939002",
+     "display": "Failed attempted termination of pregnancy complicated by metabolic disorder",
+     "target": [
+      {
+       "code": "198810005",
+       "display": "Failed attempted termination of pregnancy with metabolic disorder",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "59733002",
+     "display": "Hypertensive heart disease complicating AND/OR reason for care during childbirth",
+     "target": [
+      {
+       "code": "1373818003",
+       "display": "Disorder during maternal intrapartum period due to pre-existing hypertensive heart disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "59919008",
+     "display": "Failed attempted termination of pregnancy with complication",
+     "target": [
+      {
+       "code": "49416000",
+       "display": "Failed attempted termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "6051000119109",
+     "display": "Chronic ulcer of calf",
+     "target": [
+      {
+       "code": "10640791000119105",
+       "display": "Chronic ulcer of skin of calf",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "609447002",
+     "display": "Induced termination of pregnancy complicated by damage to pelvic organs and/or tissues",
+     "target": [
+      {
+       "code": "1389152002",
+       "display": "Traumatic injury of pelvic organ during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609449004",
+     "display": "Induced termination of pregnancy complicated by embolism",
+     "target": [
+      {
+       "code": "1373901003",
+       "display": "Embolism due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609450004",
+     "display": "Induced termination of pregnancy complicated by genital-pelvic infection",
+     "target": [
+      {
+       "code": "1379953002",
+       "display": "Pelvic inflammatory disease due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609451000",
+     "display": "Induced termination of pregnancy complicated by metabolic disorder",
+     "target": [
+      {
+       "code": "1373900002",
+       "display": "Metabolic disorder due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609452007",
+     "display": "Induced termination of pregnancy complicated by renal failure",
+     "target": [
+      {
+       "code": "1373872005",
+       "display": "Renal failure due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609453002",
+     "display": "Induced termination of pregnancy complicated by shock",
+     "target": [
+      {
+       "code": "1373919007",
+       "display": "Postoperative shock due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609454008",
+     "display": "Induced termination of pregnancy complicated by acute necrosis of liver",
+     "target": [
+      {
+       "code": "1379940000",
+       "display": "Acute necrosis of liver due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609455009",
+     "display": "Induced termination of pregnancy complicated by acute renal failure",
+     "target": [
+      {
+       "code": "1376024004",
+       "display": "Acute renal failure due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609456005",
+     "display": "Induced termination of pregnancy complicated by afibrinogenemia",
+     "target": [
+      {
+       "code": "1376015008",
+       "display": "Afibrinogenemia due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609457001",
+     "display": "Induced termination of pregnancy complicated by air embolism",
+     "target": [
+      {
+       "code": "1373908009",
+       "display": "Air embolism due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609458006",
+     "display": "Induced termination of pregnancy complicated by amniotic fluid embolism",
+     "target": [
+      {
+       "code": "1379939002",
+       "display": "Amniotic fluid embolism due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609459003",
+     "display": "Induced termination of pregnancy complicated by blood-clot embolism",
+     "target": [
+      {
+       "code": "1376026002",
+       "display": "Thromboembolism due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609461007",
+     "display": "Induced termination of pregnancy complicated by cerebral anoxia",
+     "target": [
+      {
+       "code": "1376016009",
+       "display": "Cerebral anoxia due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609462000",
+     "display": "Induced termination of pregnancy complicated by defibrination syndrome",
+     "target": [
+      {
+       "code": "1379937000",
+       "display": "Disseminated intravascular coagulation due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609463005",
+     "display": "Induced termination of pregnancy complicated by electrolyte imbalance",
+     "target": [
+      {
+       "code": "1379932006",
+       "display": "Electrolyte imbalance due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609464004",
+     "display": "Induced termination of pregnancy complicated by endometritis",
+     "target": [
+      {
+       "code": "1373904006",
+       "display": "Endometritis due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609465003",
+     "display": "Induced termination of pregnancy complicated by fat embolism",
+     "target": [
+      {
+       "code": "1373907004",
+       "display": "Fat embolism due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609466002",
+     "display": "Induced termination of pregnancy complicated by intravascular hemolysis",
+     "target": [
+      {
+       "code": "1379954008",
+       "display": "Intravascular hemolysis due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609467006",
+     "display": "Induced termination of pregnancy complicated by laceration of bowel",
+     "target": [
+      {
+       "code": "1376027006",
+       "display": "Laceration of intestine during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609468001",
+     "display": "Induced termination of pregnancy complicated by laceration of broad ligament",
+     "target": [
+      {
+       "code": "1379942008",
+       "display": "Laceration of broad ligament during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609469009",
+     "display": "Induced termination of pregnancy complicated by laceration of cervix",
+     "target": [
+      {
+       "code": "1376029009",
+       "display": "Laceration of cervix during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609470005",
+     "display": "Induced termination of pregnancy complicated by laceration of uterus",
+     "target": [
+      {
+       "code": "1376031000",
+       "display": "Laceration of uterus during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609471009",
+     "display": "Induced termination of pregnancy complicated by laceration of vagina",
+     "target": [
+      {
+       "code": "1376030004",
+       "display": "Laceration of vagina during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609472002",
+     "display": "Induced termination of pregnancy complicated by acute renal failure with oliguria",
+     "target": [
+      {
+       "code": "1379956005",
+       "display": "Acute renal failure with oliguria due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609473007",
+     "display": "Induced termination of pregnancy complicated by parametritis",
+     "target": [
+      {
+       "code": "1373906008",
+       "display": "Parametritis due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609474001",
+     "display": "Induced termination of pregnancy complicated by pelvic peritonitis",
+     "target": [
+      {
+       "code": "1376020008",
+       "display": "Pelvic peritonitis due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609475000",
+     "display": "Induced termination of pregnancy complicated by perforation of bowel",
+     "target": [
+      {
+       "code": "1376028001",
+       "display": "Traumatic perforation of intestine during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609476004",
+     "display": "Induced termination of pregnancy complicated by perforation of cervix",
+     "target": [
+      {
+       "code": "1379931004",
+       "display": "Traumatic perforation of uterine cervix during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609477008",
+     "display": "Induced termination of pregnancy complicated by perforation of uterus",
+     "target": [
+      {
+       "code": "1379935008",
+       "display": "Traumatic perforation of uterus during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609478003",
+     "display": "Induced termination of pregnancy complicated by perforation of vagina",
+     "target": [
+      {
+       "code": "1379930003",
+       "display": "Traumatic perforation of vagina during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609479006",
+     "display": "Induced termination of pregnancy complicated by postoperative shock",
+     "target": [
+      {
+       "code": "1373919007",
+       "display": "Postoperative shock due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609480009",
+     "display": "Induced termination of pregnancy complicated by pulmonary embolism",
+     "target": [
+      {
+       "code": "1376021007",
+       "display": "Pulmonary embolism due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609482001",
+     "display": "Induced termination of pregnancy complicated by renal tubular necrosis",
+     "target": [
+      {
+       "code": "1379938005",
+       "display": "Acute renal tubular necrosis due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609483006",
+     "display": "Induced termination of pregnancy complicated by salpingitis",
+     "target": [
+      {
+       "code": "1373903000",
+       "display": "Salpingitis due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609484000",
+     "display": "Induced termination of pregnancy complicated by salpingo-oophoritis",
+     "target": [
+      {
+       "code": "1376025003",
+       "display": "Salpingo-oophoritis due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609486003",
+     "display": "Induced termination of pregnancy complicated by septic embolism",
+     "target": [
+      {
+       "code": "1373918004",
+       "display": "Septic embolism due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609487007",
+     "display": "Induced termination of pregnancy complicated by septic shock",
+     "target": [
+      {
+       "code": "1373909001",
+       "display": "Septic shock due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609489005",
+     "display": "Induced termination of pregnancy complicated by soap embolism",
+     "target": [
+      {
+       "code": "1373912003",
+       "display": "Soap embolism due to and following termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609490001",
+     "display": "Induced termination of pregnancy complicated by uremia",
+     "target": [
+      {
+       "code": "1373898004",
+       "display": "Uremia due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609491002",
+     "display": "Induced termination of pregnancy complicated by urinary tract infection",
+     "target": [
+      {
+       "code": "1379952007",
+       "display": "Urinary tract infection due to and following induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609493004",
+     "display": "Induced termination of pregnancy complicated by tetanus",
+     "target": [
+      {
+       "code": "1373899007",
+       "display": "Tetanus due to and following induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609494005",
+     "display": "Induced termination of pregnancy complicated by pelvic disorder",
+     "target": [
+      {
+       "code": "1373875007",
+       "display": "Disorder of pelvis due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609496007",
+     "display": "Complication occurring during pregnancy",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 173300003 (POSSIBLY EQUIVALENT TO), 70591005 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "609498008",
+     "display": "Induced termination of pregnancy complicated by laceration of urinary bladder",
+     "target": [
+      {
+       "code": "1379929008",
+       "display": "Laceration of urinary bladder during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609499000",
+     "display": "Induced termination of pregnancy complicated by laceration of periurethral tissue",
+     "target": [
+      {
+       "code": "1379943003",
+       "display": "Laceration of periurethral tissue during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609500009",
+     "display": "Induced termination of pregnancy complicated by perforation of urinary bladder",
+     "target": [
+      {
+       "code": "1379936009",
+       "display": "Traumatic perforation of urinary bladder during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609501008",
+     "display": "Induced termination of pregnancy complicated by perforation of broad ligament",
+     "target": [
+      {
+       "code": "1379941001",
+       "display": "Traumatic perforation of broad ligament during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609502001",
+     "display": "Induced termination of pregnancy complicated by perforation of periurethral tissue",
+     "target": [
+      {
+       "code": "1379944009",
+       "display": "Traumatic perforation of periurethral tissue during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609503006",
+     "display": "Induced termination of pregnancy complicated by urinary bladder damage",
+     "target": [
+      {
+       "code": "1373915001",
+       "display": "Traumatic injury of urinary bladder during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609504000",
+     "display": "Induced termination of pregnancy complicated by bowel damage",
+     "target": [
+      {
+       "code": "1373905007",
+       "display": "Traumatic injury of intestine during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609505004",
+     "display": "Induced termination of pregnancy complicated by broad ligament damage",
+     "target": [
+      {
+       "code": "1379933001",
+       "display": "Traumatic injury of broad ligament during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609506003",
+     "display": "Induced termination of pregnancy complicated by cardiac arrest",
+     "target": [
+      {
+       "code": "1373916000",
+       "display": "Cardiac arrest due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609507007",
+     "display": "Induced termination of pregnancy complicated by cardiac failure",
+     "target": [
+      {
+       "code": "1376017000",
+       "display": "Cardiac failure due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609508002",
+     "display": "Induced termination of pregnancy complicated by cervix damage",
+     "target": [
+      {
+       "code": "1373911005",
+       "display": "Traumatic injury of uterine cervix during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609510000",
+     "display": "Induced termination of pregnancy complicated by infectious disease",
+     "target": [
+      {
+       "code": "1376022000",
+       "display": "Infectious disease due to and following induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609511001",
+     "display": "Induced termination of pregnancy complicated by periurethral tissue damage",
+     "target": [
+      {
+       "code": "1379955009",
+       "display": "Periurethral traumatic injury during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609512008",
+     "display": "Induced termination of pregnancy complicated by oliguria",
+     "target": [
+      {
+       "code": "1373902005",
+       "display": "Oliguria due to induced termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609513003",
+     "display": "Induced termination of pregnancy complicated by uterus damage",
+     "target": [
+      {
+       "code": "1373914002",
+       "display": "Traumatic injury of uterus during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "609514009",
+     "display": "Induced termination of pregnancy complicated by vaginal damage",
+     "target": [
+      {
+       "code": "1373917009",
+       "display": "Traumatic injury of vagina during termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "61714007",
+     "display": "Metabolic disturbance in labor AND/OR delivery",
+     "target": [
+      {
+       "code": "1395830004",
+       "display": "Maternal metabolic disease during intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "61947007",
+     "display": "Deaf mutism",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 88052002 (POSSIBLY REPLACED BY), 15188001 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "62612003",
+     "display": "Fibrosis of perineum affecting pregnancy",
+     "target": [
+      {
+       "code": "1381677004",
+       "display": "Fibrosis of perineum during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "62657007",
+     "display": "Cardiac arrest AND/OR failure following anesthesia AND/OR sedation in labor AND/OR delivery",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1386325001 (POSSIBLY EQUIVALENT TO), 1386326000 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "63287004",
+     "display": "Benign essential hypertension in obstetric context",
+     "target": [
+      {
+       "code": "1373658004",
+       "display": "Benign pre-existing essential hypertension during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "64171002",
+     "display": "Obstetrical cardiac complication of anesthesia AND/OR sedation",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1379973007 (POSSIBLY EQUIVALENT TO), 1379970005 (POSSIBLY EQUIVALENT TO), 1386324002 (POSSIBLY EQUIVALENT TO), 1386323008 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "65402008",
+     "display": "Pre-existing hypertension complicating AND/OR reason for care during pregnancy",
+     "target": [
+      {
+       "code": "1373619009",
+       "display": "Disorder during maternal antenatal and/or intrapartum period due to pre-existing hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "65409004",
+     "display": "Obstetrical complication of anesthesia",
+     "target": [
+      {
+       "code": "1380038008",
+       "display": "Maternal disorder due to administration of anesthesia during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "6636004",
+     "display": "Congenital cardiovascular disorder in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "code": "1379961007",
+       "display": "Maternal congenital cardiovascular disorder during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "66709007",
+     "display": "Hypertensive renal disease complicating AND/OR reason for care during pregnancy",
+     "target": [
+      {
+       "code": "1373622006",
+       "display": "Disorder during maternal antenatal and/or intrapartum period due to pre-existing hypertensive renal disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "66958002",
+     "display": "Isoimmunization from non-ABO, non-Rh blood-group incompatibility affecting pregnancy",
+     "target": [
+      {
+       "code": "1381707006",
+       "display": "Maternal non-ABO, non-Rhesus blood-group isoimmunization during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "68214002",
+     "display": "Lymphangitis of breast associated with childbirth",
+     "target": [
+      {
+       "code": "1388394002",
+       "display": "Lymphangitis of breast during postpartum",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "69302000",
+     "display": "Termination of pregnancy on demand",
+     "target": [
+      {
+       "code": "57797005",
+       "display": "Termination of pregnancy",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "698614006",
+     "display": "Acquired deaf mutism",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 88052002 (POSSIBLY REPLACED BY), 721294001 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "698615007",
+     "display": "Congenital deaf mutism",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 88052002 (POSSIBLY REPLACED BY), 95828007 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "698764006",
+     "display": "Post infectious grand mal epilepsy",
+     "target": [
+      {
+       "code": "1373924005",
+       "display": "Epilepsy due to infectious disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "698767004",
+     "display": "Post-cerebrovascular accident epilepsy",
+     "target": [
+      {
+       "code": "1380178003",
+       "display": "Epilepsy due to and following stroke",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "699950009",
+     "display": "Anti-D isoimmunization affecting pregnancy",
+     "target": [
+      {
+       "code": "1381696000",
+       "display": "Maternal anti-D isoimmunization during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "700237005",
+     "display": "Supra-eruption of tooth",
+     "target": [
+      {
+       "code": "109644008",
+       "display": "Overeruption of tooth",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "71639005",
+     "display": "Galactorrhea associated with childbirth",
+     "target": [
+      {
+       "code": "1388264005",
+       "display": "Maternal galactorrhea during postpartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "71874008",
+     "display": "Benign essential hypertension complicating AND/OR reason for care during childbirth",
+     "target": [
+      {
+       "code": "1373569006",
+       "display": "Maternal disorder during labor due to benign essential hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "72022006",
+     "display": "Essential hypertension in obstetric context",
+     "target": [
+      {
+       "code": "1373656000",
+       "display": "Pre-existing essential hypertension during maternal antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "721166000",
+     "display": "Human immunodeficiency virus complicating pregnancy childbirth and the puerperium",
+     "target": [
+      {
+       "code": "1380419009",
+       "display": "Maternal human immunodeficiency virus infection during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "721177006",
+     "display": "Injury complicating pregnancy",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1402307005 (POSSIBLY EQUIVALENT TO), 426997005 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "721201001",
+     "display": "Protozoal disease complicating pregnancy childbirth and the puerperium",
+     "target": [
+      {
+       "code": "1376000007",
+       "display": "Maternal disorder caused by Protozoa during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "721203003",
+     "display": "Sequela of complication of pregnancy childbirth and the puerperium",
+     "target": [
+      {
+       "code": "1380411007",
+       "display": "Disorder due to and following maternal disorder during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "722595002",
+     "display": "Overweight in adulthood with body mass index of 25 or more but less than 30",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Nonconformance to editorial policy); candidates: 1407011003 (ALTERNATIVE), 1407012005 (ALTERNATIVE)"
+      }
+     ]
+    },
+    {
+     "code": "72280009",
+     "display": "Achromotrichia",
+     "target": [
+      {
+       "code": "1402356006",
+       "display": "Achromotrichia",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "723091005",
+     "display": "Fistula of vagina and/or rectum and/or urinary bladder due to complication occurring during labor and/or delivery",
+     "target": [
+      {
+       "code": "1395886004",
+       "display": "Genital tract fistula following vaginal delivery",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "724497009",
+     "display": "Disease of circulatory system complicating pregnancy childbirth and puerperium",
+     "target": [
+      {
+       "code": "1380409003",
+       "display": "Maternal circulatory disorder during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "724549005",
+     "display": "Epilepsy due to infectious disease of central nervous system",
+     "target": [
+      {
+       "code": "1373924005",
+       "display": "Epilepsy due to infectious disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "724787004",
+     "display": "Epilepsy due to cerebrovascular accident",
+     "target": [
+      {
+       "code": "1380178003",
+       "display": "Epilepsy due to and following stroke",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "724988000",
+     "display": "Epilepsy co-occurrent and due to degenerative brain disorder",
+     "target": [
+      {
+       "code": "1340125003",
+       "display": "Epilepsy syndrome with progressive neurological deterioration",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "724989008",
+     "display": "Epilepsy co-occurrent and due to mesial temporal sclerosis",
+     "target": [
+      {
+       "code": "770643005",
+       "display": "Mesial temporal lobe epilepsy with hippocampal sclerosis",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "724991000",
+     "display": "Epilepsy co-occurrent and due to demyelinating disorder",
+     "target": [
+      {
+       "code": "1372950000",
+       "display": "Epilepsy due to demyelinating disease of brain",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "724992007",
+     "display": "Epilepsy co-occurrent and due to dementia",
+     "target": [
+      {
+       "code": "1373650006",
+       "display": "Epilepsy due to neurodegenerative dementia",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "72547003",
+     "display": "Dietetic colitis",
+     "target": [
+      {
+       "code": "1401589008",
+       "display": "Allergic colitis caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "72860003",
+     "display": "Disorder of amniotic cavity AND/OR membrane",
+     "target": [
+      {
+       "code": "609522002",
+       "display": "Disorder of extraembryonic membrane",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "73030000",
+     "display": "Hypertensive renal disease in obstetric context",
+     "target": [
+      {
+       "code": "1373661003",
+       "display": "Pre-existing hypertensive renal disease during maternal antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "735492001",
+     "display": "Obstructed labor due to shoulder dystocia",
+     "target": [
+      {
+       "code": "89700002",
+       "display": "Shoulder girdle dystocia",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "737194006",
+     "display": "Dietetic enteritis of small intestine",
+     "target": [
+      {
+       "code": "1401591000",
+       "display": "Allergic enteritis of small intestine caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "737329004",
+     "display": "Damage to pelvic organs and tissues following ectopic pregnancy",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1397370001 (POSSIBLY EQUIVALENT TO), 1397365008 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "737330009",
+     "display": "Damage to pelvic organs and tissues following molar pregnancy",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1397369002 (POSSIBLY EQUIVALENT TO), 1397366009 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "73813001",
+     "display": "Elastosis senilis",
+     "target": [
+      {
+       "code": "43982006",
+       "display": "Solar degeneration",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "73837001",
+     "display": "Failed attempted termination of pregnancy with cardiac arrest and/or failure",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 10750641000119101 (PARTIALLY EQUIVALENT TO), 1373227006 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "74227009",
+     "display": "Apraxic aphonia",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 441913003 (POSSIBLY EQUIVALENT TO), 1407180006 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "74955002",
+     "display": "Retracted nipple associated with childbirth",
+     "target": [
+      {
+       "code": "1388400000",
+       "display": "Retraction of nipple during postpartum",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "75150001",
+     "display": "Renal disease in pregnancy AND/OR puerperium without hypertension",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 1373626009 (PARTIALLY EQUIVALENT TO), 1373733001 (PARTIALLY EQUIVALENT TO), 733839001 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "76037007",
+     "display": "Rigid cervix uteri affecting pregnancy",
+     "target": [
+      {
+       "code": "1381674006",
+       "display": "Rigid cervix uteri during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "76118001",
+     "display": "Dietetic ileitis",
+     "target": [
+      {
+       "code": "1401592007",
+       "display": "Allergic ileitis caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "76751001",
+     "display": "Diabetes mellitus in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 609563008 (POSSIBLY EQUIVALENT TO), 199223000 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "76871004",
+     "display": "Previous surgery to vagina affecting pregnancy",
+     "target": [
+      {
+       "code": "1381679001",
+       "display": "Maternal disorder due to previous vaginal surgery during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "77285007",
+     "display": "Placental infarct affecting management of mother",
+     "target": [
+      {
+       "code": "268585006",
+       "display": "Placental infarct",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "77563000",
+     "display": "Obstruction by bony pelvis",
+     "target": [
+      {
+       "code": "199757009",
+       "display": "Obstructed labor caused by bony pelvis",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "778075008",
+     "display": "Pityriasis simplex capitis",
+     "target": [
+      {
+       "code": "400201008",
+       "display": "Pityriasis capitis",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "78381004",
+     "display": "Heart disease in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "code": "1375991008",
+       "display": "Maternal heart disorder during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "78697003",
+     "display": "Nonpurulent mastitis associated with childbirth",
+     "target": [
+      {
+       "code": "1388395001",
+       "display": "Nonpurulent mastitis during postpartum",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "78808002",
+     "display": "Essential hypertension complicating AND/OR reason for care during pregnancy",
+     "target": [
+      {
+       "code": "1373618001",
+       "display": "Disorder during maternal antenatal and/or intrapartum period due to essential hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "78818007",
+     "display": "Decreased skin sensitivity",
+     "target": [
+      {
+       "code": "398026008",
+       "display": "Reduced sensation of skin",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "79254009",
+     "display": "Flail elbow",
+     "target": [
+      {
+       "code": "296641000119105",
+       "display": "Flail joint of elbow",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "79355007",
+     "display": "Hypertensive heart disease in obstetric context",
+     "target": [
+      {
+       "code": "1373662005",
+       "display": "Pre-existing hypertensive heart disease during maternal antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "79442007",
+     "display": "Deafmutism-retinal degeneration syndrome",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 57838006 (POSSIBLY REPLACED BY), 237619009 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "79839005",
+     "display": "Perineal laceration involving vulva",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1388876002 (POSSIBLY EQUIVALENT TO), 237332009 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "80818002",
+     "display": "Previous surgery to perineum AND/OR vulva affecting pregnancy",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Classification derived); candidates: 1381693008 (PARTIALLY EQUIVALENT TO), 1381694002 (PARTIALLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "81557008",
+     "display": "Parasitic disease in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "code": "1375999005",
+       "display": "Maternal disorder caused by parasite during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "81626002",
+     "display": "Malignant hypertension in obstetric context",
+     "target": [
+      {
+       "code": "1373657009",
+       "display": "Malignant hypertension during maternal antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "8218002",
+     "display": "Chronic hypertension complicating AND/OR reason for care during childbirth",
+     "target": [
+      {
+       "code": "1373621004",
+       "display": "Disorder during maternal intrapartum period due to pre-existing hypertension",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "82381000119103",
+     "display": "Epileptic dementia with behavioral disturbance",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1591000119103 (POSSIBLY EQUIVALENT TO), 1373650006 (POSSIBLY EQUIVALENT TO), 1340125003 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "83134002",
+     "display": "Dietetic diarrhea",
+     "target": [
+      {
+       "code": "1401598006",
+       "display": "Allergic diarrhea caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "83243004",
+     "display": "Rigid pelvic floor affecting pregnancy",
+     "target": [
+      {
+       "code": "1381673000",
+       "display": "Rigid pelvic floor during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "84007008",
+     "display": "Shock during AND/OR following labor AND/OR delivery",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1381592008 (POSSIBLY EQUIVALENT TO), 1381590000 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "8445003",
+     "display": "Neoplasm of vulva affecting pregnancy",
+     "target": [
+      {
+       "code": "1381661000",
+       "display": "Neoplasm of vulva during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "84939004",
+     "display": "Rubella in mother complicating pregnancy, childbirth AND/OR puerperium",
+     "target": [
+      {
+       "code": "270497005",
+       "display": "Maternal rubella during antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "85542007",
+     "display": "Perineal laceration involving skin",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1388874004 (POSSIBLY EQUIVALENT TO), 1388873005 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "85879003",
+     "display": "Secondary fibrositis",
+     "target": [
+      {
+       "code": "203082005",
+       "display": "Fibromyalgia",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "85920003",
+     "display": "Constipation by outlet obstruction",
+     "target": [
+      {
+       "code": "713411004",
+       "display": "Obstructive defecation syndrome",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "86041002",
+     "display": "Pre-existing hypertension in obstetric context",
+     "target": [
+      {
+       "code": "1373659007",
+       "display": "Pre-existing hypertension during maternal antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "870766001",
+     "display": "Acneiform eruption due to bromine compound",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 8007005 (POSSIBLY EQUIVALENT TO), 1406864008 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "87383005",
+     "display": "Maternal distress",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 249196008 (POSSIBLY EQUIVALENT TO), 1409197005 (POSSIBLY EQUIVALENT TO), 200164009 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "8762007",
+     "display": "Chronic hypertension in obstetric context",
+     "target": [
+      {
+       "code": "1373659007",
+       "display": "Pre-existing hypertension during maternal antenatal and/or intrapartum and/or postpartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "87840008",
+     "display": "Galactocele associated with childbirth",
+     "target": [
+      {
+       "code": "1388398004",
+       "display": "Galactocele during postpartum period",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "88320008",
+     "display": "Drug tolerance",
+     "target": [
+      {
+       "code": "365992008",
+       "display": "Drug tolerance - finding",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "89672000",
+     "display": "Retromammary mastitis associated with childbirth",
+     "target": [
+      {
+       "code": "1388397009",
+       "display": "Retromammary mastitis during postpartum",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "90645002",
+     "display": "Failed attempted termination of pregnancy without complication",
+     "target": [
+      {
+       "code": "49416000",
+       "display": "Failed attempted termination of pregnancy",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "9297001",
+     "display": "Bicornuate uterus affecting pregnancy",
+     "target": [
+      {
+       "code": "1381667001",
+       "display": "Bicornate uterus during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "95344007",
+     "display": "Ulcer of lower extremity",
+     "target": [
+      {
+       "code": "711168000",
+       "display": "Ulcer of skin of lower extremity",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "95606005",
+     "display": "Maternal drug exposure",
+     "target": [
+      {
+       "code": "1254981008",
+       "display": "Substance dependence during pregnancy, childbirth and/or puerperium",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "95607001",
+     "display": "Maternal drug use",
+     "target": [
+      {
+       "code": "1254981008",
+       "display": "Substance dependence during pregnancy, childbirth and/or puerperium",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "9720009",
+     "display": "Cicatrix of cervix affecting pregnancy",
+     "target": [
+      {
+       "code": "1381675007",
+       "display": "Cicatrix of cervix during antenatal and/or intrapartum period",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

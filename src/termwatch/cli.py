@@ -62,6 +62,10 @@ def main(argv=None) -> int:
     e = sub.add_parser("explorer", help="build the self-contained HTML explorer (subway map of ValueSets x releases)")
     e.add_argument("--baseline", required=True); e.add_argument("--compare", nargs="*", default=[]); e.add_argument("--out", required=True)
     e.add_argument("--expected", action="append", default=[], metavar="KEY=VERSION", help="release expected next but not on the server yet (drawn as a grey column); repeatable")
+    dd = sub.add_parser("decide", help="rank successor candidates for inactivated codes, write decisions.json, summary.md, ConceptMaps and review.html")
+    dd.add_argument("--compare", required=True); dd.add_argument("--baseline", required=True); dd.add_argument("--out", required=True)
+    dd.add_argument("--rf2", action="append", default=[], metavar="PATH[=VERSION_URI]", help="RF2 archives of the baseline and/or target version (hierarchy + activity signals)")
+    dd.add_argument("--decisions", help="previous decisions.json to merge (default: <out>/decisions.json if present)")
     a = ap.parse_args(argv)
 
     if a.cmd == "versions":
@@ -114,6 +118,21 @@ def main(argv=None) -> int:
             sys.stdout.write(md)
         if a.csv:
             write_csv(cmp, a.csv)
+        return 0
+    if a.cmd == "decide":
+        from pathlib import Path
+        from .decide import build, write_all
+        from .rf2 import Rf2Release
+        rels = {}
+        for spec_ in a.rf2:
+            path, _, ver = spec_.partition("=")
+            r = Rf2Release(path, ver or None, quiet=True); rels[r.version] = r
+        prev_path = a.decisions or os.path.join(a.out, "decisions.json")
+        prev = json.load(open(prev_path, encoding="utf-8")) if os.path.exists(prev_path) else None
+        dec = build(json.load(open(a.compare, encoding="utf-8")), Path(a.baseline), rels, prev)
+        write_all(dec, Path(a.out))
+        import collections
+        print(f"wrote {a.out}: {len(dec['items'])} items", dict(collections.Counter(i['status'] for i in dec['items'])))
         return 0
     if a.cmd == "explorer":
         from pathlib import Path

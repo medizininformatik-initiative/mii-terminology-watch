@@ -1,0 +1,405 @@
+# Decisions: SNOMED CT 20260701 → 20260901 (de.medizininformatikinitiative.kerndatensatz.complete 2027.0.0-ballot.19)
+
+Status: auto = single SAME AS / REPLACED BY successor; proposed = one candidate survives the signals (member of the re-expanded ValueSet, active, same hierarchy); open = several candidates; none = no successor; out-of-filter = code still active, only dropped out of the filter (data stays valid).
+
+| ValueSet | auto | proposed | open | none | out-of-filter | decided |
+|---|---:|---:|---:|---:|---:|---:|
+| bildgebung / `mii-vs-bildgebung-findings-sct` | 56 | 4 | 13 | 1 | 0 | 0 |
+| bildgebung / `mii-vs-bildgebung-imaging-procedure-code-sct` | 0 | 1 | 0 | 0 | 0 | 0 |
+| bildgebung / `mii-vs-bildgebung-observation-body-site-sct` | 24 | 0 | 0 | 0 | 0 | 0 |
+| biobank / `mii-vs-biobank-body-structures-sct` | 24 | 0 | 0 | 0 | 0 | 0 |
+| biobank / `mii-vs-biobank-substance-additive-sct` | 151 | 0 | 0 | 127 | 0 | 0 |
+| diagnose / `mii-vs-diagnose-bodystructure-snomed` | 24 | 0 | 0 | 0 | 0 | 0 |
+| diagnose / `mii-vs-diagnose-diagnosecodes-snomed` | 56 | 4 | 14 | 1 | 0 | 0 |
+| kardio / `mii-vs-kardio-extended-mii-diagnosecodes-snomed` | 56 | 4 | 14 | 1 | 0 | 0 |
+| lungenfunktion / `mii-vs-lufu-sct-observable` | 0 | 0 | 1 | 0 | 0 | 0 |
+| mikrobio / `mii-vs-mikrobio-allgemeine-bestimmung-ergebnis-snomed` | 2 | 0 | 0 | 0 | 0 | 0 |
+| mikrobio / `mii-vs-mikrobio-organismen-snomedct` | 2 | 0 | 0 | 0 | 0 | 0 |
+| onko / `mii-vs-onko-koerperstruktur-sct` | 24 | 0 | 0 | 0 | 0 | 0 |
+| patho / `mii-vs-patho-collection-method-snomed-ct` | 1 | 0 | 0 | 0 | 0 | 0 |
+| patho / `mii-vs-patho-problem-list-snomed-ct` | 56 | 4 | 13 | 1 | 0 | 0 |
+| prozedur / `mii-vs-prozedur-prozeduren-snomedct` | 4 | 5 | 7 | 1 | 0 | 0 |
+| **total** | **480** | **22** | **62** | **132** | **0** | **0** |
+| **distinct codes** | **237** | **9** | **22** | **129** | **0** | **0** |
+
+A decision is taken once per code and applies to every ValueSet it sits in: 22 open + 129 without successor need a human, 9 proposals to confirm, 237 resolved automatically.
+
+## Open: several candidates (62)
+
+- `1163529009` Epilepsy due to bacterial endocarditis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373924005` Epilepsy due to infectious disease (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `1373925006` Epilepsy due to infectious abscess of brain (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `1354668000` Fibrositis of upper limb — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `102556003` Pain in upper limb (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `1354669008` Fibrositis of upper arm — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `771083005` Pain in upper arm (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `202848009` Scapulohumeral fibrositis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+    - `45326000` Pain of shoulder region (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `203104007` Fibrositis of neck — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `81680005` Neck pain (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `240044003` Fibrositis and nodular fasciitis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `400138001` Nodular fasciitis (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.67)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `274776000` Finding of alcohol in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402002006` Finding of alcohol in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1402003001` Finding of substance with alcohol structure in blood specimen (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `61947007` Deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `15188001` Hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `698614006` Acquired deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `721294001` Acquired hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.2)
+- `698615007` Congenital deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `95828007` Congenital deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.25)
+- `79442007` Deafmutism-retinal degeneration syndrome — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `57838006` Retinitis pigmentosa-deafness syndrome (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.14)
+    - `237619009` Maternally inherited diabetes and deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `82381000119103` Epileptic dementia with behavioral disturbance — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1591000119103` Dementia with behavioral disturbance (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1373650006` Epilepsy due to neurodegenerative dementia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1340125003` Epilepsy syndrome with progressive neurological deterioration (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `870766001` Acneiform eruption due to bromine compound — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `8007005` Bromoderma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `1406864008` Bromoderma tuberosum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `1163529009` Epilepsy due to bacterial endocarditis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373924005` Epilepsy due to infectious disease (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `1373925006` Epilepsy due to infectious abscess of brain (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `1354668000` Fibrositis of upper limb — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `102556003` Pain in upper limb (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `1354669008` Fibrositis of upper arm — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `771083005` Pain in upper arm (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `202848009` Scapulohumeral fibrositis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+    - `45326000` Pain of shoulder region (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `203104007` Fibrositis of neck — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `81680005` Neck pain (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `240044003` Fibrositis and nodular fasciitis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `400138001` Nodular fasciitis (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.67)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `274776000` Finding of alcohol in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402002006` Finding of alcohol in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1402003001` Finding of substance with alcohol structure in blood specimen (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `370914009` Death or serious disability (kernicterus) associated with failure to identify and treat hyperbilirubinemia in neonates — inactivated (Classification derived) — in `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`
+    - `370909005` Serious reportable event associated with care management (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `419620001` Death (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.1)
+    - `21134002` Disability (PARTIALLY EQUIVALENT TO; in VS; other hierarchy; score 3.1)
+- `61947007` Deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `15188001` Hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `698614006` Acquired deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `721294001` Acquired hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.2)
+- `698615007` Congenital deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `95828007` Congenital deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.25)
+- `79442007` Deafmutism-retinal degeneration syndrome — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `57838006` Retinitis pigmentosa-deafness syndrome (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.14)
+    - `237619009` Maternally inherited diabetes and deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `82381000119103` Epileptic dementia with behavioral disturbance — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1591000119103` Dementia with behavioral disturbance (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1373650006` Epilepsy due to neurodegenerative dementia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1340125003` Epilepsy syndrome with progressive neurological deterioration (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `870766001` Acneiform eruption due to bromine compound — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `8007005` Bromoderma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `1406864008` Bromoderma tuberosum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `1163529009` Epilepsy due to bacterial endocarditis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373924005` Epilepsy due to infectious disease (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `1373925006` Epilepsy due to infectious abscess of brain (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `1354668000` Fibrositis of upper limb — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `102556003` Pain in upper limb (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `1354669008` Fibrositis of upper arm — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `771083005` Pain in upper arm (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `202848009` Scapulohumeral fibrositis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+    - `45326000` Pain of shoulder region (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `203104007` Fibrositis of neck — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `81680005` Neck pain (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `240044003` Fibrositis and nodular fasciitis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `400138001` Nodular fasciitis (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.67)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `274776000` Finding of alcohol in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402002006` Finding of alcohol in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1402003001` Finding of substance with alcohol structure in blood specimen (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `370914009` Death or serious disability (kernicterus) associated with failure to identify and treat hyperbilirubinemia in neonates — inactivated (Classification derived) — in `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`
+    - `370909005` Serious reportable event associated with care management (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.14)
+    - `419620001` Death (PARTIALLY EQUIVALENT TO; in VS; same hierarchy; score 4.1)
+    - `21134002` Disability (PARTIALLY EQUIVALENT TO; in VS; other hierarchy; score 3.1)
+- `61947007` Deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `15188001` Hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `698614006` Acquired deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `721294001` Acquired hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.2)
+- `698615007` Congenital deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `95828007` Congenital deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.25)
+- `79442007` Deafmutism-retinal degeneration syndrome — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `57838006` Retinitis pigmentosa-deafness syndrome (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.14)
+    - `237619009` Maternally inherited diabetes and deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `82381000119103` Epileptic dementia with behavioral disturbance — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1591000119103` Dementia with behavioral disturbance (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1373650006` Epilepsy due to neurodegenerative dementia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1340125003` Epilepsy syndrome with progressive neurological deterioration (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `870766001` Acneiform eruption due to bromine compound — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `8007005` Bromoderma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `1406864008` Bromoderma tuberosum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `313221000` Respiratory percentage — inactivated (Nonconformance to editorial policy) — in `mii-vs-lufu-sct-observable`
+    - `251880004` Respiratory measure (ALTERNATIVE; not in VS; same hierarchy; score 1.33) ← proposal
+- `1163529009` Epilepsy due to bacterial endocarditis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1373924005` Epilepsy due to infectious disease (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.2)
+    - `1373925006` Epilepsy due to infectious abscess of brain (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+- `1354668000` Fibrositis of upper limb — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `102556003` Pain in upper limb (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `1354669008` Fibrositis of upper arm — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `771083005` Pain in upper arm (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `202848009` Scapulohumeral fibrositis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+    - `45326000` Pain of shoulder region (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `203104007` Fibrositis of neck — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `81680005` Neck pain (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `240044003` Fibrositis and nodular fasciitis — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `400138001` Nodular fasciitis (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.67)
+    - `203082005` Fibromyalgia (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `274776000` Finding of alcohol in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1402002006` Finding of alcohol in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1402003001` Finding of substance with alcohol structure in blood specimen (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `61947007` Deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+    - `15188001` Hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `698614006` Acquired deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `721294001` Acquired hearing loss (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.2)
+- `698615007` Congenital deaf mutism — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `88052002` Mutism (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.33)
+    - `95828007` Congenital deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.25)
+- `79442007` Deafmutism-retinal degeneration syndrome — inactivated (Outdated) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `57838006` Retinitis pigmentosa-deafness syndrome (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.14)
+    - `237619009` Maternally inherited diabetes and deafness (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.0)
+- `82381000119103` Epileptic dementia with behavioral disturbance — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1591000119103` Dementia with behavioral disturbance (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.75)
+    - `1373650006` Epilepsy due to neurodegenerative dementia (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.17)
+    - `1340125003` Epilepsy syndrome with progressive neurological deterioration (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `870766001` Acneiform eruption due to bromine compound — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `8007005` Bromoderma (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+    - `1406864008` Bromoderma tuberosum (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.0)
+- `232183005` Insertion of bone anchors for subcutaneous bone anchored hearing aid — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1401724004` Implantation of magnetic hearing aid bone anchor (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+    - `232184004` Implantation of percutaneous hearing aid bone anchor (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.27)
+- `312339003` Stereotactic injection of alcohol to Gasserian ganglion — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402007000` Stereotactic injection of alcohol to Gasserian ganglion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1402008005` Stereotactic injection of glycerol to Gasserian ganglion (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+- `32845008` Alcohol measurement, urine — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `271289006` Urine alcohol measurement (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1402000003` Measurement of substance with alcohol structure in urine specimen (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `37127001` Injection of inner ear with alcohol — inactivated (Outdated) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402090008` Injection of inner ear with gentamicin (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.6)
+    - `1402091007` Injection of inner ear with corticosteroid and/or corticosteroid derivative (POSSIBLY REPLACED BY; in VS; same hierarchy; score 4.5)
+- `442321000` Measurement of alcohol in blood specimen — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402001004` Measurement of substance with alcohol structure in blood specimen (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.67)
+    - `167009006` Blood alcohol level (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4)
+- `63267000` Alcohol measurement — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `430837008` Alcohol measurement (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1401999009` Measurement of substance with alcohol structure (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5)
+- `88572002` Injection of alcohol into nerve — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402005008` Injection of alcohol into nerve (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0)
+    - `1402006009` Injection of glycerol into nerve (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.6)
+
+## Proposed: confirm (22)
+
+- `1179359005` Maternal epilepsy due to perinatal stroke — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380178003` Epilepsy due to and following stroke (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `1260377005` Epilepsy due to congenital anomaly of brain — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1372772007` Epilepsy due to intracranial structural abnormality (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `200766001` Parakeratosis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `56585003` Parakeratosis of skin (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+    - `65068000` Parakeratosis (POSSIBLY EQUIVALENT TO; not in VS; other hierarchy; score 1.0)
+- `442766007` High alcohol level in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `441685000` High alcohol level in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `433717001` Percutaneous injection of alcohol using fluoroscopic guidance — inactivated (Ambiguous) — in `mii-vs-bildgebung-imaging-procedure-code-sct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402089004` Percutaneous injection of alcohol using fluoroscopic guidance (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `1179359005` Maternal epilepsy due to perinatal stroke — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380178003` Epilepsy due to and following stroke (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `1260377005` Epilepsy due to congenital anomaly of brain — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1372772007` Epilepsy due to intracranial structural abnormality (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `200766001` Parakeratosis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `56585003` Parakeratosis of skin (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+    - `65068000` Parakeratosis (POSSIBLY EQUIVALENT TO; not in VS; other hierarchy; score 1.0)
+- `442766007` High alcohol level in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `441685000` High alcohol level in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `1179359005` Maternal epilepsy due to perinatal stroke — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380178003` Epilepsy due to and following stroke (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `1260377005` Epilepsy due to congenital anomaly of brain — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1372772007` Epilepsy due to intracranial structural abnormality (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `200766001` Parakeratosis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `56585003` Parakeratosis of skin (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+    - `65068000` Parakeratosis (POSSIBLY EQUIVALENT TO; not in VS; other hierarchy; score 1.0)
+- `442766007` High alcohol level in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `441685000` High alcohol level in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `1179359005` Maternal epilepsy due to perinatal stroke — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1380178003` Epilepsy due to and following stroke (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.4) ← proposal
+- `1260377005` Epilepsy due to congenital anomaly of brain — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `1372772007` Epilepsy due to intracranial structural abnormality (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.14) ← proposal
+- `200766001` Parakeratosis — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `56585003` Parakeratosis of skin (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.5) ← proposal
+    - `65068000` Parakeratosis (POSSIBLY EQUIVALENT TO; not in VS; other hierarchy; score 1.0)
+- `442766007` High alcohol level in blood — inactivated (Ambiguous) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+    - `441685000` High alcohol level in blood (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `15872003` Injection of alcohol into retrobulbar space — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402088007` Injection of alcohol into retrobulbar space (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `307189004` Alcohol injection of liver metastases — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1258912004` Percutaneous injection of alcohol into neoplasm of liver (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 4.43) ← proposal
+- `433717001` Percutaneous injection of alcohol using fluoroscopic guidance — inactivated (Ambiguous) — in `mii-vs-bildgebung-imaging-procedure-code-sct`, `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402089004` Percutaneous injection of alcohol using fluoroscopic guidance (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `60196006` Injection of alcohol into sympathetic nerve — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402014003` Injection of alcohol into sympathetic nerve (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+- `89516003` Spinal injection of alcohol — inactivated (Ambiguous) — in `mii-vs-prozedur-prozeduren-snomedct`
+    - `1402012004` Spinal injection of alcohol (POSSIBLY EQUIVALENT TO; in VS; same hierarchy; score 5.0) ← proposal
+
+## No successor (132)
+
+- `111362001` Anal furunculosis — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `256928008` A*0201 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256930005` A*0203 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256932002` A*0205 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256933007` A*0206 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256940008` A*0301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256942000` A*1101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256943005` A*1102 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256944004` A*2301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256945003` A*2401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256946002` A*2501 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256947006` A*2601 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256948001` A*2901 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256949009` A*2902 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256950009` A*3001 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256951008` A*3002 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256955004` A*3201 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256956003` A*3301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256957007` A*3401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256963003` A*6801 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256964009` A*6802 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256968007` B*0701 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256969004` B*0702 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256972006` B*1301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256973001` B*1302 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256975008` B*1402 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256978005` B*1503 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256980004` B*1801 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256984008` B*2704 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256985009` B*2705 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256989003` B*3502 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256990007` B*3503 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256991006` B*3504 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256994003` B*3701 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256995002` B*3801 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256996001` B*3901 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256997005` B*3902 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256998000` B*4001 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `256999008` B*4002 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257004002` B*4201 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257006000` B*4402 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257007009` B*4403 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257009007` B*4601 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257010002` B*4701 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257011003` B*4801 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257012005` B*4901 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257013000` B*5001 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257014006` B*5101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257016008` B*5201 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257017004` B*5301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257019001` B*5501 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257020007` B*5601 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257022004` B*5701 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257023009` B*5702 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257028000` Cw*0102 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257033001` Cw*0302 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257034007` Cw*0401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257035008` Cw*0501 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257037000` Cw*0701 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257038005` Cw*0702 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257039002` Cw*0801 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257040000` Cw*0802 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257043003` Cw*1202 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257044009` Cw*1301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257048007` DPA1*0103 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257049004` DPA1*0201 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257050004` DPA1*02021 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257054008` DPB1*0101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257055009` DPB1*0201 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257059003` DPB1*0301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257060008` DPB1*0401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257062000` DPB1*0501 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257066002` DPB1*1101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257075000` DPB1*2001 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257081008` DPB1*2601 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257091002` DQA1*0101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257092009` DQA1*0102 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257094005` DQA1*0104 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257099000` DQA1*0401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257100008` DQA1*0501 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257104004` DQA1*0601 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257105003` DQB1*0501 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257106002` DQB1*0502 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257110004` DQB1*0601 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257111000` DQB1*0602 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257112007` DQB1*0603 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257113002` DQB1*0604 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257114008` DQB1*0605 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257116005` DQB1*0201 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257117001` DQB1*0301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257118006` DQB1*0302 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257122001` DQB1*0401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257124000` DRB1*0101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257125004` DRB1*0102 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257127007` DRB1*1501 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257128002` DRB1*1502 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257129005` DRB1*1503 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257130000` DRB1*1601 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257132008` DRB1*1602 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257133003` DRB1*0301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257134009` DRB1*0302 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257136006` DRB1*0401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257138007` DRB1*0403 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257139004` DRB1*0404 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257140002` DRB1*0405 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257141003` DRB1*0406 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257142005` DRB1*0407 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257143000` DRB1*0408 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257150001` DRB1*1102 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257155006` DRB1*1202 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257156007` DRB1*1301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257157003` DRB1*1302 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257158008` DRB1*1303 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257162002` DRB1*1401 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257164001` DRB1*1403 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257166004` DRB1*1405 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257167008` DRB1*1406 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257168003` DRB1*1407 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257171006` DRB1*0701 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257173009` DRB1*0801 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257178000` DRB1*0804 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257182003` DRB1*1001 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257183008` DRB3*0101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257185001` DRB3*0202 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257186000` DRB3*0301 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257187009` DRB4*0101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `257188004` DRB5*0101 — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `260071009` Human leukocyte antigen allele — inactivated (Outdated) — in `mii-vs-biobank-substance-additive-sct`
+- `111362001` Anal furunculosis — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `111362001` Anal furunculosis — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `111362001` Anal furunculosis — inactivated (Nonconformance to editorial policy) — in `mii-vs-bildgebung-findings-sct`, `mii-vs-diagnose-diagnosecodes-snomed`, `mii-vs-kardio-extended-mii-diagnosecodes-snomed`, `mii-vs-patho-problem-list-snomed-ct`
+- `236842007` Subcutaneous alcohol injection of the vulva — inactivated (Outdated) — in `mii-vs-prozedur-prozeduren-snomedct`

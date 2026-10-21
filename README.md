@@ -76,6 +76,34 @@ archive reproduces the server baseline exactly. Supported: enumerated includes, 
 Refined ECL raises an expansion error, like the server does for invalid ECL. Inactivation reasons
 (Duplicate, Outdated, Ambiguous, Classification derived, …) are reported next to the successors.
 
+### Decision tooling for inactivated codes
+
+`termwatch decide` turns the successor lists of a comparison into decisions: one item per code, the
+historical associations (the same data Snowstorm / Ontoserver expose as implicit ConceptMaps) as ranked
+candidates, and a status that says how much a human has to do.
+
+```bash
+python -m termwatch decide --compare reports/kds-complete-2027.0.0-ballot.19_sct-20261001.json \
+    --baseline baselines/kds-complete-2027.0.0-ballot.19 --out decisions/kds-complete-2027.0.0-ballot.19_sct-20261001 \
+    --rf2 .../SnomedCT_InternationalRF2_PRODUCTION_20260701T120000Z.zip --rf2 .../SnomedCT_InternationalRF2_PRODUCTION_20261001T120000Z.zip
+```
+
+| Status | Meaning |
+|---|---|
+| auto | a single SAME AS / REPLACED BY successor, resolved without a human |
+| proposed | several candidates, exactly one survives the signals (member of the re-expanded ValueSet, active, same top-level hierarchy, term overlap); to confirm |
+| open | several candidates survive; a human picks, the shortlist is ranked |
+| none | no historical association; the module team decides |
+| out-of-filter | the code is still active and only dropped out of the filter; data stays valid |
+
+Outputs: `decisions.json` (decisions survive re-runs, a decision is per code and applies to every ValueSet),
+`summary.md` as agenda for a terminology council, `ConceptMap-<valueset>.json` drafts (R4, old → new SNOMED
+version, equivalence from the association: SAME AS = equal, REPLACED BY = equivalent, WAS A = wider,
+POSSIBLY / PARTIALLY EQUIVALENT TO = inexact, open items unmatched with the candidates in a comment) and
+`review.html`, a self-contained page to pick candidates and export `decisions.json`. The review pages are
+published under `explorer/decisions/`. For SNOMED CT 20261001 the ranking leaves 98 open and 149 unresolvable
+codes for people, out of 824 inactivated codes across 20 ValueSets.
+
 ### Any package, any code system
 
 Nothing in the pipeline is tied to the Kerndatensatz. Three switches make it run against another
@@ -110,7 +138,8 @@ baselines/<package-version>/inventory.json      watched ValueSets with includes,
 baselines/<package-version>/baseline.json       versions, server, timestamp
 baselines/<package-version>/expansions/*.json   member codes per ValueSet under the baseline versions
 reports/                                        comparison JSON (ignored) + Markdown/CSV reports (committed)
-src/termwatch/                                  ontoserver.py rf2.py inventory.py baseline.py compare.py report.py explorer.py cli.py
+src/termwatch/                                  ontoserver.py rf2.py inventory.py baseline.py compare.py report.py explorer.py decide.py cli.py
+decisions/<run>/                                decisions.json, summary.md, ConceptMap-*.json, review.html
 ```
 
 ## Explorer (human-facing view)

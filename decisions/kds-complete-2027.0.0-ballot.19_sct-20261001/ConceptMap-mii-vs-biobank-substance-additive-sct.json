@@ -1,0 +1,3138 @@
+{
+ "resourceType": "ConceptMap",
+ "id": "mii-vs-biobank-substance-additive-sct-sct-20260701-20261001",
+ "status": "draft",
+ "name": "mii-vs-biobank-substance-additive-sct_sct_20260701_20261001",
+ "title": "Überleitung mii-vs-biobank-substance-additive-sct: SNOMED CT 20260701 → 20261001",
+ "date": "2026-10-21",
+ "publisher": "MII Terminology Watch (draft)",
+ "description": "Successors for members of mii-vs-biobank-substance-additive-sct inactivated between SNOMED CT International 20260701 and 20261001. 153 of 281 elements resolved (auto / proposed / decided), the rest unmatched pending a decision.",
+ "sourceUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701",
+ "targetUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20261001",
+ "group": [
+  {
+   "source": "http://snomed.info/sct",
+   "sourceVersion": "http://snomed.info/sct/900000000000207008/version/20260701",
+   "target": "http://snomed.info/sct",
+   "targetVersion": "http://snomed.info/sct/900000000000207008/version/20261001",
+   "element": [
+    {
+     "code": "1496005",
+     "display": "Proto-oncogene",
+     "target": [
+      {
+       "code": "1396287006",
+       "display": "Proto-oncogene structure",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "2343002",
+     "display": "Guthion",
+     "target": [
+      {
+       "code": "14674009",
+       "display": "Azinphos-methyl",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "256927003",
+     "display": "A*0101",
+     "target": [
+      {
+       "code": "1401958003",
+       "display": "A*01:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256928008",
+     "display": "A*0201",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256929000",
+     "display": "A*0202",
+     "target": [
+      {
+       "code": "1401957008",
+       "display": "A*02:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256930005",
+     "display": "A*0203",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256931009",
+     "display": "A*0204",
+     "target": [
+      {
+       "code": "1401956004",
+       "display": "A*02:04:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256932002",
+     "display": "A*0205",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256933007",
+     "display": "A*0206",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256934001",
+     "display": "A*0207",
+     "target": [
+      {
+       "code": "1401955000",
+       "display": "A*02:07:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256935000",
+     "display": "A*0208",
+     "target": [
+      {
+       "code": "1401954001",
+       "display": "A*02:08 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256936004",
+     "display": "A*0209",
+     "target": [
+      {
+       "code": "1401953007",
+       "display": "A*02:09:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256937008",
+     "display": "A*0210",
+     "target": [
+      {
+       "code": "1401952002",
+       "display": "A*02:10 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256938003",
+     "display": "A*0211",
+     "target": [
+      {
+       "code": "1401951009",
+       "display": "A*02:11:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256939006",
+     "display": "A*0212",
+     "target": [
+      {
+       "code": "1401950005",
+       "display": "A*02:12 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256940008",
+     "display": "A*0301",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256941007",
+     "display": "A*0302",
+     "target": [
+      {
+       "code": "1401949005",
+       "display": "A*03:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256942000",
+     "display": "A*1101",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256943005",
+     "display": "A*1102",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256944004",
+     "display": "A*2301",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256945003",
+     "display": "A*2401",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256946002",
+     "display": "A*2501",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256947006",
+     "display": "A*2601",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256948001",
+     "display": "A*2901",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256949009",
+     "display": "A*2902",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256950009",
+     "display": "A*3001",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256951008",
+     "display": "A*3002",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256953006",
+     "display": "A*31011",
+     "target": [
+      {
+       "code": "1401948002",
+       "display": "A*31:01:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "256954000",
+     "display": "A*31012",
+     "target": [
+      {
+       "code": "1401948002",
+       "display": "A*31:01:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256955004",
+     "display": "A*3201",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256956003",
+     "display": "A*3301",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256957007",
+     "display": "A*3401",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256958002",
+     "display": "A*3402",
+     "target": [
+      {
+       "code": "1401947007",
+       "display": "A*34:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256959005",
+     "display": "A*3601",
+     "target": [
+      {
+       "code": "1401946003",
+       "display": "A*36:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256960000",
+     "display": "A*4301",
+     "target": [
+      {
+       "code": "1401945004",
+       "display": "A*43:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256961001",
+     "display": "A*6601",
+     "target": [
+      {
+       "code": "1401944000",
+       "display": "A*66:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256962008",
+     "display": "A*6602",
+     "target": [
+      {
+       "code": "1401943006",
+       "display": "A*66:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256963003",
+     "display": "A*6801",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256964009",
+     "display": "A*6802",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256966006",
+     "display": "A*6901",
+     "target": [
+      {
+       "code": "1401942001",
+       "display": "A*69:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256967002",
+     "display": "A*7401",
+     "target": [
+      {
+       "code": "1401941008",
+       "display": "A*74:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256968007",
+     "display": "B*0701",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256969004",
+     "display": "B*0702",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256970003",
+     "display": "B*0703",
+     "target": [
+      {
+       "code": "1401939007",
+       "display": "B*07:03 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256971004",
+     "display": "B*0801",
+     "target": [
+      {
+       "code": "1401938004",
+       "display": "B*08:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256972006",
+     "display": "B*1301",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256973001",
+     "display": "B*1302",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256974007",
+     "display": "B*1401",
+     "target": [
+      {
+       "code": "1401937009",
+       "display": "B*14:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256975008",
+     "display": "B*1402",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256976009",
+     "display": "B*1501",
+     "target": [
+      {
+       "code": "1401936000",
+       "display": "B*15:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256977000",
+     "display": "B*1502",
+     "target": [
+      {
+       "code": "1401935001",
+       "display": "B*15:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256978005",
+     "display": "B*1503",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256979002",
+     "display": "B*1504",
+     "target": [
+      {
+       "code": "1401934002",
+       "display": "B*15:04:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256980004",
+     "display": "B*1801",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256981000",
+     "display": "B*2701",
+     "target": [
+      {
+       "code": "1401933008",
+       "display": "B*27:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256982007",
+     "display": "B*2702",
+     "target": [
+      {
+       "code": "1401932003",
+       "display": "B*27:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256983002",
+     "display": "B*2703",
+     "target": [
+      {
+       "code": "1401931005",
+       "display": "B*27:03:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256984008",
+     "display": "B*2704",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256985009",
+     "display": "B*2705",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256986005",
+     "display": "B*2706",
+     "target": [
+      {
+       "code": "1401930006",
+       "display": "B*27:06:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256987001",
+     "display": "B*2707",
+     "target": [
+      {
+       "code": "1401929001",
+       "display": "B*27:07:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256988006",
+     "display": "B*3501",
+     "target": [
+      {
+       "code": "1401928009",
+       "display": "B*35:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256989003",
+     "display": "B*3502",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256990007",
+     "display": "B*3503",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256991006",
+     "display": "B*3504",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256992004",
+     "display": "B*3505",
+     "target": [
+      {
+       "code": "1401927004",
+       "display": "B*35:05:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256993009",
+     "display": "B*3506",
+     "target": [
+      {
+       "code": "1401926008",
+       "display": "B*35:06 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "256994003",
+     "display": "B*3701",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256995002",
+     "display": "B*3801",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256996001",
+     "display": "B*3901",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256997005",
+     "display": "B*3902",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256998000",
+     "display": "B*4001",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "256999008",
+     "display": "B*4002",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257000006",
+     "display": "B*4003",
+     "target": [
+      {
+       "code": "1401925007",
+       "display": "B*40:03:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257001005",
+     "display": "B*4004",
+     "target": [
+      {
+       "code": "1401924006",
+       "display": "B*40:04:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257002003",
+     "display": "B*4005",
+     "target": [
+      {
+       "code": "1401923000",
+       "display": "B*40:05:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257003008",
+     "display": "B*4101",
+     "target": [
+      {
+       "code": "1401922005",
+       "display": "B*41:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257004002",
+     "display": "B*4201",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257005001",
+     "display": "B*4401",
+     "target": [
+      {
+       "code": "1401921003",
+       "display": "B*44:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257006000",
+     "display": "B*4402",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257007009",
+     "display": "B*4403",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257008004",
+     "display": "B*4501",
+     "target": [
+      {
+       "code": "1401920002",
+       "display": "B*45:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257009007",
+     "display": "B*4601",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257010002",
+     "display": "B*4701",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257011003",
+     "display": "B*4801",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257012005",
+     "display": "B*4901",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257013000",
+     "display": "B*5001",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257014006",
+     "display": "B*5101",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257015007",
+     "display": "B*5103",
+     "target": [
+      {
+       "code": "1401919008",
+       "display": "B*51:03 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257016008",
+     "display": "B*5201",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257017004",
+     "display": "B*5301",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257018009",
+     "display": "B*5401",
+     "target": [
+      {
+       "code": "1401918000",
+       "display": "B*54:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257019001",
+     "display": "B*5501",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257020007",
+     "display": "B*5601",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257021006",
+     "display": "B*5602",
+     "target": [
+      {
+       "code": "1401916001",
+       "display": "B*56:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257022004",
+     "display": "B*5701",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257023009",
+     "display": "B*5702",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257024003",
+     "display": "B*5801",
+     "target": [
+      {
+       "code": "1401915002",
+       "display": "B*58:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257025002",
+     "display": "B*7801",
+     "target": [
+      {
+       "code": "1401914003",
+       "display": "B*78:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257026001",
+     "display": "B*7901",
+     "target": [
+      {
+       "code": "1401913009",
+       "display": "B*15:18:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257027005",
+     "display": "Cw*0101",
+     "target": [
+      {
+       "code": "1401906009",
+       "display": "C*01:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257028000",
+     "display": "Cw*0102",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257029008",
+     "display": "Cw*0201",
+     "target": [
+      {
+       "code": "1401907000",
+       "display": "C*02:02:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257030003",
+     "display": "Cw*02021",
+     "target": [
+      {
+       "code": "1401908005",
+       "display": "C*02:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257031004",
+     "display": "Cw*02022",
+     "target": [
+      {
+       "code": "1401907000",
+       "display": "C*02:02:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257032006",
+     "display": "Cw*0301",
+     "target": [
+      {
+       "code": "1401911006",
+       "display": "C*03:04:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257033001",
+     "display": "Cw*0302",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257034007",
+     "display": "Cw*0401",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257035008",
+     "display": "Cw*0501",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257036009",
+     "display": "Cw*0601",
+     "target": [
+      {
+       "code": "1401910007",
+       "display": "C*06:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257037000",
+     "display": "Cw*0701",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257038005",
+     "display": "Cw*0702",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257039002",
+     "display": "Cw*0801",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257040000",
+     "display": "Cw*0802",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257042008",
+     "display": "Cw*1201",
+     "target": [
+      {
+       "code": "1401973002",
+       "display": "C*12:02:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257043003",
+     "display": "Cw*1202",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257044009",
+     "display": "Cw*1301",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257045005",
+     "display": "Cw*1401",
+     "target": [
+      {
+       "code": "1401909002",
+       "display": "C*14:02:01:01 allele",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "257046006",
+     "display": "DPA1*0101",
+     "target": [
+      {
+       "code": "1401902006",
+       "display": "DPA1*01:03:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257047002",
+     "display": "DPA1*0102",
+     "target": [
+      {
+       "code": "1401902006",
+       "display": "DPA1*01:03:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257048007",
+     "display": "DPA1*0103",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257049004",
+     "display": "DPA1*0201",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257050004",
+     "display": "DPA1*02021",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257051000",
+     "display": "DPA1*02022",
+     "target": [
+      {
+       "code": "1401905008",
+       "display": "DPA1*02:02:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257052007",
+     "display": "DPA1*0301",
+     "target": [
+      {
+       "code": "1401904007",
+       "display": "DPA1*03:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257053002",
+     "display": "DPA1*0401",
+     "target": [
+      {
+       "code": "1401903001",
+       "display": "DPA1*04:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257054008",
+     "display": "DPB1*0101",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257055009",
+     "display": "DPB1*0201",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257056005",
+     "display": "DPB1*02011",
+     "target": [
+      {
+       "code": "1401694001",
+       "display": "DPB1*02:01:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257057001",
+     "display": "DPB1*02012",
+     "target": [
+      {
+       "code": "1401760009",
+       "display": "DPB1*02:01:02 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257058006",
+     "display": "DPB1*0202",
+     "target": [
+      {
+       "code": "1401753003",
+       "display": "DPB1*02:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257059003",
+     "display": "DPB1*0301",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257060008",
+     "display": "DPB1*0401",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257061007",
+     "display": "DPB1*0402",
+     "target": [
+      {
+       "code": "1401756006",
+       "display": "DPB1*04:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257062000",
+     "display": "DPB1*0501",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257063005",
+     "display": "DPB1*0601",
+     "target": [
+      {
+       "code": "1401758007",
+       "display": "DPB1*06:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257064004",
+     "display": "DPB1*0801",
+     "target": [
+      {
+       "code": "1401761008",
+       "display": "DPB1*08:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257065003",
+     "display": "DPB1*0901",
+     "target": [
+      {
+       "code": "1401762001",
+       "display": "DPB1*09:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257066002",
+     "display": "DPB1*1101",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257068001",
+     "display": "DPB1*1301",
+     "target": [
+      {
+       "code": "1401750000",
+       "display": "DPB1*13:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257069009",
+     "display": "DPB1*1401",
+     "target": [
+      {
+       "code": "1401749000",
+       "display": "DPB1*14:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257070005",
+     "display": "DPB1*1501",
+     "target": [
+      {
+       "code": "1401748008",
+       "display": "DPB1*15:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257071009",
+     "display": "DPB1*1601",
+     "target": [
+      {
+       "code": "1401747003",
+       "display": "DPB1*16:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257072002",
+     "display": "DPB1*1701",
+     "target": [
+      {
+       "code": "1401746007",
+       "display": "DPB1*17:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257073007",
+     "display": "DPB1*1801",
+     "target": [
+      {
+       "code": "1401745006",
+       "display": "DPB1*18:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257074001",
+     "display": "DPB1*1901",
+     "target": [
+      {
+       "code": "1401743004",
+       "display": "DPB1*19:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257075000",
+     "display": "DPB1*2001",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257076004",
+     "display": "DPB1*2101",
+     "target": [
+      {
+       "code": "1401739003",
+       "display": "DPB1*21:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257077008",
+     "display": "DPB1*2201",
+     "target": [
+      {
+       "code": "1401738006",
+       "display": "DPB1*22:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257078003",
+     "display": "DPB1*2301",
+     "target": [
+      {
+       "code": "1401737001",
+       "display": "DPB1*23:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257079006",
+     "display": "DPB1*2401",
+     "target": [
+      {
+       "code": "1401736005",
+       "display": "DPB1*24:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257080009",
+     "display": "DPB1*2501",
+     "target": [
+      {
+       "code": "1401695000",
+       "display": "DPB1*25:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257081008",
+     "display": "DPB1*2601",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257082001",
+     "display": "DPB1*2701",
+     "target": [
+      {
+       "code": "1401583009",
+       "display": "DPB1*27:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257083006",
+     "display": "DPB1*2801",
+     "target": [
+      {
+       "code": "1401582004",
+       "display": "DPB1*28:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257084000",
+     "display": "DPB1*3001",
+     "target": [
+      {
+       "code": "1401581006",
+       "display": "DPB1*30:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257085004",
+     "display": "DPB1*3101",
+     "target": [
+      {
+       "code": "1401580007",
+       "display": "DPB1*31:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257086003",
+     "display": "DPB1*3201",
+     "target": [
+      {
+       "code": "1401579009",
+       "display": "DPB1*32:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257087007",
+     "display": "DPB1*3301",
+     "target": [
+      {
+       "code": "1401578001",
+       "display": "DPB1*33:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257088002",
+     "display": "DPB1*3401",
+     "target": [
+      {
+       "code": "1401577006",
+       "display": "DPB1*34:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257089005",
+     "display": "DPB1*3501",
+     "target": [
+      {
+       "code": "1401576002",
+       "display": "DPB1*621:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257090001",
+     "display": "DPB1*3601",
+     "target": [
+      {
+       "code": "1401575003",
+       "display": "DPB1*36:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257091002",
+     "display": "DQA1*0101",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257092009",
+     "display": "DQA1*0102",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257093004",
+     "display": "DQA1*0103",
+     "target": [
+      {
+       "code": "1401901004",
+       "display": "DQA1*01:03:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257094005",
+     "display": "DQA1*0104",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257095006",
+     "display": "DQA1*0201",
+     "target": [
+      {
+       "code": "1401900003",
+       "display": "DQA1*02:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257096007",
+     "display": "DQA1*03011",
+     "target": [
+      {
+       "code": "1401899008",
+       "display": "DQA1*03:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257097003",
+     "display": "DQA1*03012",
+     "target": [
+      {
+       "code": "1401693007",
+       "display": "DQA1*03:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257098008",
+     "display": "DQA1*0302",
+     "target": [
+      {
+       "code": "1401693007",
+       "display": "DQA1*03:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257099000",
+     "display": "DQA1*0401",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257100008",
+     "display": "DQA1*0501",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257101007",
+     "display": "DQA1*05011",
+     "target": [
+      {
+       "code": "1401898000",
+       "display": "DQA1*05:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257102000",
+     "display": "DQA1*05012",
+     "target": [
+      {
+       "code": "1401897005",
+       "display": "DQA1*05:01:02 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257103005",
+     "display": "DQA1*05013",
+     "target": [
+      {
+       "code": "1401692002",
+       "display": "DQA1*05:01:08:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257104004",
+     "display": "DQA1*0601",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257105003",
+     "display": "DQB1*0501",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257106002",
+     "display": "DQB1*0502",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257107006",
+     "display": "DQB1*05031",
+     "target": [
+      {
+       "code": "1401896001",
+       "display": "DQB1*05:03:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257108001",
+     "display": "DQB1*05032",
+     "target": [
+      {
+       "code": "1401895002",
+       "display": "DQB1*05:03:02 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257109009",
+     "display": "DQB1*0504",
+     "target": [
+      {
+       "code": "1401894003",
+       "display": "DQB1*05:04:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257110004",
+     "display": "DQB1*0601",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257111000",
+     "display": "DQB1*0602",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257112007",
+     "display": "DQB1*0603",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257113002",
+     "display": "DQB1*0604",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257114008",
+     "display": "DQB1*0605",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257115009",
+     "display": "DQB1*0606",
+     "target": [
+      {
+       "code": "1401893009",
+       "display": "DQB1*06:06 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257116005",
+     "display": "DQB1*0201",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257117001",
+     "display": "DQB1*0301",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257118006",
+     "display": "DQB1*0302",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257119003",
+     "display": "DQB1*03031",
+     "target": [
+      {
+       "code": "1401691009",
+       "display": "DQB1*03:03:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257120009",
+     "display": "DQB1*03032",
+     "target": [
+      {
+       "code": "1401691009",
+       "display": "DQB1*03:03:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257121008",
+     "display": "DQB1*0304",
+     "target": [
+      {
+       "code": "1401892004",
+       "display": "DQB1*03:04:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257122001",
+     "display": "DQB1*0401",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257123006",
+     "display": "DQB1*0402",
+     "target": [
+      {
+       "code": "1401891006",
+       "display": "DQB1*04:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257124000",
+     "display": "DRB1*0101",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257125004",
+     "display": "DRB1*0102",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257126003",
+     "display": "DRB1*0103",
+     "target": [
+      {
+       "code": "1401890007",
+       "display": "DRB1*01:03:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257127007",
+     "display": "DRB1*1501",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257128002",
+     "display": "DRB1*1502",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257129005",
+     "display": "DRB1*1503",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257130000",
+     "display": "DRB1*1601",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257132008",
+     "display": "DRB1*1602",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257133003",
+     "display": "DRB1*0301",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257134009",
+     "display": "DRB1*0302",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257135005",
+     "display": "DRB1*0303",
+     "target": [
+      {
+       "code": "1401889003",
+       "display": "DRB1*03:03 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257136006",
+     "display": "DRB1*0401",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257137002",
+     "display": "DRB1*0402",
+     "target": [
+      {
+       "code": "1401888006",
+       "display": "DRB1*04:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257138007",
+     "display": "DRB1*0403",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257139004",
+     "display": "DRB1*0404",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257140002",
+     "display": "DRB1*0405",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257141003",
+     "display": "DRB1*0406",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257142005",
+     "display": "DRB1*0407",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257143000",
+     "display": "DRB1*0408",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257144006",
+     "display": "DRB1*0409",
+     "target": [
+      {
+       "code": "1401887001",
+       "display": "DRB1*04:09:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257145007",
+     "display": "DRB1*0410",
+     "target": [
+      {
+       "code": "1401886005",
+       "display": "DRB1*04:10:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257146008",
+     "display": "DRB1*0411",
+     "target": [
+      {
+       "code": "1401885009",
+       "display": "DRB1*04:11:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257147004",
+     "display": "DRB1*0412",
+     "target": [
+      {
+       "code": "1401884008",
+       "display": "DRB1*04:12 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257148009",
+     "display": "DRB1*11011",
+     "target": [
+      {
+       "code": "1401883002",
+       "display": "DRB1*11:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257149001",
+     "display": "DRB1*11012",
+     "target": [
+      {
+       "code": "1401872006",
+       "display": "DRB1*11:01:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257150001",
+     "display": "DRB1*1102",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257151002",
+     "display": "DRB1*1103",
+     "target": [
+      {
+       "code": "1401865005",
+       "display": "DRB1*11:03:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257152009",
+     "display": "DRB1*11041",
+     "target": [
+      {
+       "code": "1401864009",
+       "display": "DRB1*11:04:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257153004",
+     "display": "DRB1*11042",
+     "target": [
+      {
+       "code": "1401863003",
+       "display": "DRB1*11:04:02 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257154005",
+     "display": "DRB1*1105",
+     "target": [
+      {
+       "code": "1401862008",
+       "display": "DRB1*11:05 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257155006",
+     "display": "DRB1*1202",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257156007",
+     "display": "DRB1*1301",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257157003",
+     "display": "DRB1*1302",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257158008",
+     "display": "DRB1*1303",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257160005",
+     "display": "DRB1*1305",
+     "target": [
+      {
+       "code": "1401841007",
+       "display": "DRB1*13:05:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257161009",
+     "display": "DRB1*1306",
+     "target": [
+      {
+       "code": "1401840008",
+       "display": "DRB1*13:06 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257162002",
+     "display": "DRB1*1401",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257163007",
+     "display": "DRB1*1402",
+     "target": [
+      {
+       "code": "1401839006",
+       "display": "DRB1*14:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257164001",
+     "display": "DRB1*1403",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257165000",
+     "display": "DRB1*1404",
+     "target": [
+      {
+       "code": "1401838003",
+       "display": "DRB1*14:04:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257166004",
+     "display": "DRB1*1405",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257167008",
+     "display": "DRB1*1406",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257168003",
+     "display": "DRB1*1407",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257170007",
+     "display": "DRB1*1408",
+     "target": [
+      {
+       "code": "1401776000",
+       "display": "DRB1*14:08 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257171006",
+     "display": "DRB1*0701",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257172004",
+     "display": "DRB1*0702",
+     "target": [
+      {
+       "code": "1401690005",
+       "display": "DRB1*07:01:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257173009",
+     "display": "DRB1*0801",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257174003",
+     "display": "DRB1*08021",
+     "target": [
+      {
+       "code": "1401772003",
+       "display": "DRB1*08:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257175002",
+     "display": "DRB1*08022",
+     "target": [
+      {
+       "code": "1401773008",
+       "display": "DRB1*08:02:02 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257176001",
+     "display": "DRB1*08031",
+     "target": [
+      {
+       "code": "1401689001",
+       "display": "DRB1*08:03:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257177005",
+     "display": "DRB1*08032",
+     "target": [
+      {
+       "code": "1401689001",
+       "display": "DRB1*08:03:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257178000",
+     "display": "DRB1*0804",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257179008",
+     "display": "DRB1*0805",
+     "target": [
+      {
+       "code": "1401766003",
+       "display": "DRB1*08:05 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257180006",
+     "display": "DRB1*09011",
+     "target": [
+      {
+       "code": "1401688009",
+       "display": "DRB1*09:01:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257181005",
+     "display": "DRB1*09012",
+     "target": [
+      {
+       "code": "1401688009",
+       "display": "DRB1*09:01:02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257182003",
+     "display": "DRB1*1001",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257183008",
+     "display": "DRB3*0101",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257184002",
+     "display": "DRB3*0201",
+     "target": [
+      {
+       "code": "1401837008",
+       "display": "DRB3*02:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257185001",
+     "display": "DRB3*0202",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257186000",
+     "display": "DRB3*0301",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257187009",
+     "display": "DRB4*0101",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257188004",
+     "display": "DRB5*0101",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "257189007",
+     "display": "DRB5*0102",
+     "target": [
+      {
+       "code": "1401836004",
+       "display": "DRB5*01:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "257190003",
+     "display": "DRB5*0201",
+     "target": [
+      {
+       "code": "1401687004",
+       "display": "DRB5*02:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "257191004",
+     "display": "DRB5*0202",
+     "target": [
+      {
+       "code": "1401687004",
+       "display": "DRB5*02:02:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "260071009",
+     "display": "Human leukocyte antigen allele",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Outdated); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "260072002",
+     "display": "Human leukocyte antigen A allele",
+     "target": [
+      {
+       "code": "1401684006",
+       "display": "HLA-A gene",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "260073007",
+     "display": "Human leukocyte antigen B allele",
+     "target": [
+      {
+       "code": "1401683000",
+       "display": "HLA-B gene",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "260074001",
+     "display": "Human leukocyte antigen C allele",
+     "target": [
+      {
+       "code": "1401682005",
+       "display": "HLA-C gene",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "260075000",
+     "display": "Human leukocyte antigen DRB1 allele",
+     "target": [
+      {
+       "code": "1401673004",
+       "display": "HLA-DRB1 gene",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "260076004",
+     "display": "DRB1*1409",
+     "target": [
+      {
+       "code": "1401686008",
+       "display": "DRB1*14:09 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "260077008",
+     "display": "DRB1*1410",
+     "target": [
+      {
+       "code": "1401685007",
+       "display": "DRB1*14:10:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "260078003",
+     "display": "Human leukocyte antigen DRB3 allele",
+     "target": [
+      {
+       "code": "1401681003",
+       "display": "HLA-DRB3 gene",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "260079006",
+     "display": "Human leukocyte antigen DRB4 allele",
+     "target": [
+      {
+       "code": "1401680002",
+       "display": "HLA-DRB4 gene",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "260080009",
+     "display": "Human leukocyte antigen DRB5 allele",
+     "target": [
+      {
+       "code": "1401679000",
+       "display": "HLA-DRB5 gene",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "260081008",
+     "display": "Human leukocyte antigen DQA1 allele",
+     "target": [
+      {
+       "code": "1401678008",
+       "display": "HLA-DQA1 gene",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "260082001",
+     "display": "Human leukocyte antigen DQB1 allele",
+     "target": [
+      {
+       "code": "1401677003",
+       "display": "HLA-DQB1 gene",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "260083006",
+     "display": "Human leukocyte antigen DPA1 allele",
+     "target": [
+      {
+       "code": "1401676007",
+       "display": "HLA-DPA1 gene",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "260084000",
+     "display": "Human leukocyte antigen DPB1 allele",
+     "target": [
+      {
+       "code": "1401574004",
+       "display": "HLA-DPB1 gene",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "260085004",
+     "display": "DPB199*2901",
+     "target": [
+      {
+       "code": "1401675006",
+       "display": "DPB1*29:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "264831008",
+     "display": "DPB1*2901",
+     "target": [
+      {
+       "code": "1401675006",
+       "display": "DPB1*29:01:01 allele",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "278315003",
+     "display": "DRB1*1304",
+     "target": [
+      {
+       "code": "1401674005",
+       "display": "DRB1*13:04 allele",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "405840007",
+     "display": "RET proto-oncogene",
+     "target": [
+      {
+       "code": "1401573005",
+       "display": "RET gene",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "412223007",
+     "display": "Recombinant human regular insulin",
+     "target": [
+      {
+       "code": "420609005",
+       "display": "Human regular insulin",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "710220009",
+     "display": "Common millet",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1411501003 (POSSIBLY EQUIVALENT TO), 1411504006 (POSSIBLY EQUIVALENT TO), 29178009 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "725636004",
+     "display": "3-ureidopropionate",
+     "target": [
+      {
+       "code": "709844000",
+       "display": "N-carbamoyl-beta-alanine",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,434 @@
+{
+ "resourceType": "ConceptMap",
+ "id": "mii-vs-onko-koerperstruktur-sct-sct-20260701-20261001",
+ "status": "draft",
+ "name": "mii-vs-onko-koerperstruktur-sct_sct_20260701_20261001",
+ "title": "Überleitung mii-vs-onko-koerperstruktur-sct: SNOMED CT 20260701 → 20261001",
+ "date": "2026-10-21",
+ "publisher": "MII Terminology Watch (draft)",
+ "description": "Successors for members of mii-vs-onko-koerperstruktur-sct inactivated between SNOMED CT International 20260701 and 20261001. 31 of 35 elements resolved (auto / proposed / decided), the rest unmatched pending a decision.",
+ "sourceUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701",
+ "targetUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20261001",
+ "group": [
+  {
+   "source": "http://snomed.info/sct",
+   "sourceVersion": "http://snomed.info/sct/900000000000207008/version/20260701",
+   "target": "http://snomed.info/sct",
+   "targetVersion": "http://snomed.info/sct/900000000000207008/version/20261001",
+   "element": [
+    {
+     "code": "110708006",
+     "display": "Middle ear and mastoid cells",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 25342003 (POSSIBLY EQUIVALENT TO), 57222008 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "1156631003",
+     "display": "Dendritic cell sarcoma",
+     "target": [
+      {
+       "code": "703822002",
+       "display": "Indeterminate dendritic cell tumor",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "1186646003",
+     "display": "Malignant histiocytic neoplasm",
+     "target": [
+      {
+       "code": "1396874009",
+       "display": "Malignant histiocytic macrophage neoplasm",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "1187282008",
+     "display": "Polyostotic Langerhans cell histiocytosis",
+     "target": [
+      {
+       "code": "1187281001",
+       "display": "Single system Langerhans cell histiocytosis",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "1187283003",
+     "display": "Monostotic Langerhans cell histiocytosis",
+     "target": [
+      {
+       "code": "1187281001",
+       "display": "Single system Langerhans cell histiocytosis",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "118974004",
+     "display": "Entire subdivision of female genital system",
+     "target": [
+      {
+       "code": "361386004",
+       "display": "Entire female genital system",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "118975003",
+     "display": "Entire subdivision of male genital system",
+     "target": [
+      {
+       "code": "361340001",
+       "display": "Entire male genital system",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "128810002",
+     "display": "Eosinophilic granuloma",
+     "target": [
+      {
+       "code": "1187281001",
+       "display": "Single system Langerhans cell histiocytosis",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "128811003",
+     "display": "Langerhans cell histiocytosis, multifocal",
+     "target": [
+      {
+       "code": "110450007",
+       "display": "Langerhans cell histiocytosis",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "128920006",
+     "display": "Malignant histiocytosis",
+     "target": [
+      {
+       "code": "1396874009",
+       "display": "Malignant histiocytic macrophage neoplasm",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "14494009",
+     "display": "Meningeal sarcomatosis",
+     "target": [
+      {
+       "code": "9395006",
+       "display": "Sarcomatosis",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "18971008",
+     "display": "Entire iliopectineal bursa",
+     "target": [
+      {
+       "code": "289364009",
+       "display": "Entire iliopsoas bursa",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "190802005",
+     "display": "Pelvic lipomatosis",
+     "target": [
+      {
+       "code": "1416374007",
+       "display": "Pelvic lipomatosis",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "23041001",
+     "display": "Sinus histiocytosis",
+     "target": [
+      {
+       "code": "1295376005",
+       "display": "Rosai-Dorfman disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "244079007",
+     "display": "Skin of eardrum",
+     "target": [
+      {
+       "code": "39725007",
+       "display": "Outer epithelial layer of tympanic membrane",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "289465009",
+     "display": "Structure of iliopectineal bursa",
+     "target": [
+      {
+       "code": "9320007",
+       "display": "Structure of iliopsoas bursa",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "361107003",
+     "display": "Entire genital system",
+     "target": [
+      {
+       "code": "278875001",
+       "display": "Entire reproductive system",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "363667005",
+     "display": "Middle ear and mastoid structure",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 25342003 (POSSIBLY EQUIVALENT TO), 59066005 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "399456004",
+     "display": "Plasma cell myeloma/plasmacytoma",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1162576007 (POSSIBLY EQUIVALENT TO), 1187107005 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "405952001",
+     "display": "Parameningeal structure in the context of malignancy",
+     "target": [
+      {
+       "code": "406121007",
+       "display": "Structure of subregion of head",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "420329002",
+     "display": "Bone structure of malleus",
+     "target": [
+      {
+       "code": "34080009",
+       "display": "Malleus structure",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "421793000",
+     "display": "Bone structure of incus",
+     "target": [
+      {
+       "code": "35395007",
+       "display": "Incus structure",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "422057008",
+     "display": "Bone structure of stapes",
+     "target": [
+      {
+       "code": "22718006",
+       "display": "Stapes structure",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "422258005",
+     "display": "Bone structure of auditory ossicle",
+     "target": [
+      {
+       "code": "41845008",
+       "display": "Ear ossicle structure",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "68801007",
+     "display": "Giant cell reticulosis",
+     "target": [
+      {
+       "code": "1295213006",
+       "display": "Reticulohistiocytosis",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "70839004",
+     "display": "Epithelial layer of tympanic membrane",
+     "target": [
+      {
+       "code": "39725007",
+       "display": "Outer epithelial layer of tympanic membrane",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "727196004",
+     "display": "Entire epithelial layer of tympanic membrane",
+     "target": [
+      {
+       "code": "727009001",
+       "display": "Entire outer epithelial layer of tympanic membrane",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "727838004",
+     "display": "Entire skin of eardrum",
+     "target": [
+      {
+       "code": "727009001",
+       "display": "Entire outer epithelial layer of tympanic membrane",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "731915001",
+     "display": "Entire bone of malleus",
+     "target": [
+      {
+       "code": "264090005",
+       "display": "Entire malleus",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "731916000",
+     "display": "Entire bone of incus",
+     "target": [
+      {
+       "code": "272649008",
+       "display": "Entire incus",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "731918004",
+     "display": "Entire bone of stapes",
+     "target": [
+      {
+       "code": "264199009",
+       "display": "Entire stapes",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "731919007",
+     "display": "Entire bone of auditory ossicle",
+     "target": [
+      {
+       "code": "181184001",
+       "display": "Entire ossicle of ear",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "732139009",
+     "display": "Entire middle ear and mastoid",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 181185000 (POSSIBLY EQUIVALENT TO), 265784008 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "788217009",
+     "display": "Structure of hair follicle of heel",
+     "target": [
+      {
+       "code": "788196007",
+       "display": "Structure of hair follicle of foot",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "788257007",
+     "display": "Entire hair follicle of heel",
+     "target": [
+      {
+       "code": "788256003",
+       "display": "Entire hair follicle of foot",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

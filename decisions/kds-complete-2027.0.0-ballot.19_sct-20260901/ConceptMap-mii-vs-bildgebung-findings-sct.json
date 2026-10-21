@@ -1,0 +1,882 @@
+{
+ "resourceType": "ConceptMap",
+ "id": "mii-vs-bildgebung-findings-sct-sct-20260701-20260901",
+ "status": "draft",
+ "name": "mii-vs-bildgebung-findings-sct_sct_20260701_20260901",
+ "title": "Überleitung mii-vs-bildgebung-findings-sct: SNOMED CT 20260701 → 20260901",
+ "date": "2026-10-21",
+ "publisher": "MII Terminology Watch (draft)",
+ "description": "Successors for members of mii-vs-bildgebung-findings-sct inactivated between SNOMED CT International 20260701 and 20260901. 60 of 74 elements resolved (auto / proposed / decided), the rest unmatched pending a decision.",
+ "sourceUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701",
+ "targetUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260901",
+ "group": [
+  {
+   "source": "http://snomed.info/sct",
+   "sourceVersion": "http://snomed.info/sct/900000000000207008/version/20260701",
+   "target": "http://snomed.info/sct",
+   "targetVersion": "http://snomed.info/sct/900000000000207008/version/20260901",
+   "element": [
+    {
+     "code": "111360009",
+     "display": "Obstipation",
+     "target": [
+      {
+       "code": "236069009",
+       "display": "Chronic constipation",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "111362001",
+     "display": "Anal furunculosis",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "none: inactivated (Nonconformance to editorial policy); candidates: none"
+      }
+     ]
+    },
+    {
+     "code": "1156495004",
+     "display": "Dendritic cell sarcoma",
+     "target": [
+      {
+       "code": "721313009",
+       "display": "Indeterminate dendritic cell neoplasm",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "1163527006",
+     "display": "Epilepsy due to parasitic disease",
+     "target": [
+      {
+       "code": "1397332000",
+       "display": "Epilepsy due to parasitic disease of brain",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "1163529009",
+     "display": "Epilepsy due to bacterial endocarditis",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1373924005 (POSSIBLY EQUIVALENT TO), 1373925006 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "1179359005",
+     "display": "Maternal epilepsy due to perinatal stroke",
+     "target": [
+      {
+       "code": "1380178003",
+       "display": "Epilepsy due to and following stroke",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "1179360000",
+     "display": "Fetal epilepsy due to perinatal stroke",
+     "target": [
+      {
+       "code": "1381734009",
+       "display": "Epilepsy due to and following perinatal fetal and/or neonatal stroke",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "1179547007",
+     "display": "Neonatal epilepsy due to perinatal stroke",
+     "target": [
+      {
+       "code": "1381734009",
+       "display": "Epilepsy due to and following perinatal fetal and/or neonatal stroke",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "118612006",
+     "display": "Malignant histiocytosis (clinical)",
+     "target": [
+      {
+       "code": "1399256008",
+       "display": "Malignant histiocytic macrophage neoplasm",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "1260371006",
+     "display": "Epilepsy due to perinatal cerebral ischemia",
+     "target": [
+      {
+       "code": "1381728002",
+       "display": "Epilepsy due to and following perinatal fetal and/or neonatal ischemic cerebrovascular accident",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "1260377005",
+     "display": "Epilepsy due to congenital anomaly of brain",
+     "target": [
+      {
+       "code": "1372772007",
+       "display": "Epilepsy due to intracranial structural abnormality",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "126944002",
+     "display": "Brain disorder resulting from a period of impaired oxygen delivery to the brain",
+     "target": [
+      {
+       "code": "1381325002",
+       "display": "Hypoxic brain injury",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "127070008",
+     "display": "Malignant histiocytic disorder",
+     "target": [
+      {
+       "code": "1399256008",
+       "display": "Malignant histiocytic macrophage neoplasm",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "1354668000",
+     "display": "Fibrositis of upper limb",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 102556003 (POSSIBLY REPLACED BY), 203082005 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "1354669008",
+     "display": "Fibrositis of upper arm",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 771083005 (POSSIBLY REPLACED BY), 203082005 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "140391000119101",
+     "display": "Ulcer of toe due to type 2 diabetes mellitus",
+     "target": [
+      {
+       "code": "10656271000119102",
+       "display": "Skin ulcer of toe due to diabetes mellitus type 2",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "15954901000119100",
+     "display": "Pendulous left breast",
+     "target": [
+      {
+       "code": "15954981000119108",
+       "display": "Ptosis of left breast",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "15954941000119103",
+     "display": "Bilateral pendulous breasts",
+     "target": [
+      {
+       "code": "15955061000119104",
+       "display": "Bilateral ptotic breasts",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "187794005",
+     "display": "Malignant neoplasm of Islets of Langerhans",
+     "target": [
+      {
+       "code": "254611009",
+       "display": "Malignant neoplasm of endocrine pancreas",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "197028009",
+     "display": "Dietetic gastritis",
+     "target": [
+      {
+       "code": "1401596005",
+       "display": "Allergic gastritis caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "197030006",
+     "display": "Dietetic enterocolitis",
+     "target": [
+      {
+       "code": "1401594008",
+       "display": "Allergic enterocolitis caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "200766001",
+     "display": "Parakeratosis",
+     "target": [
+      {
+       "code": "56585003",
+       "display": "Parakeratosis of skin",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "200948000",
+     "display": "Pityriasis rubra (Hebra)",
+     "target": [
+      {
+       "code": "399992009",
+       "display": "Erythroderma",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "202848009",
+     "display": "Scapulohumeral fibrositis",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 203082005 (POSSIBLY REPLACED BY), 45326000 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "203104007",
+     "display": "Fibrositis of neck",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 81680005 (POSSIBLY REPLACED BY), 203082005 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "20759009",
+     "display": "Dietetic jejunitis",
+     "target": [
+      {
+       "code": "1401593002",
+       "display": "Allergic jejunitis caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "230441003",
+     "display": "Drug-induced epilepsy",
+     "target": [
+      {
+       "code": "1382151008",
+       "display": "Acute symptomatic epileptic seizure due to poisoning",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "240044003",
+     "display": "Fibrositis and nodular fasciitis",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 400138001 (POSSIBLY REPLACED BY), 203082005 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "269480005",
+     "display": "Benign islet cell neoplasm",
+     "target": [
+      {
+       "code": "254614001",
+       "display": "Benign neoplasm of endocrine pancreas",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "274776000",
+     "display": "Finding of alcohol in blood",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1402002006 (POSSIBLY EQUIVALENT TO), 1402003001 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "30173002",
+     "display": "Primary fibrositis",
+     "target": [
+      {
+       "code": "95417003",
+       "display": "Primary fibromyalgia syndrome",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "30719001",
+     "display": "Dietetic enteritis of intestine",
+     "target": [
+      {
+       "code": "1401590004",
+       "display": "Allergic enteritis of intestine caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "322112361000132104",
+     "display": "Scar epilepsy",
+     "target": [
+      {
+       "code": "1372772007",
+       "display": "Epilepsy due to intracranial structural abnormality",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "33687004",
+     "display": "Dietetic gastroenteritis",
+     "target": [
+      {
+       "code": "1401597001",
+       "display": "Allergic gastroenteritis caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "35217003",
+     "display": "Gross' disease",
+     "target": [
+      {
+       "code": "716685003",
+       "display": "Solitary rectal ulcer syndrome",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "361268000",
+     "display": "Alcohol-induced epilepsy",
+     "target": [
+      {
+       "code": "1365922007",
+       "display": "Acute symptomatic epileptic seizure due to ethyl alcohol poisoning",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "36175004",
+     "display": "Furuncle of heel",
+     "target": [
+      {
+       "code": "91541006",
+       "display": "Abscess of heel",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "36199004",
+     "display": "Pendulous breast",
+     "target": [
+      {
+       "code": "248804005",
+       "display": "Ptotic breast",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "387817006",
+     "display": "Deficiency of phosphorylase b kinase",
+     "target": [
+      {
+       "code": "124329006",
+       "display": "Deficiency of phosphorylase kinase",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "404169008",
+     "display": "Malignant histiocytosis involving skin",
+     "target": [
+      {
+       "code": "1402004007",
+       "display": "Malignant histiocytic macrophage neoplasm of skin",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Classification derived)"
+      }
+     ]
+    },
+    {
+     "code": "416389007",
+     "display": "Gastrointestinal disorder due to food allergy",
+     "target": [
+      {
+       "code": "1401588000",
+       "display": "Allergic disorder of gastrointestinal tract caused by food",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "417349008",
+     "display": "Closed fracture dislocation of proximal interphalangeal joint of digit of hand",
+     "target": [
+      {
+       "code": "1401963004",
+       "display": "Closed fracture dislocation of proximal interphalangeal joint of finger",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "427921009",
+     "display": "Chronic ulcer of ankle",
+     "target": [
+      {
+       "code": "10637751000119102",
+       "display": "Chronic ulcer of skin of ankle",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "442766007",
+     "display": "High alcohol level in blood",
+     "target": [
+      {
+       "code": "441685000",
+       "display": "High alcohol level in blood",
+       "equivalence": "inexact",
+       "comment": "proposed: POSSIBLY EQUIVALENT TO; inactivated (Ambiguous)"
+      }
+     ]
+    },
+    {
+     "code": "444768009",
+     "display": "Chronic ulcer of sacral region",
+     "target": [
+      {
+       "code": "10642351000119100",
+       "display": "Chronic skin ulcer of sacrum",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "48012003",
+     "display": "Boil of tunica vaginalis",
+     "target": [
+      {
+       "code": "33724004",
+       "display": "Abscess of tunica vaginalis",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "49464009",
+     "display": "Dietetic sigmoiditis",
+     "target": [
+      {
+       "code": "1401595009",
+       "display": "Allergic sigmoiditis caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "55028001",
+     "display": "Boil of vas deferens",
+     "target": [
+      {
+       "code": "39235000",
+       "display": "Abscess of vas deferens",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "56557000",
+     "display": "Fibrositis",
+     "target": [
+      {
+       "code": "203082005",
+       "display": "Fibromyalgia",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "6051000119109",
+     "display": "Chronic ulcer of calf",
+     "target": [
+      {
+       "code": "10640791000119105",
+       "display": "Chronic ulcer of skin of calf",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "61947007",
+     "display": "Deaf mutism",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 88052002 (POSSIBLY REPLACED BY), 15188001 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "698614006",
+     "display": "Acquired deaf mutism",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 88052002 (POSSIBLY REPLACED BY), 721294001 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "698615007",
+     "display": "Congenital deaf mutism",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 88052002 (POSSIBLY REPLACED BY), 95828007 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "698764006",
+     "display": "Post infectious grand mal epilepsy",
+     "target": [
+      {
+       "code": "1373924005",
+       "display": "Epilepsy due to infectious disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "698767004",
+     "display": "Post-cerebrovascular accident epilepsy",
+     "target": [
+      {
+       "code": "1380178003",
+       "display": "Epilepsy due to and following stroke",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "700237005",
+     "display": "Supra-eruption of tooth",
+     "target": [
+      {
+       "code": "109644008",
+       "display": "Overeruption of tooth",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "724549005",
+     "display": "Epilepsy due to infectious disease of central nervous system",
+     "target": [
+      {
+       "code": "1373924005",
+       "display": "Epilepsy due to infectious disease",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "724787004",
+     "display": "Epilepsy due to cerebrovascular accident",
+     "target": [
+      {
+       "code": "1380178003",
+       "display": "Epilepsy due to and following stroke",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "724988000",
+     "display": "Epilepsy co-occurrent and due to degenerative brain disorder",
+     "target": [
+      {
+       "code": "1340125003",
+       "display": "Epilepsy syndrome with progressive neurological deterioration",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "724989008",
+     "display": "Epilepsy co-occurrent and due to mesial temporal sclerosis",
+     "target": [
+      {
+       "code": "770643005",
+       "display": "Mesial temporal lobe epilepsy with hippocampal sclerosis",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "724991000",
+     "display": "Epilepsy co-occurrent and due to demyelinating disorder",
+     "target": [
+      {
+       "code": "1372950000",
+       "display": "Epilepsy due to demyelinating disease of brain",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Nonconformance to editorial policy)"
+      }
+     ]
+    },
+    {
+     "code": "724992007",
+     "display": "Epilepsy co-occurrent and due to dementia",
+     "target": [
+      {
+       "code": "1373650006",
+       "display": "Epilepsy due to neurodegenerative dementia",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Erroneous)"
+      }
+     ]
+    },
+    {
+     "code": "72547003",
+     "display": "Dietetic colitis",
+     "target": [
+      {
+       "code": "1401589008",
+       "display": "Allergic colitis caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "737194006",
+     "display": "Dietetic enteritis of small intestine",
+     "target": [
+      {
+       "code": "1401591000",
+       "display": "Allergic enteritis of small intestine caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "76118001",
+     "display": "Dietetic ileitis",
+     "target": [
+      {
+       "code": "1401592007",
+       "display": "Allergic ileitis caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "78818007",
+     "display": "Decreased skin sensitivity",
+     "target": [
+      {
+       "code": "398026008",
+       "display": "Reduced sensation of skin",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "79254009",
+     "display": "Flail elbow",
+     "target": [
+      {
+       "code": "296641000119105",
+       "display": "Flail joint of elbow",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "79442007",
+     "display": "Deafmutism-retinal degeneration syndrome",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Outdated); candidates: 57838006 (POSSIBLY REPLACED BY), 237619009 (POSSIBLY REPLACED BY)"
+      }
+     ]
+    },
+    {
+     "code": "82381000119103",
+     "display": "Epileptic dementia with behavioral disturbance",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 1591000119103 (POSSIBLY EQUIVALENT TO), 1373650006 (POSSIBLY EQUIVALENT TO), 1340125003 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "83134002",
+     "display": "Dietetic diarrhea",
+     "target": [
+      {
+       "code": "1401598006",
+       "display": "Allergic diarrhea caused by food",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "85879003",
+     "display": "Secondary fibrositis",
+     "target": [
+      {
+       "code": "203082005",
+       "display": "Fibromyalgia",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "85920003",
+     "display": "Constipation by outlet obstruction",
+     "target": [
+      {
+       "code": "713411004",
+       "display": "Obstructive defecation syndrome",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    },
+    {
+     "code": "870766001",
+     "display": "Acneiform eruption due to bromine compound",
+     "target": [
+      {
+       "equivalence": "unmatched",
+       "comment": "open: inactivated (Ambiguous); candidates: 8007005 (POSSIBLY EQUIVALENT TO), 1406864008 (POSSIBLY EQUIVALENT TO)"
+      }
+     ]
+    },
+    {
+     "code": "95344007",
+     "display": "Ulcer of lower extremity",
+     "target": [
+      {
+       "code": "711168000",
+       "display": "Ulcer of skin of lower extremity",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

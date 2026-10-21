@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terminologie-Entscheidungen</title>
+<style>
+:root{--bg:#f7f8f7;--surface:#fff;--fg:#17201e;--muted:#5d6b67;--line:#d9e0dd;--accent:#0f766e;--accent-soft:#d8f0ec;--warn-bg:#fff7e0;--warn-fg:#7a4b00;--bad:#b42318;--ok:#1b7f3b;
+ --sans:"IBM Plex Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#121715;--surface:#1a211e;--fg:#e8ecea;--muted:#9fb0aa;--line:#2d3733;--accent:#4fd1c5;--accent-soft:#163a36;--warn-bg:#3a2e10;--warn-fg:#f5d77a;--bad:#f28b82;--ok:#7fd49a}}
+:root[data-theme="dark"]{--bg:#121715;--surface:#1a211e;--fg:#e8ecea;--muted:#9fb0aa;--line:#2d3733;--accent:#4fd1c5;--accent-soft:#163a36;--warn-bg:#3a2e10;--warn-fg:#f5d77a;--bad:#f28b82;--ok:#7fd49a}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:14px;line-height:1.5;margin:0;padding:0 16px 48px}
+main{max-width:1100px;margin:0 auto}
+h1{font-size:20px;margin:20px 0 4px}
+.meta{color:var(--muted);font-size:13px}
+code{font-family:var(--mono);font-size:12.5px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:2;border-bottom:1px solid var(--line)}
+select,input[type=text],button{font:inherit;padding:5px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg)}
+button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.kpi{display:flex;gap:14px;flex-wrap:wrap;margin:8px 0}
+.kpi span{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:4px 10px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:10px 0}
+.item.decided{border-color:var(--ok)}
+.item h3{font-size:14px;margin:0 0 2px;font-weight:600}
+.item .why{color:var(--muted);font-size:12.5px}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:10px;background:var(--accent-soft);color:var(--accent);margin-left:6px;vertical-align:middle}
+.tag.open{background:var(--warn-bg);color:var(--warn-fg)} .tag.none{background:#fde8e6;color:var(--bad)} .tag.decided{background:#e3f6e9;color:var(--ok)}
+.cands{margin:6px 0 0;padding:0;list-style:none}
+.cands li{display:flex;gap:8px;align-items:flex-start;padding:4px 0;border-top:1px solid var(--line)}
+.cands li input{margin-top:5px}
+.sig{color:var(--muted);font-size:12px}
+.sig b{font-weight:500;color:var(--fg)}
+.note{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
+.note input[type=text]{flex:1;min-width:200px}
+.vs{font-size:12px;color:var(--muted)}
+.help{font-size:12.5px;color:var(--muted);margin:6px 0 0}
+</style>
+</head>
+<body>
+<main>
+<h1>Terminologie-Entscheidungen</h1>
+<div class="meta" id="meta"></div>
+<div class="kpi" id="kpi"></div>
+<p class="help">Pro inaktiviertem Code einen Nachfolger wählen (oder „kein Nachfolger“), optional eine Begründung. <b>Exportieren</b> lädt <code>decisions.json</code> herunter; die Datei ins Repo legen und <code>termwatch decide</code> erneut laufen lassen, dann wandern die Entscheidungen in die ConceptMaps. Auswahl wird im Browser zwischengespeichert.</p>
+<div class="bar">
+  <select id="fStatus"><option value="">alle Status</option><option value="open">open</option><option value="proposed">proposed</option><option value="none">none</option><option value="auto">auto</option><option value="out-of-filter">out-of-filter</option><option value="decided">decided</option></select>
+  <select id="fModule"><option value="">alle Module</option></select>
+  <input type="text" id="fText" placeholder="Code oder Text suchen">
+  <button id="btnProposals">Vorschläge übernehmen</button>
+  <button class="primary" id="btnExport">Exportieren</button>
+  <span class="meta" id="count"></span>
+</div>
+<div id="list"></div>
+</main>
+<script>
+const DATA = /*__DATA__*/null;
+const KEY = "termwatch-decisions:" + DATA.from + ">" + DATA.to;
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let local = {};
+try { local = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { local = {}; }
+const id = it => it.code;  // decisions are per code and apply to every ValueSet the code sits in
+DATA.items.forEach(it => { if (local[id(it)]) { it.decision = local[id(it)]; it.status = "decided"; } });
+// one card per code; candidates merged (in_valueset = member of any of the ValueSets)
+const RANK = { decided: 0, open: 1, proposed: 2, none: 3, auto: 4, "out-of-filter": 5 };
+const byCode = new Map();
+DATA.items.forEach(it => {
+  const g = byCode.get(it.code);
+  if (!g) { byCode.set(it.code, { ...it, valuesets: [it.valueset], modules: [it.module], candidates: it.candidates.map(c => ({ ...c, signals: { ...c.signals } })) }); return; }
+  g.valuesets.push(it.valueset); if (!g.modules.includes(it.module)) g.modules.push(it.module);
+  it.candidates.forEach(c => { const gc = g.candidates.find(x => x.code === c.code); if (gc) { gc.signals.in_valueset = gc.signals.in_valueset || c.signals.in_valueset; gc.score = Math.max(gc.score, c.score); } else g.candidates.push(c); });
+  if (RANK[it.status] < RANK[g.status]) { g.status = it.status; g.proposal = it.proposal; }
+  if (it.decision && !g.decision) g.decision = it.decision;
+});
+const GROUPS = [...byCode.values()];
+GROUPS.forEach(g => g.candidates.sort((a, b) => b.score - a.score));
+
+const short = v => (v || "").replace(/.*\/version\//, "");
+document.getElementById("meta").textContent = `${DATA.package} · SNOMED CT ${short(DATA.from)} → ${short(DATA.to)} · Stand ${DATA.generated}`;
+const mods = [...new Set(DATA.items.map(i => i.module))].sort();
+mods.forEach(m => { const o = document.createElement("option"); o.value = m; o.textContent = m; document.getElementById("fModule").appendChild(o); });
+
+function kpi() {
+  const c = {}; GROUPS.forEach(i => c[i.status] = (c[i.status] || 0) + 1);
+  document.getElementById("kpi").innerHTML = ["open","proposed","none","decided","auto","out-of-filter"].map(s => `<span><b>${c[s] || 0}</b> ${s}</span>`).join("") + `<span>${GROUPS.length} Codes in ${DATA.items.length} ValueSet-Einträgen</span>`;
+}
+function save(it) {
+  if (it.decision) local[id(it)] = it.decision; else delete local[id(it)];
+  try { localStorage.setItem(KEY, JSON.stringify(local)); } catch (e) {}
+}
+function decide(it, target, note) {
+  if (target === undefined) { it.decision = null; it.status = recompute(it); }
+  else { it.decision = { target: target || null, equivalence: target ? (it.candidates.find(c => c.code === target) || {}).equivalence || "relatedto" : "unmatched", note: note || "", at: new Date().toISOString().slice(0, 10) }; it.status = "decided"; }
+  save(it); kpi();
+}
+function recompute(it) { return it._orig || "open"; }
+GROUPS.forEach(it => it._orig = it.status === "decided" ? "open" : it.status);
+
+function render() {
+  const fs = document.getElementById("fStatus").value, fm = document.getElementById("fModule").value, ft = document.getElementById("fText").value.toLowerCase();
+  const items = GROUPS.filter(it => (!fs || it.status === fs) && (!fm || it.modules.includes(fm)) &&
+    (!ft || it.code.includes(ft) || it.display.toLowerCase().includes(ft) || it.valuesets.some(v => v.includes(ft)) || it.candidates.some(c => c.code.includes(ft) || (c.display || "").toLowerCase().includes(ft))));
+  document.getElementById("count").textContent = `${items.length} von ${GROUPS.length} Codes`;
+  const list = document.getElementById("list"); list.innerHTML = "";
+  items.slice(0, 400).forEach(it => {
+    const d = document.createElement("div"); d.className = "item " + it.status;
+    const chosen = it.decision ? it.decision.target : it.proposal;
+    let h = `<h3><code>${esc(it.code)}</code> ${esc(it.display)}<span class="tag ${it.status}">${it.status}</span></h3>
+      <div class="why">${esc(it.reason)} · <span class="vs">${it.valuesets.map(v => `<code>${esc(v)}</code>`).join(", ")}</span></div>`;
+    if (it.status === "out-of-filter") { h += `<div class="help">Code ist weiterhin aktiv, nur nicht mehr im ValueSet. Keine Überleitung nötig; ggf. ValueSet-Definition prüfen.</div>`; d.innerHTML = h; list.appendChild(d); return; }
+    h += `<ul class="cands">`;
+    it.candidates.forEach(c => {
+      const s = c.signals; const flags = [c.association, s.in_valueset ? "<b>im ValueSet</b>" : "nicht im ValueSet"];
+      if (s.same_hierarchy !== undefined && s.same_hierarchy !== null) flags.push(s.same_hierarchy ? "gleiche Hierarchie" : "andere Hierarchie");
+      if (s.active === false) flags.push("<b>INAKTIV</b>");
+      flags.push("Score " + c.score);
+      h += `<li><input type="radio" name="${esc(id(it))}" value="${esc(c.code)}" ${chosen === c.code ? "checked" : ""}><div><code>${esc(c.code)}</code> ${esc(c.display)} <span class="sig">${flags.join(" · ")}</span></div></li>`;
+    });
+    h += `<li><input type="radio" name="${esc(id(it))}" value="" ${it.decision && !it.decision.target ? "checked" : ""}><div>kein Nachfolger (unmatched)</div></li></ul>
+      <div class="note"><input type="text" placeholder="Begründung" value="${esc(it.decision ? it.decision.note : "")}"><button class="btnReset">zurücksetzen</button></div>`;
+    d.innerHTML = h;
+    d.querySelectorAll("input[type=radio]").forEach(r => r.addEventListener("change", () => { decide(it, r.value, d.querySelector("input[type=text]").value); d.className = "item decided"; d.querySelector(".tag").className = "tag decided"; d.querySelector(".tag").textContent = "decided"; }));
+    d.querySelector("input[type=text]").addEventListener("change", e => { if (it.decision) { it.decision.note = e.target.value; save(it); } });
+    d.querySelector(".btnReset").addEventListener("click", () => { decide(it, undefined); render(); });
+    list.appendChild(d);
+  });
+}
+document.getElementById("btnProposals").addEventListener("click", () => { GROUPS.forEach(it => { if (it.status === "proposed" && it.proposal) decide(it, it.proposal, "Vorschlag übernommen"); }); render(); });
+document.getElementById("btnExport").addEventListener("click", () => {
+  const dec = {}; GROUPS.forEach(g => { if (g.decision) dec[g.code] = g.decision; });
+  const out = { ...DATA, items: DATA.items.map(it => ({ ...it, decision: dec[it.code] || null, status: dec[it.code] ? "decided" : it.status })) };
+  const blob = new Blob([JSON.stringify(out, null, 1)], { type: "application/json" });
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "decisions.json"; a.click();
+});
+["fStatus", "fModule", "fText"].forEach(i => document.getElementById(i).addEventListener("input", render));
+kpi(); render();
+</script>
+</body>
+</html>

@@ -9,7 +9,7 @@
 | SNOMED CT | 20260701 | 20260401 |
 | HGNC | 20250704 | 20250704 |
 
-Generated 2026-10-20T02:39:55 against https://ontoserver.mii-termserv.de/fhir + rf2:SnomedCT_InternationalRF2_PRODUCTION_20260401T120000Z.zip (11614 server calls).
+Generated 2026-10-21T05:57:04 against https://ontoserver.mii-termserv.de/fhir + rf2:SnomedCT_InternationalRF2_PRODUCTION_20260401T120000Z.zip (11614 server calls).
 
 ## Summary
 

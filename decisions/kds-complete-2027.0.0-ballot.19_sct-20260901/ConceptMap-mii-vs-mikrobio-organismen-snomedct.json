@@ -1,0 +1,46 @@
+{
+ "resourceType": "ConceptMap",
+ "id": "mii-vs-mikrobio-organismen-snomedct-sct-20260701-20260901",
+ "status": "draft",
+ "name": "mii-vs-mikrobio-organismen-snomedct_sct_20260701_20260901",
+ "title": "Überleitung mii-vs-mikrobio-organismen-snomedct: SNOMED CT 20260701 → 20260901",
+ "date": "2026-10-21",
+ "publisher": "MII Terminology Watch (draft)",
+ "description": "Successors for members of mii-vs-mikrobio-organismen-snomedct inactivated between SNOMED CT International 20260701 and 20260901. 2 of 2 elements resolved (auto / proposed / decided), the rest unmatched pending a decision.",
+ "sourceUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260701",
+ "targetUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20260901",
+ "group": [
+  {
+   "source": "http://snomed.info/sct",
+   "sourceVersion": "http://snomed.info/sct/900000000000207008/version/20260701",
+   "target": "http://snomed.info/sct",
+   "targetVersion": "http://snomed.info/sct/900000000000207008/version/20260901",
+   "element": [
+    {
+     "code": "116663002",
+     "display": "Sin Nombre virus",
+     "target": [
+      {
+       "code": "1389076007",
+       "display": "Orthohantavirus sinnombreense",
+       "equivalence": "equal",
+       "comment": "auto: SAME AS; inactivated (Duplicate)"
+      }
+     ]
+    },
+    {
+     "code": "49445003",
+     "display": "Genus Hantavirus",
+     "target": [
+      {
+       "code": "735350007",
+       "display": "Orthohantavirus",
+       "equivalence": "equivalent",
+       "comment": "auto: REPLACED BY; inactivated (Outdated)"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
