@@ -101,7 +101,7 @@ Outputs: `decisions.json` (decisions survive re-runs, a decision is per code and
 version, equivalence from the association: SAME AS = equal, REPLACED BY = equivalent, WAS A = wider,
 POSSIBLY / PARTIALLY EQUIVALENT TO = inexact, open items unmatched with the candidates in a comment) and
 `review.html`, a self-contained page to pick candidates and export `decisions.json`. The review pages are
-published under `explorer/decisions/`. For SNOMED CT 20261001 the ranking leaves 98 open and 149 unresolvable
+published under `explorer/decisions/`. For SNOMED CT 20261001 the ranking leaves 110 open and 137 unresolvable
 codes for people, out of 824 inactivated codes across 20 ValueSets.
 
 ### Any package, any code system
